@@ -23,7 +23,8 @@ public class ClientUtil {
 		
 		AdditionalHeader.addChild(usernameElement);
 		AdditionalHeader.addChild(passwordElement);
-		
+		//we need to test this code first
+		//then upload to the repo
 
 		return AdditionalHeader;
 	}
