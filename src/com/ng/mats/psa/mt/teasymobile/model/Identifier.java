@@ -1,4 +1,4 @@
-package com.ng.mats.psa.mt.model;
+package com.ng.mats.psa.mt.teasymobile.model;
 
 public class Identifier {
 	private final String identifier;

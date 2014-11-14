@@ -1,4 +1,4 @@
-package com.ng.mats.psa.mt.model;
+package com.ng.mats.psa.mt.teasymobile.model;
 
 import java.math.BigDecimal;
 

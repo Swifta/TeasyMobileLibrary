@@ -13,7 +13,7 @@ public class ClientUtil {
 		OMNamespace omNs = fac.createOMNamespace(
 				"http://mobilemoney.com/services/mWallet", "mwal");
 		
-		OMElement AdditionalHeader = fac.createOMElement("AdditionalHeader", omNs);
+		OMElement additionalHeader = fac.createOMElement("AdditionalHeader", omNs);
 		
 		OMElement usernameElement = fac.createOMElement("username", omNs);
 		usernameElement.addChild(fac.createOMText(usernameElement,"teasy"));
@@ -21,12 +21,12 @@ public class ClientUtil {
 		OMElement passwordElement = fac.createOMElement("password", omNs);
 		passwordElement.addChild(fac.createOMText(passwordElement,"t3apwd"));
 		
-		AdditionalHeader.addChild(usernameElement);
-		AdditionalHeader.addChild(passwordElement);
+		additionalHeader.addChild(usernameElement);
+		additionalHeader.addChild(passwordElement);
 		//we need to test this code first
 		//then upload to the repo
 
-		return AdditionalHeader;
+		return additionalHeader;
 	}
 	
 	public static OMElement getBodyOMElement() {
