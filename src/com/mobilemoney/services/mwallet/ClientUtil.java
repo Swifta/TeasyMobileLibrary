@@ -16,10 +16,10 @@ public class ClientUtil {
 		OMElement additionalHeader = fac.createOMElement("AdditionalHeader", omNs);
 		
 		OMElement usernameElement = fac.createOMElement("username", omNs);
-		usernameElement.addChild(fac.createOMText(usernameElement,"teasy"));
+		usernameElement.addChild(fac.createOMText(usernameElement,"cinfores"));
 		
 		OMElement passwordElement = fac.createOMElement("password", omNs);
-		passwordElement.addChild(fac.createOMText(passwordElement,"t3apwd"));
+		passwordElement.addChild(fac.createOMText(passwordElement,"apipass"));
 		
 		additionalHeader.addChild(usernameElement);
 		additionalHeader.addChild(passwordElement);
@@ -41,7 +41,7 @@ public class ClientUtil {
 		AccountNumberElement.addChild(fac.createOMText(AccountNumberElement,"2348171000157"));
 		
 		OMElement OriginCodeElement = fac.createOMElement("OriginCode", omNs);
-		OriginCodeElement.addChild(fac.createOMText(OriginCodeElement,"USRT"));
+		OriginCodeElement.addChild(fac.createOMText(OriginCodeElement,"CINFORES"));
 		
 		OMElement AccountPINElement = fac.createOMElement("AccountPIN", omNs);
 		AccountPINElement.addChild(fac.createOMText(AccountPINElement,"7005"));
