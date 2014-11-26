@@ -79,19 +79,21 @@ public class TeasyMobileClient {
 			System.out.println("Fund stub is not available");
 			System.out.println("---------------------------Fund stub is not available");
 		}
+		int amount  = moneyTransfer.getAmount().intValue() * 100;
 
 		DebitRequest debitRequest = new DebitRequest();
 		System.out.println("---------------------------Debit request");
 		MTransferRequestType mtrTransferRequestType = new MTransferRequestType();
 		AccountNumber accountNumber = new AccountNumber();
-		System.out.println("---------------------------Account number");
+		System.out.println("---------------------------Account number>>>>"+moneyTransfer.getReceiver());
 		accountNumber.setAccountNumber(moneyTransfer.getReceiver()); // 2348171000157
 		mtrTransferRequestType.setAccountNumber(accountNumber);
 		PIN pin = new PIN();
-		System.out.println("---------------------------PIN");
+		System.out.println("---------------------------PIN>>>"+moneyTransfer.getTeasypin());
 		pin.setPIN(moneyTransfer.getTeasypin()); // 7005
 		mtrTransferRequestType.setAccountPIN(pin);
-		mtrTransferRequestType.setAmount(moneyTransfer.getAmount().intValue());
+		mtrTransferRequestType.setAmount(amount);
+		System.out.println("---------------------------Amount>>>>"+amount);
 		CurrencyCode currencyCode = new CurrencyCode();
 		System.out.println("---------------------------Currency code");
 		currencyCode.setCurrencyCode("NGN");
@@ -163,6 +165,8 @@ public class TeasyMobileClient {
 		}
 
 		CreditRequest creditRequest = new CreditRequest();
+		
+		int amount  = moneyTransfer.getAmount().intValue() * 100;
 
 		MTransferRequestType mtrTransferRequestType = new MTransferRequestType();
 		AccountNumber accountNumber = new AccountNumber();
@@ -172,7 +176,7 @@ public class TeasyMobileClient {
 		System.out.println("after instantiation of PIN");
 		pin.setPIN(moneyTransfer.getTeasypin()); // 7005
 		mtrTransferRequestType.setAccountPIN(pin);
-		mtrTransferRequestType.setAmount(moneyTransfer.getAmount().intValue());
+		mtrTransferRequestType.setAmount(amount);
 		CurrencyCode currencyCode = new CurrencyCode();
 		System.out.println("after instantiation of CurrencyCode");
 		currencyCode.setCurrencyCode("NGN");
@@ -187,7 +191,6 @@ public class TeasyMobileClient {
 		SimpleDateFormat ft = new SimpleDateFormat("YYYYMMddHHmmSSS");
 		requestReference.setRequestReference(ft.format(dNow));
 		mtrTransferRequestType.setRequestReference(requestReference);
-
 		System.out.println("After set request reference");
 		creditRequest.setCreditRequest(mtrTransferRequestType);
 
@@ -250,8 +253,8 @@ public class TeasyMobileClient {
 
 	public static void main(String args[]) throws Exception {
 		TeasyMobileClient teasyMobileClient = new TeasyMobileClient();
-		MoneyTransfer moneyTransfer = new MoneyTransfer("2348171000157",
-				new BigDecimal(100), "dada", "7005");
+		MoneyTransfer moneyTransfer = new MoneyTransfer("2348170730938",
+				new BigDecimal(100), "dada", "1234");
 
 		MTransferResponseType response = teasyMobileClient
 				.doCashout(moneyTransfer);

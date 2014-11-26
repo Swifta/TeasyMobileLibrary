@@ -16,10 +16,10 @@ public class ClientUtil {
 		OMElement additionalHeader = fac.createOMElement("AdditionalHeader", omNs);
 		
 		OMElement usernameElement = fac.createOMElement("username", omNs);
-		usernameElement.addChild(fac.createOMText(usernameElement,"cinfores"));
+		usernameElement.addChild(fac.createOMText(usernameElement,"matsagent"));
 		
 		OMElement passwordElement = fac.createOMElement("password", omNs);
-		passwordElement.addChild(fac.createOMText(passwordElement,"apipass"));
+		passwordElement.addChild(fac.createOMText(passwordElement,"swifta123"));
 		
 		additionalHeader.addChild(usernameElement);
 		additionalHeader.addChild(passwordElement);
@@ -38,13 +38,13 @@ public class ClientUtil {
 		OMElement DebitRequestElement = fac.createOMElement("DebitRequest", omNs);
 		
 		OMElement AccountNumberElement = fac.createOMElement("AccountNumber", omNs);
-		AccountNumberElement.addChild(fac.createOMText(AccountNumberElement,"2348171000157"));
+		AccountNumberElement.addChild(fac.createOMText(AccountNumberElement,"2348170730938"));
 		
 		OMElement OriginCodeElement = fac.createOMElement("OriginCode", omNs);
 		OriginCodeElement.addChild(fac.createOMText(OriginCodeElement,"CINFORES"));
 		
 		OMElement AccountPINElement = fac.createOMElement("AccountPIN", omNs);
-		AccountPINElement.addChild(fac.createOMText(AccountPINElement,"7005"));
+		AccountPINElement.addChild(fac.createOMText(AccountPINElement,"1234"));
 		
 		OMElement RequestReferenceElement = fac.createOMElement("RequestReference", omNs);
 		RequestReferenceElement.addChild(fac.createOMText(RequestReferenceElement,"201407010000001"));
