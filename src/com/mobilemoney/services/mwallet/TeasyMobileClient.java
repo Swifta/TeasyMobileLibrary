@@ -1,35 +1,42 @@
 package com.mobilemoney.services.mwallet;
 
 import java.math.BigDecimal;
+import java.rmi.RemoteException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.logging.Logger;
 
+import org.apache.axiom.om.OMElement;
 import org.apache.axis2.transport.http.HTTPConstants;
 
 import com.mobilemoney.services.mwallet.MPWalletServiceStub.AccountNumber;
+import com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader;
+import com.mobilemoney.services.mwallet.MPWalletServiceStub.AirtimeTopupRequest;
+import com.mobilemoney.services.mwallet.MPWalletServiceStub.BalanceGetRequest;
+import com.mobilemoney.services.mwallet.MPWalletServiceStub.BalanceGetResponse;
 import com.mobilemoney.services.mwallet.MPWalletServiceStub.CreditRequest;
 import com.mobilemoney.services.mwallet.MPWalletServiceStub.CurrencyCode;
 import com.mobilemoney.services.mwallet.MPWalletServiceStub.DebitRequest;
+import com.mobilemoney.services.mwallet.MPWalletServiceStub.MAirtimeTopupRequestType;
+import com.mobilemoney.services.mwallet.MPWalletServiceStub.MBalanceResponse;
+import com.mobilemoney.services.mwallet.MPWalletServiceStub.MBasicRequestType;
+import com.mobilemoney.services.mwallet.MPWalletServiceStub.MHeader;
+import com.mobilemoney.services.mwallet.MPWalletServiceStub.MTransactionQuery;
 import com.mobilemoney.services.mwallet.MPWalletServiceStub.MTransferRequestType;
 import com.mobilemoney.services.mwallet.MPWalletServiceStub.MTransferResponseType;
 import com.mobilemoney.services.mwallet.MPWalletServiceStub.MmTransferCode;
 import com.mobilemoney.services.mwallet.MPWalletServiceStub.PIN;
 import com.mobilemoney.services.mwallet.MPWalletServiceStub.RequestReference;
+import com.mobilemoney.services.mwallet.MPWalletServiceStub.TransactionQueryRequest;
+import com.mobilemoney.services.mwallet.MPWalletServiceStub.TransactionQueryResponse;
 import com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse;
 import com.ng.mats.psa.mt.teasymobile.model.MoneyTransfer;
 
 public class TeasyMobileClient {
-	private static final Logger logger = Logger.getLogger(TeasyMobileClient.class
-			.getName());
+	private static final Logger logger = Logger
+			.getLogger(TeasyMobileClient.class.getName());
 	private MPWalletServiceStub mpWalletServiceStub = null;
-
-	// EndpointReference fundgateURl = null;
-
-	// String fundgateURl = "";
-
-	// private static final String wso2appserverHome =
-	// "/usr/server/wso2/wso2setup/wso2esb-4.8.1";
 
 	public TeasyMobileClient() throws Exception {
 
@@ -37,38 +44,172 @@ public class TeasyMobileClient {
 
 	}
 
-	// @SuppressWarnings("deprecation")
-	// public void configureSecurity() throws UnknownHostException, IOException
-	// {
-	// String clientSSLStore = wso2appserverHome + File.separator
-	// + "repository" + File.separator + "resources" + File.separator
-	// + "security" + File.separator + "client-truststore.jks";
-	//
-	// // wso2carbon.jks client-truststore.jks
-	//
-	// System.getProperties().remove("javax.net.ssl.trustStore");
-	// System.getProperties().remove("javax.net.ssl.trustStoreType");
-	// System.getProperties().remove("javax.net.ssl.trustStorePassword");
-	//
-	// System.setProperty("javax.net.ssl.trustStore", clientSSLStore);
-	// System.setProperty("javax.net.ssl.trustStoreType", "JKS");
-	// System.setProperty("javax.net.ssl.trustStorePassword", "wso2carbon");
-	// System.setProperty("javax.net.debug", "ssl");
-	// // System.setProperty("https.protocols", "SSLv3");
-	//
-	// Protocol myProtocolHandler = new Protocol("https",
-	// new SSL3ProtocolSocketFactory(), 443);
-	//
-	// fundgateStub
-	// ._getServiceClient()
-	// .getOptions()
-	// .setProperty(HTTPConstants.CUSTOM_PROTOCOL_HANDLER,
-	// myProtocolHandler);
-	//
-	// fundgateStub._getServiceClient().getOptions()
-	// .setProperty(HTTPConstants.CHUNKED, "false");
-	//
-	// }
+	public MTransferResponseType transactionQuery(MoneyTransfer moneyTransfer)
+			throws RemoteException {
+		AdditionalHeader additionalHeader = new AdditionalHeader();
+		MHeader mHeaderParam = new MHeader();
+		OMElement loginCredentials = ClientUtil.getHeaderOMElement(), contentCredentials = null;
+		Iterator<OMElement> oem = loginCredentials.getChildElements();
+		logger.info("------------------" + loginCredentials.toString());
+		while (oem.hasNext()) {
+			contentCredentials = oem.next();
+			logger.info("------------------"
+					+ contentCredentials.toString()
+					+ "----------"
+					+ contentCredentials.getText()
+					+ "------------"
+					+ contentCredentials.getLocalName()
+					+ "-------"
+					+ contentCredentials.getAttributeValue(contentCredentials
+							.getQName()));
+			if (contentCredentials.getLocalName().equalsIgnoreCase("username")) {
+				mHeaderParam.setUsername(contentCredentials.getText());
+			} else if (contentCredentials.getLocalName().equalsIgnoreCase(
+					"password")) {
+				mHeaderParam.setPassword(contentCredentials.getText());
+			}
+		}
+
+		additionalHeader.setAdditionalHeader(mHeaderParam);
+		TransactionQueryRequest transactionQueryRequest = new TransactionQueryRequest();
+		MTransactionQuery mTransRequest = new MTransactionQuery();
+		AccountNumber accountNumber = new AccountNumber();
+		System.out.println("---------------------------Account number>>>>"
+				+ moneyTransfer.getSender());
+		accountNumber.setAccountNumber(moneyTransfer.getSender());
+		mTransRequest.setAccountNumber(accountNumber);
+		RequestReference reference = new RequestReference();
+		reference.setRequestReference(moneyTransfer.getTeasyrequestreference());
+		mTransRequest.setRequestReference(reference);
+		transactionQueryRequest.setTransactionQueryRequest(mTransRequest);
+		TransactionQueryResponse transactionQueryResponse = mpWalletServiceStub
+				.transactionQueryRequest(transactionQueryRequest,
+						additionalHeader);
+		MTransferResponseType response = transactionQueryResponse
+				.getTransactionQueryResponse();
+		return response;
+	}
+
+	public MTransferResponseType airtimeSales(MoneyTransfer moneyTransfer)
+			throws RemoteException {
+		AdditionalHeader additionalHeader = new AdditionalHeader();
+		MHeader mHeaderParam = new MHeader();
+		OMElement loginCredentials = ClientUtil.getHeaderOMElement(), contentCredentials = null;
+		Iterator<OMElement> oem = loginCredentials.getChildElements();
+		logger.info("------------------" + loginCredentials.toString());
+		while (oem.hasNext()) {
+			contentCredentials = oem.next();
+			logger.info("------------------"
+					+ contentCredentials.toString()
+					+ "----------"
+					+ contentCredentials.getText()
+					+ "------------"
+					+ contentCredentials.getLocalName()
+					+ "-------"
+					+ contentCredentials.getAttributeValue(contentCredentials
+							.getQName()));
+			if (contentCredentials.getLocalName().equalsIgnoreCase("username")) {
+				mHeaderParam.setUsername(contentCredentials.getText());
+			} else if (contentCredentials.getLocalName().equalsIgnoreCase(
+					"password")) {
+				mHeaderParam.setPassword(contentCredentials.getText());
+			}
+		}
+
+		additionalHeader.setAdditionalHeader(mHeaderParam);
+		AirtimeTopupRequest airtimeTopupRequest = new AirtimeTopupRequest();
+		MAirtimeTopupRequestType airtimeRequest = new MAirtimeTopupRequestType();
+		AccountNumber accountNumber = new AccountNumber();
+		System.out.println("---------------------------Account number>>>>"
+				+ moneyTransfer.getSender());
+		accountNumber.setAccountNumber(moneyTransfer.getSender()); // 2348171000157
+		airtimeRequest.setAccountNumber(accountNumber);
+		PIN pin = new PIN();
+		System.out.println("---------------------------PIN>>>"
+				+ moneyTransfer.getTeasypin());
+		pin.setPIN(moneyTransfer.getTeasypin()); // 7005
+		airtimeRequest.setAccountPIN(pin);
+		airtimeRequest.setAmount(moneyTransfer.getAmount().intValue());
+		System.out.println("---------------------------Amount>>>>"
+				+ moneyTransfer.getAmount());
+		CurrencyCode currencyCode = new CurrencyCode();
+		System.out.println("---------------------------Currency code");
+		currencyCode.setCurrencyCode("NGN");
+		airtimeRequest.setCurrency(currencyCode);
+		MmTransferCode mmTransferCode = new MmTransferCode();
+		System.out.println("---------------------------MmTransfer code");
+		mmTransferCode.setMmTransferCode("T3ASYT3ST");
+		airtimeRequest.setOriginCode(mmTransferCode);
+		RequestReference requestReference = new RequestReference();
+		System.out.println("---------------------------Request reference");
+		Date dNow = new Date();
+		SimpleDateFormat ft = new SimpleDateFormat("YYYYMMddHHmmSSS");
+		requestReference.setRequestReference(ft.format(dNow));
+		airtimeRequest.setRequestReference(requestReference);
+		mmTransferCode = new MmTransferCode();
+		mmTransferCode.setMmTransferCode("KAKA");
+		airtimeRequest.setDestinationCode(mmTransferCode);
+		accountNumber = new AccountNumber();
+		System.out.println("---------------------------Account number>>>>"
+				+ moneyTransfer.getReceiver());
+		accountNumber.setAccountNumber(moneyTransfer.getReceiver());
+		airtimeRequest.setNumberToTopup(accountNumber);
+
+		airtimeTopupRequest.setAirtimeTopupRequest(airtimeRequest);
+		TransferResponse transferResponse = mpWalletServiceStub
+				.airtimeTopupRequest(airtimeTopupRequest, additionalHeader);
+		MTransferResponseType mTransferResponse = transferResponse
+				.getTransferResponse();
+		return mTransferResponse;
+	}
+
+	public MBalanceResponse getBalance(MoneyTransfer moneyTransfer)
+			throws Exception {
+		// mpWalletServiceStub._getServiceClient().addHeader(
+		// ClientUtil.getHeaderOMElement());
+		mpWalletServiceStub._getServiceClient().getOptions()
+				.setProperty(HTTPConstants.CHUNKED, false);
+		BalanceGetRequest balanceGetRequest = new BalanceGetRequest();
+		MBasicRequestType param = new MBasicRequestType();
+		AccountNumber accountNumber = new AccountNumber();
+		accountNumber.setAccountNumber(moneyTransfer.getReceiver());
+		param.setAccountNumber(accountNumber);
+		PIN pin = new PIN();
+		pin.setPIN(moneyTransfer.getTeasypin());
+		param.setAccountPIN(pin);
+		balanceGetRequest.setBalanceGetRequest(param);
+		AdditionalHeader additionalHeader = new AdditionalHeader();
+		MHeader mHeaderParam = new MHeader();
+		OMElement loginCredentials = ClientUtil.getHeaderOMElement(), contentCredentials = null;
+		Iterator<OMElement> oem = loginCredentials.getChildElements();
+		logger.info("------------------" + loginCredentials.toString());
+		while (oem.hasNext()) {
+			contentCredentials = oem.next();
+			logger.info("------------------"
+					+ contentCredentials.toString()
+					+ "----------"
+					+ contentCredentials.getText()
+					+ "------------"
+					+ contentCredentials.getLocalName()
+					+ "-------"
+					+ contentCredentials.getAttributeValue(contentCredentials
+							.getQName()));
+			if (contentCredentials.getLocalName().equalsIgnoreCase("username")) {
+				mHeaderParam.setUsername(contentCredentials.getText());
+			} else if (contentCredentials.getLocalName().equalsIgnoreCase(
+					"password")) {
+				mHeaderParam.setPassword(contentCredentials.getText());
+			}
+		}
+
+		additionalHeader.setAdditionalHeader(mHeaderParam);
+		BalanceGetResponse balanceGetResponse = mpWalletServiceStub
+				.balanceGetRequest(balanceGetRequest, additionalHeader);
+
+		System.out.println("---------------------------Transfer Response");
+		return balanceGetResponse.getBalanceGetResponse();
+
+	}
 
 	public MTransferResponseType doCashout(MoneyTransfer moneyTransfer)
 			throws Exception {
@@ -77,68 +218,47 @@ public class TeasyMobileClient {
 
 		if (mpWalletServiceStub == null) {
 			System.out.println("Fund stub is not available");
-			System.out.println("---------------------------Fund stub is not available");
+			System.out
+					.println("---------------------------Fund stub is not available");
 		}
-		int amount  = moneyTransfer.getAmount().intValue() * 100;
+		int amount = moneyTransfer.getAmount().intValue() * 100;
 
 		DebitRequest debitRequest = new DebitRequest();
 		System.out.println("---------------------------Debit request");
 		MTransferRequestType mtrTransferRequestType = new MTransferRequestType();
 		AccountNumber accountNumber = new AccountNumber();
-		System.out.println("---------------------------Account number>>>>"+moneyTransfer.getReceiver());
+		System.out.println("---------------------------Account number>>>>"
+				+ moneyTransfer.getReceiver());
 		accountNumber.setAccountNumber(moneyTransfer.getReceiver()); // 2348171000157
 		mtrTransferRequestType.setAccountNumber(accountNumber);
 		PIN pin = new PIN();
-		System.out.println("---------------------------PIN>>>"+moneyTransfer.getTeasypin());
+		System.out.println("---------------------------PIN>>>"
+				+ moneyTransfer.getTeasypin());
 		pin.setPIN(moneyTransfer.getTeasypin()); // 7005
 		mtrTransferRequestType.setAccountPIN(pin);
 		mtrTransferRequestType.setAmount(amount);
-		System.out.println("---------------------------Amount>>>>"+amount);
+		System.out.println("---------------------------Amount>>>>" + amount);
 		CurrencyCode currencyCode = new CurrencyCode();
-		System.out.println("---------------------------Currency code");
+
 		currencyCode.setCurrencyCode("NGN");
 		mtrTransferRequestType.setCurrency(currencyCode);
+		System.out.println("---------------------------Currency code::"
+				+ mtrTransferRequestType.getCurrency());
 		MmTransferCode mmTransferCode = new MmTransferCode();
-		System.out.println("---------------------------MmTransfer code");
 		mmTransferCode.setMmTransferCode("T3ASYT3ST");
+		System.out.println("---------------------------MmTransfer code::"
+				+ mmTransferCode.getMmTransferCode());
 		mtrTransferRequestType.setOriginCode(mmTransferCode);
 		RequestReference requestReference = new RequestReference();
-		System.out.println("---------------------------Request reference");
+
 		Date dNow = new Date();
 		SimpleDateFormat ft = new SimpleDateFormat("YYYYMMddHHmmSSS");
 		requestReference.setRequestReference(ft.format(dNow));
 		mtrTransferRequestType.setRequestReference(requestReference);
-
+		System.out.println("---------------------------Request reference:"
+				+ requestReference.getRequestReference());
 		debitRequest.setDebitRequest(mtrTransferRequestType);
 		System.out.println("---------------------------PIN");
-		// AdditionalHeader additionalHeader = new AdditionalHeader();
-		// MHeader mhHeader = new MHeader();
-		// mhHeader.setUsername("teasy");
-		// mhHeader.setPassword("t3apwd");
-		//
-		// additionalHeader.setAdditionalHeader(mhHeader);
-
-		// SOAPFactory soapFactory = OMAbstractFactory.getSOAP11Factory();
-		// SOAPEnvelope soapEnvelope = soapFactory.getDefaultEnvelope();
-		//
-		// OMElement AdditionalHeader = soapFactory.
-		// createOMElement(new
-		// QName("http://mobilemoney.com/services/mWallet","AdditionalHeader","mwal"));
-		//
-		// OMElement username = soapFactory.createOMElement(new
-		// QName("http://mobilemoney.com/services/mWallet","username"));
-		// OMText usernamevalue = soapFactory.createOMText(username,"");
-		// username.addChild(usernamevalue);
-		// OMElement password = soapFactory.createOMElement(new
-		// QName("http://mobilemoney.com/services/mWallet","password"));
-		// OMText passwordvalue = soapFactory.createOMText(password,"");
-		// password.addChild(passwordvalue);
-		// AdditionalHeader.addChild(username);
-		// AdditionalHeader.addChild(password);
-		//
-		// soapEnvelope.addChild(AdditionalHeader);
-
-		// mpWalletServiceStub._getServiceClient().removeHeaders();
 
 		mpWalletServiceStub._getServiceClient().addHeader(
 				ClientUtil.getHeaderOMElement());
@@ -160,13 +280,13 @@ public class TeasyMobileClient {
 		if (mpWalletServiceStub == null) {
 			System.out.println("---------------------------Stub is null");
 			System.out.println("Fund stub is not available");
-		}else{
+		} else {
 			System.out.println("---------------------------Stub is not null");
 		}
 
 		CreditRequest creditRequest = new CreditRequest();
-		
-		int amount  = moneyTransfer.getAmount().intValue() * 100;
+
+		int amount = moneyTransfer.getAmount().intValue() * 100;
 
 		MTransferRequestType mtrTransferRequestType = new MTransferRequestType();
 		AccountNumber accountNumber = new AccountNumber();
@@ -194,35 +314,6 @@ public class TeasyMobileClient {
 		System.out.println("After set request reference");
 		creditRequest.setCreditRequest(mtrTransferRequestType);
 
-		// AdditionalHeader additionalHeader = new AdditionalHeader();
-		// MHeader mhHeader = new MHeader();
-		// mhHeader.setUsername("teasy");
-		// mhHeader.setPassword("t3apwd");
-		//
-		// additionalHeader.setAdditionalHeader(mhHeader);
-
-		// SOAPFactory soapFactory = OMAbstractFactory.getSOAP11Factory();
-		// SOAPEnvelope soapEnvelope = soapFactory.getDefaultEnvelope();
-		//
-		// OMElement AdditionalHeader = soapFactory.
-		// createOMElement(new
-		// QName("http://mobilemoney.com/services/mWallet","AdditionalHeader","mwal"));
-		//
-		// OMElement username = soapFactory.createOMElement(new
-		// QName("http://mobilemoney.com/services/mWallet","username"));
-		// OMText usernamevalue = soapFactory.createOMText(username,"");
-		// username.addChild(usernamevalue);
-		// OMElement password = soapFactory.createOMElement(new
-		// QName("http://mobilemoney.com/services/mWallet","password"));
-		// OMText passwordvalue = soapFactory.createOMText(password,"");
-		// password.addChild(passwordvalue);
-		// AdditionalHeader.addChild(username);
-		// AdditionalHeader.addChild(password);
-		//
-		// soapEnvelope.addChild(AdditionalHeader);
-
-		// mpWalletServiceStub._getServiceClient().removeHeaders();
-
 		mpWalletServiceStub._getServiceClient().addHeader(
 				ClientUtil.getHeaderOMElement());
 		mpWalletServiceStub._getServiceClient().getOptions()
@@ -235,33 +326,32 @@ public class TeasyMobileClient {
 
 	}
 
-	// @SuppressWarnings({ "unused", "static-access" })
-	// private static String Encrypt(String plainText, String key)
-	// throws NoSuchAlgorithmException, NoSuchPaddingException,
-	// InvalidKeyException, IllegalBlockSizeException,
-	// BadPaddingException, UnsupportedEncodingException {
-	// SecretKeySpec keySpec = new SecretKeySpec(key.getBytes("UTF-8"), "AES");
-	//
-	// // Instantiate the cipher
-	// Cipher cipher = Cipher.getInstance("AES");
-	// cipher.init(Cipher.ENCRYPT_MODE, keySpec);
-	//
-	// byte[] encryptedTextBytes = cipher.doFinal(plainText.getBytes("UTF-8"));
-	//
-	// return new Base64().encodeBase64String(encryptedTextBytes);
-	// }
-
 	public static void main(String args[]) throws Exception {
 		TeasyMobileClient teasyMobileClient = new TeasyMobileClient();
 		MoneyTransfer moneyTransfer = new MoneyTransfer("2348170730938",
 				new BigDecimal(100), "dada", "1234");
 
+		// MTransferResponseType response = teasyMobileClient
+		// .doCashout(moneyTransfer);
+		// MBalanceResponse response =
+		// teasyMobileClient.getBalance(moneyTransfer);
+		moneyTransfer.setTeasyrequestreference("201411281658736");
+		// MTransferResponseType response = teasyMobileClient
+		// .airtimeSales(moneyTransfer);
 		MTransferResponseType response = teasyMobileClient
-				.doCashout(moneyTransfer);
-
+				.transactionQuery(moneyTransfer);
 		System.out.println("Status: " + response.getStatus());
 
 		System.out.println("ResponseMessage: " + response.getResponseMessage());
+
+		// airtimesales
+		System.out.println("Amount: " + response.getAmount());
+		System.out.println("CurrencyCode: " + response.getCurrency());
+		System.out.println("Fee: " + response.getFee());
+		System.out.println("TransactionId: " + response.getTransactionId());
+
+		// balance
+		// System.out.println("Balance: " + response.getBalance());
 
 	}
 

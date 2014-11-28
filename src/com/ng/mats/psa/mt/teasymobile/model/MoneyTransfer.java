@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 public class MoneyTransfer {
 
 	private String receiver = "";
+	private String sender = "";
 	private String transactionType = "";;
 	private BigDecimal amount;
 	private String mmo = "";
@@ -101,9 +102,18 @@ public class MoneyTransfer {
 		this.teasyrequestreference = teasyrequestreference;
 	}
 
+	public String getSender() {
+		return sender;
+	}
+
+	public void setSender(String sender) {
+		this.sender = sender;
+	}
+
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("Receiver: " + receiver + "\n");
+		sb.append("Sender: " + sender + "\n");
 		sb.append("Amount: " + amount + "\n");
 		sb.append("Reference: " + reference + "\n");
 		sb.append("Mmo: " + mmo + "\n");
