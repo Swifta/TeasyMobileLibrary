@@ -11,6 +11,7 @@ public class MoneyTransfer {
 	private String mmo = "";
 	private String teasypin = "";
 	private String teasyrequestreference = "";
+	private String pingRequestParam = "";
 	// @XmlTransient
 	// private CashOutStatus status = CashOutStatus.PENDING;
 	private String reference = "";
@@ -32,6 +33,7 @@ public class MoneyTransfer {
 		super();
 
 		this.receiver = receiver;
+
 		this.amount = amount;
 		this.teasypin = teasypin;
 		// this.teasyrequestreference = teasyrequestreference;
@@ -108,6 +110,14 @@ public class MoneyTransfer {
 
 	public void setSender(String sender) {
 		this.sender = sender;
+	}
+
+	public String getPingRequestParam() {
+		return pingRequestParam;
+	}
+
+	public void setPingRequestParam(String pingRequestParam) {
+		this.pingRequestParam = pingRequestParam;
 	}
 
 	public String toString() {

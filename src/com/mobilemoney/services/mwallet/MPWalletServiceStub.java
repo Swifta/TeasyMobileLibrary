@@ -3,7 +3,7 @@
  * MPWalletServiceStub.java
  *
  * This file was auto-generated from WSDL
- * by the Apache Axis2 version: 1.6.1-wso2v10  Built on : Sep 04, 2013 (02:02:54 UTC)
+ * by the Apache Axis2 version: 1.6.2  Built on : Apr 17, 2012 (05:33:49 IST)
  */
         package com.mobilemoney.services.mwallet;
 
@@ -44,12 +44,12 @@
         //creating the operations
         org.apache.axis2.description.AxisOperation __operation;
 
-        _operations = new org.apache.axis2.description.AxisOperation[9];
+        _operations = new org.apache.axis2.description.AxisOperation[12];
         
                    __operation = new org.apache.axis2.description.OutInAxisOperation();
                 
 
-            __operation.setName(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "airtimeTopupRequest"));
+            __operation.setName(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "cashOutRequest"));
 	    _service.addOperation(__operation);
 	    
 
@@ -61,7 +61,7 @@
                    __operation = new org.apache.axis2.description.OutInAxisOperation();
                 
 
-            __operation.setName(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "debitRequest"));
+            __operation.setName(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "airtimeTopupRequest"));
 	    _service.addOperation(__operation);
 	    
 
@@ -73,7 +73,7 @@
                    __operation = new org.apache.axis2.description.OutInAxisOperation();
                 
 
-            __operation.setName(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "pingRequest"));
+            __operation.setName(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "debitRequest"));
 	    _service.addOperation(__operation);
 	    
 
@@ -85,7 +85,7 @@
                    __operation = new org.apache.axis2.description.OutInAxisOperation();
                 
 
-            __operation.setName(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "customerVerificationRequest"));
+            __operation.setName(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "pingRequest"));
 	    _service.addOperation(__operation);
 	    
 
@@ -97,7 +97,7 @@
                    __operation = new org.apache.axis2.description.OutInAxisOperation();
                 
 
-            __operation.setName(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "transactionQueryRequest"));
+            __operation.setName(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "customerVerificationRequest"));
 	    _service.addOperation(__operation);
 	    
 
@@ -109,7 +109,7 @@
                    __operation = new org.apache.axis2.description.OutInAxisOperation();
                 
 
-            __operation.setName(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "customerRegistrationRequest"));
+            __operation.setName(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "transactionQueryRequest"));
 	    _service.addOperation(__operation);
 	    
 
@@ -121,7 +121,7 @@
                    __operation = new org.apache.axis2.description.OutInAxisOperation();
                 
 
-            __operation.setName(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "reverseTxnRequest"));
+            __operation.setName(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "customerRegistrationRequest"));
 	    _service.addOperation(__operation);
 	    
 
@@ -133,7 +133,7 @@
                    __operation = new org.apache.axis2.description.OutInAxisOperation();
                 
 
-            __operation.setName(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "balanceGetRequest"));
+            __operation.setName(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "reverseTxnRequest"));
 	    _service.addOperation(__operation);
 	    
 
@@ -145,13 +145,49 @@
                    __operation = new org.apache.axis2.description.OutInAxisOperation();
                 
 
-            __operation.setName(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "creditRequest"));
+            __operation.setName(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "balanceGetRequest"));
 	    _service.addOperation(__operation);
 	    
 
 	    
 	    
             _operations[8]=__operation;
+            
+        
+                   __operation = new org.apache.axis2.description.OutInAxisOperation();
+                
+
+            __operation.setName(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "purchaseRequest"));
+	    _service.addOperation(__operation);
+	    
+
+	    
+	    
+            _operations[9]=__operation;
+            
+        
+                   __operation = new org.apache.axis2.description.OutInAxisOperation();
+                
+
+            __operation.setName(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "cashInRequest"));
+	    _service.addOperation(__operation);
+	    
+
+	    
+	    
+            _operations[10]=__operation;
+            
+        
+                   __operation = new org.apache.axis2.description.OutInAxisOperation();
+                
+
+            __operation.setName(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "creditRequest"));
+	    _service.addOperation(__operation);
+	    
+
+	    
+	    
+            _operations[11]=__operation;
             
         
         }
@@ -202,7 +238,6 @@
      */
     public MPWalletServiceStub(org.apache.axis2.context.ConfigurationContext configurationContext) throws org.apache.axis2.AxisFault {
         
-                    //this(configurationContext,"http://127.0.0.1:5505/MMTransferService/mPWalletService" );
                     this(configurationContext,"http://41.220.65.177:8090/MMTransferService/mPWalletService" );
                 
     }
@@ -211,9 +246,8 @@
      * Default Constructor
      */
     public MPWalletServiceStub() throws org.apache.axis2.AxisFault {
-    	this("http://41.220.65.177:8090/MMTransferService/mPWalletService" );
         
-                    //this("http://127.0.0.1:5505/MMTransferService/mPWalletService" );
+                    this("http://41.220.65.177:8090/MMTransferService/mPWalletService" );
                 
     }
 
@@ -230,18 +264,18 @@
                     /**
                      * Auto generated method signature
                      * 
-                     * @see com.mobilemoney.services.mwallet.MPWalletService#airtimeTopupRequest
-                     * @param airtimeTopupRequest
+                     * @see com.mobilemoney.services.mwallet.MPWalletService#cashOutRequest
+                     * @param cashOutRequest16
                     
-                     * @param additionalHeader
+                     * @param additionalHeader17
                     
                      */
 
                     
 
-                            public  com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse airtimeTopupRequest(
+                            public  com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse cashOutRequest(
 
-                            com.mobilemoney.services.mwallet.MPWalletServiceStub.AirtimeTopupRequest airtimeTopupRequest,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader)
+                            com.mobilemoney.services.mwallet.MPWalletServiceStub.CashOutRequest cashOutRequest16,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader17)
                         
 
                     throws java.rmi.RemoteException
@@ -250,6 +284,298 @@
               org.apache.axis2.context.MessageContext _messageContext = null;
               try{
                org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[0].getName());
+              _operationClient.getOptions().setAction("http://mobilemoney.com/mWallet/cashOutRequest");
+              _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
+
+              
+              
+                  addPropertyToOperationClient(_operationClient,org.apache.axis2.description.WSDL2Constants.ATTR_WHTTP_QUERY_PARAMETER_SEPARATOR,"&");
+              
+
+              // create a message context
+              _messageContext = new org.apache.axis2.context.MessageContext();
+
+              
+
+              // create SOAP envelope with that payload
+              org.apache.axiom.soap.SOAPEnvelope env = null;
+                    
+                                                    
+                                                    env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
+                                                    cashOutRequest16,
+                                                    optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "cashOutRequest")), new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "cashOutRequest"));
+                                                
+                                               env.build();
+                                    
+                                        // add the children only if the parameter is not null
+                                        if (additionalHeader17!=null){
+                                            
+                                                    org.apache.axiom.om.OMElement omElementadditionalHeader17 = toOM(additionalHeader17, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "cashOutRequest")));
+                                                    addHeader(omElementadditionalHeader17,env);
+                                                
+                                        }
+                                    
+        //adding SOAP soap_headers
+         _serviceClient.addHeadersToEnvelope(env);
+        // set the message context with that soap envelope
+        _messageContext.setEnvelope(env);
+
+        // add the message contxt to the operation client
+        _operationClient.addMessageContext(_messageContext);
+
+        //execute the operation client
+        _operationClient.execute(true);
+
+         
+               org.apache.axis2.context.MessageContext _returnMessageContext = _operationClient.getMessageContext(
+                                           org.apache.axis2.wsdl.WSDLConstants.MESSAGE_LABEL_IN_VALUE);
+                org.apache.axiom.soap.SOAPEnvelope _returnEnv = _returnMessageContext.getEnvelope();
+                
+                
+                                java.lang.Object object = fromOM(
+                                             _returnEnv.getBody().getFirstElement() ,
+                                             com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse.class,
+                                              getEnvelopeNamespaces(_returnEnv));
+
+                               
+                                        return (com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse)object;
+                                   
+         }catch(org.apache.axis2.AxisFault f){
+
+            org.apache.axiom.om.OMElement faultElt = f.getDetail();
+            if (faultElt!=null){
+                if (faultExceptionNameMap.containsKey(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"cashOutRequest"))){
+                    //make the fault by reflection
+                    try{
+                        java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"cashOutRequest"));
+                        java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
+                        java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(String.class);
+                        java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
+                        //message class
+                        java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"cashOutRequest"));
+                        java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
+                        java.lang.Object messageObject = fromOM(faultElt,messageClass,null);
+                        java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
+                                   new java.lang.Class[]{messageClass});
+                        m.invoke(ex,new java.lang.Object[]{messageObject});
+                        
+
+                        throw new java.rmi.RemoteException(ex.getMessage(), ex);
+                    }catch(java.lang.ClassCastException e){
+                       // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    } catch (java.lang.ClassNotFoundException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    }catch (java.lang.NoSuchMethodException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    } catch (java.lang.reflect.InvocationTargetException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    }  catch (java.lang.IllegalAccessException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    }   catch (java.lang.InstantiationException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    }
+                }else{
+                    throw f;
+                }
+            }else{
+                throw f;
+            }
+            } finally {
+                if (_messageContext.getTransportOut() != null) {
+                      _messageContext.getTransportOut().getSender().cleanup(_messageContext);
+                }
+            }
+        }
+            
+                /**
+                * Auto generated method signature for Asynchronous Invocations
+                * 
+                * @see com.mobilemoney.services.mwallet.MPWalletService#startcashOutRequest
+                    * @param cashOutRequest16
+                
+                    * @param additionalHeader17
+                
+                */
+                public  void startcashOutRequest(
+
+                 com.mobilemoney.services.mwallet.MPWalletServiceStub.CashOutRequest cashOutRequest16,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader17,
+                    
+
+                  final com.mobilemoney.services.mwallet.MPWalletServiceCallbackHandler callback)
+
+                throws java.rmi.RemoteException{
+
+              org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[0].getName());
+             _operationClient.getOptions().setAction("http://mobilemoney.com/mWallet/cashOutRequest");
+             _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
+
+              
+              
+                  addPropertyToOperationClient(_operationClient,org.apache.axis2.description.WSDL2Constants.ATTR_WHTTP_QUERY_PARAMETER_SEPARATOR,"&");
+              
+
+
+              // create SOAP envelope with that payload
+              org.apache.axiom.soap.SOAPEnvelope env=null;
+              final org.apache.axis2.context.MessageContext _messageContext = new org.apache.axis2.context.MessageContext();
+
+                    
+                                    //Style is Doc.
+                                    
+                                                    
+                                                    env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
+                                                    cashOutRequest16,
+                                                    optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "cashOutRequest")), new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "cashOutRequest"));
+                                                
+                                         // add the soap_headers only if they are not null
+                                        if (additionalHeader17!=null){
+                                           
+                                                    org.apache.axiom.om.OMElement omElementadditionalHeader17 = toOM(additionalHeader17, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "cashOutRequest")));
+                                                    addHeader(omElementadditionalHeader17,env);
+                                                
+                                        }
+                                    
+        // adding SOAP soap_headers
+         _serviceClient.addHeadersToEnvelope(env);
+        // create message context with that soap envelope
+        _messageContext.setEnvelope(env);
+
+        // add the message context to the operation client
+        _operationClient.addMessageContext(_messageContext);
+
+
+                    
+                        _operationClient.setCallback(new org.apache.axis2.client.async.AxisCallback() {
+                            public void onMessage(org.apache.axis2.context.MessageContext resultContext) {
+                            try {
+                                org.apache.axiom.soap.SOAPEnvelope resultEnv = resultContext.getEnvelope();
+                                
+                                        java.lang.Object object = fromOM(resultEnv.getBody().getFirstElement(),
+                                                                         com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse.class,
+                                                                         getEnvelopeNamespaces(resultEnv));
+                                        callback.receiveResultcashOutRequest(
+                                        (com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse)object);
+                                        
+                            } catch (org.apache.axis2.AxisFault e) {
+                                callback.receiveErrorcashOutRequest(e);
+                            }
+                            }
+
+                            public void onError(java.lang.Exception error) {
+								if (error instanceof org.apache.axis2.AxisFault) {
+									org.apache.axis2.AxisFault f = (org.apache.axis2.AxisFault) error;
+									org.apache.axiom.om.OMElement faultElt = f.getDetail();
+									if (faultElt!=null){
+										if (faultExceptionNameMap.containsKey(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"cashOutRequest"))){
+											//make the fault by reflection
+											try{
+													java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"cashOutRequest"));
+													java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
+													java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(String.class);
+                                                    java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
+													//message class
+													java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"cashOutRequest"));
+														java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
+													java.lang.Object messageObject = fromOM(faultElt,messageClass,null);
+													java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
+															new java.lang.Class[]{messageClass});
+													m.invoke(ex,new java.lang.Object[]{messageObject});
+													
+					
+										            callback.receiveErrorcashOutRequest(new java.rmi.RemoteException(ex.getMessage(), ex));
+                                            } catch(java.lang.ClassCastException e){
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcashOutRequest(f);
+                                            } catch (java.lang.ClassNotFoundException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcashOutRequest(f);
+                                            } catch (java.lang.NoSuchMethodException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcashOutRequest(f);
+                                            } catch (java.lang.reflect.InvocationTargetException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcashOutRequest(f);
+                                            } catch (java.lang.IllegalAccessException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcashOutRequest(f);
+                                            } catch (java.lang.InstantiationException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcashOutRequest(f);
+                                            } catch (org.apache.axis2.AxisFault e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcashOutRequest(f);
+                                            }
+									    } else {
+										    callback.receiveErrorcashOutRequest(f);
+									    }
+									} else {
+									    callback.receiveErrorcashOutRequest(f);
+									}
+								} else {
+								    callback.receiveErrorcashOutRequest(error);
+								}
+                            }
+
+                            public void onFault(org.apache.axis2.context.MessageContext faultContext) {
+                                org.apache.axis2.AxisFault fault = org.apache.axis2.util.Utils.getInboundFaultFromMessageContext(faultContext);
+                                onError(fault);
+                            }
+
+                            public void onComplete() {
+                                try {
+                                    _messageContext.getTransportOut().getSender().cleanup(_messageContext);
+                                } catch (org.apache.axis2.AxisFault axisFault) {
+                                    callback.receiveErrorcashOutRequest(axisFault);
+                                }
+                            }
+                });
+                        
+
+          org.apache.axis2.util.CallbackReceiver _callbackReceiver = null;
+        if ( _operations[0].getMessageReceiver()==null &&  _operationClient.getOptions().isUseSeparateListener()) {
+           _callbackReceiver = new org.apache.axis2.util.CallbackReceiver();
+          _operations[0].setMessageReceiver(
+                    _callbackReceiver);
+        }
+
+           //execute the operation client
+           _operationClient.execute(false);
+
+                    }
+                
+                    /**
+                     * Auto generated method signature
+                     * 
+                     * @see com.mobilemoney.services.mwallet.MPWalletService#airtimeTopupRequest
+                     * @param airtimeTopupRequest19
+                    
+                     * @param additionalHeader20
+                    
+                     */
+
+                    
+
+                            public  com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse airtimeTopupRequest(
+
+                            com.mobilemoney.services.mwallet.MPWalletServiceStub.AirtimeTopupRequest airtimeTopupRequest19,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader20)
+                        
+
+                    throws java.rmi.RemoteException
+                    
+                    {
+              org.apache.axis2.context.MessageContext _messageContext = null;
+              try{
+               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[1].getName());
               _operationClient.getOptions().setAction("http://mobilemoney.com/mWallet/airtimeTopupRequest");
               _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
 
@@ -268,7 +594,7 @@
                     
                                                     
                                                     env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    airtimeTopupRequest,
+                                                    airtimeTopupRequest19,
                                                     optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
                                                     "airtimeTopupRequest")), new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
                                                     "airtimeTopupRequest"));
@@ -276,10 +602,10 @@
                                                env.build();
                                     
                                         // add the children only if the parameter is not null
-                                        if (additionalHeader!=null){
+                                        if (additionalHeader20!=null){
                                             
-                                                    org.apache.axiom.om.OMElement omElementadditionalHeader = toOM(additionalHeader, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "airtimeTopupRequest")));
-                                                    addHeader(omElementadditionalHeader,env);
+                                                    org.apache.axiom.om.OMElement omElementadditionalHeader20 = toOM(additionalHeader20, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "airtimeTopupRequest")));
+                                                    addHeader(omElementadditionalHeader20,env);
                                                 
                                         }
                                     
@@ -317,7 +643,8 @@
                     try{
                         java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"airtimeTopupRequest"));
                         java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
-                        java.lang.Exception ex = (java.lang.Exception) exceptionClass.newInstance();
+                        java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(String.class);
+                        java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
                         //message class
                         java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"airtimeTopupRequest"));
                         java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
@@ -360,13 +687,171 @@
             }
         }
             
+                /**
+                * Auto generated method signature for Asynchronous Invocations
+                * 
+                * @see com.mobilemoney.services.mwallet.MPWalletService#startairtimeTopupRequest
+                    * @param airtimeTopupRequest19
+                
+                    * @param additionalHeader20
+                
+                */
+                public  void startairtimeTopupRequest(
+
+                 com.mobilemoney.services.mwallet.MPWalletServiceStub.AirtimeTopupRequest airtimeTopupRequest19,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader20,
+                    
+
+                  final com.mobilemoney.services.mwallet.MPWalletServiceCallbackHandler callback)
+
+                throws java.rmi.RemoteException{
+
+              org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[1].getName());
+             _operationClient.getOptions().setAction("http://mobilemoney.com/mWallet/airtimeTopupRequest");
+             _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
+
+              
+              
+                  addPropertyToOperationClient(_operationClient,org.apache.axis2.description.WSDL2Constants.ATTR_WHTTP_QUERY_PARAMETER_SEPARATOR,"&");
+              
+
+
+              // create SOAP envelope with that payload
+              org.apache.axiom.soap.SOAPEnvelope env=null;
+              final org.apache.axis2.context.MessageContext _messageContext = new org.apache.axis2.context.MessageContext();
+
+                    
+                                    //Style is Doc.
+                                    
+                                                    
+                                                    env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
+                                                    airtimeTopupRequest19,
+                                                    optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "airtimeTopupRequest")), new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "airtimeTopupRequest"));
+                                                
+                                         // add the soap_headers only if they are not null
+                                        if (additionalHeader20!=null){
+                                           
+                                                    org.apache.axiom.om.OMElement omElementadditionalHeader20 = toOM(additionalHeader20, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "airtimeTopupRequest")));
+                                                    addHeader(omElementadditionalHeader20,env);
+                                                
+                                        }
+                                    
+        // adding SOAP soap_headers
+         _serviceClient.addHeadersToEnvelope(env);
+        // create message context with that soap envelope
+        _messageContext.setEnvelope(env);
+
+        // add the message context to the operation client
+        _operationClient.addMessageContext(_messageContext);
+
+
+                    
+                        _operationClient.setCallback(new org.apache.axis2.client.async.AxisCallback() {
+                            public void onMessage(org.apache.axis2.context.MessageContext resultContext) {
+                            try {
+                                org.apache.axiom.soap.SOAPEnvelope resultEnv = resultContext.getEnvelope();
+                                
+                                        java.lang.Object object = fromOM(resultEnv.getBody().getFirstElement(),
+                                                                         com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse.class,
+                                                                         getEnvelopeNamespaces(resultEnv));
+                                        callback.receiveResultairtimeTopupRequest(
+                                        (com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse)object);
+                                        
+                            } catch (org.apache.axis2.AxisFault e) {
+                                callback.receiveErrorairtimeTopupRequest(e);
+                            }
+                            }
+
+                            public void onError(java.lang.Exception error) {
+								if (error instanceof org.apache.axis2.AxisFault) {
+									org.apache.axis2.AxisFault f = (org.apache.axis2.AxisFault) error;
+									org.apache.axiom.om.OMElement faultElt = f.getDetail();
+									if (faultElt!=null){
+										if (faultExceptionNameMap.containsKey(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"airtimeTopupRequest"))){
+											//make the fault by reflection
+											try{
+													java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"airtimeTopupRequest"));
+													java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
+													java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(String.class);
+                                                    java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
+													//message class
+													java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"airtimeTopupRequest"));
+														java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
+													java.lang.Object messageObject = fromOM(faultElt,messageClass,null);
+													java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
+															new java.lang.Class[]{messageClass});
+													m.invoke(ex,new java.lang.Object[]{messageObject});
+													
+					
+										            callback.receiveErrorairtimeTopupRequest(new java.rmi.RemoteException(ex.getMessage(), ex));
+                                            } catch(java.lang.ClassCastException e){
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorairtimeTopupRequest(f);
+                                            } catch (java.lang.ClassNotFoundException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorairtimeTopupRequest(f);
+                                            } catch (java.lang.NoSuchMethodException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorairtimeTopupRequest(f);
+                                            } catch (java.lang.reflect.InvocationTargetException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorairtimeTopupRequest(f);
+                                            } catch (java.lang.IllegalAccessException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorairtimeTopupRequest(f);
+                                            } catch (java.lang.InstantiationException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorairtimeTopupRequest(f);
+                                            } catch (org.apache.axis2.AxisFault e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorairtimeTopupRequest(f);
+                                            }
+									    } else {
+										    callback.receiveErrorairtimeTopupRequest(f);
+									    }
+									} else {
+									    callback.receiveErrorairtimeTopupRequest(f);
+									}
+								} else {
+								    callback.receiveErrorairtimeTopupRequest(error);
+								}
+                            }
+
+                            public void onFault(org.apache.axis2.context.MessageContext faultContext) {
+                                org.apache.axis2.AxisFault fault = org.apache.axis2.util.Utils.getInboundFaultFromMessageContext(faultContext);
+                                onError(fault);
+                            }
+
+                            public void onComplete() {
+                                try {
+                                    _messageContext.getTransportOut().getSender().cleanup(_messageContext);
+                                } catch (org.apache.axis2.AxisFault axisFault) {
+                                    callback.receiveErrorairtimeTopupRequest(axisFault);
+                                }
+                            }
+                });
+                        
+
+          org.apache.axis2.util.CallbackReceiver _callbackReceiver = null;
+        if ( _operations[1].getMessageReceiver()==null &&  _operationClient.getOptions().isUseSeparateListener()) {
+           _callbackReceiver = new org.apache.axis2.util.CallbackReceiver();
+          _operations[1].setMessageReceiver(
+                    _callbackReceiver);
+        }
+
+           //execute the operation client
+           _operationClient.execute(false);
+
+                    }
+                
                     /**
                      * Auto generated method signature
                      * 
                      * @see com.mobilemoney.services.mwallet.MPWalletService#debitRequest
-                     * @param debitRequest
+                     * @param debitRequest22
                     
-                     * @param additionalHeader0
+                     * @param additionalHeader23
                     
                      */
 
@@ -374,7 +859,7 @@
 
                             public  com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse debitRequest(
 
-                            com.mobilemoney.services.mwallet.MPWalletServiceStub.DebitRequest debitRequest)
+                            com.mobilemoney.services.mwallet.MPWalletServiceStub.DebitRequest debitRequest22,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader23)
                         
 
                     throws java.rmi.RemoteException
@@ -382,7 +867,7 @@
                     {
               org.apache.axis2.context.MessageContext _messageContext = null;
               try{
-               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[1].getName());
+               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[2].getName());
               _operationClient.getOptions().setAction("http://mobilemoney.com/mWallet/debitRequest");
               _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
 
@@ -401,20 +886,20 @@
                     
                                                     
                                                     env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    debitRequest,
+                                                    debitRequest22,
                                                     optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
                                                     "debitRequest")), new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
                                                     "debitRequest"));
                                                 
                                                env.build();
                                     
-//                                        // add the children only if the parameter is not null
-//                                        if (additionalHeader0!=null){
-//                                            
-//                                                    org.apache.axiom.om.OMElement omElementadditionalHeader0 = toOM(additionalHeader0, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "debitRequest")));
-//                                                    addHeader(omElementadditionalHeader0,env);
-//                                                
-//                                        }
+                                        // add the children only if the parameter is not null
+                                        if (additionalHeader23!=null){
+                                            
+                                                    org.apache.axiom.om.OMElement omElementadditionalHeader23 = toOM(additionalHeader23, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "debitRequest")));
+                                                    addHeader(omElementadditionalHeader23,env);
+                                                
+                                        }
                                     
         //adding SOAP soap_headers
          _serviceClient.addHeadersToEnvelope(env);
@@ -450,7 +935,8 @@
                     try{
                         java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"debitRequest"));
                         java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
-                        java.lang.Exception ex = (java.lang.Exception) exceptionClass.newInstance();
+                        java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(String.class);
+                        java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
                         //message class
                         java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"debitRequest"));
                         java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
@@ -493,13 +979,171 @@
             }
         }
             
+                /**
+                * Auto generated method signature for Asynchronous Invocations
+                * 
+                * @see com.mobilemoney.services.mwallet.MPWalletService#startdebitRequest
+                    * @param debitRequest22
+                
+                    * @param additionalHeader23
+                
+                */
+                public  void startdebitRequest(
+
+                 com.mobilemoney.services.mwallet.MPWalletServiceStub.DebitRequest debitRequest22,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader23,
+                    
+
+                  final com.mobilemoney.services.mwallet.MPWalletServiceCallbackHandler callback)
+
+                throws java.rmi.RemoteException{
+
+              org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[2].getName());
+             _operationClient.getOptions().setAction("http://mobilemoney.com/mWallet/debitRequest");
+             _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
+
+              
+              
+                  addPropertyToOperationClient(_operationClient,org.apache.axis2.description.WSDL2Constants.ATTR_WHTTP_QUERY_PARAMETER_SEPARATOR,"&");
+              
+
+
+              // create SOAP envelope with that payload
+              org.apache.axiom.soap.SOAPEnvelope env=null;
+              final org.apache.axis2.context.MessageContext _messageContext = new org.apache.axis2.context.MessageContext();
+
+                    
+                                    //Style is Doc.
+                                    
+                                                    
+                                                    env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
+                                                    debitRequest22,
+                                                    optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "debitRequest")), new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "debitRequest"));
+                                                
+                                         // add the soap_headers only if they are not null
+                                        if (additionalHeader23!=null){
+                                           
+                                                    org.apache.axiom.om.OMElement omElementadditionalHeader23 = toOM(additionalHeader23, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "debitRequest")));
+                                                    addHeader(omElementadditionalHeader23,env);
+                                                
+                                        }
+                                    
+        // adding SOAP soap_headers
+         _serviceClient.addHeadersToEnvelope(env);
+        // create message context with that soap envelope
+        _messageContext.setEnvelope(env);
+
+        // add the message context to the operation client
+        _operationClient.addMessageContext(_messageContext);
+
+
+                    
+                        _operationClient.setCallback(new org.apache.axis2.client.async.AxisCallback() {
+                            public void onMessage(org.apache.axis2.context.MessageContext resultContext) {
+                            try {
+                                org.apache.axiom.soap.SOAPEnvelope resultEnv = resultContext.getEnvelope();
+                                
+                                        java.lang.Object object = fromOM(resultEnv.getBody().getFirstElement(),
+                                                                         com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse.class,
+                                                                         getEnvelopeNamespaces(resultEnv));
+                                        callback.receiveResultdebitRequest(
+                                        (com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse)object);
+                                        
+                            } catch (org.apache.axis2.AxisFault e) {
+                                callback.receiveErrordebitRequest(e);
+                            }
+                            }
+
+                            public void onError(java.lang.Exception error) {
+								if (error instanceof org.apache.axis2.AxisFault) {
+									org.apache.axis2.AxisFault f = (org.apache.axis2.AxisFault) error;
+									org.apache.axiom.om.OMElement faultElt = f.getDetail();
+									if (faultElt!=null){
+										if (faultExceptionNameMap.containsKey(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"debitRequest"))){
+											//make the fault by reflection
+											try{
+													java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"debitRequest"));
+													java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
+													java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(String.class);
+                                                    java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
+													//message class
+													java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"debitRequest"));
+														java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
+													java.lang.Object messageObject = fromOM(faultElt,messageClass,null);
+													java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
+															new java.lang.Class[]{messageClass});
+													m.invoke(ex,new java.lang.Object[]{messageObject});
+													
+					
+										            callback.receiveErrordebitRequest(new java.rmi.RemoteException(ex.getMessage(), ex));
+                                            } catch(java.lang.ClassCastException e){
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrordebitRequest(f);
+                                            } catch (java.lang.ClassNotFoundException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrordebitRequest(f);
+                                            } catch (java.lang.NoSuchMethodException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrordebitRequest(f);
+                                            } catch (java.lang.reflect.InvocationTargetException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrordebitRequest(f);
+                                            } catch (java.lang.IllegalAccessException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrordebitRequest(f);
+                                            } catch (java.lang.InstantiationException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrordebitRequest(f);
+                                            } catch (org.apache.axis2.AxisFault e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrordebitRequest(f);
+                                            }
+									    } else {
+										    callback.receiveErrordebitRequest(f);
+									    }
+									} else {
+									    callback.receiveErrordebitRequest(f);
+									}
+								} else {
+								    callback.receiveErrordebitRequest(error);
+								}
+                            }
+
+                            public void onFault(org.apache.axis2.context.MessageContext faultContext) {
+                                org.apache.axis2.AxisFault fault = org.apache.axis2.util.Utils.getInboundFaultFromMessageContext(faultContext);
+                                onError(fault);
+                            }
+
+                            public void onComplete() {
+                                try {
+                                    _messageContext.getTransportOut().getSender().cleanup(_messageContext);
+                                } catch (org.apache.axis2.AxisFault axisFault) {
+                                    callback.receiveErrordebitRequest(axisFault);
+                                }
+                            }
+                });
+                        
+
+          org.apache.axis2.util.CallbackReceiver _callbackReceiver = null;
+        if ( _operations[2].getMessageReceiver()==null &&  _operationClient.getOptions().isUseSeparateListener()) {
+           _callbackReceiver = new org.apache.axis2.util.CallbackReceiver();
+          _operations[2].setMessageReceiver(
+                    _callbackReceiver);
+        }
+
+           //execute the operation client
+           _operationClient.execute(false);
+
+                    }
+                
                     /**
                      * Auto generated method signature
                      * 
                      * @see com.mobilemoney.services.mwallet.MPWalletService#pingRequest
-                     * @param pingRequest
+                     * @param pingRequest25
                     
-                     * @param additionalHeader2
+                     * @param additionalHeader26
                     
                      */
 
@@ -507,7 +1151,7 @@
 
                             public  com.mobilemoney.services.mwallet.MPWalletServiceStub.PingResponse pingRequest(
 
-                            com.mobilemoney.services.mwallet.MPWalletServiceStub.PingRequest pingRequest,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader2)
+                            com.mobilemoney.services.mwallet.MPWalletServiceStub.PingRequest pingRequest25,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader26)
                         
 
                     throws java.rmi.RemoteException
@@ -515,7 +1159,7 @@
                     {
               org.apache.axis2.context.MessageContext _messageContext = null;
               try{
-               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[2].getName());
+               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[3].getName());
               _operationClient.getOptions().setAction("http://mobilemoney.com/mWallet/pingRequest");
               _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
 
@@ -534,7 +1178,7 @@
                     
                                                     
                                                     env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    pingRequest,
+                                                    pingRequest25,
                                                     optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
                                                     "pingRequest")), new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
                                                     "pingRequest"));
@@ -542,10 +1186,10 @@
                                                env.build();
                                     
                                         // add the children only if the parameter is not null
-                                        if (additionalHeader2!=null){
+                                        if (additionalHeader26!=null){
                                             
-                                                    org.apache.axiom.om.OMElement omElementadditionalHeader2 = toOM(additionalHeader2, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "pingRequest")));
-                                                    addHeader(omElementadditionalHeader2,env);
+                                                    org.apache.axiom.om.OMElement omElementadditionalHeader26 = toOM(additionalHeader26, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "pingRequest")));
+                                                    addHeader(omElementadditionalHeader26,env);
                                                 
                                         }
                                     
@@ -583,7 +1227,8 @@
                     try{
                         java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"pingRequest"));
                         java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
-                        java.lang.Exception ex = (java.lang.Exception) exceptionClass.newInstance();
+                        java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(String.class);
+                        java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
                         //message class
                         java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"pingRequest"));
                         java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
@@ -626,13 +1271,171 @@
             }
         }
             
+                /**
+                * Auto generated method signature for Asynchronous Invocations
+                * 
+                * @see com.mobilemoney.services.mwallet.MPWalletService#startpingRequest
+                    * @param pingRequest25
+                
+                    * @param additionalHeader26
+                
+                */
+                public  void startpingRequest(
+
+                 com.mobilemoney.services.mwallet.MPWalletServiceStub.PingRequest pingRequest25,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader26,
+                    
+
+                  final com.mobilemoney.services.mwallet.MPWalletServiceCallbackHandler callback)
+
+                throws java.rmi.RemoteException{
+
+              org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[3].getName());
+             _operationClient.getOptions().setAction("http://mobilemoney.com/mWallet/pingRequest");
+             _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
+
+              
+              
+                  addPropertyToOperationClient(_operationClient,org.apache.axis2.description.WSDL2Constants.ATTR_WHTTP_QUERY_PARAMETER_SEPARATOR,"&");
+              
+
+
+              // create SOAP envelope with that payload
+              org.apache.axiom.soap.SOAPEnvelope env=null;
+              final org.apache.axis2.context.MessageContext _messageContext = new org.apache.axis2.context.MessageContext();
+
+                    
+                                    //Style is Doc.
+                                    
+                                                    
+                                                    env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
+                                                    pingRequest25,
+                                                    optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "pingRequest")), new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "pingRequest"));
+                                                
+                                         // add the soap_headers only if they are not null
+                                        if (additionalHeader26!=null){
+                                           
+                                                    org.apache.axiom.om.OMElement omElementadditionalHeader26 = toOM(additionalHeader26, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "pingRequest")));
+                                                    addHeader(omElementadditionalHeader26,env);
+                                                
+                                        }
+                                    
+        // adding SOAP soap_headers
+         _serviceClient.addHeadersToEnvelope(env);
+        // create message context with that soap envelope
+        _messageContext.setEnvelope(env);
+
+        // add the message context to the operation client
+        _operationClient.addMessageContext(_messageContext);
+
+
+                    
+                        _operationClient.setCallback(new org.apache.axis2.client.async.AxisCallback() {
+                            public void onMessage(org.apache.axis2.context.MessageContext resultContext) {
+                            try {
+                                org.apache.axiom.soap.SOAPEnvelope resultEnv = resultContext.getEnvelope();
+                                
+                                        java.lang.Object object = fromOM(resultEnv.getBody().getFirstElement(),
+                                                                         com.mobilemoney.services.mwallet.MPWalletServiceStub.PingResponse.class,
+                                                                         getEnvelopeNamespaces(resultEnv));
+                                        callback.receiveResultpingRequest(
+                                        (com.mobilemoney.services.mwallet.MPWalletServiceStub.PingResponse)object);
+                                        
+                            } catch (org.apache.axis2.AxisFault e) {
+                                callback.receiveErrorpingRequest(e);
+                            }
+                            }
+
+                            public void onError(java.lang.Exception error) {
+								if (error instanceof org.apache.axis2.AxisFault) {
+									org.apache.axis2.AxisFault f = (org.apache.axis2.AxisFault) error;
+									org.apache.axiom.om.OMElement faultElt = f.getDetail();
+									if (faultElt!=null){
+										if (faultExceptionNameMap.containsKey(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"pingRequest"))){
+											//make the fault by reflection
+											try{
+													java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"pingRequest"));
+													java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
+													java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(String.class);
+                                                    java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
+													//message class
+													java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"pingRequest"));
+														java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
+													java.lang.Object messageObject = fromOM(faultElt,messageClass,null);
+													java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
+															new java.lang.Class[]{messageClass});
+													m.invoke(ex,new java.lang.Object[]{messageObject});
+													
+					
+										            callback.receiveErrorpingRequest(new java.rmi.RemoteException(ex.getMessage(), ex));
+                                            } catch(java.lang.ClassCastException e){
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorpingRequest(f);
+                                            } catch (java.lang.ClassNotFoundException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorpingRequest(f);
+                                            } catch (java.lang.NoSuchMethodException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorpingRequest(f);
+                                            } catch (java.lang.reflect.InvocationTargetException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorpingRequest(f);
+                                            } catch (java.lang.IllegalAccessException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorpingRequest(f);
+                                            } catch (java.lang.InstantiationException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorpingRequest(f);
+                                            } catch (org.apache.axis2.AxisFault e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorpingRequest(f);
+                                            }
+									    } else {
+										    callback.receiveErrorpingRequest(f);
+									    }
+									} else {
+									    callback.receiveErrorpingRequest(f);
+									}
+								} else {
+								    callback.receiveErrorpingRequest(error);
+								}
+                            }
+
+                            public void onFault(org.apache.axis2.context.MessageContext faultContext) {
+                                org.apache.axis2.AxisFault fault = org.apache.axis2.util.Utils.getInboundFaultFromMessageContext(faultContext);
+                                onError(fault);
+                            }
+
+                            public void onComplete() {
+                                try {
+                                    _messageContext.getTransportOut().getSender().cleanup(_messageContext);
+                                } catch (org.apache.axis2.AxisFault axisFault) {
+                                    callback.receiveErrorpingRequest(axisFault);
+                                }
+                            }
+                });
+                        
+
+          org.apache.axis2.util.CallbackReceiver _callbackReceiver = null;
+        if ( _operations[3].getMessageReceiver()==null &&  _operationClient.getOptions().isUseSeparateListener()) {
+           _callbackReceiver = new org.apache.axis2.util.CallbackReceiver();
+          _operations[3].setMessageReceiver(
+                    _callbackReceiver);
+        }
+
+           //execute the operation client
+           _operationClient.execute(false);
+
+                    }
+                
                     /**
                      * Auto generated method signature
                      * 
                      * @see com.mobilemoney.services.mwallet.MPWalletService#customerVerificationRequest
-                     * @param customerVerificationRequest
+                     * @param customerVerificationRequest28
                     
-                     * @param additionalHeader3
+                     * @param additionalHeader29
                     
                      */
 
@@ -640,7 +1443,7 @@
 
                             public  com.mobilemoney.services.mwallet.MPWalletServiceStub.CustomerVerificationResponse customerVerificationRequest(
 
-                            com.mobilemoney.services.mwallet.MPWalletServiceStub.CustomerVerificationRequest customerVerificationRequest,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader3)
+                            com.mobilemoney.services.mwallet.MPWalletServiceStub.CustomerVerificationRequest customerVerificationRequest28,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader29)
                         
 
                     throws java.rmi.RemoteException
@@ -648,7 +1451,7 @@
                     {
               org.apache.axis2.context.MessageContext _messageContext = null;
               try{
-               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[3].getName());
+               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[4].getName());
               _operationClient.getOptions().setAction("http://mobilemoney.com/mWallet/customerVerificationRequest");
               _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
 
@@ -667,7 +1470,7 @@
                     
                                                     
                                                     env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    customerVerificationRequest,
+                                                    customerVerificationRequest28,
                                                     optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
                                                     "customerVerificationRequest")), new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
                                                     "customerVerificationRequest"));
@@ -675,10 +1478,10 @@
                                                env.build();
                                     
                                         // add the children only if the parameter is not null
-                                        if (additionalHeader3!=null){
+                                        if (additionalHeader29!=null){
                                             
-                                                    org.apache.axiom.om.OMElement omElementadditionalHeader3 = toOM(additionalHeader3, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "customerVerificationRequest")));
-                                                    addHeader(omElementadditionalHeader3,env);
+                                                    org.apache.axiom.om.OMElement omElementadditionalHeader29 = toOM(additionalHeader29, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "customerVerificationRequest")));
+                                                    addHeader(omElementadditionalHeader29,env);
                                                 
                                         }
                                     
@@ -716,7 +1519,8 @@
                     try{
                         java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"customerVerificationRequest"));
                         java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
-                        java.lang.Exception ex = (java.lang.Exception) exceptionClass.newInstance();
+                        java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(String.class);
+                        java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
                         //message class
                         java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"customerVerificationRequest"));
                         java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
@@ -759,13 +1563,171 @@
             }
         }
             
+                /**
+                * Auto generated method signature for Asynchronous Invocations
+                * 
+                * @see com.mobilemoney.services.mwallet.MPWalletService#startcustomerVerificationRequest
+                    * @param customerVerificationRequest28
+                
+                    * @param additionalHeader29
+                
+                */
+                public  void startcustomerVerificationRequest(
+
+                 com.mobilemoney.services.mwallet.MPWalletServiceStub.CustomerVerificationRequest customerVerificationRequest28,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader29,
+                    
+
+                  final com.mobilemoney.services.mwallet.MPWalletServiceCallbackHandler callback)
+
+                throws java.rmi.RemoteException{
+
+              org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[4].getName());
+             _operationClient.getOptions().setAction("http://mobilemoney.com/mWallet/customerVerificationRequest");
+             _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
+
+              
+              
+                  addPropertyToOperationClient(_operationClient,org.apache.axis2.description.WSDL2Constants.ATTR_WHTTP_QUERY_PARAMETER_SEPARATOR,"&");
+              
+
+
+              // create SOAP envelope with that payload
+              org.apache.axiom.soap.SOAPEnvelope env=null;
+              final org.apache.axis2.context.MessageContext _messageContext = new org.apache.axis2.context.MessageContext();
+
+                    
+                                    //Style is Doc.
+                                    
+                                                    
+                                                    env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
+                                                    customerVerificationRequest28,
+                                                    optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "customerVerificationRequest")), new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "customerVerificationRequest"));
+                                                
+                                         // add the soap_headers only if they are not null
+                                        if (additionalHeader29!=null){
+                                           
+                                                    org.apache.axiom.om.OMElement omElementadditionalHeader29 = toOM(additionalHeader29, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "customerVerificationRequest")));
+                                                    addHeader(omElementadditionalHeader29,env);
+                                                
+                                        }
+                                    
+        // adding SOAP soap_headers
+         _serviceClient.addHeadersToEnvelope(env);
+        // create message context with that soap envelope
+        _messageContext.setEnvelope(env);
+
+        // add the message context to the operation client
+        _operationClient.addMessageContext(_messageContext);
+
+
+                    
+                        _operationClient.setCallback(new org.apache.axis2.client.async.AxisCallback() {
+                            public void onMessage(org.apache.axis2.context.MessageContext resultContext) {
+                            try {
+                                org.apache.axiom.soap.SOAPEnvelope resultEnv = resultContext.getEnvelope();
+                                
+                                        java.lang.Object object = fromOM(resultEnv.getBody().getFirstElement(),
+                                                                         com.mobilemoney.services.mwallet.MPWalletServiceStub.CustomerVerificationResponse.class,
+                                                                         getEnvelopeNamespaces(resultEnv));
+                                        callback.receiveResultcustomerVerificationRequest(
+                                        (com.mobilemoney.services.mwallet.MPWalletServiceStub.CustomerVerificationResponse)object);
+                                        
+                            } catch (org.apache.axis2.AxisFault e) {
+                                callback.receiveErrorcustomerVerificationRequest(e);
+                            }
+                            }
+
+                            public void onError(java.lang.Exception error) {
+								if (error instanceof org.apache.axis2.AxisFault) {
+									org.apache.axis2.AxisFault f = (org.apache.axis2.AxisFault) error;
+									org.apache.axiom.om.OMElement faultElt = f.getDetail();
+									if (faultElt!=null){
+										if (faultExceptionNameMap.containsKey(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"customerVerificationRequest"))){
+											//make the fault by reflection
+											try{
+													java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"customerVerificationRequest"));
+													java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
+													java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(String.class);
+                                                    java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
+													//message class
+													java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"customerVerificationRequest"));
+														java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
+													java.lang.Object messageObject = fromOM(faultElt,messageClass,null);
+													java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
+															new java.lang.Class[]{messageClass});
+													m.invoke(ex,new java.lang.Object[]{messageObject});
+													
+					
+										            callback.receiveErrorcustomerVerificationRequest(new java.rmi.RemoteException(ex.getMessage(), ex));
+                                            } catch(java.lang.ClassCastException e){
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcustomerVerificationRequest(f);
+                                            } catch (java.lang.ClassNotFoundException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcustomerVerificationRequest(f);
+                                            } catch (java.lang.NoSuchMethodException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcustomerVerificationRequest(f);
+                                            } catch (java.lang.reflect.InvocationTargetException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcustomerVerificationRequest(f);
+                                            } catch (java.lang.IllegalAccessException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcustomerVerificationRequest(f);
+                                            } catch (java.lang.InstantiationException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcustomerVerificationRequest(f);
+                                            } catch (org.apache.axis2.AxisFault e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcustomerVerificationRequest(f);
+                                            }
+									    } else {
+										    callback.receiveErrorcustomerVerificationRequest(f);
+									    }
+									} else {
+									    callback.receiveErrorcustomerVerificationRequest(f);
+									}
+								} else {
+								    callback.receiveErrorcustomerVerificationRequest(error);
+								}
+                            }
+
+                            public void onFault(org.apache.axis2.context.MessageContext faultContext) {
+                                org.apache.axis2.AxisFault fault = org.apache.axis2.util.Utils.getInboundFaultFromMessageContext(faultContext);
+                                onError(fault);
+                            }
+
+                            public void onComplete() {
+                                try {
+                                    _messageContext.getTransportOut().getSender().cleanup(_messageContext);
+                                } catch (org.apache.axis2.AxisFault axisFault) {
+                                    callback.receiveErrorcustomerVerificationRequest(axisFault);
+                                }
+                            }
+                });
+                        
+
+          org.apache.axis2.util.CallbackReceiver _callbackReceiver = null;
+        if ( _operations[4].getMessageReceiver()==null &&  _operationClient.getOptions().isUseSeparateListener()) {
+           _callbackReceiver = new org.apache.axis2.util.CallbackReceiver();
+          _operations[4].setMessageReceiver(
+                    _callbackReceiver);
+        }
+
+           //execute the operation client
+           _operationClient.execute(false);
+
+                    }
+                
                     /**
                      * Auto generated method signature
                      * 
                      * @see com.mobilemoney.services.mwallet.MPWalletService#transactionQueryRequest
-                     * @param transactionQueryRequest
+                     * @param transactionQueryRequest31
                     
-                     * @param additionalHeader4
+                     * @param additionalHeader32
                     
                      */
 
@@ -773,7 +1735,7 @@
 
                             public  com.mobilemoney.services.mwallet.MPWalletServiceStub.TransactionQueryResponse transactionQueryRequest(
 
-                            com.mobilemoney.services.mwallet.MPWalletServiceStub.TransactionQueryRequest transactionQueryRequest,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader4)
+                            com.mobilemoney.services.mwallet.MPWalletServiceStub.TransactionQueryRequest transactionQueryRequest31,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader32)
                         
 
                     throws java.rmi.RemoteException
@@ -781,7 +1743,7 @@
                     {
               org.apache.axis2.context.MessageContext _messageContext = null;
               try{
-               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[4].getName());
+               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[5].getName());
               _operationClient.getOptions().setAction("http://mobilemoney.com/mWallet/transactionQueryRequest");
               _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
 
@@ -800,7 +1762,7 @@
                     
                                                     
                                                     env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    transactionQueryRequest,
+                                                    transactionQueryRequest31,
                                                     optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
                                                     "transactionQueryRequest")), new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
                                                     "transactionQueryRequest"));
@@ -808,10 +1770,10 @@
                                                env.build();
                                     
                                         // add the children only if the parameter is not null
-                                        if (additionalHeader4!=null){
+                                        if (additionalHeader32!=null){
                                             
-                                                    org.apache.axiom.om.OMElement omElementadditionalHeader4 = toOM(additionalHeader4, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "transactionQueryRequest")));
-                                                    addHeader(omElementadditionalHeader4,env);
+                                                    org.apache.axiom.om.OMElement omElementadditionalHeader32 = toOM(additionalHeader32, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "transactionQueryRequest")));
+                                                    addHeader(omElementadditionalHeader32,env);
                                                 
                                         }
                                     
@@ -849,7 +1811,8 @@
                     try{
                         java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"transactionQueryRequest"));
                         java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
-                        java.lang.Exception ex = (java.lang.Exception) exceptionClass.newInstance();
+                        java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(String.class);
+                        java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
                         //message class
                         java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"transactionQueryRequest"));
                         java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
@@ -892,13 +1855,171 @@
             }
         }
             
+                /**
+                * Auto generated method signature for Asynchronous Invocations
+                * 
+                * @see com.mobilemoney.services.mwallet.MPWalletService#starttransactionQueryRequest
+                    * @param transactionQueryRequest31
+                
+                    * @param additionalHeader32
+                
+                */
+                public  void starttransactionQueryRequest(
+
+                 com.mobilemoney.services.mwallet.MPWalletServiceStub.TransactionQueryRequest transactionQueryRequest31,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader32,
+                    
+
+                  final com.mobilemoney.services.mwallet.MPWalletServiceCallbackHandler callback)
+
+                throws java.rmi.RemoteException{
+
+              org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[5].getName());
+             _operationClient.getOptions().setAction("http://mobilemoney.com/mWallet/transactionQueryRequest");
+             _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
+
+              
+              
+                  addPropertyToOperationClient(_operationClient,org.apache.axis2.description.WSDL2Constants.ATTR_WHTTP_QUERY_PARAMETER_SEPARATOR,"&");
+              
+
+
+              // create SOAP envelope with that payload
+              org.apache.axiom.soap.SOAPEnvelope env=null;
+              final org.apache.axis2.context.MessageContext _messageContext = new org.apache.axis2.context.MessageContext();
+
+                    
+                                    //Style is Doc.
+                                    
+                                                    
+                                                    env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
+                                                    transactionQueryRequest31,
+                                                    optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "transactionQueryRequest")), new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "transactionQueryRequest"));
+                                                
+                                         // add the soap_headers only if they are not null
+                                        if (additionalHeader32!=null){
+                                           
+                                                    org.apache.axiom.om.OMElement omElementadditionalHeader32 = toOM(additionalHeader32, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "transactionQueryRequest")));
+                                                    addHeader(omElementadditionalHeader32,env);
+                                                
+                                        }
+                                    
+        // adding SOAP soap_headers
+         _serviceClient.addHeadersToEnvelope(env);
+        // create message context with that soap envelope
+        _messageContext.setEnvelope(env);
+
+        // add the message context to the operation client
+        _operationClient.addMessageContext(_messageContext);
+
+
+                    
+                        _operationClient.setCallback(new org.apache.axis2.client.async.AxisCallback() {
+                            public void onMessage(org.apache.axis2.context.MessageContext resultContext) {
+                            try {
+                                org.apache.axiom.soap.SOAPEnvelope resultEnv = resultContext.getEnvelope();
+                                
+                                        java.lang.Object object = fromOM(resultEnv.getBody().getFirstElement(),
+                                                                         com.mobilemoney.services.mwallet.MPWalletServiceStub.TransactionQueryResponse.class,
+                                                                         getEnvelopeNamespaces(resultEnv));
+                                        callback.receiveResulttransactionQueryRequest(
+                                        (com.mobilemoney.services.mwallet.MPWalletServiceStub.TransactionQueryResponse)object);
+                                        
+                            } catch (org.apache.axis2.AxisFault e) {
+                                callback.receiveErrortransactionQueryRequest(e);
+                            }
+                            }
+
+                            public void onError(java.lang.Exception error) {
+								if (error instanceof org.apache.axis2.AxisFault) {
+									org.apache.axis2.AxisFault f = (org.apache.axis2.AxisFault) error;
+									org.apache.axiom.om.OMElement faultElt = f.getDetail();
+									if (faultElt!=null){
+										if (faultExceptionNameMap.containsKey(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"transactionQueryRequest"))){
+											//make the fault by reflection
+											try{
+													java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"transactionQueryRequest"));
+													java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
+													java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(String.class);
+                                                    java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
+													//message class
+													java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"transactionQueryRequest"));
+														java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
+													java.lang.Object messageObject = fromOM(faultElt,messageClass,null);
+													java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
+															new java.lang.Class[]{messageClass});
+													m.invoke(ex,new java.lang.Object[]{messageObject});
+													
+					
+										            callback.receiveErrortransactionQueryRequest(new java.rmi.RemoteException(ex.getMessage(), ex));
+                                            } catch(java.lang.ClassCastException e){
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrortransactionQueryRequest(f);
+                                            } catch (java.lang.ClassNotFoundException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrortransactionQueryRequest(f);
+                                            } catch (java.lang.NoSuchMethodException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrortransactionQueryRequest(f);
+                                            } catch (java.lang.reflect.InvocationTargetException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrortransactionQueryRequest(f);
+                                            } catch (java.lang.IllegalAccessException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrortransactionQueryRequest(f);
+                                            } catch (java.lang.InstantiationException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrortransactionQueryRequest(f);
+                                            } catch (org.apache.axis2.AxisFault e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrortransactionQueryRequest(f);
+                                            }
+									    } else {
+										    callback.receiveErrortransactionQueryRequest(f);
+									    }
+									} else {
+									    callback.receiveErrortransactionQueryRequest(f);
+									}
+								} else {
+								    callback.receiveErrortransactionQueryRequest(error);
+								}
+                            }
+
+                            public void onFault(org.apache.axis2.context.MessageContext faultContext) {
+                                org.apache.axis2.AxisFault fault = org.apache.axis2.util.Utils.getInboundFaultFromMessageContext(faultContext);
+                                onError(fault);
+                            }
+
+                            public void onComplete() {
+                                try {
+                                    _messageContext.getTransportOut().getSender().cleanup(_messageContext);
+                                } catch (org.apache.axis2.AxisFault axisFault) {
+                                    callback.receiveErrortransactionQueryRequest(axisFault);
+                                }
+                            }
+                });
+                        
+
+          org.apache.axis2.util.CallbackReceiver _callbackReceiver = null;
+        if ( _operations[5].getMessageReceiver()==null &&  _operationClient.getOptions().isUseSeparateListener()) {
+           _callbackReceiver = new org.apache.axis2.util.CallbackReceiver();
+          _operations[5].setMessageReceiver(
+                    _callbackReceiver);
+        }
+
+           //execute the operation client
+           _operationClient.execute(false);
+
+                    }
+                
                     /**
                      * Auto generated method signature
                      * 
                      * @see com.mobilemoney.services.mwallet.MPWalletService#customerRegistrationRequest
-                     * @param customerRegistrationRequest
+                     * @param customerRegistrationRequest34
                     
-                     * @param additionalHeader5
+                     * @param additionalHeader35
                     
                      */
 
@@ -906,7 +2027,7 @@
 
                             public  com.mobilemoney.services.mwallet.MPWalletServiceStub.CustomerRegistrationResponse customerRegistrationRequest(
 
-                            com.mobilemoney.services.mwallet.MPWalletServiceStub.CustomerRegistrationRequest customerRegistrationRequest,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader5)
+                            com.mobilemoney.services.mwallet.MPWalletServiceStub.CustomerRegistrationRequest customerRegistrationRequest34,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader35)
                         
 
                     throws java.rmi.RemoteException
@@ -914,7 +2035,7 @@
                     {
               org.apache.axis2.context.MessageContext _messageContext = null;
               try{
-               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[5].getName());
+               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[6].getName());
               _operationClient.getOptions().setAction("http://mobilemoney.com/mWallet/customerRegistrationRequest");
               _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
 
@@ -933,7 +2054,7 @@
                     
                                                     
                                                     env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    customerRegistrationRequest,
+                                                    customerRegistrationRequest34,
                                                     optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
                                                     "customerRegistrationRequest")), new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
                                                     "customerRegistrationRequest"));
@@ -941,10 +2062,10 @@
                                                env.build();
                                     
                                         // add the children only if the parameter is not null
-                                        if (additionalHeader5!=null){
+                                        if (additionalHeader35!=null){
                                             
-                                                    org.apache.axiom.om.OMElement omElementadditionalHeader5 = toOM(additionalHeader5, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "customerRegistrationRequest")));
-                                                    addHeader(omElementadditionalHeader5,env);
+                                                    org.apache.axiom.om.OMElement omElementadditionalHeader35 = toOM(additionalHeader35, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "customerRegistrationRequest")));
+                                                    addHeader(omElementadditionalHeader35,env);
                                                 
                                         }
                                     
@@ -982,7 +2103,8 @@
                     try{
                         java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"customerRegistrationRequest"));
                         java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
-                        java.lang.Exception ex = (java.lang.Exception) exceptionClass.newInstance();
+                        java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(String.class);
+                        java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
                         //message class
                         java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"customerRegistrationRequest"));
                         java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
@@ -1025,13 +2147,171 @@
             }
         }
             
+                /**
+                * Auto generated method signature for Asynchronous Invocations
+                * 
+                * @see com.mobilemoney.services.mwallet.MPWalletService#startcustomerRegistrationRequest
+                    * @param customerRegistrationRequest34
+                
+                    * @param additionalHeader35
+                
+                */
+                public  void startcustomerRegistrationRequest(
+
+                 com.mobilemoney.services.mwallet.MPWalletServiceStub.CustomerRegistrationRequest customerRegistrationRequest34,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader35,
+                    
+
+                  final com.mobilemoney.services.mwallet.MPWalletServiceCallbackHandler callback)
+
+                throws java.rmi.RemoteException{
+
+              org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[6].getName());
+             _operationClient.getOptions().setAction("http://mobilemoney.com/mWallet/customerRegistrationRequest");
+             _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
+
+              
+              
+                  addPropertyToOperationClient(_operationClient,org.apache.axis2.description.WSDL2Constants.ATTR_WHTTP_QUERY_PARAMETER_SEPARATOR,"&");
+              
+
+
+              // create SOAP envelope with that payload
+              org.apache.axiom.soap.SOAPEnvelope env=null;
+              final org.apache.axis2.context.MessageContext _messageContext = new org.apache.axis2.context.MessageContext();
+
+                    
+                                    //Style is Doc.
+                                    
+                                                    
+                                                    env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
+                                                    customerRegistrationRequest34,
+                                                    optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "customerRegistrationRequest")), new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "customerRegistrationRequest"));
+                                                
+                                         // add the soap_headers only if they are not null
+                                        if (additionalHeader35!=null){
+                                           
+                                                    org.apache.axiom.om.OMElement omElementadditionalHeader35 = toOM(additionalHeader35, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "customerRegistrationRequest")));
+                                                    addHeader(omElementadditionalHeader35,env);
+                                                
+                                        }
+                                    
+        // adding SOAP soap_headers
+         _serviceClient.addHeadersToEnvelope(env);
+        // create message context with that soap envelope
+        _messageContext.setEnvelope(env);
+
+        // add the message context to the operation client
+        _operationClient.addMessageContext(_messageContext);
+
+
+                    
+                        _operationClient.setCallback(new org.apache.axis2.client.async.AxisCallback() {
+                            public void onMessage(org.apache.axis2.context.MessageContext resultContext) {
+                            try {
+                                org.apache.axiom.soap.SOAPEnvelope resultEnv = resultContext.getEnvelope();
+                                
+                                        java.lang.Object object = fromOM(resultEnv.getBody().getFirstElement(),
+                                                                         com.mobilemoney.services.mwallet.MPWalletServiceStub.CustomerRegistrationResponse.class,
+                                                                         getEnvelopeNamespaces(resultEnv));
+                                        callback.receiveResultcustomerRegistrationRequest(
+                                        (com.mobilemoney.services.mwallet.MPWalletServiceStub.CustomerRegistrationResponse)object);
+                                        
+                            } catch (org.apache.axis2.AxisFault e) {
+                                callback.receiveErrorcustomerRegistrationRequest(e);
+                            }
+                            }
+
+                            public void onError(java.lang.Exception error) {
+								if (error instanceof org.apache.axis2.AxisFault) {
+									org.apache.axis2.AxisFault f = (org.apache.axis2.AxisFault) error;
+									org.apache.axiom.om.OMElement faultElt = f.getDetail();
+									if (faultElt!=null){
+										if (faultExceptionNameMap.containsKey(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"customerRegistrationRequest"))){
+											//make the fault by reflection
+											try{
+													java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"customerRegistrationRequest"));
+													java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
+													java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(String.class);
+                                                    java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
+													//message class
+													java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"customerRegistrationRequest"));
+														java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
+													java.lang.Object messageObject = fromOM(faultElt,messageClass,null);
+													java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
+															new java.lang.Class[]{messageClass});
+													m.invoke(ex,new java.lang.Object[]{messageObject});
+													
+					
+										            callback.receiveErrorcustomerRegistrationRequest(new java.rmi.RemoteException(ex.getMessage(), ex));
+                                            } catch(java.lang.ClassCastException e){
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcustomerRegistrationRequest(f);
+                                            } catch (java.lang.ClassNotFoundException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcustomerRegistrationRequest(f);
+                                            } catch (java.lang.NoSuchMethodException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcustomerRegistrationRequest(f);
+                                            } catch (java.lang.reflect.InvocationTargetException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcustomerRegistrationRequest(f);
+                                            } catch (java.lang.IllegalAccessException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcustomerRegistrationRequest(f);
+                                            } catch (java.lang.InstantiationException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcustomerRegistrationRequest(f);
+                                            } catch (org.apache.axis2.AxisFault e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcustomerRegistrationRequest(f);
+                                            }
+									    } else {
+										    callback.receiveErrorcustomerRegistrationRequest(f);
+									    }
+									} else {
+									    callback.receiveErrorcustomerRegistrationRequest(f);
+									}
+								} else {
+								    callback.receiveErrorcustomerRegistrationRequest(error);
+								}
+                            }
+
+                            public void onFault(org.apache.axis2.context.MessageContext faultContext) {
+                                org.apache.axis2.AxisFault fault = org.apache.axis2.util.Utils.getInboundFaultFromMessageContext(faultContext);
+                                onError(fault);
+                            }
+
+                            public void onComplete() {
+                                try {
+                                    _messageContext.getTransportOut().getSender().cleanup(_messageContext);
+                                } catch (org.apache.axis2.AxisFault axisFault) {
+                                    callback.receiveErrorcustomerRegistrationRequest(axisFault);
+                                }
+                            }
+                });
+                        
+
+          org.apache.axis2.util.CallbackReceiver _callbackReceiver = null;
+        if ( _operations[6].getMessageReceiver()==null &&  _operationClient.getOptions().isUseSeparateListener()) {
+           _callbackReceiver = new org.apache.axis2.util.CallbackReceiver();
+          _operations[6].setMessageReceiver(
+                    _callbackReceiver);
+        }
+
+           //execute the operation client
+           _operationClient.execute(false);
+
+                    }
+                
                     /**
                      * Auto generated method signature
                      * 
                      * @see com.mobilemoney.services.mwallet.MPWalletService#reverseTxnRequest
-                     * @param reverseTxnRequest
+                     * @param reverseTxnRequest37
                     
-                     * @param additionalHeader6
+                     * @param additionalHeader38
                     
                      */
 
@@ -1039,7 +2319,7 @@
 
                             public  com.mobilemoney.services.mwallet.MPWalletServiceStub.ReverseTxnResponse reverseTxnRequest(
 
-                            com.mobilemoney.services.mwallet.MPWalletServiceStub.ReverseTxnRequest reverseTxnRequest,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader6)
+                            com.mobilemoney.services.mwallet.MPWalletServiceStub.ReverseTxnRequest reverseTxnRequest37,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader38)
                         
 
                     throws java.rmi.RemoteException
@@ -1047,7 +2327,7 @@
                     {
               org.apache.axis2.context.MessageContext _messageContext = null;
               try{
-               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[6].getName());
+               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[7].getName());
               _operationClient.getOptions().setAction("http://mobilemoney.com/mWallet/reverseTxnRequest");
               _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
 
@@ -1066,7 +2346,7 @@
                     
                                                     
                                                     env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    reverseTxnRequest,
+                                                    reverseTxnRequest37,
                                                     optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
                                                     "reverseTxnRequest")), new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
                                                     "reverseTxnRequest"));
@@ -1074,10 +2354,10 @@
                                                env.build();
                                     
                                         // add the children only if the parameter is not null
-                                        if (additionalHeader6!=null){
+                                        if (additionalHeader38!=null){
                                             
-                                                    org.apache.axiom.om.OMElement omElementadditionalHeader6 = toOM(additionalHeader6, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "reverseTxnRequest")));
-                                                    addHeader(omElementadditionalHeader6,env);
+                                                    org.apache.axiom.om.OMElement omElementadditionalHeader38 = toOM(additionalHeader38, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "reverseTxnRequest")));
+                                                    addHeader(omElementadditionalHeader38,env);
                                                 
                                         }
                                     
@@ -1115,7 +2395,8 @@
                     try{
                         java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"reverseTxnRequest"));
                         java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
-                        java.lang.Exception ex = (java.lang.Exception) exceptionClass.newInstance();
+                        java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(String.class);
+                        java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
                         //message class
                         java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"reverseTxnRequest"));
                         java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
@@ -1158,13 +2439,171 @@
             }
         }
             
+                /**
+                * Auto generated method signature for Asynchronous Invocations
+                * 
+                * @see com.mobilemoney.services.mwallet.MPWalletService#startreverseTxnRequest
+                    * @param reverseTxnRequest37
+                
+                    * @param additionalHeader38
+                
+                */
+                public  void startreverseTxnRequest(
+
+                 com.mobilemoney.services.mwallet.MPWalletServiceStub.ReverseTxnRequest reverseTxnRequest37,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader38,
+                    
+
+                  final com.mobilemoney.services.mwallet.MPWalletServiceCallbackHandler callback)
+
+                throws java.rmi.RemoteException{
+
+              org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[7].getName());
+             _operationClient.getOptions().setAction("http://mobilemoney.com/mWallet/reverseTxnRequest");
+             _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
+
+              
+              
+                  addPropertyToOperationClient(_operationClient,org.apache.axis2.description.WSDL2Constants.ATTR_WHTTP_QUERY_PARAMETER_SEPARATOR,"&");
+              
+
+
+              // create SOAP envelope with that payload
+              org.apache.axiom.soap.SOAPEnvelope env=null;
+              final org.apache.axis2.context.MessageContext _messageContext = new org.apache.axis2.context.MessageContext();
+
+                    
+                                    //Style is Doc.
+                                    
+                                                    
+                                                    env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
+                                                    reverseTxnRequest37,
+                                                    optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "reverseTxnRequest")), new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "reverseTxnRequest"));
+                                                
+                                         // add the soap_headers only if they are not null
+                                        if (additionalHeader38!=null){
+                                           
+                                                    org.apache.axiom.om.OMElement omElementadditionalHeader38 = toOM(additionalHeader38, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "reverseTxnRequest")));
+                                                    addHeader(omElementadditionalHeader38,env);
+                                                
+                                        }
+                                    
+        // adding SOAP soap_headers
+         _serviceClient.addHeadersToEnvelope(env);
+        // create message context with that soap envelope
+        _messageContext.setEnvelope(env);
+
+        // add the message context to the operation client
+        _operationClient.addMessageContext(_messageContext);
+
+
+                    
+                        _operationClient.setCallback(new org.apache.axis2.client.async.AxisCallback() {
+                            public void onMessage(org.apache.axis2.context.MessageContext resultContext) {
+                            try {
+                                org.apache.axiom.soap.SOAPEnvelope resultEnv = resultContext.getEnvelope();
+                                
+                                        java.lang.Object object = fromOM(resultEnv.getBody().getFirstElement(),
+                                                                         com.mobilemoney.services.mwallet.MPWalletServiceStub.ReverseTxnResponse.class,
+                                                                         getEnvelopeNamespaces(resultEnv));
+                                        callback.receiveResultreverseTxnRequest(
+                                        (com.mobilemoney.services.mwallet.MPWalletServiceStub.ReverseTxnResponse)object);
+                                        
+                            } catch (org.apache.axis2.AxisFault e) {
+                                callback.receiveErrorreverseTxnRequest(e);
+                            }
+                            }
+
+                            public void onError(java.lang.Exception error) {
+								if (error instanceof org.apache.axis2.AxisFault) {
+									org.apache.axis2.AxisFault f = (org.apache.axis2.AxisFault) error;
+									org.apache.axiom.om.OMElement faultElt = f.getDetail();
+									if (faultElt!=null){
+										if (faultExceptionNameMap.containsKey(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"reverseTxnRequest"))){
+											//make the fault by reflection
+											try{
+													java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"reverseTxnRequest"));
+													java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
+													java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(String.class);
+                                                    java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
+													//message class
+													java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"reverseTxnRequest"));
+														java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
+													java.lang.Object messageObject = fromOM(faultElt,messageClass,null);
+													java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
+															new java.lang.Class[]{messageClass});
+													m.invoke(ex,new java.lang.Object[]{messageObject});
+													
+					
+										            callback.receiveErrorreverseTxnRequest(new java.rmi.RemoteException(ex.getMessage(), ex));
+                                            } catch(java.lang.ClassCastException e){
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorreverseTxnRequest(f);
+                                            } catch (java.lang.ClassNotFoundException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorreverseTxnRequest(f);
+                                            } catch (java.lang.NoSuchMethodException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorreverseTxnRequest(f);
+                                            } catch (java.lang.reflect.InvocationTargetException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorreverseTxnRequest(f);
+                                            } catch (java.lang.IllegalAccessException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorreverseTxnRequest(f);
+                                            } catch (java.lang.InstantiationException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorreverseTxnRequest(f);
+                                            } catch (org.apache.axis2.AxisFault e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorreverseTxnRequest(f);
+                                            }
+									    } else {
+										    callback.receiveErrorreverseTxnRequest(f);
+									    }
+									} else {
+									    callback.receiveErrorreverseTxnRequest(f);
+									}
+								} else {
+								    callback.receiveErrorreverseTxnRequest(error);
+								}
+                            }
+
+                            public void onFault(org.apache.axis2.context.MessageContext faultContext) {
+                                org.apache.axis2.AxisFault fault = org.apache.axis2.util.Utils.getInboundFaultFromMessageContext(faultContext);
+                                onError(fault);
+                            }
+
+                            public void onComplete() {
+                                try {
+                                    _messageContext.getTransportOut().getSender().cleanup(_messageContext);
+                                } catch (org.apache.axis2.AxisFault axisFault) {
+                                    callback.receiveErrorreverseTxnRequest(axisFault);
+                                }
+                            }
+                });
+                        
+
+          org.apache.axis2.util.CallbackReceiver _callbackReceiver = null;
+        if ( _operations[7].getMessageReceiver()==null &&  _operationClient.getOptions().isUseSeparateListener()) {
+           _callbackReceiver = new org.apache.axis2.util.CallbackReceiver();
+          _operations[7].setMessageReceiver(
+                    _callbackReceiver);
+        }
+
+           //execute the operation client
+           _operationClient.execute(false);
+
+                    }
+                
                     /**
                      * Auto generated method signature
                      * 
                      * @see com.mobilemoney.services.mwallet.MPWalletService#balanceGetRequest
-                     * @param balanceGetRequest
+                     * @param balanceGetRequest40
                     
-                     * @param additionalHeader7
+                     * @param additionalHeader41
                     
                      */
 
@@ -1172,7 +2611,7 @@
 
                             public  com.mobilemoney.services.mwallet.MPWalletServiceStub.BalanceGetResponse balanceGetRequest(
 
-                            com.mobilemoney.services.mwallet.MPWalletServiceStub.BalanceGetRequest balanceGetRequest,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader7)
+                            com.mobilemoney.services.mwallet.MPWalletServiceStub.BalanceGetRequest balanceGetRequest40,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader41)
                         
 
                     throws java.rmi.RemoteException
@@ -1180,7 +2619,7 @@
                     {
               org.apache.axis2.context.MessageContext _messageContext = null;
               try{
-               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[7].getName());
+               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[8].getName());
               _operationClient.getOptions().setAction("http://mobilemoney.com/mWallet/balanceGetRequest");
               _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
 
@@ -1199,7 +2638,7 @@
                     
                                                     
                                                     env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    balanceGetRequest,
+                                                    balanceGetRequest40,
                                                     optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
                                                     "balanceGetRequest")), new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
                                                     "balanceGetRequest"));
@@ -1207,10 +2646,10 @@
                                                env.build();
                                     
                                         // add the children only if the parameter is not null
-                                        if (additionalHeader7!=null){
+                                        if (additionalHeader41!=null){
                                             
-                                                    org.apache.axiom.om.OMElement omElementadditionalHeader7 = toOM(additionalHeader7, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "balanceGetRequest")));
-                                                    addHeader(omElementadditionalHeader7,env);
+                                                    org.apache.axiom.om.OMElement omElementadditionalHeader41 = toOM(additionalHeader41, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "balanceGetRequest")));
+                                                    addHeader(omElementadditionalHeader41,env);
                                                 
                                         }
                                     
@@ -1248,7 +2687,8 @@
                     try{
                         java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"balanceGetRequest"));
                         java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
-                        java.lang.Exception ex = (java.lang.Exception) exceptionClass.newInstance();
+                        java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(String.class);
+                        java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
                         //message class
                         java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"balanceGetRequest"));
                         java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
@@ -1291,21 +2731,179 @@
             }
         }
             
+                /**
+                * Auto generated method signature for Asynchronous Invocations
+                * 
+                * @see com.mobilemoney.services.mwallet.MPWalletService#startbalanceGetRequest
+                    * @param balanceGetRequest40
+                
+                    * @param additionalHeader41
+                
+                */
+                public  void startbalanceGetRequest(
+
+                 com.mobilemoney.services.mwallet.MPWalletServiceStub.BalanceGetRequest balanceGetRequest40,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader41,
+                    
+
+                  final com.mobilemoney.services.mwallet.MPWalletServiceCallbackHandler callback)
+
+                throws java.rmi.RemoteException{
+
+              org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[8].getName());
+             _operationClient.getOptions().setAction("http://mobilemoney.com/mWallet/balanceGetRequest");
+             _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
+
+              
+              
+                  addPropertyToOperationClient(_operationClient,org.apache.axis2.description.WSDL2Constants.ATTR_WHTTP_QUERY_PARAMETER_SEPARATOR,"&");
+              
+
+
+              // create SOAP envelope with that payload
+              org.apache.axiom.soap.SOAPEnvelope env=null;
+              final org.apache.axis2.context.MessageContext _messageContext = new org.apache.axis2.context.MessageContext();
+
+                    
+                                    //Style is Doc.
+                                    
+                                                    
+                                                    env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
+                                                    balanceGetRequest40,
+                                                    optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "balanceGetRequest")), new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "balanceGetRequest"));
+                                                
+                                         // add the soap_headers only if they are not null
+                                        if (additionalHeader41!=null){
+                                           
+                                                    org.apache.axiom.om.OMElement omElementadditionalHeader41 = toOM(additionalHeader41, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "balanceGetRequest")));
+                                                    addHeader(omElementadditionalHeader41,env);
+                                                
+                                        }
+                                    
+        // adding SOAP soap_headers
+         _serviceClient.addHeadersToEnvelope(env);
+        // create message context with that soap envelope
+        _messageContext.setEnvelope(env);
+
+        // add the message context to the operation client
+        _operationClient.addMessageContext(_messageContext);
+
+
+                    
+                        _operationClient.setCallback(new org.apache.axis2.client.async.AxisCallback() {
+                            public void onMessage(org.apache.axis2.context.MessageContext resultContext) {
+                            try {
+                                org.apache.axiom.soap.SOAPEnvelope resultEnv = resultContext.getEnvelope();
+                                
+                                        java.lang.Object object = fromOM(resultEnv.getBody().getFirstElement(),
+                                                                         com.mobilemoney.services.mwallet.MPWalletServiceStub.BalanceGetResponse.class,
+                                                                         getEnvelopeNamespaces(resultEnv));
+                                        callback.receiveResultbalanceGetRequest(
+                                        (com.mobilemoney.services.mwallet.MPWalletServiceStub.BalanceGetResponse)object);
+                                        
+                            } catch (org.apache.axis2.AxisFault e) {
+                                callback.receiveErrorbalanceGetRequest(e);
+                            }
+                            }
+
+                            public void onError(java.lang.Exception error) {
+								if (error instanceof org.apache.axis2.AxisFault) {
+									org.apache.axis2.AxisFault f = (org.apache.axis2.AxisFault) error;
+									org.apache.axiom.om.OMElement faultElt = f.getDetail();
+									if (faultElt!=null){
+										if (faultExceptionNameMap.containsKey(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"balanceGetRequest"))){
+											//make the fault by reflection
+											try{
+													java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"balanceGetRequest"));
+													java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
+													java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(String.class);
+                                                    java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
+													//message class
+													java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"balanceGetRequest"));
+														java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
+													java.lang.Object messageObject = fromOM(faultElt,messageClass,null);
+													java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
+															new java.lang.Class[]{messageClass});
+													m.invoke(ex,new java.lang.Object[]{messageObject});
+													
+					
+										            callback.receiveErrorbalanceGetRequest(new java.rmi.RemoteException(ex.getMessage(), ex));
+                                            } catch(java.lang.ClassCastException e){
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorbalanceGetRequest(f);
+                                            } catch (java.lang.ClassNotFoundException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorbalanceGetRequest(f);
+                                            } catch (java.lang.NoSuchMethodException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorbalanceGetRequest(f);
+                                            } catch (java.lang.reflect.InvocationTargetException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorbalanceGetRequest(f);
+                                            } catch (java.lang.IllegalAccessException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorbalanceGetRequest(f);
+                                            } catch (java.lang.InstantiationException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorbalanceGetRequest(f);
+                                            } catch (org.apache.axis2.AxisFault e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorbalanceGetRequest(f);
+                                            }
+									    } else {
+										    callback.receiveErrorbalanceGetRequest(f);
+									    }
+									} else {
+									    callback.receiveErrorbalanceGetRequest(f);
+									}
+								} else {
+								    callback.receiveErrorbalanceGetRequest(error);
+								}
+                            }
+
+                            public void onFault(org.apache.axis2.context.MessageContext faultContext) {
+                                org.apache.axis2.AxisFault fault = org.apache.axis2.util.Utils.getInboundFaultFromMessageContext(faultContext);
+                                onError(fault);
+                            }
+
+                            public void onComplete() {
+                                try {
+                                    _messageContext.getTransportOut().getSender().cleanup(_messageContext);
+                                } catch (org.apache.axis2.AxisFault axisFault) {
+                                    callback.receiveErrorbalanceGetRequest(axisFault);
+                                }
+                            }
+                });
+                        
+
+          org.apache.axis2.util.CallbackReceiver _callbackReceiver = null;
+        if ( _operations[8].getMessageReceiver()==null &&  _operationClient.getOptions().isUseSeparateListener()) {
+           _callbackReceiver = new org.apache.axis2.util.CallbackReceiver();
+          _operations[8].setMessageReceiver(
+                    _callbackReceiver);
+        }
+
+           //execute the operation client
+           _operationClient.execute(false);
+
+                    }
+                
                     /**
                      * Auto generated method signature
                      * 
-                     * @see com.mobilemoney.services.mwallet.MPWalletService#creditRequest
-                     * @param creditRequest
+                     * @see com.mobilemoney.services.mwallet.MPWalletService#purchaseRequest
+                     * @param purchaseRequest43
                     
-                     * @param additionalHeader8
+                     * @param additionalHeader44
                     
                      */
 
                     
 
-                            public  com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse creditRequest(
+                            public  com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse purchaseRequest(
 
-                            com.mobilemoney.services.mwallet.MPWalletServiceStub.CreditRequest creditRequest)
+                            com.mobilemoney.services.mwallet.MPWalletServiceStub.PurchaseRequest purchaseRequest43,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader44)
                         
 
                     throws java.rmi.RemoteException
@@ -1313,7 +2911,591 @@
                     {
               org.apache.axis2.context.MessageContext _messageContext = null;
               try{
-               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[8].getName());
+               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[9].getName());
+              _operationClient.getOptions().setAction("http://mobilemoney.com/mWallet/purchaseRequest");
+              _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
+
+              
+              
+                  addPropertyToOperationClient(_operationClient,org.apache.axis2.description.WSDL2Constants.ATTR_WHTTP_QUERY_PARAMETER_SEPARATOR,"&");
+              
+
+              // create a message context
+              _messageContext = new org.apache.axis2.context.MessageContext();
+
+              
+
+              // create SOAP envelope with that payload
+              org.apache.axiom.soap.SOAPEnvelope env = null;
+                    
+                                                    
+                                                    env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
+                                                    purchaseRequest43,
+                                                    optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "purchaseRequest")), new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "purchaseRequest"));
+                                                
+                                               env.build();
+                                    
+                                        // add the children only if the parameter is not null
+                                        if (additionalHeader44!=null){
+                                            
+                                                    org.apache.axiom.om.OMElement omElementadditionalHeader44 = toOM(additionalHeader44, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "purchaseRequest")));
+                                                    addHeader(omElementadditionalHeader44,env);
+                                                
+                                        }
+                                    
+        //adding SOAP soap_headers
+         _serviceClient.addHeadersToEnvelope(env);
+        // set the message context with that soap envelope
+        _messageContext.setEnvelope(env);
+
+        // add the message contxt to the operation client
+        _operationClient.addMessageContext(_messageContext);
+
+        //execute the operation client
+        _operationClient.execute(true);
+
+         
+               org.apache.axis2.context.MessageContext _returnMessageContext = _operationClient.getMessageContext(
+                                           org.apache.axis2.wsdl.WSDLConstants.MESSAGE_LABEL_IN_VALUE);
+                org.apache.axiom.soap.SOAPEnvelope _returnEnv = _returnMessageContext.getEnvelope();
+                
+                
+                                java.lang.Object object = fromOM(
+                                             _returnEnv.getBody().getFirstElement() ,
+                                             com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse.class,
+                                              getEnvelopeNamespaces(_returnEnv));
+
+                               
+                                        return (com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse)object;
+                                   
+         }catch(org.apache.axis2.AxisFault f){
+
+            org.apache.axiom.om.OMElement faultElt = f.getDetail();
+            if (faultElt!=null){
+                if (faultExceptionNameMap.containsKey(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"purchaseRequest"))){
+                    //make the fault by reflection
+                    try{
+                        java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"purchaseRequest"));
+                        java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
+                        java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(String.class);
+                        java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
+                        //message class
+                        java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"purchaseRequest"));
+                        java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
+                        java.lang.Object messageObject = fromOM(faultElt,messageClass,null);
+                        java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
+                                   new java.lang.Class[]{messageClass});
+                        m.invoke(ex,new java.lang.Object[]{messageObject});
+                        
+
+                        throw new java.rmi.RemoteException(ex.getMessage(), ex);
+                    }catch(java.lang.ClassCastException e){
+                       // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    } catch (java.lang.ClassNotFoundException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    }catch (java.lang.NoSuchMethodException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    } catch (java.lang.reflect.InvocationTargetException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    }  catch (java.lang.IllegalAccessException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    }   catch (java.lang.InstantiationException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    }
+                }else{
+                    throw f;
+                }
+            }else{
+                throw f;
+            }
+            } finally {
+                if (_messageContext.getTransportOut() != null) {
+                      _messageContext.getTransportOut().getSender().cleanup(_messageContext);
+                }
+            }
+        }
+            
+                /**
+                * Auto generated method signature for Asynchronous Invocations
+                * 
+                * @see com.mobilemoney.services.mwallet.MPWalletService#startpurchaseRequest
+                    * @param purchaseRequest43
+                
+                    * @param additionalHeader44
+                
+                */
+                public  void startpurchaseRequest(
+
+                 com.mobilemoney.services.mwallet.MPWalletServiceStub.PurchaseRequest purchaseRequest43,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader44,
+                    
+
+                  final com.mobilemoney.services.mwallet.MPWalletServiceCallbackHandler callback)
+
+                throws java.rmi.RemoteException{
+
+              org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[9].getName());
+             _operationClient.getOptions().setAction("http://mobilemoney.com/mWallet/purchaseRequest");
+             _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
+
+              
+              
+                  addPropertyToOperationClient(_operationClient,org.apache.axis2.description.WSDL2Constants.ATTR_WHTTP_QUERY_PARAMETER_SEPARATOR,"&");
+              
+
+
+              // create SOAP envelope with that payload
+              org.apache.axiom.soap.SOAPEnvelope env=null;
+              final org.apache.axis2.context.MessageContext _messageContext = new org.apache.axis2.context.MessageContext();
+
+                    
+                                    //Style is Doc.
+                                    
+                                                    
+                                                    env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
+                                                    purchaseRequest43,
+                                                    optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "purchaseRequest")), new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "purchaseRequest"));
+                                                
+                                         // add the soap_headers only if they are not null
+                                        if (additionalHeader44!=null){
+                                           
+                                                    org.apache.axiom.om.OMElement omElementadditionalHeader44 = toOM(additionalHeader44, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "purchaseRequest")));
+                                                    addHeader(omElementadditionalHeader44,env);
+                                                
+                                        }
+                                    
+        // adding SOAP soap_headers
+         _serviceClient.addHeadersToEnvelope(env);
+        // create message context with that soap envelope
+        _messageContext.setEnvelope(env);
+
+        // add the message context to the operation client
+        _operationClient.addMessageContext(_messageContext);
+
+
+                    
+                        _operationClient.setCallback(new org.apache.axis2.client.async.AxisCallback() {
+                            public void onMessage(org.apache.axis2.context.MessageContext resultContext) {
+                            try {
+                                org.apache.axiom.soap.SOAPEnvelope resultEnv = resultContext.getEnvelope();
+                                
+                                        java.lang.Object object = fromOM(resultEnv.getBody().getFirstElement(),
+                                                                         com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse.class,
+                                                                         getEnvelopeNamespaces(resultEnv));
+                                        callback.receiveResultpurchaseRequest(
+                                        (com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse)object);
+                                        
+                            } catch (org.apache.axis2.AxisFault e) {
+                                callback.receiveErrorpurchaseRequest(e);
+                            }
+                            }
+
+                            public void onError(java.lang.Exception error) {
+								if (error instanceof org.apache.axis2.AxisFault) {
+									org.apache.axis2.AxisFault f = (org.apache.axis2.AxisFault) error;
+									org.apache.axiom.om.OMElement faultElt = f.getDetail();
+									if (faultElt!=null){
+										if (faultExceptionNameMap.containsKey(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"purchaseRequest"))){
+											//make the fault by reflection
+											try{
+													java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"purchaseRequest"));
+													java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
+													java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(String.class);
+                                                    java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
+													//message class
+													java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"purchaseRequest"));
+														java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
+													java.lang.Object messageObject = fromOM(faultElt,messageClass,null);
+													java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
+															new java.lang.Class[]{messageClass});
+													m.invoke(ex,new java.lang.Object[]{messageObject});
+													
+					
+										            callback.receiveErrorpurchaseRequest(new java.rmi.RemoteException(ex.getMessage(), ex));
+                                            } catch(java.lang.ClassCastException e){
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorpurchaseRequest(f);
+                                            } catch (java.lang.ClassNotFoundException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorpurchaseRequest(f);
+                                            } catch (java.lang.NoSuchMethodException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorpurchaseRequest(f);
+                                            } catch (java.lang.reflect.InvocationTargetException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorpurchaseRequest(f);
+                                            } catch (java.lang.IllegalAccessException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorpurchaseRequest(f);
+                                            } catch (java.lang.InstantiationException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorpurchaseRequest(f);
+                                            } catch (org.apache.axis2.AxisFault e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorpurchaseRequest(f);
+                                            }
+									    } else {
+										    callback.receiveErrorpurchaseRequest(f);
+									    }
+									} else {
+									    callback.receiveErrorpurchaseRequest(f);
+									}
+								} else {
+								    callback.receiveErrorpurchaseRequest(error);
+								}
+                            }
+
+                            public void onFault(org.apache.axis2.context.MessageContext faultContext) {
+                                org.apache.axis2.AxisFault fault = org.apache.axis2.util.Utils.getInboundFaultFromMessageContext(faultContext);
+                                onError(fault);
+                            }
+
+                            public void onComplete() {
+                                try {
+                                    _messageContext.getTransportOut().getSender().cleanup(_messageContext);
+                                } catch (org.apache.axis2.AxisFault axisFault) {
+                                    callback.receiveErrorpurchaseRequest(axisFault);
+                                }
+                            }
+                });
+                        
+
+          org.apache.axis2.util.CallbackReceiver _callbackReceiver = null;
+        if ( _operations[9].getMessageReceiver()==null &&  _operationClient.getOptions().isUseSeparateListener()) {
+           _callbackReceiver = new org.apache.axis2.util.CallbackReceiver();
+          _operations[9].setMessageReceiver(
+                    _callbackReceiver);
+        }
+
+           //execute the operation client
+           _operationClient.execute(false);
+
+                    }
+                
+                    /**
+                     * Auto generated method signature
+                     * 
+                     * @see com.mobilemoney.services.mwallet.MPWalletService#cashInRequest
+                     * @param cashInRequest46
+                    
+                     * @param additionalHeader47
+                    
+                     */
+
+                    
+
+                            public  com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse cashInRequest(
+
+                            com.mobilemoney.services.mwallet.MPWalletServiceStub.CashInRequest cashInRequest46,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader47)
+                        
+
+                    throws java.rmi.RemoteException
+                    
+                    {
+              org.apache.axis2.context.MessageContext _messageContext = null;
+              try{
+               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[10].getName());
+              _operationClient.getOptions().setAction("http://mobilemoney.com/mWallet/cashInRequest");
+              _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
+
+              
+              
+                  addPropertyToOperationClient(_operationClient,org.apache.axis2.description.WSDL2Constants.ATTR_WHTTP_QUERY_PARAMETER_SEPARATOR,"&");
+              
+
+              // create a message context
+              _messageContext = new org.apache.axis2.context.MessageContext();
+
+              
+
+              // create SOAP envelope with that payload
+              org.apache.axiom.soap.SOAPEnvelope env = null;
+                    
+                                                    
+                                                    env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
+                                                    cashInRequest46,
+                                                    optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "cashInRequest")), new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "cashInRequest"));
+                                                
+                                               env.build();
+                                    
+                                        // add the children only if the parameter is not null
+                                        if (additionalHeader47!=null){
+                                            
+                                                    org.apache.axiom.om.OMElement omElementadditionalHeader47 = toOM(additionalHeader47, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "cashInRequest")));
+                                                    addHeader(omElementadditionalHeader47,env);
+                                                
+                                        }
+                                    
+        //adding SOAP soap_headers
+         _serviceClient.addHeadersToEnvelope(env);
+        // set the message context with that soap envelope
+        _messageContext.setEnvelope(env);
+
+        // add the message contxt to the operation client
+        _operationClient.addMessageContext(_messageContext);
+
+        //execute the operation client
+        _operationClient.execute(true);
+
+         
+               org.apache.axis2.context.MessageContext _returnMessageContext = _operationClient.getMessageContext(
+                                           org.apache.axis2.wsdl.WSDLConstants.MESSAGE_LABEL_IN_VALUE);
+                org.apache.axiom.soap.SOAPEnvelope _returnEnv = _returnMessageContext.getEnvelope();
+                
+                
+                                java.lang.Object object = fromOM(
+                                             _returnEnv.getBody().getFirstElement() ,
+                                             com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse.class,
+                                              getEnvelopeNamespaces(_returnEnv));
+
+                               
+                                        return (com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse)object;
+                                   
+         }catch(org.apache.axis2.AxisFault f){
+
+            org.apache.axiom.om.OMElement faultElt = f.getDetail();
+            if (faultElt!=null){
+                if (faultExceptionNameMap.containsKey(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"cashInRequest"))){
+                    //make the fault by reflection
+                    try{
+                        java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"cashInRequest"));
+                        java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
+                        java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(String.class);
+                        java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
+                        //message class
+                        java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"cashInRequest"));
+                        java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
+                        java.lang.Object messageObject = fromOM(faultElt,messageClass,null);
+                        java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
+                                   new java.lang.Class[]{messageClass});
+                        m.invoke(ex,new java.lang.Object[]{messageObject});
+                        
+
+                        throw new java.rmi.RemoteException(ex.getMessage(), ex);
+                    }catch(java.lang.ClassCastException e){
+                       // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    } catch (java.lang.ClassNotFoundException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    }catch (java.lang.NoSuchMethodException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    } catch (java.lang.reflect.InvocationTargetException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    }  catch (java.lang.IllegalAccessException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    }   catch (java.lang.InstantiationException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    }
+                }else{
+                    throw f;
+                }
+            }else{
+                throw f;
+            }
+            } finally {
+                if (_messageContext.getTransportOut() != null) {
+                      _messageContext.getTransportOut().getSender().cleanup(_messageContext);
+                }
+            }
+        }
+            
+                /**
+                * Auto generated method signature for Asynchronous Invocations
+                * 
+                * @see com.mobilemoney.services.mwallet.MPWalletService#startcashInRequest
+                    * @param cashInRequest46
+                
+                    * @param additionalHeader47
+                
+                */
+                public  void startcashInRequest(
+
+                 com.mobilemoney.services.mwallet.MPWalletServiceStub.CashInRequest cashInRequest46,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader47,
+                    
+
+                  final com.mobilemoney.services.mwallet.MPWalletServiceCallbackHandler callback)
+
+                throws java.rmi.RemoteException{
+
+              org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[10].getName());
+             _operationClient.getOptions().setAction("http://mobilemoney.com/mWallet/cashInRequest");
+             _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
+
+              
+              
+                  addPropertyToOperationClient(_operationClient,org.apache.axis2.description.WSDL2Constants.ATTR_WHTTP_QUERY_PARAMETER_SEPARATOR,"&");
+              
+
+
+              // create SOAP envelope with that payload
+              org.apache.axiom.soap.SOAPEnvelope env=null;
+              final org.apache.axis2.context.MessageContext _messageContext = new org.apache.axis2.context.MessageContext();
+
+                    
+                                    //Style is Doc.
+                                    
+                                                    
+                                                    env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
+                                                    cashInRequest46,
+                                                    optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "cashInRequest")), new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "cashInRequest"));
+                                                
+                                         // add the soap_headers only if they are not null
+                                        if (additionalHeader47!=null){
+                                           
+                                                    org.apache.axiom.om.OMElement omElementadditionalHeader47 = toOM(additionalHeader47, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "cashInRequest")));
+                                                    addHeader(omElementadditionalHeader47,env);
+                                                
+                                        }
+                                    
+        // adding SOAP soap_headers
+         _serviceClient.addHeadersToEnvelope(env);
+        // create message context with that soap envelope
+        _messageContext.setEnvelope(env);
+
+        // add the message context to the operation client
+        _operationClient.addMessageContext(_messageContext);
+
+
+                    
+                        _operationClient.setCallback(new org.apache.axis2.client.async.AxisCallback() {
+                            public void onMessage(org.apache.axis2.context.MessageContext resultContext) {
+                            try {
+                                org.apache.axiom.soap.SOAPEnvelope resultEnv = resultContext.getEnvelope();
+                                
+                                        java.lang.Object object = fromOM(resultEnv.getBody().getFirstElement(),
+                                                                         com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse.class,
+                                                                         getEnvelopeNamespaces(resultEnv));
+                                        callback.receiveResultcashInRequest(
+                                        (com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse)object);
+                                        
+                            } catch (org.apache.axis2.AxisFault e) {
+                                callback.receiveErrorcashInRequest(e);
+                            }
+                            }
+
+                            public void onError(java.lang.Exception error) {
+								if (error instanceof org.apache.axis2.AxisFault) {
+									org.apache.axis2.AxisFault f = (org.apache.axis2.AxisFault) error;
+									org.apache.axiom.om.OMElement faultElt = f.getDetail();
+									if (faultElt!=null){
+										if (faultExceptionNameMap.containsKey(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"cashInRequest"))){
+											//make the fault by reflection
+											try{
+													java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"cashInRequest"));
+													java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
+													java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(String.class);
+                                                    java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
+													//message class
+													java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"cashInRequest"));
+														java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
+													java.lang.Object messageObject = fromOM(faultElt,messageClass,null);
+													java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
+															new java.lang.Class[]{messageClass});
+													m.invoke(ex,new java.lang.Object[]{messageObject});
+													
+					
+										            callback.receiveErrorcashInRequest(new java.rmi.RemoteException(ex.getMessage(), ex));
+                                            } catch(java.lang.ClassCastException e){
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcashInRequest(f);
+                                            } catch (java.lang.ClassNotFoundException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcashInRequest(f);
+                                            } catch (java.lang.NoSuchMethodException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcashInRequest(f);
+                                            } catch (java.lang.reflect.InvocationTargetException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcashInRequest(f);
+                                            } catch (java.lang.IllegalAccessException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcashInRequest(f);
+                                            } catch (java.lang.InstantiationException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcashInRequest(f);
+                                            } catch (org.apache.axis2.AxisFault e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcashInRequest(f);
+                                            }
+									    } else {
+										    callback.receiveErrorcashInRequest(f);
+									    }
+									} else {
+									    callback.receiveErrorcashInRequest(f);
+									}
+								} else {
+								    callback.receiveErrorcashInRequest(error);
+								}
+                            }
+
+                            public void onFault(org.apache.axis2.context.MessageContext faultContext) {
+                                org.apache.axis2.AxisFault fault = org.apache.axis2.util.Utils.getInboundFaultFromMessageContext(faultContext);
+                                onError(fault);
+                            }
+
+                            public void onComplete() {
+                                try {
+                                    _messageContext.getTransportOut().getSender().cleanup(_messageContext);
+                                } catch (org.apache.axis2.AxisFault axisFault) {
+                                    callback.receiveErrorcashInRequest(axisFault);
+                                }
+                            }
+                });
+                        
+
+          org.apache.axis2.util.CallbackReceiver _callbackReceiver = null;
+        if ( _operations[10].getMessageReceiver()==null &&  _operationClient.getOptions().isUseSeparateListener()) {
+           _callbackReceiver = new org.apache.axis2.util.CallbackReceiver();
+          _operations[10].setMessageReceiver(
+                    _callbackReceiver);
+        }
+
+           //execute the operation client
+           _operationClient.execute(false);
+
+                    }
+                
+                    /**
+                     * Auto generated method signature
+                     * 
+                     * @see com.mobilemoney.services.mwallet.MPWalletService#creditRequest
+                     * @param creditRequest49
+                    
+                     * @param additionalHeader50
+                    
+                     */
+
+                    
+
+                            public  com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse creditRequest(
+
+                            com.mobilemoney.services.mwallet.MPWalletServiceStub.CreditRequest creditRequest49,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader50)
+                        
+
+                    throws java.rmi.RemoteException
+                    
+                    {
+              org.apache.axis2.context.MessageContext _messageContext = null;
+              try{
+               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[11].getName());
               _operationClient.getOptions().setAction("http://mobilemoney.com/mWallet/creditRequest");
               _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
 
@@ -1332,20 +3514,20 @@
                     
                                                     
                                                     env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    creditRequest,
+                                                    creditRequest49,
                                                     optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
                                                     "creditRequest")), new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
                                                     "creditRequest"));
                                                 
                                                env.build();
                                     
-//                                        // add the children only if the parameter is not null
-//                                        if (additionalHeader8!=null){
-//                                            
-//                                                    org.apache.axiom.om.OMElement omElementadditionalHeader8 = toOM(additionalHeader8, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "creditRequest")));
-//                                                    addHeader(omElementadditionalHeader8,env);
-//                                                
-//                                        }
+                                        // add the children only if the parameter is not null
+                                        if (additionalHeader50!=null){
+                                            
+                                                    org.apache.axiom.om.OMElement omElementadditionalHeader50 = toOM(additionalHeader50, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "creditRequest")));
+                                                    addHeader(omElementadditionalHeader50,env);
+                                                
+                                        }
                                     
         //adding SOAP soap_headers
          _serviceClient.addHeadersToEnvelope(env);
@@ -1381,7 +3563,8 @@
                     try{
                         java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"creditRequest"));
                         java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
-                        java.lang.Exception ex = (java.lang.Exception) exceptionClass.newInstance();
+                        java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(String.class);
+                        java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
                         //message class
                         java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"creditRequest"));
                         java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
@@ -1424,6 +3607,164 @@
             }
         }
             
+                /**
+                * Auto generated method signature for Asynchronous Invocations
+                * 
+                * @see com.mobilemoney.services.mwallet.MPWalletService#startcreditRequest
+                    * @param creditRequest49
+                
+                    * @param additionalHeader50
+                
+                */
+                public  void startcreditRequest(
+
+                 com.mobilemoney.services.mwallet.MPWalletServiceStub.CreditRequest creditRequest49,com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader additionalHeader50,
+                    
+
+                  final com.mobilemoney.services.mwallet.MPWalletServiceCallbackHandler callback)
+
+                throws java.rmi.RemoteException{
+
+              org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[11].getName());
+             _operationClient.getOptions().setAction("http://mobilemoney.com/mWallet/creditRequest");
+             _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
+
+              
+              
+                  addPropertyToOperationClient(_operationClient,org.apache.axis2.description.WSDL2Constants.ATTR_WHTTP_QUERY_PARAMETER_SEPARATOR,"&");
+              
+
+
+              // create SOAP envelope with that payload
+              org.apache.axiom.soap.SOAPEnvelope env=null;
+              final org.apache.axis2.context.MessageContext _messageContext = new org.apache.axis2.context.MessageContext();
+
+                    
+                                    //Style is Doc.
+                                    
+                                                    
+                                                    env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
+                                                    creditRequest49,
+                                                    optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "creditRequest")), new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                    "creditRequest"));
+                                                
+                                         // add the soap_headers only if they are not null
+                                        if (additionalHeader50!=null){
+                                           
+                                                    org.apache.axiom.om.OMElement omElementadditionalHeader50 = toOM(additionalHeader50, optimizeContent(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet", "creditRequest")));
+                                                    addHeader(omElementadditionalHeader50,env);
+                                                
+                                        }
+                                    
+        // adding SOAP soap_headers
+         _serviceClient.addHeadersToEnvelope(env);
+        // create message context with that soap envelope
+        _messageContext.setEnvelope(env);
+
+        // add the message context to the operation client
+        _operationClient.addMessageContext(_messageContext);
+
+
+                    
+                        _operationClient.setCallback(new org.apache.axis2.client.async.AxisCallback() {
+                            public void onMessage(org.apache.axis2.context.MessageContext resultContext) {
+                            try {
+                                org.apache.axiom.soap.SOAPEnvelope resultEnv = resultContext.getEnvelope();
+                                
+                                        java.lang.Object object = fromOM(resultEnv.getBody().getFirstElement(),
+                                                                         com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse.class,
+                                                                         getEnvelopeNamespaces(resultEnv));
+                                        callback.receiveResultcreditRequest(
+                                        (com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse)object);
+                                        
+                            } catch (org.apache.axis2.AxisFault e) {
+                                callback.receiveErrorcreditRequest(e);
+                            }
+                            }
+
+                            public void onError(java.lang.Exception error) {
+								if (error instanceof org.apache.axis2.AxisFault) {
+									org.apache.axis2.AxisFault f = (org.apache.axis2.AxisFault) error;
+									org.apache.axiom.om.OMElement faultElt = f.getDetail();
+									if (faultElt!=null){
+										if (faultExceptionNameMap.containsKey(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"creditRequest"))){
+											//make the fault by reflection
+											try{
+													java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"creditRequest"));
+													java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
+													java.lang.reflect.Constructor constructor = exceptionClass.getConstructor(String.class);
+                                                    java.lang.Exception ex = (java.lang.Exception) constructor.newInstance(f.getMessage());
+													//message class
+													java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"creditRequest"));
+														java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
+													java.lang.Object messageObject = fromOM(faultElt,messageClass,null);
+													java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
+															new java.lang.Class[]{messageClass});
+													m.invoke(ex,new java.lang.Object[]{messageObject});
+													
+					
+										            callback.receiveErrorcreditRequest(new java.rmi.RemoteException(ex.getMessage(), ex));
+                                            } catch(java.lang.ClassCastException e){
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcreditRequest(f);
+                                            } catch (java.lang.ClassNotFoundException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcreditRequest(f);
+                                            } catch (java.lang.NoSuchMethodException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcreditRequest(f);
+                                            } catch (java.lang.reflect.InvocationTargetException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcreditRequest(f);
+                                            } catch (java.lang.IllegalAccessException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcreditRequest(f);
+                                            } catch (java.lang.InstantiationException e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcreditRequest(f);
+                                            } catch (org.apache.axis2.AxisFault e) {
+                                                // we cannot intantiate the class - throw the original Axis fault
+                                                callback.receiveErrorcreditRequest(f);
+                                            }
+									    } else {
+										    callback.receiveErrorcreditRequest(f);
+									    }
+									} else {
+									    callback.receiveErrorcreditRequest(f);
+									}
+								} else {
+								    callback.receiveErrorcreditRequest(error);
+								}
+                            }
+
+                            public void onFault(org.apache.axis2.context.MessageContext faultContext) {
+                                org.apache.axis2.AxisFault fault = org.apache.axis2.util.Utils.getInboundFaultFromMessageContext(faultContext);
+                                onError(fault);
+                            }
+
+                            public void onComplete() {
+                                try {
+                                    _messageContext.getTransportOut().getSender().cleanup(_messageContext);
+                                } catch (org.apache.axis2.AxisFault axisFault) {
+                                    callback.receiveErrorcreditRequest(axisFault);
+                                }
+                            }
+                });
+                        
+
+          org.apache.axis2.util.CallbackReceiver _callbackReceiver = null;
+        if ( _operations[11].getMessageReceiver()==null &&  _operationClient.getOptions().isUseSeparateListener()) {
+           _callbackReceiver = new org.apache.axis2.util.CallbackReceiver();
+          _operations[11].setMessageReceiver(
+                    _callbackReceiver);
+        }
+
+           //execute the operation client
+           _operationClient.execute(false);
+
+                    }
+                
 
 
        /**
@@ -1456,340 +3797,6 @@
         return false;
     }
      //http://41.220.65.177:8090/MMTransferService/mPWalletService
-        public static class AirtimeTopupRequest
-        implements org.apache.axis2.databinding.ADBBean{
-        
-                public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
-                "http://mobilemoney.com/services/mWallet",
-                "AirtimeTopupRequest",
-                "ns1");
-
-            
-
-                        /**
-                        * field for AirtimeTopupRequest
-                        */
-
-                        
-                                    protected MAirtimeTopupRequestType localAirtimeTopupRequest ;
-                                
-
-                           /**
-                           * Auto generated getter method
-                           * @return MAirtimeTopupRequestType
-                           */
-                           public  MAirtimeTopupRequestType getAirtimeTopupRequest(){
-                               return localAirtimeTopupRequest;
-                           }
-
-                           
-                        
-                            /**
-                               * Auto generated setter method
-                               * @param param AirtimeTopupRequest
-                               */
-                               public void setAirtimeTopupRequest(MAirtimeTopupRequestType param){
-                            
-                                            this.localAirtimeTopupRequest=param;
-                                    
-
-                               }
-                            
-     
-
-     
-        /**
-        *
-        * @param parentQName
-        * @param factory
-        * @return org.apache.axiom.om.OMElement
-        */
-       public org.apache.axiom.om.OMElement getOMElement (
-               final javax.xml.namespace.QName parentQName,
-               final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
-
-
-        
-               org.apache.axiom.om.OMDataSource dataSource =
-                       new org.apache.axis2.databinding.ADBDataSource(this,MY_QNAME);
-               return factory.createOMElement(dataSource,MY_QNAME);
-            
-        }
-
-         public void serialize(final javax.xml.namespace.QName parentQName,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter)
-                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
-                           serialize(parentQName,xmlWriter,false);
-         }
-
-         public void serialize(final javax.xml.namespace.QName parentQName,
-                               javax.xml.stream.XMLStreamWriter xmlWriter,
-                               boolean serializeType)
-            throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
-            
-                
-                //We can safely assume an element has only one type associated with it
-                
-                                 if (localAirtimeTopupRequest==null){
-                                   throw new org.apache.axis2.databinding.ADBException("AirtimeTopupRequest cannot be null!");
-                                 }
-                                 localAirtimeTopupRequest.serialize(MY_QNAME,xmlWriter);
-                            
-
-        }
-
-        private static java.lang.String generatePrefix(java.lang.String namespace) {
-            if(namespace.equals("http://mobilemoney.com/services/mWallet")){
-                return "ns1";
-            }
-            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
-        }
-
-        /**
-         * Utility method to write an element start tag.
-         */
-        private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-            java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
-            if (writerPrefix != null) {
-                xmlWriter.writeStartElement(namespace, localPart);
-            } else {
-                if (namespace.length() == 0) {
-                    prefix = "";
-                } else if (prefix == null) {
-                    prefix = generatePrefix(namespace);
-                }
-
-                xmlWriter.writeStartElement(prefix, localPart, namespace);
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-        }
-        
-        /**
-         * Util method to write an attribute with the ns prefix
-         */
-        private void writeAttribute(java.lang.String prefix,java.lang.String namespace,java.lang.String attName,
-                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
-            if (xmlWriter.getPrefix(namespace) == null) {
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-            xmlWriter.writeAttribute(namespace,attName,attValue);
-        }
-
-        /**
-         * Util method to write an attribute without the ns prefix
-         */
-        private void writeAttribute(java.lang.String namespace,java.lang.String attName,
-                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
-            if (namespace.equals("")) {
-                xmlWriter.writeAttribute(attName,attValue);
-            } else {
-                registerPrefix(xmlWriter, namespace);
-                xmlWriter.writeAttribute(namespace,attName,attValue);
-            }
-        }
-
-
-           /**
-             * Util method to write an attribute without the ns prefix
-             */
-            private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
-                                             javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-
-                java.lang.String attributeNamespace = qname.getNamespaceURI();
-                java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
-                if (attributePrefix == null) {
-                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
-                }
-                java.lang.String attributeValue;
-                if (attributePrefix.trim().length() > 0) {
-                    attributeValue = attributePrefix + ":" + qname.getLocalPart();
-                } else {
-                    attributeValue = qname.getLocalPart();
-                }
-
-                if (namespace.equals("")) {
-                    xmlWriter.writeAttribute(attName, attributeValue);
-                } else {
-                    registerPrefix(xmlWriter, namespace);
-                    xmlWriter.writeAttribute(namespace, attName, attributeValue);
-                }
-            }
-        /**
-         *  method to handle Qnames
-         */
-
-        private void writeQName(javax.xml.namespace.QName qname,
-                                javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-            java.lang.String namespaceURI = qname.getNamespaceURI();
-            if (namespaceURI != null) {
-                java.lang.String prefix = xmlWriter.getPrefix(namespaceURI);
-                if (prefix == null) {
-                    prefix = generatePrefix(namespaceURI);
-                    xmlWriter.writeNamespace(prefix, namespaceURI);
-                    xmlWriter.setPrefix(prefix,namespaceURI);
-                }
-
-                if (prefix.trim().length() > 0){
-                    xmlWriter.writeCharacters(prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-                } else {
-                    // i.e this is the default namespace
-                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-                }
-
-            } else {
-                xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-            }
-        }
-
-        private void writeQNames(javax.xml.namespace.QName[] qnames,
-                                 javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-
-            if (qnames != null) {
-                // we have to store this data until last moment since it is not possible to write any
-                // namespace data after writing the charactor data
-                java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
-                java.lang.String namespaceURI = null;
-                java.lang.String prefix = null;
-
-                for (int i = 0; i < qnames.length; i++) {
-                    if (i > 0) {
-                        stringToWrite.append(" ");
-                    }
-                    namespaceURI = qnames[i].getNamespaceURI();
-                    if (namespaceURI != null) {
-                        prefix = xmlWriter.getPrefix(namespaceURI);
-                        if ((prefix == null) || (prefix.length() == 0)) {
-                            prefix = generatePrefix(namespaceURI);
-                            xmlWriter.writeNamespace(prefix, namespaceURI);
-                            xmlWriter.setPrefix(prefix,namespaceURI);
-                        }
-
-                        if (prefix.trim().length() > 0){
-                            stringToWrite.append(prefix).append(":").append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                        } else {
-                            stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                        }
-                    } else {
-                        stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                    }
-                }
-                xmlWriter.writeCharacters(stringToWrite.toString());
-            }
-
-        }
-
-
-        /**
-         * Register a namespace prefix
-         */
-        private java.lang.String registerPrefix(javax.xml.stream.XMLStreamWriter xmlWriter, java.lang.String namespace) throws javax.xml.stream.XMLStreamException {
-            java.lang.String prefix = xmlWriter.getPrefix(namespace);
-            if (prefix == null) {
-                prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
-                    prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
-                }
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-            return prefix;
-        }
-
-
-  
-        /**
-        * databinding method to get an XML representation of this object
-        *
-        */
-        public javax.xml.stream.XMLStreamReader getPullParser(javax.xml.namespace.QName qName)
-                    throws org.apache.axis2.databinding.ADBException{
-
-
-        
-                
-                //We can safely assume an element has only one type associated with it
-                return localAirtimeTopupRequest.getPullParser(MY_QNAME);
-
-        }
-
-  
-
-     /**
-      *  Factory class that keeps the parse method
-      */
-    public static class Factory{
-
-        
-        
-
-        /**
-        * static method to create the object
-        * Precondition:  If this object is an element, the current or next start element starts this object and any intervening reader events are ignorable
-        *                If this object is not an element, it is a complex type and the reader is at the event just after the outer start element
-        * Postcondition: If this object is an element, the reader is positioned at its end element
-        *                If this object is a complex type, the reader is positioned at the end element of its outer element
-        */
-        public static AirtimeTopupRequest parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
-            AirtimeTopupRequest object =
-                new AirtimeTopupRequest();
-
-            int event;
-            java.lang.String nillableValue = null;
-            java.lang.String prefix ="";
-            java.lang.String namespaceuri ="";
-            try {
-                
-                while (!reader.isStartElement() && !reader.isEndElement())
-                    reader.next();
-
-                
-
-                
-                // Note all attributes that were handled. Used to differ normal attributes
-                // from anyAttributes.
-                java.util.Vector handledAttributes = new java.util.Vector();
-                
-
-                   
-                while(!reader.isEndElement()) {
-                    if (reader.isStartElement() ){
-                
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","AirtimeTopupRequest").equals(reader.getName())){
-                                
-                                                object.setAirtimeTopupRequest(MAirtimeTopupRequestType.Factory.parse(reader));
-                                            
-                              }  // End of if for expected property start element
-                                
-                             else{
-                                        // A start element we are not expecting indicates an invalid parameter was passed
-                                        throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
-                             }
-                          
-                             } else {
-                                reader.next();
-                             }  
-                           }  // end of while loop
-                        
-
-
-
-            } catch (javax.xml.stream.XMLStreamException e) {
-                throw new java.lang.Exception(e);
-            }
-
-            return object;
-        }
-
-        }//end of factory class
-
-        
-
-        }
-           
-    
         public static class CustomerRegistrationResponse
         implements org.apache.axis2.databinding.ADBBean{
         
@@ -1829,8 +3836,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -2023,7 +4030,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -2124,6 +4136,684 @@
         }
            
     
+        public static class AirtimeTopupRequest
+        implements org.apache.axis2.databinding.ADBBean{
+        
+                public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
+                "http://mobilemoney.com/services/mWallet",
+                "AirtimeTopupRequest",
+                "ns1");
+
+            
+
+                        /**
+                        * field for AirtimeTopupRequest
+                        */
+
+                        
+                                    protected MAirtimeTopupRequestType localAirtimeTopupRequest ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return MAirtimeTopupRequestType
+                           */
+                           public  MAirtimeTopupRequestType getAirtimeTopupRequest(){
+                               return localAirtimeTopupRequest;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param AirtimeTopupRequest
+                               */
+                               public void setAirtimeTopupRequest(MAirtimeTopupRequestType param){
+                            
+                                            this.localAirtimeTopupRequest=param;
+                                    
+
+                               }
+                            
+
+     
+     
+        /**
+        *
+        * @param parentQName
+        * @param factory
+        * @return org.apache.axiom.om.OMElement
+        */
+       public org.apache.axiom.om.OMElement getOMElement (
+               final javax.xml.namespace.QName parentQName,
+               final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
+
+
+        
+               org.apache.axiom.om.OMDataSource dataSource =
+                       new org.apache.axis2.databinding.ADBDataSource(this,MY_QNAME);
+               return factory.createOMElement(dataSource,MY_QNAME);
+            
+        }
+
+         public void serialize(final javax.xml.namespace.QName parentQName,
+                                       javax.xml.stream.XMLStreamWriter xmlWriter)
+                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+                           serialize(parentQName,xmlWriter,false);
+         }
+
+         public void serialize(final javax.xml.namespace.QName parentQName,
+                               javax.xml.stream.XMLStreamWriter xmlWriter,
+                               boolean serializeType)
+            throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+            
+                
+                //We can safely assume an element has only one type associated with it
+                
+                                 if (localAirtimeTopupRequest==null){
+                                   throw new org.apache.axis2.databinding.ADBException("AirtimeTopupRequest cannot be null!");
+                                 }
+                                 localAirtimeTopupRequest.serialize(MY_QNAME,xmlWriter);
+                            
+
+        }
+
+        private static java.lang.String generatePrefix(java.lang.String namespace) {
+            if(namespace.equals("http://mobilemoney.com/services/mWallet")){
+                return "ns1";
+            }
+            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+        }
+
+        /**
+         * Utility method to write an element start tag.
+         */
+        private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
+                                       javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+            java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
+            if (writerPrefix != null) {
+                xmlWriter.writeStartElement(namespace, localPart);
+            } else {
+                if (namespace.length() == 0) {
+                    prefix = "";
+                } else if (prefix == null) {
+                    prefix = generatePrefix(namespace);
+                }
+
+                xmlWriter.writeStartElement(prefix, localPart, namespace);
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+        }
+        
+        /**
+         * Util method to write an attribute with the ns prefix
+         */
+        private void writeAttribute(java.lang.String prefix,java.lang.String namespace,java.lang.String attName,
+                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+            if (xmlWriter.getPrefix(namespace) == null) {
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+            xmlWriter.writeAttribute(namespace,attName,attValue);
+        }
+
+        /**
+         * Util method to write an attribute without the ns prefix
+         */
+        private void writeAttribute(java.lang.String namespace,java.lang.String attName,
+                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+            if (namespace.equals("")) {
+                xmlWriter.writeAttribute(attName,attValue);
+            } else {
+                registerPrefix(xmlWriter, namespace);
+                xmlWriter.writeAttribute(namespace,attName,attValue);
+            }
+        }
+
+
+           /**
+             * Util method to write an attribute without the ns prefix
+             */
+            private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
+                                             javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+
+                java.lang.String attributeNamespace = qname.getNamespaceURI();
+                java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
+                if (attributePrefix == null) {
+                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
+                }
+                java.lang.String attributeValue;
+                if (attributePrefix.trim().length() > 0) {
+                    attributeValue = attributePrefix + ":" + qname.getLocalPart();
+                } else {
+                    attributeValue = qname.getLocalPart();
+                }
+
+                if (namespace.equals("")) {
+                    xmlWriter.writeAttribute(attName, attributeValue);
+                } else {
+                    registerPrefix(xmlWriter, namespace);
+                    xmlWriter.writeAttribute(namespace, attName, attributeValue);
+                }
+            }
+        /**
+         *  method to handle Qnames
+         */
+
+        private void writeQName(javax.xml.namespace.QName qname,
+                                javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+            java.lang.String namespaceURI = qname.getNamespaceURI();
+            if (namespaceURI != null) {
+                java.lang.String prefix = xmlWriter.getPrefix(namespaceURI);
+                if (prefix == null) {
+                    prefix = generatePrefix(namespaceURI);
+                    xmlWriter.writeNamespace(prefix, namespaceURI);
+                    xmlWriter.setPrefix(prefix,namespaceURI);
+                }
+
+                if (prefix.trim().length() > 0){
+                    xmlWriter.writeCharacters(prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+                } else {
+                    // i.e this is the default namespace
+                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+                }
+
+            } else {
+                xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+            }
+        }
+
+        private void writeQNames(javax.xml.namespace.QName[] qnames,
+                                 javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+
+            if (qnames != null) {
+                // we have to store this data until last moment since it is not possible to write any
+                // namespace data after writing the charactor data
+                java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
+                java.lang.String namespaceURI = null;
+                java.lang.String prefix = null;
+
+                for (int i = 0; i < qnames.length; i++) {
+                    if (i > 0) {
+                        stringToWrite.append(" ");
+                    }
+                    namespaceURI = qnames[i].getNamespaceURI();
+                    if (namespaceURI != null) {
+                        prefix = xmlWriter.getPrefix(namespaceURI);
+                        if ((prefix == null) || (prefix.length() == 0)) {
+                            prefix = generatePrefix(namespaceURI);
+                            xmlWriter.writeNamespace(prefix, namespaceURI);
+                            xmlWriter.setPrefix(prefix,namespaceURI);
+                        }
+
+                        if (prefix.trim().length() > 0){
+                            stringToWrite.append(prefix).append(":").append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                        } else {
+                            stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                        }
+                    } else {
+                        stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                    }
+                }
+                xmlWriter.writeCharacters(stringToWrite.toString());
+            }
+
+        }
+
+
+        /**
+         * Register a namespace prefix
+         */
+        private java.lang.String registerPrefix(javax.xml.stream.XMLStreamWriter xmlWriter, java.lang.String namespace) throws javax.xml.stream.XMLStreamException {
+            java.lang.String prefix = xmlWriter.getPrefix(namespace);
+            if (prefix == null) {
+                prefix = generatePrefix(namespace);
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
+                    prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+                }
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+            return prefix;
+        }
+
+
+  
+        /**
+        * databinding method to get an XML representation of this object
+        *
+        */
+        public javax.xml.stream.XMLStreamReader getPullParser(javax.xml.namespace.QName qName)
+                    throws org.apache.axis2.databinding.ADBException{
+
+
+        
+                
+                //We can safely assume an element has only one type associated with it
+                return localAirtimeTopupRequest.getPullParser(MY_QNAME);
+
+        }
+
+  
+
+     /**
+      *  Factory class that keeps the parse method
+      */
+    public static class Factory{
+
+        
+        
+
+        /**
+        * static method to create the object
+        * Precondition:  If this object is an element, the current or next start element starts this object and any intervening reader events are ignorable
+        *                If this object is not an element, it is a complex type and the reader is at the event just after the outer start element
+        * Postcondition: If this object is an element, the reader is positioned at its end element
+        *                If this object is a complex type, the reader is positioned at the end element of its outer element
+        */
+        public static AirtimeTopupRequest parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
+            AirtimeTopupRequest object =
+                new AirtimeTopupRequest();
+
+            int event;
+            java.lang.String nillableValue = null;
+            java.lang.String prefix ="";
+            java.lang.String namespaceuri ="";
+            try {
+                
+                while (!reader.isStartElement() && !reader.isEndElement())
+                    reader.next();
+
+                
+
+                
+                // Note all attributes that were handled. Used to differ normal attributes
+                // from anyAttributes.
+                java.util.Vector handledAttributes = new java.util.Vector();
+                
+
+                   
+                while(!reader.isEndElement()) {
+                    if (reader.isStartElement() ){
+                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","AirtimeTopupRequest").equals(reader.getName())){
+                                
+                                                object.setAirtimeTopupRequest(MAirtimeTopupRequestType.Factory.parse(reader));
+                                            
+                              }  // End of if for expected property start element
+                                
+                             else{
+                                        // A start element we are not expecting indicates an invalid parameter was passed
+                                        throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                             }
+                          
+                             } else {
+                                reader.next();
+                             }  
+                           }  // end of while loop
+                        
+
+
+
+            } catch (javax.xml.stream.XMLStreamException e) {
+                throw new java.lang.Exception(e);
+            }
+
+            return object;
+        }
+
+        }//end of factory class
+
+        
+
+        }
+           
+    
+        public static class DebitRequest
+        implements org.apache.axis2.databinding.ADBBean{
+        
+                public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
+                "http://mobilemoney.com/services/mWallet",
+                "DebitRequest",
+                "ns1");
+
+            
+
+                        /**
+                        * field for DebitRequest
+                        */
+
+                        
+                                    protected MTransferRequestType localDebitRequest ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return MTransferRequestType
+                           */
+                           public  MTransferRequestType getDebitRequest(){
+                               return localDebitRequest;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param DebitRequest
+                               */
+                               public void setDebitRequest(MTransferRequestType param){
+                            
+                                            this.localDebitRequest=param;
+                                    
+
+                               }
+                            
+
+     
+     
+        /**
+        *
+        * @param parentQName
+        * @param factory
+        * @return org.apache.axiom.om.OMElement
+        */
+       public org.apache.axiom.om.OMElement getOMElement (
+               final javax.xml.namespace.QName parentQName,
+               final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
+
+
+        
+               org.apache.axiom.om.OMDataSource dataSource =
+                       new org.apache.axis2.databinding.ADBDataSource(this,MY_QNAME);
+               return factory.createOMElement(dataSource,MY_QNAME);
+            
+        }
+
+         public void serialize(final javax.xml.namespace.QName parentQName,
+                                       javax.xml.stream.XMLStreamWriter xmlWriter)
+                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+                           serialize(parentQName,xmlWriter,false);
+         }
+
+         public void serialize(final javax.xml.namespace.QName parentQName,
+                               javax.xml.stream.XMLStreamWriter xmlWriter,
+                               boolean serializeType)
+            throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+            
+                
+                //We can safely assume an element has only one type associated with it
+                
+                                 if (localDebitRequest==null){
+                                   throw new org.apache.axis2.databinding.ADBException("DebitRequest cannot be null!");
+                                 }
+                                 localDebitRequest.serialize(MY_QNAME,xmlWriter);
+                            
+
+        }
+
+        private static java.lang.String generatePrefix(java.lang.String namespace) {
+            if(namespace.equals("http://mobilemoney.com/services/mWallet")){
+                return "ns1";
+            }
+            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+        }
+
+        /**
+         * Utility method to write an element start tag.
+         */
+        private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
+                                       javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+            java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
+            if (writerPrefix != null) {
+                xmlWriter.writeStartElement(namespace, localPart);
+            } else {
+                if (namespace.length() == 0) {
+                    prefix = "";
+                } else if (prefix == null) {
+                    prefix = generatePrefix(namespace);
+                }
+
+                xmlWriter.writeStartElement(prefix, localPart, namespace);
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+        }
+        
+        /**
+         * Util method to write an attribute with the ns prefix
+         */
+        private void writeAttribute(java.lang.String prefix,java.lang.String namespace,java.lang.String attName,
+                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+            if (xmlWriter.getPrefix(namespace) == null) {
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+            xmlWriter.writeAttribute(namespace,attName,attValue);
+        }
+
+        /**
+         * Util method to write an attribute without the ns prefix
+         */
+        private void writeAttribute(java.lang.String namespace,java.lang.String attName,
+                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+            if (namespace.equals("")) {
+                xmlWriter.writeAttribute(attName,attValue);
+            } else {
+                registerPrefix(xmlWriter, namespace);
+                xmlWriter.writeAttribute(namespace,attName,attValue);
+            }
+        }
+
+
+           /**
+             * Util method to write an attribute without the ns prefix
+             */
+            private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
+                                             javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+
+                java.lang.String attributeNamespace = qname.getNamespaceURI();
+                java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
+                if (attributePrefix == null) {
+                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
+                }
+                java.lang.String attributeValue;
+                if (attributePrefix.trim().length() > 0) {
+                    attributeValue = attributePrefix + ":" + qname.getLocalPart();
+                } else {
+                    attributeValue = qname.getLocalPart();
+                }
+
+                if (namespace.equals("")) {
+                    xmlWriter.writeAttribute(attName, attributeValue);
+                } else {
+                    registerPrefix(xmlWriter, namespace);
+                    xmlWriter.writeAttribute(namespace, attName, attributeValue);
+                }
+            }
+        /**
+         *  method to handle Qnames
+         */
+
+        private void writeQName(javax.xml.namespace.QName qname,
+                                javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+            java.lang.String namespaceURI = qname.getNamespaceURI();
+            if (namespaceURI != null) {
+                java.lang.String prefix = xmlWriter.getPrefix(namespaceURI);
+                if (prefix == null) {
+                    prefix = generatePrefix(namespaceURI);
+                    xmlWriter.writeNamespace(prefix, namespaceURI);
+                    xmlWriter.setPrefix(prefix,namespaceURI);
+                }
+
+                if (prefix.trim().length() > 0){
+                    xmlWriter.writeCharacters(prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+                } else {
+                    // i.e this is the default namespace
+                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+                }
+
+            } else {
+                xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+            }
+        }
+
+        private void writeQNames(javax.xml.namespace.QName[] qnames,
+                                 javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+
+            if (qnames != null) {
+                // we have to store this data until last moment since it is not possible to write any
+                // namespace data after writing the charactor data
+                java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
+                java.lang.String namespaceURI = null;
+                java.lang.String prefix = null;
+
+                for (int i = 0; i < qnames.length; i++) {
+                    if (i > 0) {
+                        stringToWrite.append(" ");
+                    }
+                    namespaceURI = qnames[i].getNamespaceURI();
+                    if (namespaceURI != null) {
+                        prefix = xmlWriter.getPrefix(namespaceURI);
+                        if ((prefix == null) || (prefix.length() == 0)) {
+                            prefix = generatePrefix(namespaceURI);
+                            xmlWriter.writeNamespace(prefix, namespaceURI);
+                            xmlWriter.setPrefix(prefix,namespaceURI);
+                        }
+
+                        if (prefix.trim().length() > 0){
+                            stringToWrite.append(prefix).append(":").append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                        } else {
+                            stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                        }
+                    } else {
+                        stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                    }
+                }
+                xmlWriter.writeCharacters(stringToWrite.toString());
+            }
+
+        }
+
+
+        /**
+         * Register a namespace prefix
+         */
+        private java.lang.String registerPrefix(javax.xml.stream.XMLStreamWriter xmlWriter, java.lang.String namespace) throws javax.xml.stream.XMLStreamException {
+            java.lang.String prefix = xmlWriter.getPrefix(namespace);
+            if (prefix == null) {
+                prefix = generatePrefix(namespace);
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
+                    prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+                }
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+            return prefix;
+        }
+
+
+  
+        /**
+        * databinding method to get an XML representation of this object
+        *
+        */
+        public javax.xml.stream.XMLStreamReader getPullParser(javax.xml.namespace.QName qName)
+                    throws org.apache.axis2.databinding.ADBException{
+
+
+        
+                
+                //We can safely assume an element has only one type associated with it
+                return localDebitRequest.getPullParser(MY_QNAME);
+
+        }
+
+  
+
+     /**
+      *  Factory class that keeps the parse method
+      */
+    public static class Factory{
+
+        
+        
+
+        /**
+        * static method to create the object
+        * Precondition:  If this object is an element, the current or next start element starts this object and any intervening reader events are ignorable
+        *                If this object is not an element, it is a complex type and the reader is at the event just after the outer start element
+        * Postcondition: If this object is an element, the reader is positioned at its end element
+        *                If this object is a complex type, the reader is positioned at the end element of its outer element
+        */
+        public static DebitRequest parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
+            DebitRequest object =
+                new DebitRequest();
+
+            int event;
+            java.lang.String nillableValue = null;
+            java.lang.String prefix ="";
+            java.lang.String namespaceuri ="";
+            try {
+                
+                while (!reader.isStartElement() && !reader.isEndElement())
+                    reader.next();
+
+                
+
+                
+                // Note all attributes that were handled. Used to differ normal attributes
+                // from anyAttributes.
+                java.util.Vector handledAttributes = new java.util.Vector();
+                
+
+                   
+                while(!reader.isEndElement()) {
+                    if (reader.isStartElement() ){
+                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","DebitRequest").equals(reader.getName())){
+                                
+                                                object.setDebitRequest(MTransferRequestType.Factory.parse(reader));
+                                            
+                              }  // End of if for expected property start element
+                                
+                             else{
+                                        // A start element we are not expecting indicates an invalid parameter was passed
+                                        throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                             }
+                          
+                             } else {
+                                reader.next();
+                             }  
+                           }  // end of while loop
+                        
+
+
+
+            } catch (javax.xml.stream.XMLStreamException e) {
+                throw new java.lang.Exception(e);
+            }
+
+            return object;
+        }
+
+        }//end of factory class
+
+        
+
+        }
+           
+    
         public static class MPingResponse
         implements org.apache.axis2.databinding.ADBBean{
         /* This type was generated from the piece of schema that had
@@ -2192,8 +4882,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -2439,7 +5129,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -2627,47 +5322,47 @@
         }
            
     
-        public static class DebitRequest
+        public static class CashOutRequest
         implements org.apache.axis2.databinding.ADBBean{
         
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://mobilemoney.com/services/mWallet",
-                "DebitRequest",
+                "CashOutRequest",
                 "ns1");
 
             
 
                         /**
-                        * field for DebitRequest
+                        * field for CashOutRequest
                         */
 
                         
-                                    protected MTransferRequestType localDebitRequest ;
+                                    protected MCashOutRequestType localCashOutRequest ;
                                 
 
                            /**
                            * Auto generated getter method
-                           * @return MTransferRequestType
+                           * @return MCashOutRequestType
                            */
-                           public  MTransferRequestType getDebitRequest(){
-                               return localDebitRequest;
+                           public  MCashOutRequestType getCashOutRequest(){
+                               return localCashOutRequest;
                            }
 
                            
                         
                             /**
                                * Auto generated setter method
-                               * @param param DebitRequest
+                               * @param param CashOutRequest
                                */
-                               public void setDebitRequest(MTransferRequestType param){
+                               public void setCashOutRequest(MCashOutRequestType param){
                             
-                                            this.localDebitRequest=param;
+                                            this.localCashOutRequest=param;
                                     
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -2701,10 +5396,10 @@
                 
                 //We can safely assume an element has only one type associated with it
                 
-                                 if (localDebitRequest==null){
-                                   throw new org.apache.axis2.databinding.ADBException("DebitRequest cannot be null!");
+                                 if (localCashOutRequest==null){
+                                   throw new org.apache.axis2.databinding.ADBException("CashOutRequest cannot be null!");
                                  }
-                                 localDebitRequest.serialize(MY_QNAME,xmlWriter);
+                                 localCashOutRequest.serialize(MY_QNAME,xmlWriter);
                             
 
         }
@@ -2860,7 +5555,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -2882,7 +5582,7 @@
         
                 
                 //We can safely assume an element has only one type associated with it
-                return localDebitRequest.getPullParser(MY_QNAME);
+                return localCashOutRequest.getPullParser(MY_QNAME);
 
         }
 
@@ -2903,9 +5603,9 @@
         * Postcondition: If this object is an element, the reader is positioned at its end element
         *                If this object is a complex type, the reader is positioned at the end element of its outer element
         */
-        public static DebitRequest parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
-            DebitRequest object =
-                new DebitRequest();
+        public static CashOutRequest parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
+            CashOutRequest object =
+                new CashOutRequest();
 
             int event;
             java.lang.String nillableValue = null;
@@ -2928,9 +5628,9 @@
                 while(!reader.isEndElement()) {
                     if (reader.isStartElement() ){
                 
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","DebitRequest").equals(reader.getName())){
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","CashOutRequest").equals(reader.getName())){
                                 
-                                                object.setDebitRequest(MTransferRequestType.Factory.parse(reader));
+                                                object.setCashOutRequest(MCashOutRequestType.Factory.parse(reader));
                                             
                               }  // End of if for expected property start element
                                 
@@ -3143,8 +5843,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -3408,7 +6108,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -3708,8 +6413,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -3902,7 +6607,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -4054,8 +6764,8 @@
                                     
                             }
                         
-     
 
+     
      
         /**
         *
@@ -4274,7 +6984,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -4451,8 +7166,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -4645,7 +7360,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -4797,8 +7517,8 @@
                                     
                             }
                         
-     
 
+     
      
         /**
         *
@@ -5017,7 +7737,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -5125,6 +7850,684 @@
                                     
                                               object.setLastName(
                                                     org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
+                                            
+                              }  // End of if for expected property start element
+                                
+                             else{
+                                        // A start element we are not expecting indicates an invalid parameter was passed
+                                        throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                             }
+                          
+                             } else {
+                                reader.next();
+                             }  
+                           }  // end of while loop
+                        
+
+
+
+            } catch (javax.xml.stream.XMLStreamException e) {
+                throw new java.lang.Exception(e);
+            }
+
+            return object;
+        }
+
+        }//end of factory class
+
+        
+
+        }
+           
+    
+        public static class CashInRequest
+        implements org.apache.axis2.databinding.ADBBean{
+        
+                public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
+                "http://mobilemoney.com/services/mWallet",
+                "CashInRequest",
+                "ns1");
+
+            
+
+                        /**
+                        * field for CashInRequest
+                        */
+
+                        
+                                    protected MCashInRequestType localCashInRequest ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return MCashInRequestType
+                           */
+                           public  MCashInRequestType getCashInRequest(){
+                               return localCashInRequest;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param CashInRequest
+                               */
+                               public void setCashInRequest(MCashInRequestType param){
+                            
+                                            this.localCashInRequest=param;
+                                    
+
+                               }
+                            
+
+     
+     
+        /**
+        *
+        * @param parentQName
+        * @param factory
+        * @return org.apache.axiom.om.OMElement
+        */
+       public org.apache.axiom.om.OMElement getOMElement (
+               final javax.xml.namespace.QName parentQName,
+               final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
+
+
+        
+               org.apache.axiom.om.OMDataSource dataSource =
+                       new org.apache.axis2.databinding.ADBDataSource(this,MY_QNAME);
+               return factory.createOMElement(dataSource,MY_QNAME);
+            
+        }
+
+         public void serialize(final javax.xml.namespace.QName parentQName,
+                                       javax.xml.stream.XMLStreamWriter xmlWriter)
+                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+                           serialize(parentQName,xmlWriter,false);
+         }
+
+         public void serialize(final javax.xml.namespace.QName parentQName,
+                               javax.xml.stream.XMLStreamWriter xmlWriter,
+                               boolean serializeType)
+            throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+            
+                
+                //We can safely assume an element has only one type associated with it
+                
+                                 if (localCashInRequest==null){
+                                   throw new org.apache.axis2.databinding.ADBException("CashInRequest cannot be null!");
+                                 }
+                                 localCashInRequest.serialize(MY_QNAME,xmlWriter);
+                            
+
+        }
+
+        private static java.lang.String generatePrefix(java.lang.String namespace) {
+            if(namespace.equals("http://mobilemoney.com/services/mWallet")){
+                return "ns1";
+            }
+            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+        }
+
+        /**
+         * Utility method to write an element start tag.
+         */
+        private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
+                                       javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+            java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
+            if (writerPrefix != null) {
+                xmlWriter.writeStartElement(namespace, localPart);
+            } else {
+                if (namespace.length() == 0) {
+                    prefix = "";
+                } else if (prefix == null) {
+                    prefix = generatePrefix(namespace);
+                }
+
+                xmlWriter.writeStartElement(prefix, localPart, namespace);
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+        }
+        
+        /**
+         * Util method to write an attribute with the ns prefix
+         */
+        private void writeAttribute(java.lang.String prefix,java.lang.String namespace,java.lang.String attName,
+                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+            if (xmlWriter.getPrefix(namespace) == null) {
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+            xmlWriter.writeAttribute(namespace,attName,attValue);
+        }
+
+        /**
+         * Util method to write an attribute without the ns prefix
+         */
+        private void writeAttribute(java.lang.String namespace,java.lang.String attName,
+                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+            if (namespace.equals("")) {
+                xmlWriter.writeAttribute(attName,attValue);
+            } else {
+                registerPrefix(xmlWriter, namespace);
+                xmlWriter.writeAttribute(namespace,attName,attValue);
+            }
+        }
+
+
+           /**
+             * Util method to write an attribute without the ns prefix
+             */
+            private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
+                                             javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+
+                java.lang.String attributeNamespace = qname.getNamespaceURI();
+                java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
+                if (attributePrefix == null) {
+                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
+                }
+                java.lang.String attributeValue;
+                if (attributePrefix.trim().length() > 0) {
+                    attributeValue = attributePrefix + ":" + qname.getLocalPart();
+                } else {
+                    attributeValue = qname.getLocalPart();
+                }
+
+                if (namespace.equals("")) {
+                    xmlWriter.writeAttribute(attName, attributeValue);
+                } else {
+                    registerPrefix(xmlWriter, namespace);
+                    xmlWriter.writeAttribute(namespace, attName, attributeValue);
+                }
+            }
+        /**
+         *  method to handle Qnames
+         */
+
+        private void writeQName(javax.xml.namespace.QName qname,
+                                javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+            java.lang.String namespaceURI = qname.getNamespaceURI();
+            if (namespaceURI != null) {
+                java.lang.String prefix = xmlWriter.getPrefix(namespaceURI);
+                if (prefix == null) {
+                    prefix = generatePrefix(namespaceURI);
+                    xmlWriter.writeNamespace(prefix, namespaceURI);
+                    xmlWriter.setPrefix(prefix,namespaceURI);
+                }
+
+                if (prefix.trim().length() > 0){
+                    xmlWriter.writeCharacters(prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+                } else {
+                    // i.e this is the default namespace
+                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+                }
+
+            } else {
+                xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+            }
+        }
+
+        private void writeQNames(javax.xml.namespace.QName[] qnames,
+                                 javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+
+            if (qnames != null) {
+                // we have to store this data until last moment since it is not possible to write any
+                // namespace data after writing the charactor data
+                java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
+                java.lang.String namespaceURI = null;
+                java.lang.String prefix = null;
+
+                for (int i = 0; i < qnames.length; i++) {
+                    if (i > 0) {
+                        stringToWrite.append(" ");
+                    }
+                    namespaceURI = qnames[i].getNamespaceURI();
+                    if (namespaceURI != null) {
+                        prefix = xmlWriter.getPrefix(namespaceURI);
+                        if ((prefix == null) || (prefix.length() == 0)) {
+                            prefix = generatePrefix(namespaceURI);
+                            xmlWriter.writeNamespace(prefix, namespaceURI);
+                            xmlWriter.setPrefix(prefix,namespaceURI);
+                        }
+
+                        if (prefix.trim().length() > 0){
+                            stringToWrite.append(prefix).append(":").append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                        } else {
+                            stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                        }
+                    } else {
+                        stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                    }
+                }
+                xmlWriter.writeCharacters(stringToWrite.toString());
+            }
+
+        }
+
+
+        /**
+         * Register a namespace prefix
+         */
+        private java.lang.String registerPrefix(javax.xml.stream.XMLStreamWriter xmlWriter, java.lang.String namespace) throws javax.xml.stream.XMLStreamException {
+            java.lang.String prefix = xmlWriter.getPrefix(namespace);
+            if (prefix == null) {
+                prefix = generatePrefix(namespace);
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
+                    prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+                }
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+            return prefix;
+        }
+
+
+  
+        /**
+        * databinding method to get an XML representation of this object
+        *
+        */
+        public javax.xml.stream.XMLStreamReader getPullParser(javax.xml.namespace.QName qName)
+                    throws org.apache.axis2.databinding.ADBException{
+
+
+        
+                
+                //We can safely assume an element has only one type associated with it
+                return localCashInRequest.getPullParser(MY_QNAME);
+
+        }
+
+  
+
+     /**
+      *  Factory class that keeps the parse method
+      */
+    public static class Factory{
+
+        
+        
+
+        /**
+        * static method to create the object
+        * Precondition:  If this object is an element, the current or next start element starts this object and any intervening reader events are ignorable
+        *                If this object is not an element, it is a complex type and the reader is at the event just after the outer start element
+        * Postcondition: If this object is an element, the reader is positioned at its end element
+        *                If this object is a complex type, the reader is positioned at the end element of its outer element
+        */
+        public static CashInRequest parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
+            CashInRequest object =
+                new CashInRequest();
+
+            int event;
+            java.lang.String nillableValue = null;
+            java.lang.String prefix ="";
+            java.lang.String namespaceuri ="";
+            try {
+                
+                while (!reader.isStartElement() && !reader.isEndElement())
+                    reader.next();
+
+                
+
+                
+                // Note all attributes that were handled. Used to differ normal attributes
+                // from anyAttributes.
+                java.util.Vector handledAttributes = new java.util.Vector();
+                
+
+                   
+                while(!reader.isEndElement()) {
+                    if (reader.isStartElement() ){
+                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","CashInRequest").equals(reader.getName())){
+                                
+                                                object.setCashInRequest(MCashInRequestType.Factory.parse(reader));
+                                            
+                              }  // End of if for expected property start element
+                                
+                             else{
+                                        // A start element we are not expecting indicates an invalid parameter was passed
+                                        throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                             }
+                          
+                             } else {
+                                reader.next();
+                             }  
+                           }  // end of while loop
+                        
+
+
+
+            } catch (javax.xml.stream.XMLStreamException e) {
+                throw new java.lang.Exception(e);
+            }
+
+            return object;
+        }
+
+        }//end of factory class
+
+        
+
+        }
+           
+    
+        public static class PurchaseRequest
+        implements org.apache.axis2.databinding.ADBBean{
+        
+                public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
+                "http://mobilemoney.com/services/mWallet",
+                "PurchaseRequest",
+                "ns1");
+
+            
+
+                        /**
+                        * field for PurchaseRequest
+                        */
+
+                        
+                                    protected MPurchaseRequestType localPurchaseRequest ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return MPurchaseRequestType
+                           */
+                           public  MPurchaseRequestType getPurchaseRequest(){
+                               return localPurchaseRequest;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param PurchaseRequest
+                               */
+                               public void setPurchaseRequest(MPurchaseRequestType param){
+                            
+                                            this.localPurchaseRequest=param;
+                                    
+
+                               }
+                            
+
+     
+     
+        /**
+        *
+        * @param parentQName
+        * @param factory
+        * @return org.apache.axiom.om.OMElement
+        */
+       public org.apache.axiom.om.OMElement getOMElement (
+               final javax.xml.namespace.QName parentQName,
+               final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
+
+
+        
+               org.apache.axiom.om.OMDataSource dataSource =
+                       new org.apache.axis2.databinding.ADBDataSource(this,MY_QNAME);
+               return factory.createOMElement(dataSource,MY_QNAME);
+            
+        }
+
+         public void serialize(final javax.xml.namespace.QName parentQName,
+                                       javax.xml.stream.XMLStreamWriter xmlWriter)
+                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+                           serialize(parentQName,xmlWriter,false);
+         }
+
+         public void serialize(final javax.xml.namespace.QName parentQName,
+                               javax.xml.stream.XMLStreamWriter xmlWriter,
+                               boolean serializeType)
+            throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+            
+                
+                //We can safely assume an element has only one type associated with it
+                
+                                 if (localPurchaseRequest==null){
+                                   throw new org.apache.axis2.databinding.ADBException("PurchaseRequest cannot be null!");
+                                 }
+                                 localPurchaseRequest.serialize(MY_QNAME,xmlWriter);
+                            
+
+        }
+
+        private static java.lang.String generatePrefix(java.lang.String namespace) {
+            if(namespace.equals("http://mobilemoney.com/services/mWallet")){
+                return "ns1";
+            }
+            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+        }
+
+        /**
+         * Utility method to write an element start tag.
+         */
+        private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
+                                       javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+            java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
+            if (writerPrefix != null) {
+                xmlWriter.writeStartElement(namespace, localPart);
+            } else {
+                if (namespace.length() == 0) {
+                    prefix = "";
+                } else if (prefix == null) {
+                    prefix = generatePrefix(namespace);
+                }
+
+                xmlWriter.writeStartElement(prefix, localPart, namespace);
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+        }
+        
+        /**
+         * Util method to write an attribute with the ns prefix
+         */
+        private void writeAttribute(java.lang.String prefix,java.lang.String namespace,java.lang.String attName,
+                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+            if (xmlWriter.getPrefix(namespace) == null) {
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+            xmlWriter.writeAttribute(namespace,attName,attValue);
+        }
+
+        /**
+         * Util method to write an attribute without the ns prefix
+         */
+        private void writeAttribute(java.lang.String namespace,java.lang.String attName,
+                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+            if (namespace.equals("")) {
+                xmlWriter.writeAttribute(attName,attValue);
+            } else {
+                registerPrefix(xmlWriter, namespace);
+                xmlWriter.writeAttribute(namespace,attName,attValue);
+            }
+        }
+
+
+           /**
+             * Util method to write an attribute without the ns prefix
+             */
+            private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
+                                             javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+
+                java.lang.String attributeNamespace = qname.getNamespaceURI();
+                java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
+                if (attributePrefix == null) {
+                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
+                }
+                java.lang.String attributeValue;
+                if (attributePrefix.trim().length() > 0) {
+                    attributeValue = attributePrefix + ":" + qname.getLocalPart();
+                } else {
+                    attributeValue = qname.getLocalPart();
+                }
+
+                if (namespace.equals("")) {
+                    xmlWriter.writeAttribute(attName, attributeValue);
+                } else {
+                    registerPrefix(xmlWriter, namespace);
+                    xmlWriter.writeAttribute(namespace, attName, attributeValue);
+                }
+            }
+        /**
+         *  method to handle Qnames
+         */
+
+        private void writeQName(javax.xml.namespace.QName qname,
+                                javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+            java.lang.String namespaceURI = qname.getNamespaceURI();
+            if (namespaceURI != null) {
+                java.lang.String prefix = xmlWriter.getPrefix(namespaceURI);
+                if (prefix == null) {
+                    prefix = generatePrefix(namespaceURI);
+                    xmlWriter.writeNamespace(prefix, namespaceURI);
+                    xmlWriter.setPrefix(prefix,namespaceURI);
+                }
+
+                if (prefix.trim().length() > 0){
+                    xmlWriter.writeCharacters(prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+                } else {
+                    // i.e this is the default namespace
+                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+                }
+
+            } else {
+                xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+            }
+        }
+
+        private void writeQNames(javax.xml.namespace.QName[] qnames,
+                                 javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+
+            if (qnames != null) {
+                // we have to store this data until last moment since it is not possible to write any
+                // namespace data after writing the charactor data
+                java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
+                java.lang.String namespaceURI = null;
+                java.lang.String prefix = null;
+
+                for (int i = 0; i < qnames.length; i++) {
+                    if (i > 0) {
+                        stringToWrite.append(" ");
+                    }
+                    namespaceURI = qnames[i].getNamespaceURI();
+                    if (namespaceURI != null) {
+                        prefix = xmlWriter.getPrefix(namespaceURI);
+                        if ((prefix == null) || (prefix.length() == 0)) {
+                            prefix = generatePrefix(namespaceURI);
+                            xmlWriter.writeNamespace(prefix, namespaceURI);
+                            xmlWriter.setPrefix(prefix,namespaceURI);
+                        }
+
+                        if (prefix.trim().length() > 0){
+                            stringToWrite.append(prefix).append(":").append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                        } else {
+                            stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                        }
+                    } else {
+                        stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                    }
+                }
+                xmlWriter.writeCharacters(stringToWrite.toString());
+            }
+
+        }
+
+
+        /**
+         * Register a namespace prefix
+         */
+        private java.lang.String registerPrefix(javax.xml.stream.XMLStreamWriter xmlWriter, java.lang.String namespace) throws javax.xml.stream.XMLStreamException {
+            java.lang.String prefix = xmlWriter.getPrefix(namespace);
+            if (prefix == null) {
+                prefix = generatePrefix(namespace);
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
+                    prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+                }
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+            return prefix;
+        }
+
+
+  
+        /**
+        * databinding method to get an XML representation of this object
+        *
+        */
+        public javax.xml.stream.XMLStreamReader getPullParser(javax.xml.namespace.QName qName)
+                    throws org.apache.axis2.databinding.ADBException{
+
+
+        
+                
+                //We can safely assume an element has only one type associated with it
+                return localPurchaseRequest.getPullParser(MY_QNAME);
+
+        }
+
+  
+
+     /**
+      *  Factory class that keeps the parse method
+      */
+    public static class Factory{
+
+        
+        
+
+        /**
+        * static method to create the object
+        * Precondition:  If this object is an element, the current or next start element starts this object and any intervening reader events are ignorable
+        *                If this object is not an element, it is a complex type and the reader is at the event just after the outer start element
+        * Postcondition: If this object is an element, the reader is positioned at its end element
+        *                If this object is a complex type, the reader is positioned at the end element of its outer element
+        */
+        public static PurchaseRequest parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
+            PurchaseRequest object =
+                new PurchaseRequest();
+
+            int event;
+            java.lang.String nillableValue = null;
+            java.lang.String prefix ="";
+            java.lang.String namespaceuri ="";
+            try {
+                
+                while (!reader.isStartElement() && !reader.isEndElement())
+                    reader.next();
+
+                
+
+                
+                // Note all attributes that were handled. Used to differ normal attributes
+                // from anyAttributes.
+                java.util.Vector handledAttributes = new java.util.Vector();
+                
+
+                   
+                while(!reader.isEndElement()) {
+                    if (reader.isStartElement() ){
+                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","PurchaseRequest").equals(reader.getName())){
+                                
+                                                object.setPurchaseRequest(MPurchaseRequestType.Factory.parse(reader));
                                             
                               }  // End of if for expected property start element
                                 
@@ -5355,8 +8758,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -5614,7 +9017,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -5770,6 +9178,820 @@
                                     if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","AccountNumber").equals(reader.getName())){
                                 
                                                 object.setAccountNumber(AccountNumber.Factory.parse(reader));
+                                              
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                else{
+                                    // A start element we are not expecting indicates an invalid parameter was passed
+                                    throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                                }
+                            
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","OriginCode").equals(reader.getName())){
+                                
+                                                object.setOriginCode(MmTransferCode.Factory.parse(reader));
+                                              
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                else{
+                                    // A start element we are not expecting indicates an invalid parameter was passed
+                                    throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                                }
+                            
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","AccountPIN").equals(reader.getName())){
+                                
+                                                object.setAccountPIN(PIN.Factory.parse(reader));
+                                              
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                    else {
+                                        
+                                    }
+                                
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","RequestReference").equals(reader.getName())){
+                                
+                                                object.setRequestReference(RequestReference.Factory.parse(reader));
+                                              
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                else{
+                                    // A start element we are not expecting indicates an invalid parameter was passed
+                                    throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                                }
+                            
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","Currency").equals(reader.getName())){
+                                
+                                                object.setCurrency(CurrencyCode.Factory.parse(reader));
+                                              
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                else{
+                                    // A start element we are not expecting indicates an invalid parameter was passed
+                                    throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                                }
+                            
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","Amount").equals(reader.getName())){
+                                
+                                    nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
+                                    if ("true".equals(nillableValue) || "1".equals(nillableValue)){
+                                        throw new org.apache.axis2.databinding.ADBException("The element: "+"Amount" +"  cannot be null");
+                                    }
+                                    
+
+                                    java.lang.String content = reader.getElementText();
+                                    
+                                              object.setAmount(
+                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToInt(content));
+                                              
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                else{
+                                    // A start element we are not expecting indicates an invalid parameter was passed
+                                    throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                                }
+                              
+                            while (!reader.isStartElement() && !reader.isEndElement())
+                                reader.next();
+                            
+                                if (reader.isStartElement())
+                                // A start element we are not expecting indicates a trailing invalid property
+                                throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                            
+
+
+
+            } catch (javax.xml.stream.XMLStreamException e) {
+                throw new java.lang.Exception(e);
+            }
+
+            return object;
+        }
+
+        }//end of factory class
+
+        
+
+        }
+           
+    
+        public static class MCashOutRequestType
+        implements org.apache.axis2.databinding.ADBBean{
+        /* This type was generated from the piece of schema that had
+                name = mCashOutRequestType
+                Namespace URI = http://mobilemoney.com/services/mWallet
+                Namespace Prefix = ns1
+                */
+            
+
+                        /**
+                        * field for AccountNumber
+                        */
+
+                        
+                                    protected AccountNumber localAccountNumber ;
+                                
+                           /*  This tracker boolean wil be used to detect whether the user called the set method
+                          *   for this attribute. It will be used to determine whether to include this field
+                           *   in the serialized XML
+                           */
+                           protected boolean localAccountNumberTracker = false ;
+
+                           public boolean isAccountNumberSpecified(){
+                               return localAccountNumberTracker;
+                           }
+
+                           
+
+                           /**
+                           * Auto generated getter method
+                           * @return AccountNumber
+                           */
+                           public  AccountNumber getAccountNumber(){
+                               return localAccountNumber;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param AccountNumber
+                               */
+                               public void setAccountNumber(AccountNumber param){
+                            localAccountNumberTracker = param != null;
+                                   
+                                            this.localAccountNumber=param;
+                                    
+
+                               }
+                            
+
+                        /**
+                        * field for MerchantNumber
+                        */
+
+                        
+                                    protected AccountNumber localMerchantNumber ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return AccountNumber
+                           */
+                           public  AccountNumber getMerchantNumber(){
+                               return localMerchantNumber;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param MerchantNumber
+                               */
+                               public void setMerchantNumber(AccountNumber param){
+                            
+                                            this.localMerchantNumber=param;
+                                    
+
+                               }
+                            
+
+                        /**
+                        * field for OriginCode
+                        */
+
+                        
+                                    protected MmTransferCode localOriginCode ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return MmTransferCode
+                           */
+                           public  MmTransferCode getOriginCode(){
+                               return localOriginCode;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param OriginCode
+                               */
+                               public void setOriginCode(MmTransferCode param){
+                            
+                                            this.localOriginCode=param;
+                                    
+
+                               }
+                            
+
+                        /**
+                        * field for AccountPIN
+                        */
+
+                        
+                                    protected PIN localAccountPIN ;
+                                
+                           /*  This tracker boolean wil be used to detect whether the user called the set method
+                          *   for this attribute. It will be used to determine whether to include this field
+                           *   in the serialized XML
+                           */
+                           protected boolean localAccountPINTracker = false ;
+
+                           public boolean isAccountPINSpecified(){
+                               return localAccountPINTracker;
+                           }
+
+                           
+
+                           /**
+                           * Auto generated getter method
+                           * @return PIN
+                           */
+                           public  PIN getAccountPIN(){
+                               return localAccountPIN;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param AccountPIN
+                               */
+                               public void setAccountPIN(PIN param){
+                            localAccountPINTracker = param != null;
+                                   
+                                            this.localAccountPIN=param;
+                                    
+
+                               }
+                            
+
+                        /**
+                        * field for RequestReference
+                        */
+
+                        
+                                    protected RequestReference localRequestReference ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return RequestReference
+                           */
+                           public  RequestReference getRequestReference(){
+                               return localRequestReference;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param RequestReference
+                               */
+                               public void setRequestReference(RequestReference param){
+                            
+                                            this.localRequestReference=param;
+                                    
+
+                               }
+                            
+
+                        /**
+                        * field for Currency
+                        */
+
+                        
+                                    protected CurrencyCode localCurrency ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return CurrencyCode
+                           */
+                           public  CurrencyCode getCurrency(){
+                               return localCurrency;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param Currency
+                               */
+                               public void setCurrency(CurrencyCode param){
+                            
+                                            this.localCurrency=param;
+                                    
+
+                               }
+                            
+
+                        /**
+                        * field for Amount
+                        */
+
+                        
+                                    protected int localAmount ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return int
+                           */
+                           public  int getAmount(){
+                               return localAmount;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param Amount
+                               */
+                               public void setAmount(int param){
+                            
+                                            this.localAmount=param;
+                                    
+
+                               }
+                            
+
+     
+     
+        /**
+        *
+        * @param parentQName
+        * @param factory
+        * @return org.apache.axiom.om.OMElement
+        */
+       public org.apache.axiom.om.OMElement getOMElement (
+               final javax.xml.namespace.QName parentQName,
+               final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
+
+
+        
+               org.apache.axiom.om.OMDataSource dataSource =
+                       new org.apache.axis2.databinding.ADBDataSource(this,parentQName);
+               return factory.createOMElement(dataSource,parentQName);
+            
+        }
+
+         public void serialize(final javax.xml.namespace.QName parentQName,
+                                       javax.xml.stream.XMLStreamWriter xmlWriter)
+                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+                           serialize(parentQName,xmlWriter,false);
+         }
+
+         public void serialize(final javax.xml.namespace.QName parentQName,
+                               javax.xml.stream.XMLStreamWriter xmlWriter,
+                               boolean serializeType)
+            throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+            
+                
+
+
+                java.lang.String prefix = null;
+                java.lang.String namespace = null;
+                
+
+                    prefix = parentQName.getPrefix();
+                    namespace = parentQName.getNamespaceURI();
+                    writeStartElement(prefix, namespace, parentQName.getLocalPart(), xmlWriter);
+                
+                  if (serializeType){
+               
+
+                   java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://mobilemoney.com/services/mWallet");
+                   if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
+                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
+                           namespacePrefix+":mCashOutRequestType",
+                           xmlWriter);
+                   } else {
+                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
+                           "mCashOutRequestType",
+                           xmlWriter);
+                   }
+
+               
+                   }
+                if (localAccountNumberTracker){
+                                            if (localAccountNumber==null){
+                                                 throw new org.apache.axis2.databinding.ADBException("AccountNumber cannot be null!!");
+                                            }
+                                           localAccountNumber.serialize(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","AccountNumber"),
+                                               xmlWriter);
+                                        }
+                                            if (localMerchantNumber==null){
+                                                 throw new org.apache.axis2.databinding.ADBException("MerchantNumber cannot be null!!");
+                                            }
+                                           localMerchantNumber.serialize(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","MerchantNumber"),
+                                               xmlWriter);
+                                        
+                                            if (localOriginCode==null){
+                                                 throw new org.apache.axis2.databinding.ADBException("OriginCode cannot be null!!");
+                                            }
+                                           localOriginCode.serialize(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","OriginCode"),
+                                               xmlWriter);
+                                         if (localAccountPINTracker){
+                                            if (localAccountPIN==null){
+                                                 throw new org.apache.axis2.databinding.ADBException("AccountPIN cannot be null!!");
+                                            }
+                                           localAccountPIN.serialize(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","AccountPIN"),
+                                               xmlWriter);
+                                        }
+                                            if (localRequestReference==null){
+                                                 throw new org.apache.axis2.databinding.ADBException("RequestReference cannot be null!!");
+                                            }
+                                           localRequestReference.serialize(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","RequestReference"),
+                                               xmlWriter);
+                                        
+                                            if (localCurrency==null){
+                                                 throw new org.apache.axis2.databinding.ADBException("Currency cannot be null!!");
+                                            }
+                                           localCurrency.serialize(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","Currency"),
+                                               xmlWriter);
+                                        
+                                    namespace = "http://mobilemoney.com/services/mWallet";
+                                    writeStartElement(null, namespace, "Amount", xmlWriter);
+                             
+                                               if (localAmount==java.lang.Integer.MIN_VALUE) {
+                                           
+                                                         throw new org.apache.axis2.databinding.ADBException("Amount cannot be null!!");
+                                                      
+                                               } else {
+                                                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localAmount));
+                                               }
+                                    
+                                   xmlWriter.writeEndElement();
+                             
+                    xmlWriter.writeEndElement();
+               
+
+        }
+
+        private static java.lang.String generatePrefix(java.lang.String namespace) {
+            if(namespace.equals("http://mobilemoney.com/services/mWallet")){
+                return "ns1";
+            }
+            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+        }
+
+        /**
+         * Utility method to write an element start tag.
+         */
+        private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
+                                       javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+            java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
+            if (writerPrefix != null) {
+                xmlWriter.writeStartElement(namespace, localPart);
+            } else {
+                if (namespace.length() == 0) {
+                    prefix = "";
+                } else if (prefix == null) {
+                    prefix = generatePrefix(namespace);
+                }
+
+                xmlWriter.writeStartElement(prefix, localPart, namespace);
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+        }
+        
+        /**
+         * Util method to write an attribute with the ns prefix
+         */
+        private void writeAttribute(java.lang.String prefix,java.lang.String namespace,java.lang.String attName,
+                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+            if (xmlWriter.getPrefix(namespace) == null) {
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+            xmlWriter.writeAttribute(namespace,attName,attValue);
+        }
+
+        /**
+         * Util method to write an attribute without the ns prefix
+         */
+        private void writeAttribute(java.lang.String namespace,java.lang.String attName,
+                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+            if (namespace.equals("")) {
+                xmlWriter.writeAttribute(attName,attValue);
+            } else {
+                registerPrefix(xmlWriter, namespace);
+                xmlWriter.writeAttribute(namespace,attName,attValue);
+            }
+        }
+
+
+           /**
+             * Util method to write an attribute without the ns prefix
+             */
+            private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
+                                             javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+
+                java.lang.String attributeNamespace = qname.getNamespaceURI();
+                java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
+                if (attributePrefix == null) {
+                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
+                }
+                java.lang.String attributeValue;
+                if (attributePrefix.trim().length() > 0) {
+                    attributeValue = attributePrefix + ":" + qname.getLocalPart();
+                } else {
+                    attributeValue = qname.getLocalPart();
+                }
+
+                if (namespace.equals("")) {
+                    xmlWriter.writeAttribute(attName, attributeValue);
+                } else {
+                    registerPrefix(xmlWriter, namespace);
+                    xmlWriter.writeAttribute(namespace, attName, attributeValue);
+                }
+            }
+        /**
+         *  method to handle Qnames
+         */
+
+        private void writeQName(javax.xml.namespace.QName qname,
+                                javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+            java.lang.String namespaceURI = qname.getNamespaceURI();
+            if (namespaceURI != null) {
+                java.lang.String prefix = xmlWriter.getPrefix(namespaceURI);
+                if (prefix == null) {
+                    prefix = generatePrefix(namespaceURI);
+                    xmlWriter.writeNamespace(prefix, namespaceURI);
+                    xmlWriter.setPrefix(prefix,namespaceURI);
+                }
+
+                if (prefix.trim().length() > 0){
+                    xmlWriter.writeCharacters(prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+                } else {
+                    // i.e this is the default namespace
+                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+                }
+
+            } else {
+                xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+            }
+        }
+
+        private void writeQNames(javax.xml.namespace.QName[] qnames,
+                                 javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+
+            if (qnames != null) {
+                // we have to store this data until last moment since it is not possible to write any
+                // namespace data after writing the charactor data
+                java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
+                java.lang.String namespaceURI = null;
+                java.lang.String prefix = null;
+
+                for (int i = 0; i < qnames.length; i++) {
+                    if (i > 0) {
+                        stringToWrite.append(" ");
+                    }
+                    namespaceURI = qnames[i].getNamespaceURI();
+                    if (namespaceURI != null) {
+                        prefix = xmlWriter.getPrefix(namespaceURI);
+                        if ((prefix == null) || (prefix.length() == 0)) {
+                            prefix = generatePrefix(namespaceURI);
+                            xmlWriter.writeNamespace(prefix, namespaceURI);
+                            xmlWriter.setPrefix(prefix,namespaceURI);
+                        }
+
+                        if (prefix.trim().length() > 0){
+                            stringToWrite.append(prefix).append(":").append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                        } else {
+                            stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                        }
+                    } else {
+                        stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                    }
+                }
+                xmlWriter.writeCharacters(stringToWrite.toString());
+            }
+
+        }
+
+
+        /**
+         * Register a namespace prefix
+         */
+        private java.lang.String registerPrefix(javax.xml.stream.XMLStreamWriter xmlWriter, java.lang.String namespace) throws javax.xml.stream.XMLStreamException {
+            java.lang.String prefix = xmlWriter.getPrefix(namespace);
+            if (prefix == null) {
+                prefix = generatePrefix(namespace);
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
+                    prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+                }
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+            return prefix;
+        }
+
+
+  
+        /**
+        * databinding method to get an XML representation of this object
+        *
+        */
+        public javax.xml.stream.XMLStreamReader getPullParser(javax.xml.namespace.QName qName)
+                    throws org.apache.axis2.databinding.ADBException{
+
+
+        
+                 java.util.ArrayList elementList = new java.util.ArrayList();
+                 java.util.ArrayList attribList = new java.util.ArrayList();
+
+                 if (localAccountNumberTracker){
+                            elementList.add(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                                      "AccountNumber"));
+                            
+                            
+                                    if (localAccountNumber==null){
+                                         throw new org.apache.axis2.databinding.ADBException("AccountNumber cannot be null!!");
+                                    }
+                                    elementList.add(localAccountNumber);
+                                }
+                            elementList.add(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                                      "MerchantNumber"));
+                            
+                            
+                                    if (localMerchantNumber==null){
+                                         throw new org.apache.axis2.databinding.ADBException("MerchantNumber cannot be null!!");
+                                    }
+                                    elementList.add(localMerchantNumber);
+                                
+                            elementList.add(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                                      "OriginCode"));
+                            
+                            
+                                    if (localOriginCode==null){
+                                         throw new org.apache.axis2.databinding.ADBException("OriginCode cannot be null!!");
+                                    }
+                                    elementList.add(localOriginCode);
+                                 if (localAccountPINTracker){
+                            elementList.add(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                                      "AccountPIN"));
+                            
+                            
+                                    if (localAccountPIN==null){
+                                         throw new org.apache.axis2.databinding.ADBException("AccountPIN cannot be null!!");
+                                    }
+                                    elementList.add(localAccountPIN);
+                                }
+                            elementList.add(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                                      "RequestReference"));
+                            
+                            
+                                    if (localRequestReference==null){
+                                         throw new org.apache.axis2.databinding.ADBException("RequestReference cannot be null!!");
+                                    }
+                                    elementList.add(localRequestReference);
+                                
+                            elementList.add(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                                      "Currency"));
+                            
+                            
+                                    if (localCurrency==null){
+                                         throw new org.apache.axis2.databinding.ADBException("Currency cannot be null!!");
+                                    }
+                                    elementList.add(localCurrency);
+                                
+                                      elementList.add(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                                      "Amount"));
+                                 
+                                elementList.add(
+                                   org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localAmount));
+                            
+
+                return new org.apache.axis2.databinding.utils.reader.ADBXMLStreamReaderImpl(qName, elementList.toArray(), attribList.toArray());
+            
+            
+
+        }
+
+  
+
+     /**
+      *  Factory class that keeps the parse method
+      */
+    public static class Factory{
+
+        
+        
+
+        /**
+        * static method to create the object
+        * Precondition:  If this object is an element, the current or next start element starts this object and any intervening reader events are ignorable
+        *                If this object is not an element, it is a complex type and the reader is at the event just after the outer start element
+        * Postcondition: If this object is an element, the reader is positioned at its end element
+        *                If this object is a complex type, the reader is positioned at the end element of its outer element
+        */
+        public static MCashOutRequestType parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
+            MCashOutRequestType object =
+                new MCashOutRequestType();
+
+            int event;
+            java.lang.String nillableValue = null;
+            java.lang.String prefix ="";
+            java.lang.String namespaceuri ="";
+            try {
+                
+                while (!reader.isStartElement() && !reader.isEndElement())
+                    reader.next();
+
+                
+                if (reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","type")!=null){
+                  java.lang.String fullTypeName = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance",
+                        "type");
+                  if (fullTypeName!=null){
+                    java.lang.String nsPrefix = null;
+                    if (fullTypeName.indexOf(":") > -1){
+                        nsPrefix = fullTypeName.substring(0,fullTypeName.indexOf(":"));
+                    }
+                    nsPrefix = nsPrefix==null?"":nsPrefix;
+
+                    java.lang.String type = fullTypeName.substring(fullTypeName.indexOf(":")+1);
+                    
+                            if (!"mCashOutRequestType".equals(type)){
+                                //find namespace for the prefix
+                                java.lang.String nsUri = reader.getNamespaceContext().getNamespaceURI(nsPrefix);
+                                return (MCashOutRequestType)ExtensionMapper.getTypeObject(
+                                     nsUri,type,reader);
+                              }
+                        
+
+                  }
+                
+
+                }
+
+                
+
+                
+                // Note all attributes that were handled. Used to differ normal attributes
+                // from anyAttributes.
+                java.util.Vector handledAttributes = new java.util.Vector();
+                
+
+                
+                    
+                    reader.next();
+                
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","AccountNumber").equals(reader.getName())){
+                                
+                                                object.setAccountNumber(AccountNumber.Factory.parse(reader));
+                                              
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                    else {
+                                        
+                                    }
+                                
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","MerchantNumber").equals(reader.getName())){
+                                
+                                                object.setMerchantNumber(AccountNumber.Factory.parse(reader));
                                               
                                         reader.next();
                                     
@@ -6134,8 +10356,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -6431,7 +10653,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -6740,268 +10967,6 @@
         }
            
     
-        public static class ExtensionMapper{
-
-          public static java.lang.Object getTypeObject(java.lang.String namespaceURI,
-                                                       java.lang.String typeName,
-                                                       javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "mBasicRequestType".equals(typeName)){
-                   
-                            return  MBasicRequestType.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "mTransferRequestType".equals(typeName)){
-                   
-                            return  MTransferRequestType.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "RequestReference".equals(typeName)){
-                   
-                            return  RequestReference.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "LastName".equals(typeName)){
-                   
-                            return  LastName.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "mBalanceResponse".equals(typeName)){
-                   
-                            return  MBalanceResponse.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "mHeader".equals(typeName)){
-                   
-                            return  MHeader.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "mCustomerRegRequest".equals(typeName)){
-                   
-                            return  MCustomerRegRequest.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "FirstName".equals(typeName)){
-                   
-                            return  FirstName.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "mTxnReverseResponse".equals(typeName)){
-                   
-                            return  MTxnReverseResponse.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "PIN".equals(typeName)){
-                   
-                            return  PIN.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "mTransactionQuery".equals(typeName)){
-                   
-                            return  MTransactionQuery.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "mTransferResponseType".equals(typeName)){
-                   
-                            return  MTransferResponseType.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "mCustomerRegResponse".equals(typeName)){
-                   
-                            return  MCustomerRegResponse.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "AccountNumber".equals(typeName)){
-                   
-                            return  AccountNumber.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "AddressLine".equals(typeName)){
-                   
-                            return  AddressLine.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "mAirtimeTopupRequestType".equals(typeName)){
-                   
-                            return  MAirtimeTopupRequestType.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "mTxnReverseRequest".equals(typeName)){
-                   
-                            return  MTxnReverseRequest.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "CurrencyCode".equals(typeName)){
-                   
-                            return  CurrencyCode.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "Country".equals(typeName)){
-                   
-                            return  Country.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "mCustomerVerificationRequest".equals(typeName)){
-                   
-                            return  MCustomerVerificationRequest.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "City".equals(typeName)){
-                   
-                            return  City.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "MmTransferCode".equals(typeName)){
-                   
-                            return  MmTransferCode.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "State".equals(typeName)){
-                   
-                            return  State.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "mPingResponse".equals(typeName)){
-                   
-                            return  MPingResponse.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
-                  "mCustomerVerificationResponse".equals(typeName)){
-                   
-                            return  MCustomerVerificationResponse.Factory.parse(reader);
-                        
-
-                  }
-
-              
-             throw new org.apache.axis2.databinding.ADBException("Unsupported type " + namespaceURI + " " + typeName);
-          }
-
-        }
-    
         public static class CustomerVerificationRequest
         implements org.apache.axis2.databinding.ADBBean{
         
@@ -7041,8 +11006,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -7235,7 +11200,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -7336,6 +11306,298 @@
         }
            
     
+        public static class ExtensionMapper{
+
+          public static java.lang.Object getTypeObject(java.lang.String namespaceURI,
+                                                       java.lang.String typeName,
+                                                       javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "mBasicRequestType".equals(typeName)){
+                   
+                            return  MBasicRequestType.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "mTransferRequestType".equals(typeName)){
+                   
+                            return  MTransferRequestType.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "RequestReference".equals(typeName)){
+                   
+                            return  RequestReference.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "LastName".equals(typeName)){
+                   
+                            return  LastName.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "mCashOutRequestType".equals(typeName)){
+                   
+                            return  MCashOutRequestType.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "mBalanceResponse".equals(typeName)){
+                   
+                            return  MBalanceResponse.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "mHeader".equals(typeName)){
+                   
+                            return  MHeader.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "mCustomerRegRequest".equals(typeName)){
+                   
+                            return  MCustomerRegRequest.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "FirstName".equals(typeName)){
+                   
+                            return  FirstName.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "mCashInRequestType".equals(typeName)){
+                   
+                            return  MCashInRequestType.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "mPurchaseRequestType".equals(typeName)){
+                   
+                            return  MPurchaseRequestType.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "mTxnReverseResponse".equals(typeName)){
+                   
+                            return  MTxnReverseResponse.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "PIN".equals(typeName)){
+                   
+                            return  PIN.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "mTransactionQuery".equals(typeName)){
+                   
+                            return  MTransactionQuery.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "mTransferResponseType".equals(typeName)){
+                   
+                            return  MTransferResponseType.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "mCustomerRegResponse".equals(typeName)){
+                   
+                            return  MCustomerRegResponse.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "AccountNumber".equals(typeName)){
+                   
+                            return  AccountNumber.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "AddressLine".equals(typeName)){
+                   
+                            return  AddressLine.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "mAirtimeTopupRequestType".equals(typeName)){
+                   
+                            return  MAirtimeTopupRequestType.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "mTxnReverseRequest".equals(typeName)){
+                   
+                            return  MTxnReverseRequest.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "CurrencyCode".equals(typeName)){
+                   
+                            return  CurrencyCode.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "mCustomerVerificationRequest".equals(typeName)){
+                   
+                            return  MCustomerVerificationRequest.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "Country".equals(typeName)){
+                   
+                            return  Country.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "City".equals(typeName)){
+                   
+                            return  City.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "MmTransferCode".equals(typeName)){
+                   
+                            return  MmTransferCode.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "State".equals(typeName)){
+                   
+                            return  State.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "mPingResponse".equals(typeName)){
+                   
+                            return  MPingResponse.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://mobilemoney.com/services/mWallet".equals(namespaceURI) &&
+                  "mCustomerVerificationResponse".equals(typeName)){
+                   
+                            return  MCustomerVerificationResponse.Factory.parse(reader);
+                        
+
+                  }
+
+              
+             throw new org.apache.axis2.databinding.ADBException("Unsupported type " + namespaceURI + " " + typeName);
+          }
+
+        }
+    
         public static class MBasicRequestType
         implements org.apache.axis2.databinding.ADBBean{
         /* This type was generated from the piece of schema that had
@@ -7416,8 +11678,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -7644,7 +11906,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -7867,8 +12134,8 @@
                                     
                             }
                         
-     
 
+     
      
         /**
         *
@@ -8087,7 +12354,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -8276,8 +12548,8 @@
                                     
                             }
                         
-     
 
+     
      
         /**
         *
@@ -8496,7 +12768,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -8732,8 +13009,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -8997,7 +13274,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -9258,8 +13540,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -9452,7 +13734,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -9553,6 +13840,737 @@
         }
            
     
+        public static class MCashInRequestType
+        implements org.apache.axis2.databinding.ADBBean{
+        /* This type was generated from the piece of schema that had
+                name = mCashInRequestType
+                Namespace URI = http://mobilemoney.com/services/mWallet
+                Namespace Prefix = ns1
+                */
+            
+
+                        /**
+                        * field for AccountNumber
+                        */
+
+                        
+                                    protected AccountNumber localAccountNumber ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return AccountNumber
+                           */
+                           public  AccountNumber getAccountNumber(){
+                               return localAccountNumber;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param AccountNumber
+                               */
+                               public void setAccountNumber(AccountNumber param){
+                            
+                                            this.localAccountNumber=param;
+                                    
+
+                               }
+                            
+
+                        /**
+                        * field for MerchantNumber
+                        */
+
+                        
+                                    protected AccountNumber localMerchantNumber ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return AccountNumber
+                           */
+                           public  AccountNumber getMerchantNumber(){
+                               return localMerchantNumber;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param MerchantNumber
+                               */
+                               public void setMerchantNumber(AccountNumber param){
+                            
+                                            this.localMerchantNumber=param;
+                                    
+
+                               }
+                            
+
+                        /**
+                        * field for OriginCode
+                        */
+
+                        
+                                    protected MmTransferCode localOriginCode ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return MmTransferCode
+                           */
+                           public  MmTransferCode getOriginCode(){
+                               return localOriginCode;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param OriginCode
+                               */
+                               public void setOriginCode(MmTransferCode param){
+                            
+                                            this.localOriginCode=param;
+                                    
+
+                               }
+                            
+
+                        /**
+                        * field for RequestReference
+                        */
+
+                        
+                                    protected RequestReference localRequestReference ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return RequestReference
+                           */
+                           public  RequestReference getRequestReference(){
+                               return localRequestReference;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param RequestReference
+                               */
+                               public void setRequestReference(RequestReference param){
+                            
+                                            this.localRequestReference=param;
+                                    
+
+                               }
+                            
+
+                        /**
+                        * field for Currency
+                        */
+
+                        
+                                    protected CurrencyCode localCurrency ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return CurrencyCode
+                           */
+                           public  CurrencyCode getCurrency(){
+                               return localCurrency;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param Currency
+                               */
+                               public void setCurrency(CurrencyCode param){
+                            
+                                            this.localCurrency=param;
+                                    
+
+                               }
+                            
+
+                        /**
+                        * field for Amount
+                        */
+
+                        
+                                    protected int localAmount ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return int
+                           */
+                           public  int getAmount(){
+                               return localAmount;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param Amount
+                               */
+                               public void setAmount(int param){
+                            
+                                            this.localAmount=param;
+                                    
+
+                               }
+                            
+
+     
+     
+        /**
+        *
+        * @param parentQName
+        * @param factory
+        * @return org.apache.axiom.om.OMElement
+        */
+       public org.apache.axiom.om.OMElement getOMElement (
+               final javax.xml.namespace.QName parentQName,
+               final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
+
+
+        
+               org.apache.axiom.om.OMDataSource dataSource =
+                       new org.apache.axis2.databinding.ADBDataSource(this,parentQName);
+               return factory.createOMElement(dataSource,parentQName);
+            
+        }
+
+         public void serialize(final javax.xml.namespace.QName parentQName,
+                                       javax.xml.stream.XMLStreamWriter xmlWriter)
+                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+                           serialize(parentQName,xmlWriter,false);
+         }
+
+         public void serialize(final javax.xml.namespace.QName parentQName,
+                               javax.xml.stream.XMLStreamWriter xmlWriter,
+                               boolean serializeType)
+            throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+            
+                
+
+
+                java.lang.String prefix = null;
+                java.lang.String namespace = null;
+                
+
+                    prefix = parentQName.getPrefix();
+                    namespace = parentQName.getNamespaceURI();
+                    writeStartElement(prefix, namespace, parentQName.getLocalPart(), xmlWriter);
+                
+                  if (serializeType){
+               
+
+                   java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://mobilemoney.com/services/mWallet");
+                   if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
+                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
+                           namespacePrefix+":mCashInRequestType",
+                           xmlWriter);
+                   } else {
+                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
+                           "mCashInRequestType",
+                           xmlWriter);
+                   }
+
+               
+                   }
+               
+                                            if (localAccountNumber==null){
+                                                 throw new org.apache.axis2.databinding.ADBException("AccountNumber cannot be null!!");
+                                            }
+                                           localAccountNumber.serialize(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","AccountNumber"),
+                                               xmlWriter);
+                                        
+                                            if (localMerchantNumber==null){
+                                                 throw new org.apache.axis2.databinding.ADBException("MerchantNumber cannot be null!!");
+                                            }
+                                           localMerchantNumber.serialize(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","MerchantNumber"),
+                                               xmlWriter);
+                                        
+                                            if (localOriginCode==null){
+                                                 throw new org.apache.axis2.databinding.ADBException("OriginCode cannot be null!!");
+                                            }
+                                           localOriginCode.serialize(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","OriginCode"),
+                                               xmlWriter);
+                                        
+                                            if (localRequestReference==null){
+                                                 throw new org.apache.axis2.databinding.ADBException("RequestReference cannot be null!!");
+                                            }
+                                           localRequestReference.serialize(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","RequestReference"),
+                                               xmlWriter);
+                                        
+                                            if (localCurrency==null){
+                                                 throw new org.apache.axis2.databinding.ADBException("Currency cannot be null!!");
+                                            }
+                                           localCurrency.serialize(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","Currency"),
+                                               xmlWriter);
+                                        
+                                    namespace = "http://mobilemoney.com/services/mWallet";
+                                    writeStartElement(null, namespace, "Amount", xmlWriter);
+                             
+                                               if (localAmount==java.lang.Integer.MIN_VALUE) {
+                                           
+                                                         throw new org.apache.axis2.databinding.ADBException("Amount cannot be null!!");
+                                                      
+                                               } else {
+                                                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localAmount));
+                                               }
+                                    
+                                   xmlWriter.writeEndElement();
+                             
+                    xmlWriter.writeEndElement();
+               
+
+        }
+
+        private static java.lang.String generatePrefix(java.lang.String namespace) {
+            if(namespace.equals("http://mobilemoney.com/services/mWallet")){
+                return "ns1";
+            }
+            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+        }
+
+        /**
+         * Utility method to write an element start tag.
+         */
+        private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
+                                       javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+            java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
+            if (writerPrefix != null) {
+                xmlWriter.writeStartElement(namespace, localPart);
+            } else {
+                if (namespace.length() == 0) {
+                    prefix = "";
+                } else if (prefix == null) {
+                    prefix = generatePrefix(namespace);
+                }
+
+                xmlWriter.writeStartElement(prefix, localPart, namespace);
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+        }
+        
+        /**
+         * Util method to write an attribute with the ns prefix
+         */
+        private void writeAttribute(java.lang.String prefix,java.lang.String namespace,java.lang.String attName,
+                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+            if (xmlWriter.getPrefix(namespace) == null) {
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+            xmlWriter.writeAttribute(namespace,attName,attValue);
+        }
+
+        /**
+         * Util method to write an attribute without the ns prefix
+         */
+        private void writeAttribute(java.lang.String namespace,java.lang.String attName,
+                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+            if (namespace.equals("")) {
+                xmlWriter.writeAttribute(attName,attValue);
+            } else {
+                registerPrefix(xmlWriter, namespace);
+                xmlWriter.writeAttribute(namespace,attName,attValue);
+            }
+        }
+
+
+           /**
+             * Util method to write an attribute without the ns prefix
+             */
+            private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
+                                             javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+
+                java.lang.String attributeNamespace = qname.getNamespaceURI();
+                java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
+                if (attributePrefix == null) {
+                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
+                }
+                java.lang.String attributeValue;
+                if (attributePrefix.trim().length() > 0) {
+                    attributeValue = attributePrefix + ":" + qname.getLocalPart();
+                } else {
+                    attributeValue = qname.getLocalPart();
+                }
+
+                if (namespace.equals("")) {
+                    xmlWriter.writeAttribute(attName, attributeValue);
+                } else {
+                    registerPrefix(xmlWriter, namespace);
+                    xmlWriter.writeAttribute(namespace, attName, attributeValue);
+                }
+            }
+        /**
+         *  method to handle Qnames
+         */
+
+        private void writeQName(javax.xml.namespace.QName qname,
+                                javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+            java.lang.String namespaceURI = qname.getNamespaceURI();
+            if (namespaceURI != null) {
+                java.lang.String prefix = xmlWriter.getPrefix(namespaceURI);
+                if (prefix == null) {
+                    prefix = generatePrefix(namespaceURI);
+                    xmlWriter.writeNamespace(prefix, namespaceURI);
+                    xmlWriter.setPrefix(prefix,namespaceURI);
+                }
+
+                if (prefix.trim().length() > 0){
+                    xmlWriter.writeCharacters(prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+                } else {
+                    // i.e this is the default namespace
+                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+                }
+
+            } else {
+                xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+            }
+        }
+
+        private void writeQNames(javax.xml.namespace.QName[] qnames,
+                                 javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+
+            if (qnames != null) {
+                // we have to store this data until last moment since it is not possible to write any
+                // namespace data after writing the charactor data
+                java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
+                java.lang.String namespaceURI = null;
+                java.lang.String prefix = null;
+
+                for (int i = 0; i < qnames.length; i++) {
+                    if (i > 0) {
+                        stringToWrite.append(" ");
+                    }
+                    namespaceURI = qnames[i].getNamespaceURI();
+                    if (namespaceURI != null) {
+                        prefix = xmlWriter.getPrefix(namespaceURI);
+                        if ((prefix == null) || (prefix.length() == 0)) {
+                            prefix = generatePrefix(namespaceURI);
+                            xmlWriter.writeNamespace(prefix, namespaceURI);
+                            xmlWriter.setPrefix(prefix,namespaceURI);
+                        }
+
+                        if (prefix.trim().length() > 0){
+                            stringToWrite.append(prefix).append(":").append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                        } else {
+                            stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                        }
+                    } else {
+                        stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                    }
+                }
+                xmlWriter.writeCharacters(stringToWrite.toString());
+            }
+
+        }
+
+
+        /**
+         * Register a namespace prefix
+         */
+        private java.lang.String registerPrefix(javax.xml.stream.XMLStreamWriter xmlWriter, java.lang.String namespace) throws javax.xml.stream.XMLStreamException {
+            java.lang.String prefix = xmlWriter.getPrefix(namespace);
+            if (prefix == null) {
+                prefix = generatePrefix(namespace);
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
+                    prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+                }
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+            return prefix;
+        }
+
+
+  
+        /**
+        * databinding method to get an XML representation of this object
+        *
+        */
+        public javax.xml.stream.XMLStreamReader getPullParser(javax.xml.namespace.QName qName)
+                    throws org.apache.axis2.databinding.ADBException{
+
+
+        
+                 java.util.ArrayList elementList = new java.util.ArrayList();
+                 java.util.ArrayList attribList = new java.util.ArrayList();
+
+                
+                            elementList.add(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                                      "AccountNumber"));
+                            
+                            
+                                    if (localAccountNumber==null){
+                                         throw new org.apache.axis2.databinding.ADBException("AccountNumber cannot be null!!");
+                                    }
+                                    elementList.add(localAccountNumber);
+                                
+                            elementList.add(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                                      "MerchantNumber"));
+                            
+                            
+                                    if (localMerchantNumber==null){
+                                         throw new org.apache.axis2.databinding.ADBException("MerchantNumber cannot be null!!");
+                                    }
+                                    elementList.add(localMerchantNumber);
+                                
+                            elementList.add(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                                      "OriginCode"));
+                            
+                            
+                                    if (localOriginCode==null){
+                                         throw new org.apache.axis2.databinding.ADBException("OriginCode cannot be null!!");
+                                    }
+                                    elementList.add(localOriginCode);
+                                
+                            elementList.add(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                                      "RequestReference"));
+                            
+                            
+                                    if (localRequestReference==null){
+                                         throw new org.apache.axis2.databinding.ADBException("RequestReference cannot be null!!");
+                                    }
+                                    elementList.add(localRequestReference);
+                                
+                            elementList.add(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                                      "Currency"));
+                            
+                            
+                                    if (localCurrency==null){
+                                         throw new org.apache.axis2.databinding.ADBException("Currency cannot be null!!");
+                                    }
+                                    elementList.add(localCurrency);
+                                
+                                      elementList.add(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                                      "Amount"));
+                                 
+                                elementList.add(
+                                   org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localAmount));
+                            
+
+                return new org.apache.axis2.databinding.utils.reader.ADBXMLStreamReaderImpl(qName, elementList.toArray(), attribList.toArray());
+            
+            
+
+        }
+
+  
+
+     /**
+      *  Factory class that keeps the parse method
+      */
+    public static class Factory{
+
+        
+        
+
+        /**
+        * static method to create the object
+        * Precondition:  If this object is an element, the current or next start element starts this object and any intervening reader events are ignorable
+        *                If this object is not an element, it is a complex type and the reader is at the event just after the outer start element
+        * Postcondition: If this object is an element, the reader is positioned at its end element
+        *                If this object is a complex type, the reader is positioned at the end element of its outer element
+        */
+        public static MCashInRequestType parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
+            MCashInRequestType object =
+                new MCashInRequestType();
+
+            int event;
+            java.lang.String nillableValue = null;
+            java.lang.String prefix ="";
+            java.lang.String namespaceuri ="";
+            try {
+                
+                while (!reader.isStartElement() && !reader.isEndElement())
+                    reader.next();
+
+                
+                if (reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","type")!=null){
+                  java.lang.String fullTypeName = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance",
+                        "type");
+                  if (fullTypeName!=null){
+                    java.lang.String nsPrefix = null;
+                    if (fullTypeName.indexOf(":") > -1){
+                        nsPrefix = fullTypeName.substring(0,fullTypeName.indexOf(":"));
+                    }
+                    nsPrefix = nsPrefix==null?"":nsPrefix;
+
+                    java.lang.String type = fullTypeName.substring(fullTypeName.indexOf(":")+1);
+                    
+                            if (!"mCashInRequestType".equals(type)){
+                                //find namespace for the prefix
+                                java.lang.String nsUri = reader.getNamespaceContext().getNamespaceURI(nsPrefix);
+                                return (MCashInRequestType)ExtensionMapper.getTypeObject(
+                                     nsUri,type,reader);
+                              }
+                        
+
+                  }
+                
+
+                }
+
+                
+
+                
+                // Note all attributes that were handled. Used to differ normal attributes
+                // from anyAttributes.
+                java.util.Vector handledAttributes = new java.util.Vector();
+                
+
+                
+                    
+                    reader.next();
+                
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","AccountNumber").equals(reader.getName())){
+                                
+                                                object.setAccountNumber(AccountNumber.Factory.parse(reader));
+                                              
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                else{
+                                    // A start element we are not expecting indicates an invalid parameter was passed
+                                    throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                                }
+                            
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","MerchantNumber").equals(reader.getName())){
+                                
+                                                object.setMerchantNumber(AccountNumber.Factory.parse(reader));
+                                              
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                else{
+                                    // A start element we are not expecting indicates an invalid parameter was passed
+                                    throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                                }
+                            
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","OriginCode").equals(reader.getName())){
+                                
+                                                object.setOriginCode(MmTransferCode.Factory.parse(reader));
+                                              
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                else{
+                                    // A start element we are not expecting indicates an invalid parameter was passed
+                                    throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                                }
+                            
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","RequestReference").equals(reader.getName())){
+                                
+                                                object.setRequestReference(RequestReference.Factory.parse(reader));
+                                              
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                else{
+                                    // A start element we are not expecting indicates an invalid parameter was passed
+                                    throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                                }
+                            
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","Currency").equals(reader.getName())){
+                                
+                                                object.setCurrency(CurrencyCode.Factory.parse(reader));
+                                              
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                else{
+                                    // A start element we are not expecting indicates an invalid parameter was passed
+                                    throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                                }
+                            
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","Amount").equals(reader.getName())){
+                                
+                                    nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
+                                    if ("true".equals(nillableValue) || "1".equals(nillableValue)){
+                                        throw new org.apache.axis2.databinding.ADBException("The element: "+"Amount" +"  cannot be null");
+                                    }
+                                    
+
+                                    java.lang.String content = reader.getElementText();
+                                    
+                                              object.setAmount(
+                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToInt(content));
+                                              
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                else{
+                                    // A start element we are not expecting indicates an invalid parameter was passed
+                                    throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                                }
+                              
+                            while (!reader.isStartElement() && !reader.isEndElement())
+                                reader.next();
+                            
+                                if (reader.isStartElement())
+                                // A start element we are not expecting indicates a trailing invalid property
+                                throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                            
+
+
+
+            } catch (javax.xml.stream.XMLStreamException e) {
+                throw new java.lang.Exception(e);
+            }
+
+            return object;
+        }
+
+        }//end of factory class
+
+        
+
+        }
+           
+    
         public static class TransactionQueryResponse
         implements org.apache.axis2.databinding.ADBBean{
         
@@ -9592,8 +14610,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -9786,7 +14804,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -9955,8 +14978,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -10183,7 +15206,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -10339,6 +15367,420 @@
                                 // A start element we are not expecting indicates a trailing invalid property
                                 throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
                             
+
+
+
+            } catch (javax.xml.stream.XMLStreamException e) {
+                throw new java.lang.Exception(e);
+            }
+
+            return object;
+        }
+
+        }//end of factory class
+
+        
+
+        }
+           
+    
+        public static class AccountNumber
+        implements org.apache.axis2.databinding.ADBBean{
+        
+                public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
+                "http://mobilemoney.com/services/mWallet",
+                "AccountNumber",
+                "ns1");
+
+            
+
+                        /**
+                        * field for AccountNumber
+                        */
+
+                        
+                                    protected java.lang.String localAccountNumber ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return java.lang.String
+                           */
+                           public  java.lang.String getAccountNumber(){
+                               return localAccountNumber;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param AccountNumber
+                               */
+                               public void setAccountNumber(java.lang.String param){
+                            
+                                            if (org.apache.axis2.databinding.utils.ConverterUtil.convertToString(param).matches("([0-9])*")) {
+                                                this.localAccountNumber=param;
+                                            }
+                                            else {
+                                                throw new java.lang.RuntimeException();
+                                            }
+                                        
+
+                               }
+                            
+
+                            public java.lang.String toString(){
+                                
+                                        return localAccountNumber.toString();
+                                    
+                            }
+                        
+
+     
+     
+        /**
+        *
+        * @param parentQName
+        * @param factory
+        * @return org.apache.axiom.om.OMElement
+        */
+       public org.apache.axiom.om.OMElement getOMElement (
+               final javax.xml.namespace.QName parentQName,
+               final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
+
+
+        
+               org.apache.axiom.om.OMDataSource dataSource =
+                       new org.apache.axis2.databinding.ADBDataSource(this,MY_QNAME);
+               return factory.createOMElement(dataSource,MY_QNAME);
+            
+        }
+
+         public void serialize(final javax.xml.namespace.QName parentQName,
+                                       javax.xml.stream.XMLStreamWriter xmlWriter)
+                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+                           serialize(parentQName,xmlWriter,false);
+         }
+
+         public void serialize(final javax.xml.namespace.QName parentQName,
+                               javax.xml.stream.XMLStreamWriter xmlWriter,
+                               boolean serializeType)
+            throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+            
+                
+                //We can safely assume an element has only one type associated with it
+                
+                            java.lang.String namespace = parentQName.getNamespaceURI();
+                            java.lang.String _localName = parentQName.getLocalPart();
+                        
+                            writeStartElement(null, namespace, _localName, xmlWriter);
+
+                            // add the type details if this is used in a simple type
+                               if (serializeType){
+                                   java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://mobilemoney.com/services/mWallet");
+                                   if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
+                                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
+                                           namespacePrefix+":AccountNumber",
+                                           xmlWriter);
+                                   } else {
+                                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
+                                           "AccountNumber",
+                                           xmlWriter);
+                                   }
+                               }
+                            
+                                          if (localAccountNumber==null){
+                                            
+                                                     throw new org.apache.axis2.databinding.ADBException("AccountNumber cannot be null !!");
+                                                
+                                         }else{
+                                        
+                                                       xmlWriter.writeCharacters(localAccountNumber);
+                                            
+                                         }
+                                    
+                            xmlWriter.writeEndElement();
+                    
+
+        }
+
+        private static java.lang.String generatePrefix(java.lang.String namespace) {
+            if(namespace.equals("http://mobilemoney.com/services/mWallet")){
+                return "ns1";
+            }
+            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+        }
+
+        /**
+         * Utility method to write an element start tag.
+         */
+        private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
+                                       javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+            java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
+            if (writerPrefix != null) {
+                xmlWriter.writeStartElement(namespace, localPart);
+            } else {
+                if (namespace.length() == 0) {
+                    prefix = "";
+                } else if (prefix == null) {
+                    prefix = generatePrefix(namespace);
+                }
+
+                xmlWriter.writeStartElement(prefix, localPart, namespace);
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+        }
+        
+        /**
+         * Util method to write an attribute with the ns prefix
+         */
+        private void writeAttribute(java.lang.String prefix,java.lang.String namespace,java.lang.String attName,
+                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+            if (xmlWriter.getPrefix(namespace) == null) {
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+            xmlWriter.writeAttribute(namespace,attName,attValue);
+        }
+
+        /**
+         * Util method to write an attribute without the ns prefix
+         */
+        private void writeAttribute(java.lang.String namespace,java.lang.String attName,
+                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+            if (namespace.equals("")) {
+                xmlWriter.writeAttribute(attName,attValue);
+            } else {
+                registerPrefix(xmlWriter, namespace);
+                xmlWriter.writeAttribute(namespace,attName,attValue);
+            }
+        }
+
+
+           /**
+             * Util method to write an attribute without the ns prefix
+             */
+            private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
+                                             javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+
+                java.lang.String attributeNamespace = qname.getNamespaceURI();
+                java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
+                if (attributePrefix == null) {
+                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
+                }
+                java.lang.String attributeValue;
+                if (attributePrefix.trim().length() > 0) {
+                    attributeValue = attributePrefix + ":" + qname.getLocalPart();
+                } else {
+                    attributeValue = qname.getLocalPart();
+                }
+
+                if (namespace.equals("")) {
+                    xmlWriter.writeAttribute(attName, attributeValue);
+                } else {
+                    registerPrefix(xmlWriter, namespace);
+                    xmlWriter.writeAttribute(namespace, attName, attributeValue);
+                }
+            }
+        /**
+         *  method to handle Qnames
+         */
+
+        private void writeQName(javax.xml.namespace.QName qname,
+                                javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+            java.lang.String namespaceURI = qname.getNamespaceURI();
+            if (namespaceURI != null) {
+                java.lang.String prefix = xmlWriter.getPrefix(namespaceURI);
+                if (prefix == null) {
+                    prefix = generatePrefix(namespaceURI);
+                    xmlWriter.writeNamespace(prefix, namespaceURI);
+                    xmlWriter.setPrefix(prefix,namespaceURI);
+                }
+
+                if (prefix.trim().length() > 0){
+                    xmlWriter.writeCharacters(prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+                } else {
+                    // i.e this is the default namespace
+                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+                }
+
+            } else {
+                xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+            }
+        }
+
+        private void writeQNames(javax.xml.namespace.QName[] qnames,
+                                 javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+
+            if (qnames != null) {
+                // we have to store this data until last moment since it is not possible to write any
+                // namespace data after writing the charactor data
+                java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
+                java.lang.String namespaceURI = null;
+                java.lang.String prefix = null;
+
+                for (int i = 0; i < qnames.length; i++) {
+                    if (i > 0) {
+                        stringToWrite.append(" ");
+                    }
+                    namespaceURI = qnames[i].getNamespaceURI();
+                    if (namespaceURI != null) {
+                        prefix = xmlWriter.getPrefix(namespaceURI);
+                        if ((prefix == null) || (prefix.length() == 0)) {
+                            prefix = generatePrefix(namespaceURI);
+                            xmlWriter.writeNamespace(prefix, namespaceURI);
+                            xmlWriter.setPrefix(prefix,namespaceURI);
+                        }
+
+                        if (prefix.trim().length() > 0){
+                            stringToWrite.append(prefix).append(":").append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                        } else {
+                            stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                        }
+                    } else {
+                        stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                    }
+                }
+                xmlWriter.writeCharacters(stringToWrite.toString());
+            }
+
+        }
+
+
+        /**
+         * Register a namespace prefix
+         */
+        private java.lang.String registerPrefix(javax.xml.stream.XMLStreamWriter xmlWriter, java.lang.String namespace) throws javax.xml.stream.XMLStreamException {
+            java.lang.String prefix = xmlWriter.getPrefix(namespace);
+            if (prefix == null) {
+                prefix = generatePrefix(namespace);
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
+                    prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+                }
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+            return prefix;
+        }
+
+
+  
+        /**
+        * databinding method to get an XML representation of this object
+        *
+        */
+        public javax.xml.stream.XMLStreamReader getPullParser(javax.xml.namespace.QName qName)
+                    throws org.apache.axis2.databinding.ADBException{
+
+
+        
+                
+                //We can safely assume an element has only one type associated with it
+                 return new org.apache.axis2.databinding.utils.reader.ADBXMLStreamReaderImpl(MY_QNAME,
+                            new java.lang.Object[]{
+                            org.apache.axis2.databinding.utils.reader.ADBXMLStreamReader.ELEMENT_TEXT,
+                            org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localAccountNumber)
+                            },
+                            null);
+
+        }
+
+  
+
+     /**
+      *  Factory class that keeps the parse method
+      */
+    public static class Factory{
+
+        
+        
+                public static AccountNumber fromString(java.lang.String value,
+                                                    java.lang.String namespaceURI){
+                    AccountNumber returnValue = new  AccountNumber();
+                    
+                            returnValue.setAccountNumber(
+                                org.apache.axis2.databinding.utils.ConverterUtil.convertToString(value));
+                        
+
+                    return returnValue;
+                }
+
+                public static AccountNumber fromString(javax.xml.stream.XMLStreamReader xmlStreamReader,
+                                                                    java.lang.String content) {
+                    if (content.indexOf(":") > -1){
+                        java.lang.String prefix = content.substring(0,content.indexOf(":"));
+                        java.lang.String namespaceUri = xmlStreamReader.getNamespaceContext().getNamespaceURI(prefix);
+                        return AccountNumber.Factory.fromString(content,namespaceUri);
+                    } else {
+                       return AccountNumber.Factory.fromString(content,"");
+                    }
+                }
+
+            
+
+        /**
+        * static method to create the object
+        * Precondition:  If this object is an element, the current or next start element starts this object and any intervening reader events are ignorable
+        *                If this object is not an element, it is a complex type and the reader is at the event just after the outer start element
+        * Postcondition: If this object is an element, the reader is positioned at its end element
+        *                If this object is a complex type, the reader is positioned at the end element of its outer element
+        */
+        public static AccountNumber parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
+            AccountNumber object =
+                new AccountNumber();
+
+            int event;
+            java.lang.String nillableValue = null;
+            java.lang.String prefix ="";
+            java.lang.String namespaceuri ="";
+            try {
+                
+                while (!reader.isStartElement() && !reader.isEndElement())
+                    reader.next();
+
+                
+
+                
+                // Note all attributes that were handled. Used to differ normal attributes
+                // from anyAttributes.
+                java.util.Vector handledAttributes = new java.util.Vector();
+                
+
+                   
+                while(!reader.isEndElement()) {
+                    if (reader.isStartElement()  || reader.hasText()){
+                
+                                    if (reader.isStartElement()  || reader.hasText()){
+                                
+                                    nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
+                                    if ("true".equals(nillableValue) || "1".equals(nillableValue)){
+                                        throw new org.apache.axis2.databinding.ADBException("The element: "+"AccountNumber" +"  cannot be null");
+                                    }
+                                    
+
+                                    java.lang.String content = reader.getElementText();
+                                    
+                                              object.setAccountNumber(
+                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
+                                            
+                              }  // End of if for expected property start element
+                                
+                             else{
+                                        // A start element we are not expecting indicates an invalid parameter was passed
+                                        throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                             }
+                          
+                             } else {
+                                reader.next();
+                             }  
+                           }  // end of while loop
+                        
 
 
 
@@ -10628,8 +16070,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -10899,7 +16341,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -11226,415 +16673,6 @@
         }
            
     
-        public static class AccountNumber
-        implements org.apache.axis2.databinding.ADBBean{
-        
-                public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
-                "http://mobilemoney.com/services/mWallet",
-                "AccountNumber",
-                "ns1");
-
-            
-
-                        /**
-                        * field for AccountNumber
-                        */
-
-                        
-                                    protected java.lang.String localAccountNumber ;
-                                
-
-                           /**
-                           * Auto generated getter method
-                           * @return java.lang.String
-                           */
-                           public  java.lang.String getAccountNumber(){
-                               return localAccountNumber;
-                           }
-
-                           
-                        
-                            /**
-                               * Auto generated setter method
-                               * @param param AccountNumber
-                               */
-                               public void setAccountNumber(java.lang.String param){
-                            
-                                            if (org.apache.axis2.databinding.utils.ConverterUtil.convertToString(param).matches("([0-9])*")) {
-                                                this.localAccountNumber=param;
-                                            }
-                                            else {
-                                                throw new java.lang.RuntimeException();
-                                            }
-                                        
-
-                               }
-                            
-
-                            public java.lang.String toString(){
-                                
-                                        return localAccountNumber.toString();
-                                    
-                            }
-                        
-     
-
-     
-        /**
-        *
-        * @param parentQName
-        * @param factory
-        * @return org.apache.axiom.om.OMElement
-        */
-       public org.apache.axiom.om.OMElement getOMElement (
-               final javax.xml.namespace.QName parentQName,
-               final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
-
-
-        
-               org.apache.axiom.om.OMDataSource dataSource =
-                       new org.apache.axis2.databinding.ADBDataSource(this,MY_QNAME);
-               return factory.createOMElement(dataSource,MY_QNAME);
-            
-        }
-
-         public void serialize(final javax.xml.namespace.QName parentQName,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter)
-                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
-                           serialize(parentQName,xmlWriter,false);
-         }
-
-         public void serialize(final javax.xml.namespace.QName parentQName,
-                               javax.xml.stream.XMLStreamWriter xmlWriter,
-                               boolean serializeType)
-            throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
-            
-                
-                //We can safely assume an element has only one type associated with it
-                
-                            java.lang.String namespace = parentQName.getNamespaceURI();
-                            java.lang.String _localName = parentQName.getLocalPart();
-                        
-                            writeStartElement(null, namespace, _localName, xmlWriter);
-
-                            // add the type details if this is used in a simple type
-                               if (serializeType){
-                                   java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://mobilemoney.com/services/mWallet");
-                                   if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
-                                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                                           namespacePrefix+":AccountNumber",
-                                           xmlWriter);
-                                   } else {
-                                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                                           "AccountNumber",
-                                           xmlWriter);
-                                   }
-                               }
-                            
-                                          if (localAccountNumber==null){
-                                            
-                                                     throw new org.apache.axis2.databinding.ADBException("AccountNumber cannot be null !!");
-                                                
-                                         }else{
-                                        
-                                                       xmlWriter.writeCharacters(localAccountNumber);
-                                            
-                                         }
-                                    
-                            xmlWriter.writeEndElement();
-                    
-
-        }
-
-        private static java.lang.String generatePrefix(java.lang.String namespace) {
-            if(namespace.equals("http://mobilemoney.com/services/mWallet")){
-                return "ns1";
-            }
-            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
-        }
-
-        /**
-         * Utility method to write an element start tag.
-         */
-        private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-            java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
-            if (writerPrefix != null) {
-                xmlWriter.writeStartElement(namespace, localPart);
-            } else {
-                if (namespace.length() == 0) {
-                    prefix = "";
-                } else if (prefix == null) {
-                    prefix = generatePrefix(namespace);
-                }
-
-                xmlWriter.writeStartElement(prefix, localPart, namespace);
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-        }
-        
-        /**
-         * Util method to write an attribute with the ns prefix
-         */
-        private void writeAttribute(java.lang.String prefix,java.lang.String namespace,java.lang.String attName,
-                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
-            if (xmlWriter.getPrefix(namespace) == null) {
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-            xmlWriter.writeAttribute(namespace,attName,attValue);
-        }
-
-        /**
-         * Util method to write an attribute without the ns prefix
-         */
-        private void writeAttribute(java.lang.String namespace,java.lang.String attName,
-                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
-            if (namespace.equals("")) {
-                xmlWriter.writeAttribute(attName,attValue);
-            } else {
-                registerPrefix(xmlWriter, namespace);
-                xmlWriter.writeAttribute(namespace,attName,attValue);
-            }
-        }
-
-
-           /**
-             * Util method to write an attribute without the ns prefix
-             */
-            private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
-                                             javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-
-                java.lang.String attributeNamespace = qname.getNamespaceURI();
-                java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
-                if (attributePrefix == null) {
-                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
-                }
-                java.lang.String attributeValue;
-                if (attributePrefix.trim().length() > 0) {
-                    attributeValue = attributePrefix + ":" + qname.getLocalPart();
-                } else {
-                    attributeValue = qname.getLocalPart();
-                }
-
-                if (namespace.equals("")) {
-                    xmlWriter.writeAttribute(attName, attributeValue);
-                } else {
-                    registerPrefix(xmlWriter, namespace);
-                    xmlWriter.writeAttribute(namespace, attName, attributeValue);
-                }
-            }
-        /**
-         *  method to handle Qnames
-         */
-
-        private void writeQName(javax.xml.namespace.QName qname,
-                                javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-            java.lang.String namespaceURI = qname.getNamespaceURI();
-            if (namespaceURI != null) {
-                java.lang.String prefix = xmlWriter.getPrefix(namespaceURI);
-                if (prefix == null) {
-                    prefix = generatePrefix(namespaceURI);
-                    xmlWriter.writeNamespace(prefix, namespaceURI);
-                    xmlWriter.setPrefix(prefix,namespaceURI);
-                }
-
-                if (prefix.trim().length() > 0){
-                    xmlWriter.writeCharacters(prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-                } else {
-                    // i.e this is the default namespace
-                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-                }
-
-            } else {
-                xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-            }
-        }
-
-        private void writeQNames(javax.xml.namespace.QName[] qnames,
-                                 javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-
-            if (qnames != null) {
-                // we have to store this data until last moment since it is not possible to write any
-                // namespace data after writing the charactor data
-                java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
-                java.lang.String namespaceURI = null;
-                java.lang.String prefix = null;
-
-                for (int i = 0; i < qnames.length; i++) {
-                    if (i > 0) {
-                        stringToWrite.append(" ");
-                    }
-                    namespaceURI = qnames[i].getNamespaceURI();
-                    if (namespaceURI != null) {
-                        prefix = xmlWriter.getPrefix(namespaceURI);
-                        if ((prefix == null) || (prefix.length() == 0)) {
-                            prefix = generatePrefix(namespaceURI);
-                            xmlWriter.writeNamespace(prefix, namespaceURI);
-                            xmlWriter.setPrefix(prefix,namespaceURI);
-                        }
-
-                        if (prefix.trim().length() > 0){
-                            stringToWrite.append(prefix).append(":").append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                        } else {
-                            stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                        }
-                    } else {
-                        stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                    }
-                }
-                xmlWriter.writeCharacters(stringToWrite.toString());
-            }
-
-        }
-
-
-        /**
-         * Register a namespace prefix
-         */
-        private java.lang.String registerPrefix(javax.xml.stream.XMLStreamWriter xmlWriter, java.lang.String namespace) throws javax.xml.stream.XMLStreamException {
-            java.lang.String prefix = xmlWriter.getPrefix(namespace);
-            if (prefix == null) {
-                prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
-                    prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
-                }
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-            return prefix;
-        }
-
-
-  
-        /**
-        * databinding method to get an XML representation of this object
-        *
-        */
-        public javax.xml.stream.XMLStreamReader getPullParser(javax.xml.namespace.QName qName)
-                    throws org.apache.axis2.databinding.ADBException{
-
-
-        
-                
-                //We can safely assume an element has only one type associated with it
-                 return new org.apache.axis2.databinding.utils.reader.ADBXMLStreamReaderImpl(MY_QNAME,
-                            new java.lang.Object[]{
-                            org.apache.axis2.databinding.utils.reader.ADBXMLStreamReader.ELEMENT_TEXT,
-                            org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localAccountNumber)
-                            },
-                            null);
-
-        }
-
-  
-
-     /**
-      *  Factory class that keeps the parse method
-      */
-    public static class Factory{
-
-        
-        
-                public static AccountNumber fromString(java.lang.String value,
-                                                    java.lang.String namespaceURI){
-                    AccountNumber returnValue = new  AccountNumber();
-                    
-                            returnValue.setAccountNumber(
-                                org.apache.axis2.databinding.utils.ConverterUtil.convertToString(value));
-                        
-
-                    return returnValue;
-                }
-
-                public static AccountNumber fromString(javax.xml.stream.XMLStreamReader xmlStreamReader,
-                                                                    java.lang.String content) {
-                    if (content.indexOf(":") > -1){
-                        java.lang.String prefix = content.substring(0,content.indexOf(":"));
-                        java.lang.String namespaceUri = xmlStreamReader.getNamespaceContext().getNamespaceURI(prefix);
-                        return AccountNumber.Factory.fromString(content,namespaceUri);
-                    } else {
-                       return AccountNumber.Factory.fromString(content,"");
-                    }
-                }
-
-            
-
-        /**
-        * static method to create the object
-        * Precondition:  If this object is an element, the current or next start element starts this object and any intervening reader events are ignorable
-        *                If this object is not an element, it is a complex type and the reader is at the event just after the outer start element
-        * Postcondition: If this object is an element, the reader is positioned at its end element
-        *                If this object is a complex type, the reader is positioned at the end element of its outer element
-        */
-        public static AccountNumber parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
-            AccountNumber object =
-                new AccountNumber();
-
-            int event;
-            java.lang.String nillableValue = null;
-            java.lang.String prefix ="";
-            java.lang.String namespaceuri ="";
-            try {
-                
-                while (!reader.isStartElement() && !reader.isEndElement())
-                    reader.next();
-
-                
-
-                
-                // Note all attributes that were handled. Used to differ normal attributes
-                // from anyAttributes.
-                java.util.Vector handledAttributes = new java.util.Vector();
-                
-
-                   
-                while(!reader.isEndElement()) {
-                    if (reader.isStartElement()  || reader.hasText()){
-                
-                                    if (reader.isStartElement()  || reader.hasText()){
-                                
-                                    nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
-                                    if ("true".equals(nillableValue) || "1".equals(nillableValue)){
-                                        throw new org.apache.axis2.databinding.ADBException("The element: "+"AccountNumber" +"  cannot be null");
-                                    }
-                                    
-
-                                    java.lang.String content = reader.getElementText();
-                                    
-                                              object.setAccountNumber(
-                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
-                                            
-                              }  // End of if for expected property start element
-                                
-                             else{
-                                        // A start element we are not expecting indicates an invalid parameter was passed
-                                        throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
-                             }
-                          
-                             } else {
-                                reader.next();
-                             }  
-                           }  // end of while loop
-                        
-
-
-
-            } catch (javax.xml.stream.XMLStreamException e) {
-                throw new java.lang.Exception(e);
-            }
-
-            return object;
-        }
-
-        }//end of factory class
-
-        
-
-        }
-           
-    
         public static class AddressLine
         implements org.apache.axis2.databinding.ADBBean{
         
@@ -11686,8 +16724,8 @@
                                     
                             }
                         
-     
 
+     
      
         /**
         *
@@ -11906,7 +16944,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -12083,8 +17126,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -12277,7 +17320,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -12417,8 +17465,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -12611,7 +17659,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -12712,6 +17765,345 @@
         }
            
     
+        public static class AdditionalHeader
+        implements org.apache.axis2.databinding.ADBBean{
+        
+                public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
+                "http://mobilemoney.com/services/mWallet",
+                "AdditionalHeader",
+                "ns1");
+
+            
+
+                        /**
+                        * field for AdditionalHeader
+                        */
+
+                        
+                                    protected MHeader localAdditionalHeader ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return MHeader
+                           */
+                           public  MHeader getAdditionalHeader(){
+                               return localAdditionalHeader;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param AdditionalHeader
+                               */
+                               public void setAdditionalHeader(MHeader param){
+                            
+                                            this.localAdditionalHeader=param;
+                                    
+
+                               }
+                            
+
+     
+     
+        /**
+        *
+        * @param parentQName
+        * @param factory
+        * @return org.apache.axiom.om.OMElement
+        */
+       public org.apache.axiom.om.OMElement getOMElement (
+               final javax.xml.namespace.QName parentQName,
+               final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
+
+
+        
+               org.apache.axiom.om.OMDataSource dataSource =
+                       new org.apache.axis2.databinding.ADBDataSource(this,MY_QNAME);
+               return factory.createOMElement(dataSource,MY_QNAME);
+            
+        }
+
+         public void serialize(final javax.xml.namespace.QName parentQName,
+                                       javax.xml.stream.XMLStreamWriter xmlWriter)
+                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+                           serialize(parentQName,xmlWriter,false);
+         }
+
+         public void serialize(final javax.xml.namespace.QName parentQName,
+                               javax.xml.stream.XMLStreamWriter xmlWriter,
+                               boolean serializeType)
+            throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+            
+                
+                //We can safely assume an element has only one type associated with it
+                
+                                 if (localAdditionalHeader==null){
+                                   throw new org.apache.axis2.databinding.ADBException("AdditionalHeader cannot be null!");
+                                 }
+                                 localAdditionalHeader.serialize(MY_QNAME,xmlWriter);
+                            
+
+        }
+
+        private static java.lang.String generatePrefix(java.lang.String namespace) {
+            if(namespace.equals("http://mobilemoney.com/services/mWallet")){
+                return "ns1";
+            }
+            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+        }
+
+        /**
+         * Utility method to write an element start tag.
+         */
+        private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
+                                       javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+            java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
+            if (writerPrefix != null) {
+                xmlWriter.writeStartElement(namespace, localPart);
+            } else {
+                if (namespace.length() == 0) {
+                    prefix = "";
+                } else if (prefix == null) {
+                    prefix = generatePrefix(namespace);
+                }
+
+                xmlWriter.writeStartElement(prefix, localPart, namespace);
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+        }
+        
+        /**
+         * Util method to write an attribute with the ns prefix
+         */
+        private void writeAttribute(java.lang.String prefix,java.lang.String namespace,java.lang.String attName,
+                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+            if (xmlWriter.getPrefix(namespace) == null) {
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+            xmlWriter.writeAttribute(namespace,attName,attValue);
+        }
+
+        /**
+         * Util method to write an attribute without the ns prefix
+         */
+        private void writeAttribute(java.lang.String namespace,java.lang.String attName,
+                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+            if (namespace.equals("")) {
+                xmlWriter.writeAttribute(attName,attValue);
+            } else {
+                registerPrefix(xmlWriter, namespace);
+                xmlWriter.writeAttribute(namespace,attName,attValue);
+            }
+        }
+
+
+           /**
+             * Util method to write an attribute without the ns prefix
+             */
+            private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
+                                             javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+
+                java.lang.String attributeNamespace = qname.getNamespaceURI();
+                java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
+                if (attributePrefix == null) {
+                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
+                }
+                java.lang.String attributeValue;
+                if (attributePrefix.trim().length() > 0) {
+                    attributeValue = attributePrefix + ":" + qname.getLocalPart();
+                } else {
+                    attributeValue = qname.getLocalPart();
+                }
+
+                if (namespace.equals("")) {
+                    xmlWriter.writeAttribute(attName, attributeValue);
+                } else {
+                    registerPrefix(xmlWriter, namespace);
+                    xmlWriter.writeAttribute(namespace, attName, attributeValue);
+                }
+            }
+        /**
+         *  method to handle Qnames
+         */
+
+        private void writeQName(javax.xml.namespace.QName qname,
+                                javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+            java.lang.String namespaceURI = qname.getNamespaceURI();
+            if (namespaceURI != null) {
+                java.lang.String prefix = xmlWriter.getPrefix(namespaceURI);
+                if (prefix == null) {
+                    prefix = generatePrefix(namespaceURI);
+                    xmlWriter.writeNamespace(prefix, namespaceURI);
+                    xmlWriter.setPrefix(prefix,namespaceURI);
+                }
+
+                if (prefix.trim().length() > 0){
+                    xmlWriter.writeCharacters(prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+                } else {
+                    // i.e this is the default namespace
+                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+                }
+
+            } else {
+                xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+            }
+        }
+
+        private void writeQNames(javax.xml.namespace.QName[] qnames,
+                                 javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+
+            if (qnames != null) {
+                // we have to store this data until last moment since it is not possible to write any
+                // namespace data after writing the charactor data
+                java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
+                java.lang.String namespaceURI = null;
+                java.lang.String prefix = null;
+
+                for (int i = 0; i < qnames.length; i++) {
+                    if (i > 0) {
+                        stringToWrite.append(" ");
+                    }
+                    namespaceURI = qnames[i].getNamespaceURI();
+                    if (namespaceURI != null) {
+                        prefix = xmlWriter.getPrefix(namespaceURI);
+                        if ((prefix == null) || (prefix.length() == 0)) {
+                            prefix = generatePrefix(namespaceURI);
+                            xmlWriter.writeNamespace(prefix, namespaceURI);
+                            xmlWriter.setPrefix(prefix,namespaceURI);
+                        }
+
+                        if (prefix.trim().length() > 0){
+                            stringToWrite.append(prefix).append(":").append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                        } else {
+                            stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                        }
+                    } else {
+                        stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                    }
+                }
+                xmlWriter.writeCharacters(stringToWrite.toString());
+            }
+
+        }
+
+
+        /**
+         * Register a namespace prefix
+         */
+        private java.lang.String registerPrefix(javax.xml.stream.XMLStreamWriter xmlWriter, java.lang.String namespace) throws javax.xml.stream.XMLStreamException {
+            java.lang.String prefix = xmlWriter.getPrefix(namespace);
+            if (prefix == null) {
+                prefix = generatePrefix(namespace);
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
+                    prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+                }
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+            return prefix;
+        }
+
+
+  
+        /**
+        * databinding method to get an XML representation of this object
+        *
+        */
+        public javax.xml.stream.XMLStreamReader getPullParser(javax.xml.namespace.QName qName)
+                    throws org.apache.axis2.databinding.ADBException{
+
+
+        
+                
+                //We can safely assume an element has only one type associated with it
+                return localAdditionalHeader.getPullParser(MY_QNAME);
+
+        }
+
+  
+
+     /**
+      *  Factory class that keeps the parse method
+      */
+    public static class Factory{
+
+        
+        
+
+        /**
+        * static method to create the object
+        * Precondition:  If this object is an element, the current or next start element starts this object and any intervening reader events are ignorable
+        *                If this object is not an element, it is a complex type and the reader is at the event just after the outer start element
+        * Postcondition: If this object is an element, the reader is positioned at its end element
+        *                If this object is a complex type, the reader is positioned at the end element of its outer element
+        */
+        public static AdditionalHeader parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
+            AdditionalHeader object =
+                new AdditionalHeader();
+
+            int event;
+            java.lang.String nillableValue = null;
+            java.lang.String prefix ="";
+            java.lang.String namespaceuri ="";
+            try {
+                
+                while (!reader.isStartElement() && !reader.isEndElement())
+                    reader.next();
+
+                
+
+                
+                // Note all attributes that were handled. Used to differ normal attributes
+                // from anyAttributes.
+                java.util.Vector handledAttributes = new java.util.Vector();
+                
+
+                   
+                while(!reader.isEndElement()) {
+                    if (reader.isStartElement() ){
+                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","AdditionalHeader").equals(reader.getName())){
+                                
+                                                object.setAdditionalHeader(MHeader.Factory.parse(reader));
+                                            
+                              }  // End of if for expected property start element
+                                
+                             else{
+                                        // A start element we are not expecting indicates an invalid parameter was passed
+                                        throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                             }
+                          
+                             } else {
+                                reader.next();
+                             }  
+                           }  // end of while loop
+                        
+
+
+
+            } catch (javax.xml.stream.XMLStreamException e) {
+                throw new java.lang.Exception(e);
+            }
+
+            return object;
+        }
+
+        }//end of factory class
+
+        
+
+        }
+           
+    
         public static class MCustomerVerificationRequest
         implements org.apache.axis2.databinding.ADBBean{
         /* This type was generated from the piece of schema that had
@@ -12750,8 +18142,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -12972,7 +18364,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -13512,8 +18909,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -13800,7 +19197,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -14175,340 +19577,6 @@
         }
            
     
-        public static class AdditionalHeader
-        implements org.apache.axis2.databinding.ADBBean{
-        
-                public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
-                "http://mobilemoney.com/services/mWallet",
-                "AdditionalHeader",
-                "ns1");
-
-            
-
-                        /**
-                        * field for AdditionalHeader
-                        */
-
-                        
-                                    protected MHeader localAdditionalHeader ;
-                                
-
-                           /**
-                           * Auto generated getter method
-                           * @return MHeader
-                           */
-                           public  MHeader getAdditionalHeader(){
-                               return localAdditionalHeader;
-                           }
-
-                           
-                        
-                            /**
-                               * Auto generated setter method
-                               * @param param AdditionalHeader
-                               */
-                               public void setAdditionalHeader(MHeader param){
-                            
-                                            this.localAdditionalHeader=param;
-                                    
-
-                               }
-                            
-     
-
-     
-        /**
-        *
-        * @param parentQName
-        * @param factory
-        * @return org.apache.axiom.om.OMElement
-        */
-       public org.apache.axiom.om.OMElement getOMElement (
-               final javax.xml.namespace.QName parentQName,
-               final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
-
-
-        
-               org.apache.axiom.om.OMDataSource dataSource =
-                       new org.apache.axis2.databinding.ADBDataSource(this,MY_QNAME);
-               return factory.createOMElement(dataSource,MY_QNAME);
-            
-        }
-
-         public void serialize(final javax.xml.namespace.QName parentQName,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter)
-                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
-                           serialize(parentQName,xmlWriter,false);
-         }
-
-         public void serialize(final javax.xml.namespace.QName parentQName,
-                               javax.xml.stream.XMLStreamWriter xmlWriter,
-                               boolean serializeType)
-            throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
-            
-                
-                //We can safely assume an element has only one type associated with it
-                
-                                 if (localAdditionalHeader==null){
-                                   throw new org.apache.axis2.databinding.ADBException("AdditionalHeader cannot be null!");
-                                 }
-                                 localAdditionalHeader.serialize(MY_QNAME,xmlWriter);
-                            
-
-        }
-
-        private static java.lang.String generatePrefix(java.lang.String namespace) {
-            if(namespace.equals("http://mobilemoney.com/services/mWallet")){
-                return "ns1";
-            }
-            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
-        }
-
-        /**
-         * Utility method to write an element start tag.
-         */
-        private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-            java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
-            if (writerPrefix != null) {
-                xmlWriter.writeStartElement(namespace, localPart);
-            } else {
-                if (namespace.length() == 0) {
-                    prefix = "";
-                } else if (prefix == null) {
-                    prefix = generatePrefix(namespace);
-                }
-
-                xmlWriter.writeStartElement(prefix, localPart, namespace);
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-        }
-        
-        /**
-         * Util method to write an attribute with the ns prefix
-         */
-        private void writeAttribute(java.lang.String prefix,java.lang.String namespace,java.lang.String attName,
-                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
-            if (xmlWriter.getPrefix(namespace) == null) {
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-            xmlWriter.writeAttribute(namespace,attName,attValue);
-        }
-
-        /**
-         * Util method to write an attribute without the ns prefix
-         */
-        private void writeAttribute(java.lang.String namespace,java.lang.String attName,
-                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
-            if (namespace.equals("")) {
-                xmlWriter.writeAttribute(attName,attValue);
-            } else {
-                registerPrefix(xmlWriter, namespace);
-                xmlWriter.writeAttribute(namespace,attName,attValue);
-            }
-        }
-
-
-           /**
-             * Util method to write an attribute without the ns prefix
-             */
-            private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
-                                             javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-
-                java.lang.String attributeNamespace = qname.getNamespaceURI();
-                java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
-                if (attributePrefix == null) {
-                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
-                }
-                java.lang.String attributeValue;
-                if (attributePrefix.trim().length() > 0) {
-                    attributeValue = attributePrefix + ":" + qname.getLocalPart();
-                } else {
-                    attributeValue = qname.getLocalPart();
-                }
-
-                if (namespace.equals("")) {
-                    xmlWriter.writeAttribute(attName, attributeValue);
-                } else {
-                    registerPrefix(xmlWriter, namespace);
-                    xmlWriter.writeAttribute(namespace, attName, attributeValue);
-                }
-            }
-        /**
-         *  method to handle Qnames
-         */
-
-        private void writeQName(javax.xml.namespace.QName qname,
-                                javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-            java.lang.String namespaceURI = qname.getNamespaceURI();
-            if (namespaceURI != null) {
-                java.lang.String prefix = xmlWriter.getPrefix(namespaceURI);
-                if (prefix == null) {
-                    prefix = generatePrefix(namespaceURI);
-                    xmlWriter.writeNamespace(prefix, namespaceURI);
-                    xmlWriter.setPrefix(prefix,namespaceURI);
-                }
-
-                if (prefix.trim().length() > 0){
-                    xmlWriter.writeCharacters(prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-                } else {
-                    // i.e this is the default namespace
-                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-                }
-
-            } else {
-                xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-            }
-        }
-
-        private void writeQNames(javax.xml.namespace.QName[] qnames,
-                                 javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-
-            if (qnames != null) {
-                // we have to store this data until last moment since it is not possible to write any
-                // namespace data after writing the charactor data
-                java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
-                java.lang.String namespaceURI = null;
-                java.lang.String prefix = null;
-
-                for (int i = 0; i < qnames.length; i++) {
-                    if (i > 0) {
-                        stringToWrite.append(" ");
-                    }
-                    namespaceURI = qnames[i].getNamespaceURI();
-                    if (namespaceURI != null) {
-                        prefix = xmlWriter.getPrefix(namespaceURI);
-                        if ((prefix == null) || (prefix.length() == 0)) {
-                            prefix = generatePrefix(namespaceURI);
-                            xmlWriter.writeNamespace(prefix, namespaceURI);
-                            xmlWriter.setPrefix(prefix,namespaceURI);
-                        }
-
-                        if (prefix.trim().length() > 0){
-                            stringToWrite.append(prefix).append(":").append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                        } else {
-                            stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                        }
-                    } else {
-                        stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                    }
-                }
-                xmlWriter.writeCharacters(stringToWrite.toString());
-            }
-
-        }
-
-
-        /**
-         * Register a namespace prefix
-         */
-        private java.lang.String registerPrefix(javax.xml.stream.XMLStreamWriter xmlWriter, java.lang.String namespace) throws javax.xml.stream.XMLStreamException {
-            java.lang.String prefix = xmlWriter.getPrefix(namespace);
-            if (prefix == null) {
-                prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
-                    prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
-                }
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-            return prefix;
-        }
-
-
-  
-        /**
-        * databinding method to get an XML representation of this object
-        *
-        */
-        public javax.xml.stream.XMLStreamReader getPullParser(javax.xml.namespace.QName qName)
-                    throws org.apache.axis2.databinding.ADBException{
-
-
-        
-                
-                //We can safely assume an element has only one type associated with it
-                return localAdditionalHeader.getPullParser(MY_QNAME);
-
-        }
-
-  
-
-     /**
-      *  Factory class that keeps the parse method
-      */
-    public static class Factory{
-
-        
-        
-
-        /**
-        * static method to create the object
-        * Precondition:  If this object is an element, the current or next start element starts this object and any intervening reader events are ignorable
-        *                If this object is not an element, it is a complex type and the reader is at the event just after the outer start element
-        * Postcondition: If this object is an element, the reader is positioned at its end element
-        *                If this object is a complex type, the reader is positioned at the end element of its outer element
-        */
-        public static AdditionalHeader parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
-            AdditionalHeader object =
-                new AdditionalHeader();
-
-            int event;
-            java.lang.String nillableValue = null;
-            java.lang.String prefix ="";
-            java.lang.String namespaceuri ="";
-            try {
-                
-                while (!reader.isStartElement() && !reader.isEndElement())
-                    reader.next();
-
-                
-
-                
-                // Note all attributes that were handled. Used to differ normal attributes
-                // from anyAttributes.
-                java.util.Vector handledAttributes = new java.util.Vector();
-                
-
-                   
-                while(!reader.isEndElement()) {
-                    if (reader.isStartElement() ){
-                
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","AdditionalHeader").equals(reader.getName())){
-                                
-                                                object.setAdditionalHeader(MHeader.Factory.parse(reader));
-                                            
-                              }  // End of if for expected property start element
-                                
-                             else{
-                                        // A start element we are not expecting indicates an invalid parameter was passed
-                                        throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
-                             }
-                          
-                             } else {
-                                reader.next();
-                             }  
-                           }  // end of while loop
-                        
-
-
-
-            } catch (javax.xml.stream.XMLStreamException e) {
-                throw new java.lang.Exception(e);
-            }
-
-            return object;
-        }
-
-        }//end of factory class
-
-        
-
-        }
-           
-    
         public static class MHeader
         implements org.apache.axis2.databinding.ADBBean{
         /* This type was generated from the piece of schema that had
@@ -14577,8 +19645,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -14829,7 +19897,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -15020,6 +20093,345 @@
         }
            
     
+        public static class CustomerVerificationResponse
+        implements org.apache.axis2.databinding.ADBBean{
+        
+                public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
+                "http://mobilemoney.com/services/mWallet",
+                "CustomerVerificationResponse",
+                "ns1");
+
+            
+
+                        /**
+                        * field for CustomerVerificationResponse
+                        */
+
+                        
+                                    protected MCustomerVerificationResponse localCustomerVerificationResponse ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return MCustomerVerificationResponse
+                           */
+                           public  MCustomerVerificationResponse getCustomerVerificationResponse(){
+                               return localCustomerVerificationResponse;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param CustomerVerificationResponse
+                               */
+                               public void setCustomerVerificationResponse(MCustomerVerificationResponse param){
+                            
+                                            this.localCustomerVerificationResponse=param;
+                                    
+
+                               }
+                            
+
+     
+     
+        /**
+        *
+        * @param parentQName
+        * @param factory
+        * @return org.apache.axiom.om.OMElement
+        */
+       public org.apache.axiom.om.OMElement getOMElement (
+               final javax.xml.namespace.QName parentQName,
+               final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
+
+
+        
+               org.apache.axiom.om.OMDataSource dataSource =
+                       new org.apache.axis2.databinding.ADBDataSource(this,MY_QNAME);
+               return factory.createOMElement(dataSource,MY_QNAME);
+            
+        }
+
+         public void serialize(final javax.xml.namespace.QName parentQName,
+                                       javax.xml.stream.XMLStreamWriter xmlWriter)
+                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+                           serialize(parentQName,xmlWriter,false);
+         }
+
+         public void serialize(final javax.xml.namespace.QName parentQName,
+                               javax.xml.stream.XMLStreamWriter xmlWriter,
+                               boolean serializeType)
+            throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+            
+                
+                //We can safely assume an element has only one type associated with it
+                
+                                 if (localCustomerVerificationResponse==null){
+                                   throw new org.apache.axis2.databinding.ADBException("CustomerVerificationResponse cannot be null!");
+                                 }
+                                 localCustomerVerificationResponse.serialize(MY_QNAME,xmlWriter);
+                            
+
+        }
+
+        private static java.lang.String generatePrefix(java.lang.String namespace) {
+            if(namespace.equals("http://mobilemoney.com/services/mWallet")){
+                return "ns1";
+            }
+            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+        }
+
+        /**
+         * Utility method to write an element start tag.
+         */
+        private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
+                                       javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+            java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
+            if (writerPrefix != null) {
+                xmlWriter.writeStartElement(namespace, localPart);
+            } else {
+                if (namespace.length() == 0) {
+                    prefix = "";
+                } else if (prefix == null) {
+                    prefix = generatePrefix(namespace);
+                }
+
+                xmlWriter.writeStartElement(prefix, localPart, namespace);
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+        }
+        
+        /**
+         * Util method to write an attribute with the ns prefix
+         */
+        private void writeAttribute(java.lang.String prefix,java.lang.String namespace,java.lang.String attName,
+                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+            if (xmlWriter.getPrefix(namespace) == null) {
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+            xmlWriter.writeAttribute(namespace,attName,attValue);
+        }
+
+        /**
+         * Util method to write an attribute without the ns prefix
+         */
+        private void writeAttribute(java.lang.String namespace,java.lang.String attName,
+                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+            if (namespace.equals("")) {
+                xmlWriter.writeAttribute(attName,attValue);
+            } else {
+                registerPrefix(xmlWriter, namespace);
+                xmlWriter.writeAttribute(namespace,attName,attValue);
+            }
+        }
+
+
+           /**
+             * Util method to write an attribute without the ns prefix
+             */
+            private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
+                                             javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+
+                java.lang.String attributeNamespace = qname.getNamespaceURI();
+                java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
+                if (attributePrefix == null) {
+                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
+                }
+                java.lang.String attributeValue;
+                if (attributePrefix.trim().length() > 0) {
+                    attributeValue = attributePrefix + ":" + qname.getLocalPart();
+                } else {
+                    attributeValue = qname.getLocalPart();
+                }
+
+                if (namespace.equals("")) {
+                    xmlWriter.writeAttribute(attName, attributeValue);
+                } else {
+                    registerPrefix(xmlWriter, namespace);
+                    xmlWriter.writeAttribute(namespace, attName, attributeValue);
+                }
+            }
+        /**
+         *  method to handle Qnames
+         */
+
+        private void writeQName(javax.xml.namespace.QName qname,
+                                javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+            java.lang.String namespaceURI = qname.getNamespaceURI();
+            if (namespaceURI != null) {
+                java.lang.String prefix = xmlWriter.getPrefix(namespaceURI);
+                if (prefix == null) {
+                    prefix = generatePrefix(namespaceURI);
+                    xmlWriter.writeNamespace(prefix, namespaceURI);
+                    xmlWriter.setPrefix(prefix,namespaceURI);
+                }
+
+                if (prefix.trim().length() > 0){
+                    xmlWriter.writeCharacters(prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+                } else {
+                    // i.e this is the default namespace
+                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+                }
+
+            } else {
+                xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+            }
+        }
+
+        private void writeQNames(javax.xml.namespace.QName[] qnames,
+                                 javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+
+            if (qnames != null) {
+                // we have to store this data until last moment since it is not possible to write any
+                // namespace data after writing the charactor data
+                java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
+                java.lang.String namespaceURI = null;
+                java.lang.String prefix = null;
+
+                for (int i = 0; i < qnames.length; i++) {
+                    if (i > 0) {
+                        stringToWrite.append(" ");
+                    }
+                    namespaceURI = qnames[i].getNamespaceURI();
+                    if (namespaceURI != null) {
+                        prefix = xmlWriter.getPrefix(namespaceURI);
+                        if ((prefix == null) || (prefix.length() == 0)) {
+                            prefix = generatePrefix(namespaceURI);
+                            xmlWriter.writeNamespace(prefix, namespaceURI);
+                            xmlWriter.setPrefix(prefix,namespaceURI);
+                        }
+
+                        if (prefix.trim().length() > 0){
+                            stringToWrite.append(prefix).append(":").append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                        } else {
+                            stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                        }
+                    } else {
+                        stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                    }
+                }
+                xmlWriter.writeCharacters(stringToWrite.toString());
+            }
+
+        }
+
+
+        /**
+         * Register a namespace prefix
+         */
+        private java.lang.String registerPrefix(javax.xml.stream.XMLStreamWriter xmlWriter, java.lang.String namespace) throws javax.xml.stream.XMLStreamException {
+            java.lang.String prefix = xmlWriter.getPrefix(namespace);
+            if (prefix == null) {
+                prefix = generatePrefix(namespace);
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
+                    prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+                }
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+            return prefix;
+        }
+
+
+  
+        /**
+        * databinding method to get an XML representation of this object
+        *
+        */
+        public javax.xml.stream.XMLStreamReader getPullParser(javax.xml.namespace.QName qName)
+                    throws org.apache.axis2.databinding.ADBException{
+
+
+        
+                
+                //We can safely assume an element has only one type associated with it
+                return localCustomerVerificationResponse.getPullParser(MY_QNAME);
+
+        }
+
+  
+
+     /**
+      *  Factory class that keeps the parse method
+      */
+    public static class Factory{
+
+        
+        
+
+        /**
+        * static method to create the object
+        * Precondition:  If this object is an element, the current or next start element starts this object and any intervening reader events are ignorable
+        *                If this object is not an element, it is a complex type and the reader is at the event just after the outer start element
+        * Postcondition: If this object is an element, the reader is positioned at its end element
+        *                If this object is a complex type, the reader is positioned at the end element of its outer element
+        */
+        public static CustomerVerificationResponse parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
+            CustomerVerificationResponse object =
+                new CustomerVerificationResponse();
+
+            int event;
+            java.lang.String nillableValue = null;
+            java.lang.String prefix ="";
+            java.lang.String namespaceuri ="";
+            try {
+                
+                while (!reader.isStartElement() && !reader.isEndElement())
+                    reader.next();
+
+                
+
+                
+                // Note all attributes that were handled. Used to differ normal attributes
+                // from anyAttributes.
+                java.util.Vector handledAttributes = new java.util.Vector();
+                
+
+                   
+                while(!reader.isEndElement()) {
+                    if (reader.isStartElement() ){
+                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","CustomerVerificationResponse").equals(reader.getName())){
+                                
+                                                object.setCustomerVerificationResponse(MCustomerVerificationResponse.Factory.parse(reader));
+                                            
+                              }  // End of if for expected property start element
+                                
+                             else{
+                                        // A start element we are not expecting indicates an invalid parameter was passed
+                                        throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                             }
+                          
+                             } else {
+                                reader.next();
+                             }  
+                           }  // end of while loop
+                        
+
+
+
+            } catch (javax.xml.stream.XMLStreamException e) {
+                throw new java.lang.Exception(e);
+            }
+
+            return object;
+        }
+
+        }//end of factory class
+
+        
+
+        }
+           
+    
         public static class CurrencyCode
         implements org.apache.axis2.databinding.ADBBean{
         
@@ -15071,8 +20483,8 @@
                                     
                             }
                         
-     
 
+     
      
         /**
         *
@@ -15291,7 +20703,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -15429,47 +20846,59 @@
         }
            
     
-        public static class CustomerVerificationResponse
+        public static class Country
         implements org.apache.axis2.databinding.ADBBean{
         
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://mobilemoney.com/services/mWallet",
-                "CustomerVerificationResponse",
+                "Country",
                 "ns1");
 
             
 
                         /**
-                        * field for CustomerVerificationResponse
+                        * field for Country
                         */
 
                         
-                                    protected MCustomerVerificationResponse localCustomerVerificationResponse ;
+                                    protected java.lang.String localCountry ;
                                 
 
                            /**
                            * Auto generated getter method
-                           * @return MCustomerVerificationResponse
+                           * @return java.lang.String
                            */
-                           public  MCustomerVerificationResponse getCustomerVerificationResponse(){
-                               return localCustomerVerificationResponse;
+                           public  java.lang.String getCountry(){
+                               return localCountry;
                            }
 
                            
                         
                             /**
                                * Auto generated setter method
-                               * @param param CustomerVerificationResponse
+                               * @param param Country
                                */
-                               public void setCustomerVerificationResponse(MCustomerVerificationResponse param){
+                               public void setCountry(java.lang.String param){
                             
-                                            this.localCustomerVerificationResponse=param;
-                                    
+                                            if (  (java.lang.String.valueOf(param).length() <= 2)  ) {
+                                                this.localCountry=param;
+                                            }
+                                            else {
+                                                throw new java.lang.RuntimeException();
+                                            }
+                                        
 
                                }
                             
-     
 
+                            public java.lang.String toString(){
+                                
+                                        return localCountry.toString();
+                                    
+                            }
+                        
+
+     
      
         /**
         *
@@ -15503,11 +20932,37 @@
                 
                 //We can safely assume an element has only one type associated with it
                 
-                                 if (localCustomerVerificationResponse==null){
-                                   throw new org.apache.axis2.databinding.ADBException("CustomerVerificationResponse cannot be null!");
-                                 }
-                                 localCustomerVerificationResponse.serialize(MY_QNAME,xmlWriter);
+                            java.lang.String namespace = parentQName.getNamespaceURI();
+                            java.lang.String _localName = parentQName.getLocalPart();
+                        
+                            writeStartElement(null, namespace, _localName, xmlWriter);
+
+                            // add the type details if this is used in a simple type
+                               if (serializeType){
+                                   java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://mobilemoney.com/services/mWallet");
+                                   if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
+                                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
+                                           namespacePrefix+":Country",
+                                           xmlWriter);
+                                   } else {
+                                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
+                                           "Country",
+                                           xmlWriter);
+                                   }
+                               }
                             
+                                          if (localCountry==null){
+                                            
+                                                     throw new org.apache.axis2.databinding.ADBException("Country cannot be null !!");
+                                                
+                                         }else{
+                                        
+                                                       xmlWriter.writeCharacters(localCountry);
+                                            
+                                         }
+                                    
+                            xmlWriter.writeEndElement();
+                    
 
         }
 
@@ -15662,7 +21117,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -15684,7 +21144,12 @@
         
                 
                 //We can safely assume an element has only one type associated with it
-                return localCustomerVerificationResponse.getPullParser(MY_QNAME);
+                 return new org.apache.axis2.databinding.utils.reader.ADBXMLStreamReaderImpl(MY_QNAME,
+                            new java.lang.Object[]{
+                            org.apache.axis2.databinding.utils.reader.ADBXMLStreamReader.ELEMENT_TEXT,
+                            org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localCountry)
+                            },
+                            null);
 
         }
 
@@ -15697,6 +21162,29 @@
 
         
         
+                public static Country fromString(java.lang.String value,
+                                                    java.lang.String namespaceURI){
+                    Country returnValue = new  Country();
+                    
+                            returnValue.setCountry(
+                                org.apache.axis2.databinding.utils.ConverterUtil.convertToString(value));
+                        
+
+                    return returnValue;
+                }
+
+                public static Country fromString(javax.xml.stream.XMLStreamReader xmlStreamReader,
+                                                                    java.lang.String content) {
+                    if (content.indexOf(":") > -1){
+                        java.lang.String prefix = content.substring(0,content.indexOf(":"));
+                        java.lang.String namespaceUri = xmlStreamReader.getNamespaceContext().getNamespaceURI(prefix);
+                        return Country.Factory.fromString(content,namespaceUri);
+                    } else {
+                       return Country.Factory.fromString(content,"");
+                    }
+                }
+
+            
 
         /**
         * static method to create the object
@@ -15705,9 +21193,9 @@
         * Postcondition: If this object is an element, the reader is positioned at its end element
         *                If this object is a complex type, the reader is positioned at the end element of its outer element
         */
-        public static CustomerVerificationResponse parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
-            CustomerVerificationResponse object =
-                new CustomerVerificationResponse();
+        public static Country parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
+            Country object =
+                new Country();
 
             int event;
             java.lang.String nillableValue = null;
@@ -15728,11 +21216,20 @@
 
                    
                 while(!reader.isEndElement()) {
-                    if (reader.isStartElement() ){
+                    if (reader.isStartElement()  || reader.hasText()){
                 
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","CustomerVerificationResponse").equals(reader.getName())){
+                                    if (reader.isStartElement()  || reader.hasText()){
                                 
-                                                object.setCustomerVerificationResponse(MCustomerVerificationResponse.Factory.parse(reader));
+                                    nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
+                                    if ("true".equals(nillableValue) || "1".equals(nillableValue)){
+                                        throw new org.apache.axis2.databinding.ADBException("The element: "+"Country" +"  cannot be null");
+                                    }
+                                    
+
+                                    java.lang.String content = reader.getElementText();
+                                    
+                                              object.setCountry(
+                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
                                             
                               }  // End of if for expected property start element
                                 
@@ -15831,8 +21328,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -16059,7 +21556,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -16232,415 +21734,6 @@
         }
            
     
-        public static class Country
-        implements org.apache.axis2.databinding.ADBBean{
-        
-                public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
-                "http://mobilemoney.com/services/mWallet",
-                "Country",
-                "ns1");
-
-            
-
-                        /**
-                        * field for Country
-                        */
-
-                        
-                                    protected java.lang.String localCountry ;
-                                
-
-                           /**
-                           * Auto generated getter method
-                           * @return java.lang.String
-                           */
-                           public  java.lang.String getCountry(){
-                               return localCountry;
-                           }
-
-                           
-                        
-                            /**
-                               * Auto generated setter method
-                               * @param param Country
-                               */
-                               public void setCountry(java.lang.String param){
-                            
-                                            if (  (java.lang.String.valueOf(param).length() <= 2)  ) {
-                                                this.localCountry=param;
-                                            }
-                                            else {
-                                                throw new java.lang.RuntimeException();
-                                            }
-                                        
-
-                               }
-                            
-
-                            public java.lang.String toString(){
-                                
-                                        return localCountry.toString();
-                                    
-                            }
-                        
-     
-
-     
-        /**
-        *
-        * @param parentQName
-        * @param factory
-        * @return org.apache.axiom.om.OMElement
-        */
-       public org.apache.axiom.om.OMElement getOMElement (
-               final javax.xml.namespace.QName parentQName,
-               final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
-
-
-        
-               org.apache.axiom.om.OMDataSource dataSource =
-                       new org.apache.axis2.databinding.ADBDataSource(this,MY_QNAME);
-               return factory.createOMElement(dataSource,MY_QNAME);
-            
-        }
-
-         public void serialize(final javax.xml.namespace.QName parentQName,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter)
-                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
-                           serialize(parentQName,xmlWriter,false);
-         }
-
-         public void serialize(final javax.xml.namespace.QName parentQName,
-                               javax.xml.stream.XMLStreamWriter xmlWriter,
-                               boolean serializeType)
-            throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
-            
-                
-                //We can safely assume an element has only one type associated with it
-                
-                            java.lang.String namespace = parentQName.getNamespaceURI();
-                            java.lang.String _localName = parentQName.getLocalPart();
-                        
-                            writeStartElement(null, namespace, _localName, xmlWriter);
-
-                            // add the type details if this is used in a simple type
-                               if (serializeType){
-                                   java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://mobilemoney.com/services/mWallet");
-                                   if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
-                                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                                           namespacePrefix+":Country",
-                                           xmlWriter);
-                                   } else {
-                                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                                           "Country",
-                                           xmlWriter);
-                                   }
-                               }
-                            
-                                          if (localCountry==null){
-                                            
-                                                     throw new org.apache.axis2.databinding.ADBException("Country cannot be null !!");
-                                                
-                                         }else{
-                                        
-                                                       xmlWriter.writeCharacters(localCountry);
-                                            
-                                         }
-                                    
-                            xmlWriter.writeEndElement();
-                    
-
-        }
-
-        private static java.lang.String generatePrefix(java.lang.String namespace) {
-            if(namespace.equals("http://mobilemoney.com/services/mWallet")){
-                return "ns1";
-            }
-            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
-        }
-
-        /**
-         * Utility method to write an element start tag.
-         */
-        private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-            java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
-            if (writerPrefix != null) {
-                xmlWriter.writeStartElement(namespace, localPart);
-            } else {
-                if (namespace.length() == 0) {
-                    prefix = "";
-                } else if (prefix == null) {
-                    prefix = generatePrefix(namespace);
-                }
-
-                xmlWriter.writeStartElement(prefix, localPart, namespace);
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-        }
-        
-        /**
-         * Util method to write an attribute with the ns prefix
-         */
-        private void writeAttribute(java.lang.String prefix,java.lang.String namespace,java.lang.String attName,
-                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
-            if (xmlWriter.getPrefix(namespace) == null) {
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-            xmlWriter.writeAttribute(namespace,attName,attValue);
-        }
-
-        /**
-         * Util method to write an attribute without the ns prefix
-         */
-        private void writeAttribute(java.lang.String namespace,java.lang.String attName,
-                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
-            if (namespace.equals("")) {
-                xmlWriter.writeAttribute(attName,attValue);
-            } else {
-                registerPrefix(xmlWriter, namespace);
-                xmlWriter.writeAttribute(namespace,attName,attValue);
-            }
-        }
-
-
-           /**
-             * Util method to write an attribute without the ns prefix
-             */
-            private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
-                                             javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-
-                java.lang.String attributeNamespace = qname.getNamespaceURI();
-                java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
-                if (attributePrefix == null) {
-                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
-                }
-                java.lang.String attributeValue;
-                if (attributePrefix.trim().length() > 0) {
-                    attributeValue = attributePrefix + ":" + qname.getLocalPart();
-                } else {
-                    attributeValue = qname.getLocalPart();
-                }
-
-                if (namespace.equals("")) {
-                    xmlWriter.writeAttribute(attName, attributeValue);
-                } else {
-                    registerPrefix(xmlWriter, namespace);
-                    xmlWriter.writeAttribute(namespace, attName, attributeValue);
-                }
-            }
-        /**
-         *  method to handle Qnames
-         */
-
-        private void writeQName(javax.xml.namespace.QName qname,
-                                javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-            java.lang.String namespaceURI = qname.getNamespaceURI();
-            if (namespaceURI != null) {
-                java.lang.String prefix = xmlWriter.getPrefix(namespaceURI);
-                if (prefix == null) {
-                    prefix = generatePrefix(namespaceURI);
-                    xmlWriter.writeNamespace(prefix, namespaceURI);
-                    xmlWriter.setPrefix(prefix,namespaceURI);
-                }
-
-                if (prefix.trim().length() > 0){
-                    xmlWriter.writeCharacters(prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-                } else {
-                    // i.e this is the default namespace
-                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-                }
-
-            } else {
-                xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-            }
-        }
-
-        private void writeQNames(javax.xml.namespace.QName[] qnames,
-                                 javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-
-            if (qnames != null) {
-                // we have to store this data until last moment since it is not possible to write any
-                // namespace data after writing the charactor data
-                java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
-                java.lang.String namespaceURI = null;
-                java.lang.String prefix = null;
-
-                for (int i = 0; i < qnames.length; i++) {
-                    if (i > 0) {
-                        stringToWrite.append(" ");
-                    }
-                    namespaceURI = qnames[i].getNamespaceURI();
-                    if (namespaceURI != null) {
-                        prefix = xmlWriter.getPrefix(namespaceURI);
-                        if ((prefix == null) || (prefix.length() == 0)) {
-                            prefix = generatePrefix(namespaceURI);
-                            xmlWriter.writeNamespace(prefix, namespaceURI);
-                            xmlWriter.setPrefix(prefix,namespaceURI);
-                        }
-
-                        if (prefix.trim().length() > 0){
-                            stringToWrite.append(prefix).append(":").append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                        } else {
-                            stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                        }
-                    } else {
-                        stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                    }
-                }
-                xmlWriter.writeCharacters(stringToWrite.toString());
-            }
-
-        }
-
-
-        /**
-         * Register a namespace prefix
-         */
-        private java.lang.String registerPrefix(javax.xml.stream.XMLStreamWriter xmlWriter, java.lang.String namespace) throws javax.xml.stream.XMLStreamException {
-            java.lang.String prefix = xmlWriter.getPrefix(namespace);
-            if (prefix == null) {
-                prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
-                    prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
-                }
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-            return prefix;
-        }
-
-
-  
-        /**
-        * databinding method to get an XML representation of this object
-        *
-        */
-        public javax.xml.stream.XMLStreamReader getPullParser(javax.xml.namespace.QName qName)
-                    throws org.apache.axis2.databinding.ADBException{
-
-
-        
-                
-                //We can safely assume an element has only one type associated with it
-                 return new org.apache.axis2.databinding.utils.reader.ADBXMLStreamReaderImpl(MY_QNAME,
-                            new java.lang.Object[]{
-                            org.apache.axis2.databinding.utils.reader.ADBXMLStreamReader.ELEMENT_TEXT,
-                            org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localCountry)
-                            },
-                            null);
-
-        }
-
-  
-
-     /**
-      *  Factory class that keeps the parse method
-      */
-    public static class Factory{
-
-        
-        
-                public static Country fromString(java.lang.String value,
-                                                    java.lang.String namespaceURI){
-                    Country returnValue = new  Country();
-                    
-                            returnValue.setCountry(
-                                org.apache.axis2.databinding.utils.ConverterUtil.convertToString(value));
-                        
-
-                    return returnValue;
-                }
-
-                public static Country fromString(javax.xml.stream.XMLStreamReader xmlStreamReader,
-                                                                    java.lang.String content) {
-                    if (content.indexOf(":") > -1){
-                        java.lang.String prefix = content.substring(0,content.indexOf(":"));
-                        java.lang.String namespaceUri = xmlStreamReader.getNamespaceContext().getNamespaceURI(prefix);
-                        return Country.Factory.fromString(content,namespaceUri);
-                    } else {
-                       return Country.Factory.fromString(content,"");
-                    }
-                }
-
-            
-
-        /**
-        * static method to create the object
-        * Precondition:  If this object is an element, the current or next start element starts this object and any intervening reader events are ignorable
-        *                If this object is not an element, it is a complex type and the reader is at the event just after the outer start element
-        * Postcondition: If this object is an element, the reader is positioned at its end element
-        *                If this object is a complex type, the reader is positioned at the end element of its outer element
-        */
-        public static Country parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
-            Country object =
-                new Country();
-
-            int event;
-            java.lang.String nillableValue = null;
-            java.lang.String prefix ="";
-            java.lang.String namespaceuri ="";
-            try {
-                
-                while (!reader.isStartElement() && !reader.isEndElement())
-                    reader.next();
-
-                
-
-                
-                // Note all attributes that were handled. Used to differ normal attributes
-                // from anyAttributes.
-                java.util.Vector handledAttributes = new java.util.Vector();
-                
-
-                   
-                while(!reader.isEndElement()) {
-                    if (reader.isStartElement()  || reader.hasText()){
-                
-                                    if (reader.isStartElement()  || reader.hasText()){
-                                
-                                    nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
-                                    if ("true".equals(nillableValue) || "1".equals(nillableValue)){
-                                        throw new org.apache.axis2.databinding.ADBException("The element: "+"Country" +"  cannot be null");
-                                    }
-                                    
-
-                                    java.lang.String content = reader.getElementText();
-                                    
-                                              object.setCountry(
-                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
-                                            
-                              }  // End of if for expected property start element
-                                
-                             else{
-                                        // A start element we are not expecting indicates an invalid parameter was passed
-                                        throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
-                             }
-                          
-                             } else {
-                                reader.next();
-                             }  
-                           }  // end of while loop
-                        
-
-
-
-            } catch (javax.xml.stream.XMLStreamException e) {
-                throw new java.lang.Exception(e);
-            }
-
-            return object;
-        }
-
-        }//end of factory class
-
-        
-
-        }
-           
-    
         public static class City
         implements org.apache.axis2.databinding.ADBBean{
         
@@ -16692,8 +21785,8 @@
                                     
                             }
                         
-     
 
+     
      
         /**
         *
@@ -16912,7 +22005,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -17089,8 +22187,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -17283,7 +22381,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -17384,6 +22487,345 @@
         }
            
     
+        public static class TransferResponse
+        implements org.apache.axis2.databinding.ADBBean{
+        
+                public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
+                "http://mobilemoney.com/services/mWallet",
+                "TransferResponse",
+                "ns1");
+
+            
+
+                        /**
+                        * field for TransferResponse
+                        */
+
+                        
+                                    protected MTransferResponseType localTransferResponse ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return MTransferResponseType
+                           */
+                           public  MTransferResponseType getTransferResponse(){
+                               return localTransferResponse;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param TransferResponse
+                               */
+                               public void setTransferResponse(MTransferResponseType param){
+                            
+                                            this.localTransferResponse=param;
+                                    
+
+                               }
+                            
+
+     
+     
+        /**
+        *
+        * @param parentQName
+        * @param factory
+        * @return org.apache.axiom.om.OMElement
+        */
+       public org.apache.axiom.om.OMElement getOMElement (
+               final javax.xml.namespace.QName parentQName,
+               final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
+
+
+        
+               org.apache.axiom.om.OMDataSource dataSource =
+                       new org.apache.axis2.databinding.ADBDataSource(this,MY_QNAME);
+               return factory.createOMElement(dataSource,MY_QNAME);
+            
+        }
+
+         public void serialize(final javax.xml.namespace.QName parentQName,
+                                       javax.xml.stream.XMLStreamWriter xmlWriter)
+                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+                           serialize(parentQName,xmlWriter,false);
+         }
+
+         public void serialize(final javax.xml.namespace.QName parentQName,
+                               javax.xml.stream.XMLStreamWriter xmlWriter,
+                               boolean serializeType)
+            throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+            
+                
+                //We can safely assume an element has only one type associated with it
+                
+                                 if (localTransferResponse==null){
+                                   throw new org.apache.axis2.databinding.ADBException("TransferResponse cannot be null!");
+                                 }
+                                 localTransferResponse.serialize(MY_QNAME,xmlWriter);
+                            
+
+        }
+
+        private static java.lang.String generatePrefix(java.lang.String namespace) {
+            if(namespace.equals("http://mobilemoney.com/services/mWallet")){
+                return "ns1";
+            }
+            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+        }
+
+        /**
+         * Utility method to write an element start tag.
+         */
+        private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
+                                       javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+            java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
+            if (writerPrefix != null) {
+                xmlWriter.writeStartElement(namespace, localPart);
+            } else {
+                if (namespace.length() == 0) {
+                    prefix = "";
+                } else if (prefix == null) {
+                    prefix = generatePrefix(namespace);
+                }
+
+                xmlWriter.writeStartElement(prefix, localPart, namespace);
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+        }
+        
+        /**
+         * Util method to write an attribute with the ns prefix
+         */
+        private void writeAttribute(java.lang.String prefix,java.lang.String namespace,java.lang.String attName,
+                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+            if (xmlWriter.getPrefix(namespace) == null) {
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+            xmlWriter.writeAttribute(namespace,attName,attValue);
+        }
+
+        /**
+         * Util method to write an attribute without the ns prefix
+         */
+        private void writeAttribute(java.lang.String namespace,java.lang.String attName,
+                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+            if (namespace.equals("")) {
+                xmlWriter.writeAttribute(attName,attValue);
+            } else {
+                registerPrefix(xmlWriter, namespace);
+                xmlWriter.writeAttribute(namespace,attName,attValue);
+            }
+        }
+
+
+           /**
+             * Util method to write an attribute without the ns prefix
+             */
+            private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
+                                             javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+
+                java.lang.String attributeNamespace = qname.getNamespaceURI();
+                java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
+                if (attributePrefix == null) {
+                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
+                }
+                java.lang.String attributeValue;
+                if (attributePrefix.trim().length() > 0) {
+                    attributeValue = attributePrefix + ":" + qname.getLocalPart();
+                } else {
+                    attributeValue = qname.getLocalPart();
+                }
+
+                if (namespace.equals("")) {
+                    xmlWriter.writeAttribute(attName, attributeValue);
+                } else {
+                    registerPrefix(xmlWriter, namespace);
+                    xmlWriter.writeAttribute(namespace, attName, attributeValue);
+                }
+            }
+        /**
+         *  method to handle Qnames
+         */
+
+        private void writeQName(javax.xml.namespace.QName qname,
+                                javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+            java.lang.String namespaceURI = qname.getNamespaceURI();
+            if (namespaceURI != null) {
+                java.lang.String prefix = xmlWriter.getPrefix(namespaceURI);
+                if (prefix == null) {
+                    prefix = generatePrefix(namespaceURI);
+                    xmlWriter.writeNamespace(prefix, namespaceURI);
+                    xmlWriter.setPrefix(prefix,namespaceURI);
+                }
+
+                if (prefix.trim().length() > 0){
+                    xmlWriter.writeCharacters(prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+                } else {
+                    // i.e this is the default namespace
+                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+                }
+
+            } else {
+                xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+            }
+        }
+
+        private void writeQNames(javax.xml.namespace.QName[] qnames,
+                                 javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+
+            if (qnames != null) {
+                // we have to store this data until last moment since it is not possible to write any
+                // namespace data after writing the charactor data
+                java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
+                java.lang.String namespaceURI = null;
+                java.lang.String prefix = null;
+
+                for (int i = 0; i < qnames.length; i++) {
+                    if (i > 0) {
+                        stringToWrite.append(" ");
+                    }
+                    namespaceURI = qnames[i].getNamespaceURI();
+                    if (namespaceURI != null) {
+                        prefix = xmlWriter.getPrefix(namespaceURI);
+                        if ((prefix == null) || (prefix.length() == 0)) {
+                            prefix = generatePrefix(namespaceURI);
+                            xmlWriter.writeNamespace(prefix, namespaceURI);
+                            xmlWriter.setPrefix(prefix,namespaceURI);
+                        }
+
+                        if (prefix.trim().length() > 0){
+                            stringToWrite.append(prefix).append(":").append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                        } else {
+                            stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                        }
+                    } else {
+                        stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                    }
+                }
+                xmlWriter.writeCharacters(stringToWrite.toString());
+            }
+
+        }
+
+
+        /**
+         * Register a namespace prefix
+         */
+        private java.lang.String registerPrefix(javax.xml.stream.XMLStreamWriter xmlWriter, java.lang.String namespace) throws javax.xml.stream.XMLStreamException {
+            java.lang.String prefix = xmlWriter.getPrefix(namespace);
+            if (prefix == null) {
+                prefix = generatePrefix(namespace);
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
+                    prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+                }
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+            return prefix;
+        }
+
+
+  
+        /**
+        * databinding method to get an XML representation of this object
+        *
+        */
+        public javax.xml.stream.XMLStreamReader getPullParser(javax.xml.namespace.QName qName)
+                    throws org.apache.axis2.databinding.ADBException{
+
+
+        
+                
+                //We can safely assume an element has only one type associated with it
+                return localTransferResponse.getPullParser(MY_QNAME);
+
+        }
+
+  
+
+     /**
+      *  Factory class that keeps the parse method
+      */
+    public static class Factory{
+
+        
+        
+
+        /**
+        * static method to create the object
+        * Precondition:  If this object is an element, the current or next start element starts this object and any intervening reader events are ignorable
+        *                If this object is not an element, it is a complex type and the reader is at the event just after the outer start element
+        * Postcondition: If this object is an element, the reader is positioned at its end element
+        *                If this object is a complex type, the reader is positioned at the end element of its outer element
+        */
+        public static TransferResponse parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
+            TransferResponse object =
+                new TransferResponse();
+
+            int event;
+            java.lang.String nillableValue = null;
+            java.lang.String prefix ="";
+            java.lang.String namespaceuri ="";
+            try {
+                
+                while (!reader.isStartElement() && !reader.isEndElement())
+                    reader.next();
+
+                
+
+                
+                // Note all attributes that were handled. Used to differ normal attributes
+                // from anyAttributes.
+                java.util.Vector handledAttributes = new java.util.Vector();
+                
+
+                   
+                while(!reader.isEndElement()) {
+                    if (reader.isStartElement() ){
+                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","TransferResponse").equals(reader.getName())){
+                                
+                                                object.setTransferResponse(MTransferResponseType.Factory.parse(reader));
+                                            
+                              }  // End of if for expected property start element
+                                
+                             else{
+                                        // A start element we are not expecting indicates an invalid parameter was passed
+                                        throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                             }
+                          
+                             } else {
+                                reader.next();
+                             }  
+                           }  // end of while loop
+                        
+
+
+
+            } catch (javax.xml.stream.XMLStreamException e) {
+                throw new java.lang.Exception(e);
+            }
+
+            return object;
+        }
+
+        }//end of factory class
+
+        
+
+        }
+           
+    
         public static class MmTransferCode
         implements org.apache.axis2.databinding.ADBBean{
         
@@ -17435,8 +22877,8 @@
                                     
                             }
                         
-     
 
+     
      
         /**
         *
@@ -17655,7 +23097,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -17793,340 +23240,6 @@
         }
            
     
-        public static class TransferResponse
-        implements org.apache.axis2.databinding.ADBBean{
-        
-                public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
-                "http://mobilemoney.com/services/mWallet",
-                "TransferResponse",
-                "ns1");
-
-            
-
-                        /**
-                        * field for TransferResponse
-                        */
-
-                        
-                                    protected MTransferResponseType localTransferResponse ;
-                                
-
-                           /**
-                           * Auto generated getter method
-                           * @return MTransferResponseType
-                           */
-                           public  MTransferResponseType getTransferResponse(){
-                               return localTransferResponse;
-                           }
-
-                           
-                        
-                            /**
-                               * Auto generated setter method
-                               * @param param TransferResponse
-                               */
-                               public void setTransferResponse(MTransferResponseType param){
-                            
-                                            this.localTransferResponse=param;
-                                    
-
-                               }
-                            
-     
-
-     
-        /**
-        *
-        * @param parentQName
-        * @param factory
-        * @return org.apache.axiom.om.OMElement
-        */
-       public org.apache.axiom.om.OMElement getOMElement (
-               final javax.xml.namespace.QName parentQName,
-               final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
-
-
-        
-               org.apache.axiom.om.OMDataSource dataSource =
-                       new org.apache.axis2.databinding.ADBDataSource(this,MY_QNAME);
-               return factory.createOMElement(dataSource,MY_QNAME);
-            
-        }
-
-         public void serialize(final javax.xml.namespace.QName parentQName,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter)
-                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
-                           serialize(parentQName,xmlWriter,false);
-         }
-
-         public void serialize(final javax.xml.namespace.QName parentQName,
-                               javax.xml.stream.XMLStreamWriter xmlWriter,
-                               boolean serializeType)
-            throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
-            
-                
-                //We can safely assume an element has only one type associated with it
-                
-                                 if (localTransferResponse==null){
-                                   throw new org.apache.axis2.databinding.ADBException("TransferResponse cannot be null!");
-                                 }
-                                 localTransferResponse.serialize(MY_QNAME,xmlWriter);
-                            
-
-        }
-
-        private static java.lang.String generatePrefix(java.lang.String namespace) {
-            if(namespace.equals("http://mobilemoney.com/services/mWallet")){
-                return "ns1";
-            }
-            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
-        }
-
-        /**
-         * Utility method to write an element start tag.
-         */
-        private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-            java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
-            if (writerPrefix != null) {
-                xmlWriter.writeStartElement(namespace, localPart);
-            } else {
-                if (namespace.length() == 0) {
-                    prefix = "";
-                } else if (prefix == null) {
-                    prefix = generatePrefix(namespace);
-                }
-
-                xmlWriter.writeStartElement(prefix, localPart, namespace);
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-        }
-        
-        /**
-         * Util method to write an attribute with the ns prefix
-         */
-        private void writeAttribute(java.lang.String prefix,java.lang.String namespace,java.lang.String attName,
-                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
-            if (xmlWriter.getPrefix(namespace) == null) {
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-            xmlWriter.writeAttribute(namespace,attName,attValue);
-        }
-
-        /**
-         * Util method to write an attribute without the ns prefix
-         */
-        private void writeAttribute(java.lang.String namespace,java.lang.String attName,
-                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
-            if (namespace.equals("")) {
-                xmlWriter.writeAttribute(attName,attValue);
-            } else {
-                registerPrefix(xmlWriter, namespace);
-                xmlWriter.writeAttribute(namespace,attName,attValue);
-            }
-        }
-
-
-           /**
-             * Util method to write an attribute without the ns prefix
-             */
-            private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
-                                             javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-
-                java.lang.String attributeNamespace = qname.getNamespaceURI();
-                java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
-                if (attributePrefix == null) {
-                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
-                }
-                java.lang.String attributeValue;
-                if (attributePrefix.trim().length() > 0) {
-                    attributeValue = attributePrefix + ":" + qname.getLocalPart();
-                } else {
-                    attributeValue = qname.getLocalPart();
-                }
-
-                if (namespace.equals("")) {
-                    xmlWriter.writeAttribute(attName, attributeValue);
-                } else {
-                    registerPrefix(xmlWriter, namespace);
-                    xmlWriter.writeAttribute(namespace, attName, attributeValue);
-                }
-            }
-        /**
-         *  method to handle Qnames
-         */
-
-        private void writeQName(javax.xml.namespace.QName qname,
-                                javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-            java.lang.String namespaceURI = qname.getNamespaceURI();
-            if (namespaceURI != null) {
-                java.lang.String prefix = xmlWriter.getPrefix(namespaceURI);
-                if (prefix == null) {
-                    prefix = generatePrefix(namespaceURI);
-                    xmlWriter.writeNamespace(prefix, namespaceURI);
-                    xmlWriter.setPrefix(prefix,namespaceURI);
-                }
-
-                if (prefix.trim().length() > 0){
-                    xmlWriter.writeCharacters(prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-                } else {
-                    // i.e this is the default namespace
-                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-                }
-
-            } else {
-                xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-            }
-        }
-
-        private void writeQNames(javax.xml.namespace.QName[] qnames,
-                                 javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-
-            if (qnames != null) {
-                // we have to store this data until last moment since it is not possible to write any
-                // namespace data after writing the charactor data
-                java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
-                java.lang.String namespaceURI = null;
-                java.lang.String prefix = null;
-
-                for (int i = 0; i < qnames.length; i++) {
-                    if (i > 0) {
-                        stringToWrite.append(" ");
-                    }
-                    namespaceURI = qnames[i].getNamespaceURI();
-                    if (namespaceURI != null) {
-                        prefix = xmlWriter.getPrefix(namespaceURI);
-                        if ((prefix == null) || (prefix.length() == 0)) {
-                            prefix = generatePrefix(namespaceURI);
-                            xmlWriter.writeNamespace(prefix, namespaceURI);
-                            xmlWriter.setPrefix(prefix,namespaceURI);
-                        }
-
-                        if (prefix.trim().length() > 0){
-                            stringToWrite.append(prefix).append(":").append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                        } else {
-                            stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                        }
-                    } else {
-                        stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                    }
-                }
-                xmlWriter.writeCharacters(stringToWrite.toString());
-            }
-
-        }
-
-
-        /**
-         * Register a namespace prefix
-         */
-        private java.lang.String registerPrefix(javax.xml.stream.XMLStreamWriter xmlWriter, java.lang.String namespace) throws javax.xml.stream.XMLStreamException {
-            java.lang.String prefix = xmlWriter.getPrefix(namespace);
-            if (prefix == null) {
-                prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
-                    prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
-                }
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-            return prefix;
-        }
-
-
-  
-        /**
-        * databinding method to get an XML representation of this object
-        *
-        */
-        public javax.xml.stream.XMLStreamReader getPullParser(javax.xml.namespace.QName qName)
-                    throws org.apache.axis2.databinding.ADBException{
-
-
-        
-                
-                //We can safely assume an element has only one type associated with it
-                return localTransferResponse.getPullParser(MY_QNAME);
-
-        }
-
-  
-
-     /**
-      *  Factory class that keeps the parse method
-      */
-    public static class Factory{
-
-        
-        
-
-        /**
-        * static method to create the object
-        * Precondition:  If this object is an element, the current or next start element starts this object and any intervening reader events are ignorable
-        *                If this object is not an element, it is a complex type and the reader is at the event just after the outer start element
-        * Postcondition: If this object is an element, the reader is positioned at its end element
-        *                If this object is a complex type, the reader is positioned at the end element of its outer element
-        */
-        public static TransferResponse parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
-            TransferResponse object =
-                new TransferResponse();
-
-            int event;
-            java.lang.String nillableValue = null;
-            java.lang.String prefix ="";
-            java.lang.String namespaceuri ="";
-            try {
-                
-                while (!reader.isStartElement() && !reader.isEndElement())
-                    reader.next();
-
-                
-
-                
-                // Note all attributes that were handled. Used to differ normal attributes
-                // from anyAttributes.
-                java.util.Vector handledAttributes = new java.util.Vector();
-                
-
-                   
-                while(!reader.isEndElement()) {
-                    if (reader.isStartElement() ){
-                
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","TransferResponse").equals(reader.getName())){
-                                
-                                                object.setTransferResponse(MTransferResponseType.Factory.parse(reader));
-                                            
-                              }  // End of if for expected property start element
-                                
-                             else{
-                                        // A start element we are not expecting indicates an invalid parameter was passed
-                                        throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
-                             }
-                          
-                             } else {
-                                reader.next();
-                             }  
-                           }  // end of while loop
-                        
-
-
-
-            } catch (javax.xml.stream.XMLStreamException e) {
-                throw new java.lang.Exception(e);
-            }
-
-            return object;
-        }
-
-        }//end of factory class
-
-        
-
-        }
-           
-    
         public static class MBalanceResponse
         implements org.apache.axis2.databinding.ADBBean{
         /* This type was generated from the piece of schema that had
@@ -18225,8 +23338,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -18485,7 +23598,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -18704,6 +23822,345 @@
         }
            
     
+        public static class BalanceGetRequest
+        implements org.apache.axis2.databinding.ADBBean{
+        
+                public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
+                "http://mobilemoney.com/services/mWallet",
+                "BalanceGetRequest",
+                "ns1");
+
+            
+
+                        /**
+                        * field for BalanceGetRequest
+                        */
+
+                        
+                                    protected MBasicRequestType localBalanceGetRequest ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return MBasicRequestType
+                           */
+                           public  MBasicRequestType getBalanceGetRequest(){
+                               return localBalanceGetRequest;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param BalanceGetRequest
+                               */
+                               public void setBalanceGetRequest(MBasicRequestType param){
+                            
+                                            this.localBalanceGetRequest=param;
+                                    
+
+                               }
+                            
+
+     
+     
+        /**
+        *
+        * @param parentQName
+        * @param factory
+        * @return org.apache.axiom.om.OMElement
+        */
+       public org.apache.axiom.om.OMElement getOMElement (
+               final javax.xml.namespace.QName parentQName,
+               final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
+
+
+        
+               org.apache.axiom.om.OMDataSource dataSource =
+                       new org.apache.axis2.databinding.ADBDataSource(this,MY_QNAME);
+               return factory.createOMElement(dataSource,MY_QNAME);
+            
+        }
+
+         public void serialize(final javax.xml.namespace.QName parentQName,
+                                       javax.xml.stream.XMLStreamWriter xmlWriter)
+                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+                           serialize(parentQName,xmlWriter,false);
+         }
+
+         public void serialize(final javax.xml.namespace.QName parentQName,
+                               javax.xml.stream.XMLStreamWriter xmlWriter,
+                               boolean serializeType)
+            throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+            
+                
+                //We can safely assume an element has only one type associated with it
+                
+                                 if (localBalanceGetRequest==null){
+                                   throw new org.apache.axis2.databinding.ADBException("BalanceGetRequest cannot be null!");
+                                 }
+                                 localBalanceGetRequest.serialize(MY_QNAME,xmlWriter);
+                            
+
+        }
+
+        private static java.lang.String generatePrefix(java.lang.String namespace) {
+            if(namespace.equals("http://mobilemoney.com/services/mWallet")){
+                return "ns1";
+            }
+            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+        }
+
+        /**
+         * Utility method to write an element start tag.
+         */
+        private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
+                                       javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+            java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
+            if (writerPrefix != null) {
+                xmlWriter.writeStartElement(namespace, localPart);
+            } else {
+                if (namespace.length() == 0) {
+                    prefix = "";
+                } else if (prefix == null) {
+                    prefix = generatePrefix(namespace);
+                }
+
+                xmlWriter.writeStartElement(prefix, localPart, namespace);
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+        }
+        
+        /**
+         * Util method to write an attribute with the ns prefix
+         */
+        private void writeAttribute(java.lang.String prefix,java.lang.String namespace,java.lang.String attName,
+                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+            if (xmlWriter.getPrefix(namespace) == null) {
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+            xmlWriter.writeAttribute(namespace,attName,attValue);
+        }
+
+        /**
+         * Util method to write an attribute without the ns prefix
+         */
+        private void writeAttribute(java.lang.String namespace,java.lang.String attName,
+                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+            if (namespace.equals("")) {
+                xmlWriter.writeAttribute(attName,attValue);
+            } else {
+                registerPrefix(xmlWriter, namespace);
+                xmlWriter.writeAttribute(namespace,attName,attValue);
+            }
+        }
+
+
+           /**
+             * Util method to write an attribute without the ns prefix
+             */
+            private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
+                                             javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+
+                java.lang.String attributeNamespace = qname.getNamespaceURI();
+                java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
+                if (attributePrefix == null) {
+                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
+                }
+                java.lang.String attributeValue;
+                if (attributePrefix.trim().length() > 0) {
+                    attributeValue = attributePrefix + ":" + qname.getLocalPart();
+                } else {
+                    attributeValue = qname.getLocalPart();
+                }
+
+                if (namespace.equals("")) {
+                    xmlWriter.writeAttribute(attName, attributeValue);
+                } else {
+                    registerPrefix(xmlWriter, namespace);
+                    xmlWriter.writeAttribute(namespace, attName, attributeValue);
+                }
+            }
+        /**
+         *  method to handle Qnames
+         */
+
+        private void writeQName(javax.xml.namespace.QName qname,
+                                javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+            java.lang.String namespaceURI = qname.getNamespaceURI();
+            if (namespaceURI != null) {
+                java.lang.String prefix = xmlWriter.getPrefix(namespaceURI);
+                if (prefix == null) {
+                    prefix = generatePrefix(namespaceURI);
+                    xmlWriter.writeNamespace(prefix, namespaceURI);
+                    xmlWriter.setPrefix(prefix,namespaceURI);
+                }
+
+                if (prefix.trim().length() > 0){
+                    xmlWriter.writeCharacters(prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+                } else {
+                    // i.e this is the default namespace
+                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+                }
+
+            } else {
+                xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+            }
+        }
+
+        private void writeQNames(javax.xml.namespace.QName[] qnames,
+                                 javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+
+            if (qnames != null) {
+                // we have to store this data until last moment since it is not possible to write any
+                // namespace data after writing the charactor data
+                java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
+                java.lang.String namespaceURI = null;
+                java.lang.String prefix = null;
+
+                for (int i = 0; i < qnames.length; i++) {
+                    if (i > 0) {
+                        stringToWrite.append(" ");
+                    }
+                    namespaceURI = qnames[i].getNamespaceURI();
+                    if (namespaceURI != null) {
+                        prefix = xmlWriter.getPrefix(namespaceURI);
+                        if ((prefix == null) || (prefix.length() == 0)) {
+                            prefix = generatePrefix(namespaceURI);
+                            xmlWriter.writeNamespace(prefix, namespaceURI);
+                            xmlWriter.setPrefix(prefix,namespaceURI);
+                        }
+
+                        if (prefix.trim().length() > 0){
+                            stringToWrite.append(prefix).append(":").append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                        } else {
+                            stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                        }
+                    } else {
+                        stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                    }
+                }
+                xmlWriter.writeCharacters(stringToWrite.toString());
+            }
+
+        }
+
+
+        /**
+         * Register a namespace prefix
+         */
+        private java.lang.String registerPrefix(javax.xml.stream.XMLStreamWriter xmlWriter, java.lang.String namespace) throws javax.xml.stream.XMLStreamException {
+            java.lang.String prefix = xmlWriter.getPrefix(namespace);
+            if (prefix == null) {
+                prefix = generatePrefix(namespace);
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
+                    prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+                }
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+            return prefix;
+        }
+
+
+  
+        /**
+        * databinding method to get an XML representation of this object
+        *
+        */
+        public javax.xml.stream.XMLStreamReader getPullParser(javax.xml.namespace.QName qName)
+                    throws org.apache.axis2.databinding.ADBException{
+
+
+        
+                
+                //We can safely assume an element has only one type associated with it
+                return localBalanceGetRequest.getPullParser(MY_QNAME);
+
+        }
+
+  
+
+     /**
+      *  Factory class that keeps the parse method
+      */
+    public static class Factory{
+
+        
+        
+
+        /**
+        * static method to create the object
+        * Precondition:  If this object is an element, the current or next start element starts this object and any intervening reader events are ignorable
+        *                If this object is not an element, it is a complex type and the reader is at the event just after the outer start element
+        * Postcondition: If this object is an element, the reader is positioned at its end element
+        *                If this object is a complex type, the reader is positioned at the end element of its outer element
+        */
+        public static BalanceGetRequest parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
+            BalanceGetRequest object =
+                new BalanceGetRequest();
+
+            int event;
+            java.lang.String nillableValue = null;
+            java.lang.String prefix ="";
+            java.lang.String namespaceuri ="";
+            try {
+                
+                while (!reader.isStartElement() && !reader.isEndElement())
+                    reader.next();
+
+                
+
+                
+                // Note all attributes that were handled. Used to differ normal attributes
+                // from anyAttributes.
+                java.util.Vector handledAttributes = new java.util.Vector();
+                
+
+                   
+                while(!reader.isEndElement()) {
+                    if (reader.isStartElement() ){
+                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","BalanceGetRequest").equals(reader.getName())){
+                                
+                                                object.setBalanceGetRequest(MBasicRequestType.Factory.parse(reader));
+                                            
+                              }  // End of if for expected property start element
+                                
+                             else{
+                                        // A start element we are not expecting indicates an invalid parameter was passed
+                                        throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                             }
+                          
+                             } else {
+                                reader.next();
+                             }  
+                           }  // end of while loop
+                        
+
+
+
+            } catch (javax.xml.stream.XMLStreamException e) {
+                throw new java.lang.Exception(e);
+            }
+
+            return object;
+        }
+
+        }//end of factory class
+
+        
+
+        }
+           
+    
         public static class State
         implements org.apache.axis2.databinding.ADBBean{
         
@@ -18755,8 +24212,8 @@
                                     
                             }
                         
-     
 
+     
      
         /**
         *
@@ -18975,7 +24432,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -19113,47 +24575,250 @@
         }
            
     
-        public static class BalanceGetRequest
+        public static class MPurchaseRequestType
         implements org.apache.axis2.databinding.ADBBean{
-        
-                public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
-                "http://mobilemoney.com/services/mWallet",
-                "BalanceGetRequest",
-                "ns1");
-
+        /* This type was generated from the piece of schema that had
+                name = mPurchaseRequestType
+                Namespace URI = http://mobilemoney.com/services/mWallet
+                Namespace Prefix = ns1
+                */
             
 
                         /**
-                        * field for BalanceGetRequest
+                        * field for AccountNumber
                         */
 
                         
-                                    protected MBasicRequestType localBalanceGetRequest ;
+                                    protected AccountNumber localAccountNumber ;
                                 
+                           /*  This tracker boolean wil be used to detect whether the user called the set method
+                          *   for this attribute. It will be used to determine whether to include this field
+                           *   in the serialized XML
+                           */
+                           protected boolean localAccountNumberTracker = false ;
+
+                           public boolean isAccountNumberSpecified(){
+                               return localAccountNumberTracker;
+                           }
+
+                           
 
                            /**
                            * Auto generated getter method
-                           * @return MBasicRequestType
+                           * @return AccountNumber
                            */
-                           public  MBasicRequestType getBalanceGetRequest(){
-                               return localBalanceGetRequest;
+                           public  AccountNumber getAccountNumber(){
+                               return localAccountNumber;
                            }
 
                            
                         
                             /**
                                * Auto generated setter method
-                               * @param param BalanceGetRequest
+                               * @param param AccountNumber
                                */
-                               public void setBalanceGetRequest(MBasicRequestType param){
-                            
-                                            this.localBalanceGetRequest=param;
+                               public void setAccountNumber(AccountNumber param){
+                            localAccountNumberTracker = param != null;
+                                   
+                                            this.localAccountNumber=param;
                                     
 
                                }
                             
-     
 
+                        /**
+                        * field for MerchantNumber
+                        */
+
+                        
+                                    protected AccountNumber localMerchantNumber ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return AccountNumber
+                           */
+                           public  AccountNumber getMerchantNumber(){
+                               return localMerchantNumber;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param MerchantNumber
+                               */
+                               public void setMerchantNumber(AccountNumber param){
+                            
+                                            this.localMerchantNumber=param;
+                                    
+
+                               }
+                            
+
+                        /**
+                        * field for OriginCode
+                        */
+
+                        
+                                    protected MmTransferCode localOriginCode ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return MmTransferCode
+                           */
+                           public  MmTransferCode getOriginCode(){
+                               return localOriginCode;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param OriginCode
+                               */
+                               public void setOriginCode(MmTransferCode param){
+                            
+                                            this.localOriginCode=param;
+                                    
+
+                               }
+                            
+
+                        /**
+                        * field for AccountPIN
+                        */
+
+                        
+                                    protected PIN localAccountPIN ;
+                                
+                           /*  This tracker boolean wil be used to detect whether the user called the set method
+                          *   for this attribute. It will be used to determine whether to include this field
+                           *   in the serialized XML
+                           */
+                           protected boolean localAccountPINTracker = false ;
+
+                           public boolean isAccountPINSpecified(){
+                               return localAccountPINTracker;
+                           }
+
+                           
+
+                           /**
+                           * Auto generated getter method
+                           * @return PIN
+                           */
+                           public  PIN getAccountPIN(){
+                               return localAccountPIN;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param AccountPIN
+                               */
+                               public void setAccountPIN(PIN param){
+                            localAccountPINTracker = param != null;
+                                   
+                                            this.localAccountPIN=param;
+                                    
+
+                               }
+                            
+
+                        /**
+                        * field for RequestReference
+                        */
+
+                        
+                                    protected RequestReference localRequestReference ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return RequestReference
+                           */
+                           public  RequestReference getRequestReference(){
+                               return localRequestReference;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param RequestReference
+                               */
+                               public void setRequestReference(RequestReference param){
+                            
+                                            this.localRequestReference=param;
+                                    
+
+                               }
+                            
+
+                        /**
+                        * field for Currency
+                        */
+
+                        
+                                    protected CurrencyCode localCurrency ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return CurrencyCode
+                           */
+                           public  CurrencyCode getCurrency(){
+                               return localCurrency;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param Currency
+                               */
+                               public void setCurrency(CurrencyCode param){
+                            
+                                            this.localCurrency=param;
+                                    
+
+                               }
+                            
+
+                        /**
+                        * field for Amount
+                        */
+
+                        
+                                    protected int localAmount ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return int
+                           */
+                           public  int getAmount(){
+                               return localAmount;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param Amount
+                               */
+                               public void setAmount(int param){
+                            
+                                            this.localAmount=param;
+                                    
+
+                               }
+                            
+
+     
      
         /**
         *
@@ -19168,8 +24833,8 @@
 
         
                org.apache.axiom.om.OMDataSource dataSource =
-                       new org.apache.axis2.databinding.ADBDataSource(this,MY_QNAME);
-               return factory.createOMElement(dataSource,MY_QNAME);
+                       new org.apache.axis2.databinding.ADBDataSource(this,parentQName);
+               return factory.createOMElement(dataSource,parentQName);
             
         }
 
@@ -19185,13 +24850,84 @@
             throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
             
                 
-                //We can safely assume an element has only one type associated with it
+
+
+                java.lang.String prefix = null;
+                java.lang.String namespace = null;
                 
-                                 if (localBalanceGetRequest==null){
-                                   throw new org.apache.axis2.databinding.ADBException("BalanceGetRequest cannot be null!");
-                                 }
-                                 localBalanceGetRequest.serialize(MY_QNAME,xmlWriter);
-                            
+
+                    prefix = parentQName.getPrefix();
+                    namespace = parentQName.getNamespaceURI();
+                    writeStartElement(prefix, namespace, parentQName.getLocalPart(), xmlWriter);
+                
+                  if (serializeType){
+               
+
+                   java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://mobilemoney.com/services/mWallet");
+                   if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
+                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
+                           namespacePrefix+":mPurchaseRequestType",
+                           xmlWriter);
+                   } else {
+                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
+                           "mPurchaseRequestType",
+                           xmlWriter);
+                   }
+
+               
+                   }
+                if (localAccountNumberTracker){
+                                            if (localAccountNumber==null){
+                                                 throw new org.apache.axis2.databinding.ADBException("AccountNumber cannot be null!!");
+                                            }
+                                           localAccountNumber.serialize(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","AccountNumber"),
+                                               xmlWriter);
+                                        }
+                                            if (localMerchantNumber==null){
+                                                 throw new org.apache.axis2.databinding.ADBException("MerchantNumber cannot be null!!");
+                                            }
+                                           localMerchantNumber.serialize(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","MerchantNumber"),
+                                               xmlWriter);
+                                        
+                                            if (localOriginCode==null){
+                                                 throw new org.apache.axis2.databinding.ADBException("OriginCode cannot be null!!");
+                                            }
+                                           localOriginCode.serialize(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","OriginCode"),
+                                               xmlWriter);
+                                         if (localAccountPINTracker){
+                                            if (localAccountPIN==null){
+                                                 throw new org.apache.axis2.databinding.ADBException("AccountPIN cannot be null!!");
+                                            }
+                                           localAccountPIN.serialize(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","AccountPIN"),
+                                               xmlWriter);
+                                        }
+                                            if (localRequestReference==null){
+                                                 throw new org.apache.axis2.databinding.ADBException("RequestReference cannot be null!!");
+                                            }
+                                           localRequestReference.serialize(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","RequestReference"),
+                                               xmlWriter);
+                                        
+                                            if (localCurrency==null){
+                                                 throw new org.apache.axis2.databinding.ADBException("Currency cannot be null!!");
+                                            }
+                                           localCurrency.serialize(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","Currency"),
+                                               xmlWriter);
+                                        
+                                    namespace = "http://mobilemoney.com/services/mWallet";
+                                    writeStartElement(null, namespace, "Amount", xmlWriter);
+                             
+                                               if (localAmount==java.lang.Integer.MIN_VALUE) {
+                                           
+                                                         throw new org.apache.axis2.databinding.ADBException("Amount cannot be null!!");
+                                                      
+                                               } else {
+                                                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localAmount));
+                                               }
+                                    
+                                   xmlWriter.writeEndElement();
+                             
+                    xmlWriter.writeEndElement();
+               
 
         }
 
@@ -19346,7 +25082,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -19366,9 +25107,74 @@
 
 
         
-                
-                //We can safely assume an element has only one type associated with it
-                return localBalanceGetRequest.getPullParser(MY_QNAME);
+                 java.util.ArrayList elementList = new java.util.ArrayList();
+                 java.util.ArrayList attribList = new java.util.ArrayList();
+
+                 if (localAccountNumberTracker){
+                            elementList.add(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                                      "AccountNumber"));
+                            
+                            
+                                    if (localAccountNumber==null){
+                                         throw new org.apache.axis2.databinding.ADBException("AccountNumber cannot be null!!");
+                                    }
+                                    elementList.add(localAccountNumber);
+                                }
+                            elementList.add(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                                      "MerchantNumber"));
+                            
+                            
+                                    if (localMerchantNumber==null){
+                                         throw new org.apache.axis2.databinding.ADBException("MerchantNumber cannot be null!!");
+                                    }
+                                    elementList.add(localMerchantNumber);
+                                
+                            elementList.add(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                                      "OriginCode"));
+                            
+                            
+                                    if (localOriginCode==null){
+                                         throw new org.apache.axis2.databinding.ADBException("OriginCode cannot be null!!");
+                                    }
+                                    elementList.add(localOriginCode);
+                                 if (localAccountPINTracker){
+                            elementList.add(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                                      "AccountPIN"));
+                            
+                            
+                                    if (localAccountPIN==null){
+                                         throw new org.apache.axis2.databinding.ADBException("AccountPIN cannot be null!!");
+                                    }
+                                    elementList.add(localAccountPIN);
+                                }
+                            elementList.add(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                                      "RequestReference"));
+                            
+                            
+                                    if (localRequestReference==null){
+                                         throw new org.apache.axis2.databinding.ADBException("RequestReference cannot be null!!");
+                                    }
+                                    elementList.add(localRequestReference);
+                                
+                            elementList.add(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                                      "Currency"));
+                            
+                            
+                                    if (localCurrency==null){
+                                         throw new org.apache.axis2.databinding.ADBException("Currency cannot be null!!");
+                                    }
+                                    elementList.add(localCurrency);
+                                
+                                      elementList.add(new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet",
+                                                                      "Amount"));
+                                 
+                                elementList.add(
+                                   org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localAmount));
+                            
+
+                return new org.apache.axis2.databinding.utils.reader.ADBXMLStreamReaderImpl(qName, elementList.toArray(), attribList.toArray());
+            
+            
 
         }
 
@@ -19389,9 +25195,9 @@
         * Postcondition: If this object is an element, the reader is positioned at its end element
         *                If this object is a complex type, the reader is positioned at the end element of its outer element
         */
-        public static BalanceGetRequest parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
-            BalanceGetRequest object =
-                new BalanceGetRequest();
+        public static MPurchaseRequestType parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
+            MPurchaseRequestType object =
+                new MPurchaseRequestType();
 
             int event;
             java.lang.String nillableValue = null;
@@ -19403,6 +25209,32 @@
                     reader.next();
 
                 
+                if (reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","type")!=null){
+                  java.lang.String fullTypeName = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance",
+                        "type");
+                  if (fullTypeName!=null){
+                    java.lang.String nsPrefix = null;
+                    if (fullTypeName.indexOf(":") > -1){
+                        nsPrefix = fullTypeName.substring(0,fullTypeName.indexOf(":"));
+                    }
+                    nsPrefix = nsPrefix==null?"":nsPrefix;
+
+                    java.lang.String type = fullTypeName.substring(fullTypeName.indexOf(":")+1);
+                    
+                            if (!"mPurchaseRequestType".equals(type)){
+                                //find namespace for the prefix
+                                java.lang.String nsUri = reader.getNamespaceContext().getNamespaceURI(nsPrefix);
+                                return (MPurchaseRequestType)ExtensionMapper.getTypeObject(
+                                     nsUri,type,reader);
+                              }
+                        
+
+                  }
+                
+
+                }
+
+                
 
                 
                 // Note all attributes that were handled. Used to differ normal attributes
@@ -19410,26 +25242,136 @@
                 java.util.Vector handledAttributes = new java.util.Vector();
                 
 
-                   
-                while(!reader.isEndElement()) {
-                    if (reader.isStartElement() ){
                 
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","BalanceGetRequest").equals(reader.getName())){
+                    
+                    reader.next();
+                
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
                                 
-                                                object.setBalanceGetRequest(MBasicRequestType.Factory.parse(reader));
-                                            
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","AccountNumber").equals(reader.getName())){
+                                
+                                                object.setAccountNumber(AccountNumber.Factory.parse(reader));
+                                              
+                                        reader.next();
+                                    
                               }  // End of if for expected property start element
                                 
-                             else{
-                                        // A start element we are not expecting indicates an invalid parameter was passed
-                                        throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
-                             }
-                          
-                             } else {
+                                    else {
+                                        
+                                    }
+                                
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","MerchantNumber").equals(reader.getName())){
+                                
+                                                object.setMerchantNumber(AccountNumber.Factory.parse(reader));
+                                              
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                else{
+                                    // A start element we are not expecting indicates an invalid parameter was passed
+                                    throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                                }
+                            
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","OriginCode").equals(reader.getName())){
+                                
+                                                object.setOriginCode(MmTransferCode.Factory.parse(reader));
+                                              
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                else{
+                                    // A start element we are not expecting indicates an invalid parameter was passed
+                                    throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                                }
+                            
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","AccountPIN").equals(reader.getName())){
+                                
+                                                object.setAccountPIN(PIN.Factory.parse(reader));
+                                              
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                    else {
+                                        
+                                    }
+                                
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","RequestReference").equals(reader.getName())){
+                                
+                                                object.setRequestReference(RequestReference.Factory.parse(reader));
+                                              
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                else{
+                                    // A start element we are not expecting indicates an invalid parameter was passed
+                                    throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                                }
+                            
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","Currency").equals(reader.getName())){
+                                
+                                                object.setCurrency(CurrencyCode.Factory.parse(reader));
+                                              
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                else{
+                                    // A start element we are not expecting indicates an invalid parameter was passed
+                                    throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                                }
+                            
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://mobilemoney.com/services/mWallet","Amount").equals(reader.getName())){
+                                
+                                    nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
+                                    if ("true".equals(nillableValue) || "1".equals(nillableValue)){
+                                        throw new org.apache.axis2.databinding.ADBException("The element: "+"Amount" +"  cannot be null");
+                                    }
+                                    
+
+                                    java.lang.String content = reader.getElementText();
+                                    
+                                              object.setAmount(
+                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToInt(content));
+                                              
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                else{
+                                    // A start element we are not expecting indicates an invalid parameter was passed
+                                    throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                                }
+                              
+                            while (!reader.isStartElement() && !reader.isEndElement())
                                 reader.next();
-                             }  
-                           }  // end of while loop
-                        
+                            
+                                if (reader.isStartElement())
+                                // A start element we are not expecting indicates a trailing invalid property
+                                throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                            
 
 
 
@@ -19545,8 +25487,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -19798,7 +25740,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -20050,8 +25997,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -20244,7 +26191,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -20384,8 +26336,8 @@
 
                                }
                             
-     
 
+     
      
         /**
         *
@@ -20604,7 +26556,12 @@
             java.lang.String prefix = xmlWriter.getPrefix(namespace);
             if (prefix == null) {
                 prefix = generatePrefix(namespace);
-                while (xmlWriter.getNamespaceContext().getNamespaceURI(prefix) != null) {
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
                     prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
                 }
                 xmlWriter.writeNamespace(prefix, namespace);
@@ -20719,12 +26676,12 @@
         }
            
     
-            private  org.apache.axiom.om.OMElement  toOM(com.mobilemoney.services.mwallet.MPWalletServiceStub.AirtimeTopupRequest param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.mobilemoney.services.mwallet.MPWalletServiceStub.CashOutRequest param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.mobilemoney.services.mwallet.MPWalletServiceStub.AirtimeTopupRequest.MY_QNAME,
+                             return param.getOMElement(com.mobilemoney.services.mwallet.MPWalletServiceStub.CashOutRequest.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -20753,6 +26710,20 @@
             
                         try{
                              return param.getOMElement(com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader.MY_QNAME,
+                                          org.apache.axiom.om.OMAbstractFactory.getOMFactory());
+                        } catch(org.apache.axis2.databinding.ADBException e){
+                            throw org.apache.axis2.AxisFault.makeFault(e);
+                        }
+                    
+
+            }
+        
+            private  org.apache.axiom.om.OMElement  toOM(com.mobilemoney.services.mwallet.MPWalletServiceStub.AirtimeTopupRequest param, boolean optimizeContent)
+            throws org.apache.axis2.AxisFault {
+
+            
+                        try{
+                             return param.getOMElement(com.mobilemoney.services.mwallet.MPWalletServiceStub.AirtimeTopupRequest.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -20943,6 +26914,34 @@
 
             }
         
+            private  org.apache.axiom.om.OMElement  toOM(com.mobilemoney.services.mwallet.MPWalletServiceStub.PurchaseRequest param, boolean optimizeContent)
+            throws org.apache.axis2.AxisFault {
+
+            
+                        try{
+                             return param.getOMElement(com.mobilemoney.services.mwallet.MPWalletServiceStub.PurchaseRequest.MY_QNAME,
+                                          org.apache.axiom.om.OMAbstractFactory.getOMFactory());
+                        } catch(org.apache.axis2.databinding.ADBException e){
+                            throw org.apache.axis2.AxisFault.makeFault(e);
+                        }
+                    
+
+            }
+        
+            private  org.apache.axiom.om.OMElement  toOM(com.mobilemoney.services.mwallet.MPWalletServiceStub.CashInRequest param, boolean optimizeContent)
+            throws org.apache.axis2.AxisFault {
+
+            
+                        try{
+                             return param.getOMElement(com.mobilemoney.services.mwallet.MPWalletServiceStub.CashInRequest.MY_QNAME,
+                                          org.apache.axiom.om.OMAbstractFactory.getOMFactory());
+                        } catch(org.apache.axis2.databinding.ADBException e){
+                            throw org.apache.axis2.AxisFault.makeFault(e);
+                        }
+                    
+
+            }
+        
             private  org.apache.axiom.om.OMElement  toOM(com.mobilemoney.services.mwallet.MPWalletServiceStub.CreditRequest param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
@@ -20957,6 +26956,27 @@
 
             }
         
+                                    
+                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.mobilemoney.services.mwallet.MPWalletServiceStub.CashOutRequest param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                                        throws org.apache.axis2.AxisFault{
+
+                                             
+                                                    try{
+
+                                                            org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
+                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.mobilemoney.services.mwallet.MPWalletServiceStub.CashOutRequest.MY_QNAME,factory));
+                                                            return emptyEnvelope;
+                                                        } catch(org.apache.axis2.databinding.ADBException e){
+                                                            throw org.apache.axis2.AxisFault.makeFault(e);
+                                                        }
+                                                
+
+                                        }
+                                
+                             
+                             /* methods to provide back word compatibility */
+
+                             
                                     
                                         private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.mobilemoney.services.mwallet.MPWalletServiceStub.AirtimeTopupRequest param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
                                         throws org.apache.axis2.AxisFault{
@@ -21126,6 +27146,48 @@
 
                              
                                     
+                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.mobilemoney.services.mwallet.MPWalletServiceStub.PurchaseRequest param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                                        throws org.apache.axis2.AxisFault{
+
+                                             
+                                                    try{
+
+                                                            org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
+                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.mobilemoney.services.mwallet.MPWalletServiceStub.PurchaseRequest.MY_QNAME,factory));
+                                                            return emptyEnvelope;
+                                                        } catch(org.apache.axis2.databinding.ADBException e){
+                                                            throw org.apache.axis2.AxisFault.makeFault(e);
+                                                        }
+                                                
+
+                                        }
+                                
+                             
+                             /* methods to provide back word compatibility */
+
+                             
+                                    
+                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.mobilemoney.services.mwallet.MPWalletServiceStub.CashInRequest param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                                        throws org.apache.axis2.AxisFault{
+
+                                             
+                                                    try{
+
+                                                            org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
+                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.mobilemoney.services.mwallet.MPWalletServiceStub.CashInRequest.MY_QNAME,factory));
+                                                            return emptyEnvelope;
+                                                        } catch(org.apache.axis2.databinding.ADBException e){
+                                                            throw org.apache.axis2.AxisFault.makeFault(e);
+                                                        }
+                                                
+
+                                        }
+                                
+                             
+                             /* methods to provide back word compatibility */
+
+                             
+                                    
                                         private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.mobilemoney.services.mwallet.MPWalletServiceStub.CreditRequest param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
                                         throws org.apache.axis2.AxisFault{
 
@@ -21163,6 +27225,27 @@
 
         try {
         
+                if (com.mobilemoney.services.mwallet.MPWalletServiceStub.CashOutRequest.class.equals(type)){
+                
+                           return com.mobilemoney.services.mwallet.MPWalletServiceStub.CashOutRequest.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                    
+
+                }
+           
+                if (com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse.class.equals(type)){
+                
+                           return com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                    
+
+                }
+           
+                if (com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader.class.equals(type)){
+                
+                           return com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                    
+
+                }
+           
                 if (com.mobilemoney.services.mwallet.MPWalletServiceStub.AirtimeTopupRequest.class.equals(type)){
                 
                            return com.mobilemoney.services.mwallet.MPWalletServiceStub.AirtimeTopupRequest.Factory.parse(param.getXMLStreamReaderWithoutCaching());
@@ -21320,6 +27403,48 @@
                 if (com.mobilemoney.services.mwallet.MPWalletServiceStub.BalanceGetResponse.class.equals(type)){
                 
                            return com.mobilemoney.services.mwallet.MPWalletServiceStub.BalanceGetResponse.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                    
+
+                }
+           
+                if (com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader.class.equals(type)){
+                
+                           return com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                    
+
+                }
+           
+                if (com.mobilemoney.services.mwallet.MPWalletServiceStub.PurchaseRequest.class.equals(type)){
+                
+                           return com.mobilemoney.services.mwallet.MPWalletServiceStub.PurchaseRequest.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                    
+
+                }
+           
+                if (com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse.class.equals(type)){
+                
+                           return com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                    
+
+                }
+           
+                if (com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader.class.equals(type)){
+                
+                           return com.mobilemoney.services.mwallet.MPWalletServiceStub.AdditionalHeader.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                    
+
+                }
+           
+                if (com.mobilemoney.services.mwallet.MPWalletServiceStub.CashInRequest.class.equals(type)){
+                
+                           return com.mobilemoney.services.mwallet.MPWalletServiceStub.CashInRequest.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                    
+
+                }
+           
+                if (com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse.class.equals(type)){
+                
+                           return com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }

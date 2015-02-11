@@ -6,62 +6,69 @@ import org.apache.axiom.om.OMFactory;
 import org.apache.axiom.om.OMNamespace;
 
 public class ClientUtil {
-	
 	public static OMElement getHeaderOMElement() {
 		OMFactory fac = OMAbstractFactory.getOMFactory();
-		
+
 		OMNamespace omNs = fac.createOMNamespace(
 				"http://mobilemoney.com/services/mWallet", "mwal");
-		
-		OMElement additionalHeader = fac.createOMElement("AdditionalHeader", omNs);
-		
+
+		OMElement additionalHeader = fac.createOMElement("AdditionalHeader",
+				omNs);
+
 		OMElement usernameElement = fac.createOMElement("username", omNs);
-		usernameElement.addChild(fac.createOMText(usernameElement,"matsagent"));
-		
+		usernameElement
+				.addChild(fac.createOMText(usernameElement, "matsagent"));
+
 		OMElement passwordElement = fac.createOMElement("password", omNs);
-		passwordElement.addChild(fac.createOMText(passwordElement,"swifta123"));
-		
+		passwordElement
+				.addChild(fac.createOMText(passwordElement, "swifta123"));
+
 		additionalHeader.addChild(usernameElement);
 		additionalHeader.addChild(passwordElement);
-		//we need to test this code first
-		//then upload to the repo
+		// we need to test this code first
+		// then upload to the repo
 
 		return additionalHeader;
 	}
-	
+
 	public static OMElement getBodyOMElement() {
 		OMFactory fac = OMAbstractFactory.getOMFactory();
-		
+
 		OMNamespace omNs = fac.createOMNamespace(
 				"http://mobilemoney.com/services/mWallet", "mwal");
-		
-		OMElement DebitRequestElement = fac.createOMElement("DebitRequest", omNs);
-		
-		OMElement AccountNumberElement = fac.createOMElement("AccountNumber", omNs);
-		AccountNumberElement.addChild(fac.createOMText(AccountNumberElement,"2348170730938"));
-		
+
+		OMElement DebitRequestElement = fac.createOMElement("DebitRequest",
+				omNs);
+
+		OMElement AccountNumberElement = fac.createOMElement("AccountNumber",
+				omNs);
+		AccountNumberElement.addChild(fac.createOMText(AccountNumberElement,
+				"2348170730938"));
+
 		OMElement OriginCodeElement = fac.createOMElement("OriginCode", omNs);
-		OriginCodeElement.addChild(fac.createOMText(OriginCodeElement,"CINFORES"));
-		
+		OriginCodeElement.addChild(fac.createOMText(OriginCodeElement,
+				"CINFORES"));
+
 		OMElement AccountPINElement = fac.createOMElement("AccountPIN", omNs);
-		AccountPINElement.addChild(fac.createOMText(AccountPINElement,"1234"));
-		
-		OMElement RequestReferenceElement = fac.createOMElement("RequestReference", omNs);
-		RequestReferenceElement.addChild(fac.createOMText(RequestReferenceElement,"201407010000001"));
-		
+		AccountPINElement.addChild(fac.createOMText(AccountPINElement, "1234"));
+
+		OMElement RequestReferenceElement = fac.createOMElement(
+				"RequestReference", omNs);
+		RequestReferenceElement.addChild(fac.createOMText(
+				RequestReferenceElement, "201407010000001"));
+
 		OMElement CurrencyElement = fac.createOMElement("Currency", omNs);
-		CurrencyElement.addChild(fac.createOMText(CurrencyElement,"NGN"));
-		
+		CurrencyElement.addChild(fac.createOMText(CurrencyElement, "NGN"));
+
 		OMElement AmountElement = fac.createOMElement("Amount", omNs);
-		AmountElement.addChild(fac.createOMText(AmountElement,"1500"));
-		
+		AmountElement.addChild(fac.createOMText(AmountElement, "1500"));
+
 		DebitRequestElement.addChild(AccountNumberElement);
 		DebitRequestElement.addChild(OriginCodeElement);
 		DebitRequestElement.addChild(AccountPINElement);
 		DebitRequestElement.addChild(RequestReferenceElement);
 		DebitRequestElement.addChild(CurrencyElement);
 		DebitRequestElement.addChild(AmountElement);
-		
 
 		return DebitRequestElement;
 	}
