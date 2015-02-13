@@ -396,8 +396,8 @@ public class TeasyMobileClient {
 		MoneyTransfer moneyTransfer = new MoneyTransfer("2348104001339",
 				new BigDecimal(110), "dada", "1234");
 		moneyTransfer.setSender("2348170730938");
-		// MTransferResponseType response = teasyMobileClient
-		// .doCashout(moneyTransfer);
+		MTransferResponseType response = teasyMobileClient
+				.doCashout(moneyTransfer);
 		// MTransferResponseType response = teasyMobileClient
 		// .doCashIn(moneyTransfer);
 		// MBalanceResponse response =
@@ -410,21 +410,21 @@ public class TeasyMobileClient {
 		// MTxnReverseResponse response = teasyMobileClient
 		// .reverseTransaction(moneyTransfer);
 		moneyTransfer.setPingRequestParam("41.220.65.177");
-		MPingResponse response = teasyMobileClient.pingRequest(moneyTransfer);
+		// MPingResponse response =
+		// teasyMobileClient.pingRequest(moneyTransfer);
 		System.out.println("Status: " + response.getStatus());
 
 		System.out.println("ResponseMessage: " + response.getResponseMessage());
 
-		/*
-		 * airtimesales System.out.println("Amount: " + response.getAmount());
-		 * System.out.println("CurrencyCode: " + response.getCurrency());
-		 * System.out.println("Fee: " + response.getFee());
-		 * System.out.println("TransactionId: " + response.getTransactionId());
-		 */
+		// airtimesales
+		System.out.println("Amount: " + response.getAmount());
+		System.out.println("CurrencyCode: " + response.getCurrency());
+		System.out.println("Fee: " + response.getFee());
+		System.out.println("TransactionId: " + response.getTransactionId());
+
 		// balance
 		// System.out.println("Balance: " + response.getBalance() / 100);
 		// reverse transaction
 		// System.out.println("Balance: " + response.getTransactionId());
 	}
-
 }
