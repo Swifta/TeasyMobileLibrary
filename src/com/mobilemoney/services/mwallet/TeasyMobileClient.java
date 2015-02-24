@@ -40,17 +40,47 @@ import com.mobilemoney.services.mwallet.MPWalletServiceStub.ReverseTxnResponse;
 import com.mobilemoney.services.mwallet.MPWalletServiceStub.TransactionQueryRequest;
 import com.mobilemoney.services.mwallet.MPWalletServiceStub.TransactionQueryResponse;
 import com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse;
+import com.multibank.webservice.WalletMultiBankServicesStub;
+import com.multibank.webservice.WalletMultiBankServicesStub.PostMultiPartyPaymentRequest;
+import com.multibank.webservice.WalletMultiBankServicesStub.PostMultiPartyPaymentRequestResponse;
 import com.ng.mats.psa.mt.teasymobile.model.MoneyTransfer;
 
 public class TeasyMobileClient {
 	private static final Logger logger = Logger
 			.getLogger(TeasyMobileClient.class.getName());
 	private MPWalletServiceStub mpWalletServiceStub = null;
+	WalletMultiBankServicesStub walletBankServiceStub = null;
 
 	public TeasyMobileClient() throws Exception {
 
 		mpWalletServiceStub = new MPWalletServiceStub();
+		walletBankServiceStub = new WalletMultiBankServicesStub();
 
+	}
+
+	public void walletToBank(MoneyTransfer moneyTransfer) {
+		walletBankServiceStub._getServiceClient().addHeader(
+				ClientUtil.getHeaderOMElement());
+		walletBankServiceStub._getServiceClient().getOptions()
+				.setProperty(HTTPConstants.CHUNKED, false);
+
+		PostMultiPartyPaymentRequest postMultiPartyPaymentRequest = new PostMultiPartyPaymentRequest();
+		PostMultiPartyPaymentRequestResponse response = new PostMultiPartyPaymentRequestResponse();
+
+		String requestFormat = "";
+		// MultiPartyPaymentRequest multiPartyPaymentRequest = new
+		// MultiPartyPaymentRequest();
+		// multiPartyPaymentRequest
+		postMultiPartyPaymentRequest.setMultipartyPaymentRequest(requestFormat);
+		try {
+			response = walletBankServiceStub
+					.postMultiPartyPaymentRequest(postMultiPartyPaymentRequest);
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		response.get_return();
+		// mpWalletServiceStub.
 	}
 
 	public MTransferResponseType transactionQuery(MoneyTransfer moneyTransfer)
@@ -417,11 +447,11 @@ public class TeasyMobileClient {
 		System.out.println("ResponseMessage: " + response.getResponseMessage());
 
 		// airtimesales
+
 		System.out.println("Amount: " + response.getAmount());
 		System.out.println("CurrencyCode: " + response.getCurrency());
 		System.out.println("Fee: " + response.getFee());
 		System.out.println("TransactionId: " + response.getTransactionId());
-
 		// balance
 		// System.out.println("Balance: " + response.getBalance() / 100);
 		// reverse transaction
