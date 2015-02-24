@@ -43,22 +43,137 @@ import com.mobilemoney.services.mwallet.MPWalletServiceStub.TransferResponse;
 import com.multibank.webservice.WalletMultiBankServicesStub;
 import com.multibank.webservice.WalletMultiBankServicesStub.PostMultiPartyPaymentRequest;
 import com.multibank.webservice.WalletMultiBankServicesStub.PostMultiPartyPaymentRequestResponse;
+import com.ng.mats.psa.mt.teasymobile.model.BatchNumber;
 import com.ng.mats.psa.mt.teasymobile.model.MoneyTransfer;
+import com.ng.mats.psa.mt.teasymobile.model.NumberOfRecords;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.AccountIdentificationName;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.AccountIdentificationNumber;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.AuthenticationDetails;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.CreditAccountNo;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.DebitAccountNo;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.DebitAccountPIN;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.DebitAmount;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.DebitFee;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.DebitRequest;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.DestinationCode;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.FTAmount;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.FTBulkCreditRequest;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.Header;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.MultiPartyPaymentRequest;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.Narration;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.OriginCode;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.Password;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.PaymentReference;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.RecID;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.Record;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.ResponseProcessor;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.Username;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.WalletDebitCreditInfo;
 
 public class TeasyMobileClient {
 	private static final Logger logger = Logger
 			.getLogger(TeasyMobileClient.class.getName());
 	private MPWalletServiceStub mpWalletServiceStub = null;
 	WalletMultiBankServicesStub walletBankServiceStub = null;
+	ResponseProcessor rp = null;
 
 	public TeasyMobileClient() throws Exception {
 
 		mpWalletServiceStub = new MPWalletServiceStub();
 		walletBankServiceStub = new WalletMultiBankServicesStub();
+		rp = new ResponseProcessor();
 
 	}
 
-	public void walletToBank(MoneyTransfer moneyTransfer) {
+	public String generatePaymentString() {
+		String batchNumberValue = "20150223210941001000", numberOfRecordsValue = "1", accountIdentificationNameValue = "Jude Smith", accountIdentificationNumberValue = "9998887771", destinationCodeValue = "999", fTAmountValue = "200000", narrationValue = "Transfer to Bank", paymentReferenceValue = "201502231111119", recIDValue = "000001", originCodeValue = "CINFORES", usernameValue = "cinfores", passwordValue = "apipass", creditAccountNoValue = "2348033919555", debitAccountNoValue = "2348171000157", debitAccountPINValue = "7005", debitAmountValue = "200000", debitFeeValue = "15000";
+
+		MultiPartyPaymentRequest request = new MultiPartyPaymentRequest();
+
+		FTBulkCreditRequest fTBulkCreditRequest = new FTBulkCreditRequest();
+		Header header = new Header();
+		Record record = new Record();
+		BatchNumber batchNumber = new BatchNumber();
+		NumberOfRecords numberOfRecords = new NumberOfRecords();
+
+		numberOfRecords.setValue(numberOfRecordsValue);
+		batchNumber.setValue(batchNumberValue);
+
+		header.setBatchNumber(batchNumber);
+		header.setNumberOfRecords(numberOfRecords);
+
+		AccountIdentificationName accountIdentificationName = new AccountIdentificationName();
+		AccountIdentificationNumber accountIdentificationNumber = new AccountIdentificationNumber();
+		DestinationCode destinationCode = new DestinationCode();
+		FTAmount fTAmount = new FTAmount();
+		Narration narration = new Narration();
+		PaymentReference paymentReference = new PaymentReference();
+		RecID recID = new RecID();
+
+		accountIdentificationName.setValue(accountIdentificationNameValue);
+		accountIdentificationNumber.setValue(accountIdentificationNumberValue);
+		destinationCode.setValue(destinationCodeValue);
+		fTAmount.setValue(fTAmountValue);
+		narration.setValue(narrationValue);
+		paymentReference.setValue(paymentReferenceValue);
+		recID.setValue(recIDValue);
+
+		record.setAccountIdentificationName(accountIdentificationName);
+		record.setAccountIdentificationNumber(accountIdentificationNumber);
+		record.setDestinationCode(destinationCode);
+		record.setfTAmount(fTAmount);
+		record.setNarration(narration);
+		record.setPaymentReference(paymentReference);
+		record.setRecID(recID);
+
+		fTBulkCreditRequest.setHeader(header);
+		fTBulkCreditRequest.setRecord(record);
+
+		request.setfTBulkCreditRequest(fTBulkCreditRequest);
+
+		WalletDebitCreditInfo walletDebitCreditInfo = new WalletDebitCreditInfo();
+		AuthenticationDetails authenticationDetails = new AuthenticationDetails();
+
+		OriginCode originCode = new OriginCode();
+		originCode.setValue(originCodeValue);
+		Password password = new Password();
+		password.setValue(passwordValue);
+		Username username = new Username();
+		username.setValue(usernameValue);
+
+		authenticationDetails.setOriginCode(originCode);
+		authenticationDetails.setPassword(password);
+		authenticationDetails.setUsername(username);
+
+		walletDebitCreditInfo.setAuthenticationDetails(authenticationDetails);
+		com.ng.mats.psa.mt.teasymobile.xmlprocessor.CreditRequest creditRequest = new com.ng.mats.psa.mt.teasymobile.xmlprocessor.CreditRequest();
+		CreditAccountNo creditAccountNo = new CreditAccountNo();
+		DebitAccountNo debitAccountNo = new DebitAccountNo();
+		DebitAccountPIN debitAccountPIN = new DebitAccountPIN();
+		DebitAmount debitAmount = new DebitAmount();
+		DebitFee debitFee = new DebitFee();
+
+		creditAccountNo.setValue(creditAccountNoValue);
+		debitAccountNo.setValue(debitAccountNoValue);
+		debitAccountPIN.setValue(debitAccountPINValue);
+		debitAmount.setValue(debitAmountValue);
+		debitFee.setValue(debitFeeValue);
+
+		creditRequest.setCreditAccountNo(creditAccountNo);
+		DebitRequest debitRequest = new DebitRequest();
+		debitRequest.setDebitAccountNo(debitAccountNo);
+		debitRequest.setDebitAccountPIN(debitAccountPIN);
+		debitRequest.setDebitAmount(debitAmount);
+		debitRequest.setDebitFee(debitFee);
+		walletDebitCreditInfo.setCreditRequest(creditRequest);
+		walletDebitCreditInfo.setDebitRequest(debitRequest);
+
+		request.setWalletDebitCreditInfo(walletDebitCreditInfo);
+		return rp.marshal(request);
+	}
+
+	public com.ng.mats.psa.mt.teasymobile.xmlprocessor.TransferResponse walletToBank(
+			MoneyTransfer moneyTransfer) {
 		walletBankServiceStub._getServiceClient().addHeader(
 				ClientUtil.getHeaderOMElement());
 		walletBankServiceStub._getServiceClient().getOptions()
@@ -71,6 +186,9 @@ public class TeasyMobileClient {
 		// MultiPartyPaymentRequest multiPartyPaymentRequest = new
 		// MultiPartyPaymentRequest();
 		// multiPartyPaymentRequest
+		requestFormat = generatePaymentString();
+		logger.info("<<<<<<<<<THE XML GENERATED IS >>>>>>>>>>>>\n"
+				+ requestFormat);
 		postMultiPartyPaymentRequest.setMultipartyPaymentRequest(requestFormat);
 		try {
 			response = walletBankServiceStub
@@ -79,7 +197,8 @@ public class TeasyMobileClient {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		response.get_return();
+		return rp.unMarshal(response.get_return());
+
 		// mpWalletServiceStub.
 	}
 
@@ -426,8 +545,10 @@ public class TeasyMobileClient {
 		MoneyTransfer moneyTransfer = new MoneyTransfer("2348104001339",
 				new BigDecimal(110), "dada", "1234");
 		moneyTransfer.setSender("2348170730938");
-		MTransferResponseType response = teasyMobileClient
-				.doCashout(moneyTransfer);
+		// MTransferResponseType response = teasyMobileClient
+		// .doCashout(moneyTransfer);
+		com.ng.mats.psa.mt.teasymobile.xmlprocessor.TransferResponse response = teasyMobileClient
+				.walletToBank(moneyTransfer);
 		// MTransferResponseType response = teasyMobileClient
 		// .doCashIn(moneyTransfer);
 		// MBalanceResponse response =
@@ -442,19 +563,23 @@ public class TeasyMobileClient {
 		moneyTransfer.setPingRequestParam("41.220.65.177");
 		// MPingResponse response =
 		// teasyMobileClient.pingRequest(moneyTransfer);
-		System.out.println("Status: " + response.getStatus());
+		/*
+		 * System.out.println("Status: " + response.getStatus());
+		 * 
+		 * //System.out.println("ResponseMessage: " +
+		 * response.getResponseMessage());
+		 * 
+		 * // airtimesales
+		 * 
+		 * System.out.println("Amount: " + response.getAmount());
+		 * System.out.println("CurrencyCode: " + response.getCurrency());
+		 * System.out.println("Fee: " + response.getFee());
+		 * System.out.println("TransactionId: " + response.getTransactionId());
+		 * // balance // System.out.println("Balance: " + response.getBalance()
+		 * / 100); // reverse transaction // System.out.println("Balance: " +
+		 * response.getTransactionId());
+		 */
 
-		System.out.println("ResponseMessage: " + response.getResponseMessage());
-
-		// airtimesales
-
-		System.out.println("Amount: " + response.getAmount());
-		System.out.println("CurrencyCode: " + response.getCurrency());
-		System.out.println("Fee: " + response.getFee());
-		System.out.println("TransactionId: " + response.getTransactionId());
-		// balance
-		// System.out.println("Balance: " + response.getBalance() / 100);
-		// reverse transaction
-		// System.out.println("Balance: " + response.getTransactionId());
+		System.out.println("The output response is::::" + response.toString());
 	}
 }

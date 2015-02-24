@@ -1,40 +1,84 @@
 package com.ng.mats.psa.mt.teasymobile.xmlprocessor;
 
-import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
 
+@XmlType(name = "record")
 public class Record {
 
-}
-
-@XmlType(name = "message")
-public class Message {
-
-	private String code = null;
-	private String value = null;
+	private RecID recID = null;
+	private DestinationCode destinationCode = null;
+	private AccountIdentificationName accountIdentificationName = null;
+	private AccountIdentificationNumber accountIdentificationNumber = null;
+	private Narration narration = null;
+	private PaymentReference paymentReference = null;
+	private FTAmount fTAmount = null;
 
 	@Override
 	public String toString() {
-		return "Message{" + "code=" + code + ", value=" + value + '}';
+		return "Record{" + "RecID=" + recID + ",DestinationCode="
+				+ destinationCode + "AccountIdentificationName="
+				+ accountIdentificationName + "AccountIdentificationNumber="
+				+ accountIdentificationNumber + "Narration=" + narration
+				+ "PaymentReference=" + paymentReference + "FTAmount="
+				+ fTAmount + "}";
 	}
 
-	@XmlAttribute
-	public String getCode() {
-		return code;
+	public RecID getRecID() {
+		return recID;
 	}
 
-	public void setCode(String code) {
-		this.code = code;
+	public void setRecID(RecID recID) {
+		this.recID = recID;
 	}
 
-	@XmlValue
-	public String getValue() {
-		return value;
+	public DestinationCode getDestinationCode() {
+		return destinationCode;
 	}
 
-	public void setValue(String value) {
-		this.value = value;
+	public void setDestinationCode(DestinationCode destinationCode) {
+		this.destinationCode = destinationCode;
+	}
+
+	public AccountIdentificationName getAccountIdentificationName() {
+		return accountIdentificationName;
+	}
+
+	public void setAccountIdentificationName(
+			AccountIdentificationName accountIdentificationName) {
+		this.accountIdentificationName = accountIdentificationName;
+	}
+
+	public AccountIdentificationNumber getAccountIdentificationNumber() {
+		return accountIdentificationNumber;
+	}
+
+	public void setAccountIdentificationNumber(
+			AccountIdentificationNumber accountIdentificationNumber) {
+		this.accountIdentificationNumber = accountIdentificationNumber;
+	}
+
+	public Narration getNarration() {
+		return narration;
+	}
+
+	public void setNarration(Narration narration) {
+		this.narration = narration;
+	}
+
+	public PaymentReference getPaymentReference() {
+		return paymentReference;
+	}
+
+	public void setPaymentReference(PaymentReference paymentReference) {
+		this.paymentReference = paymentReference;
+	}
+
+	public FTAmount getfTAmount() {
+		return fTAmount;
+	}
+
+	public void setfTAmount(FTAmount fTAmount) {
+		this.fTAmount = fTAmount;
 	}
 
 }

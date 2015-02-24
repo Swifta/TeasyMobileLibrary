@@ -1,12 +1,11 @@
 package com.ng.mats.psa.mt.teasymobile.xmlprocessor;
 
-import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
 import com.ng.mats.psa.mt.teasymobile.model.BatchNumber;
 import com.ng.mats.psa.mt.teasymobile.model.NumberOfRecords;
 
-@XmlType(propOrder = { "BatchNumber", "NumberOfRecords" }, name = "Header")
+@XmlType(name = "Header")
 public class Header {
 
 	private BatchNumber batchNumber = null;
@@ -18,7 +17,6 @@ public class Header {
 				+ numberOfRecords + "}";
 	}
 
-	@XmlAttribute
 	public BatchNumber getBatchNumber() {
 		return batchNumber;
 	}
@@ -27,7 +25,6 @@ public class Header {
 		this.batchNumber = batchNumber;
 	}
 
-	@XmlAttribute
 	public NumberOfRecords getNumberOfRecords() {
 		return numberOfRecords;
 	}

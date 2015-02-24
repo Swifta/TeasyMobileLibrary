@@ -1,9 +1,8 @@
 package com.ng.mats.psa.mt.teasymobile.xmlprocessor;
 
-import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
-@XmlType(propOrder = { "CreditAccountNo" }, name = "CreditRequest")
+@XmlType(name = "CreditRequest")
 public class CreditRequest {
 
 	private CreditAccountNo creditAccountNo = null;
@@ -13,7 +12,6 @@ public class CreditRequest {
 		return "CreditRequest{" + "CreditAccountNo=" + creditAccountNo + "}";
 	}
 
-	@XmlAttribute
 	public CreditAccountNo getCreditAccountNo() {
 		return creditAccountNo;
 	}

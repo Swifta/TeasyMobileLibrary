@@ -1,9 +1,8 @@
 package com.ng.mats.psa.mt.teasymobile.xmlprocessor;
 
-import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
-@XmlType(propOrder = { "username", "password", "OriginCode" }, name = "AuthenticationDetails")
+@XmlType(name = "AuthenticationDetails")
 public class AuthenticationDetails {
 
 	private Username username = null;
@@ -16,7 +15,6 @@ public class AuthenticationDetails {
 				+ ", Password=" + password + ", OriginCode=" + originCode + "}";
 	}
 
-	@XmlAttribute
 	public Username getUsername() {
 		return username;
 	}
@@ -25,7 +23,6 @@ public class AuthenticationDetails {
 		this.username = username;
 	}
 
-	@XmlAttribute
 	public Password getPassword() {
 		return password;
 	}
@@ -34,7 +31,6 @@ public class AuthenticationDetails {
 		this.password = password;
 	}
 
-	@XmlAttribute
 	public OriginCode getOriginCode() {
 		return originCode;
 	}

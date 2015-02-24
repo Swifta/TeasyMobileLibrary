@@ -1,9 +1,8 @@
 package com.ng.mats.psa.mt.teasymobile.xmlprocessor;
 
-import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
-@XmlType(propOrder = { "Header", "Record" }, name = "FTBulkCreditRequest")
+@XmlType(name = "FTBulkCreditRequest")
 public class FTBulkCreditRequest {
 
 	private Header header = null;
@@ -15,7 +14,6 @@ public class FTBulkCreditRequest {
 				+ record + "}";
 	}
 
-	@XmlAttribute
 	public Header getHeader() {
 		return header;
 	}
@@ -24,7 +22,6 @@ public class FTBulkCreditRequest {
 		this.header = header;
 	}
 
-	@XmlAttribute
 	public Record getRecord() {
 		return record;
 	}

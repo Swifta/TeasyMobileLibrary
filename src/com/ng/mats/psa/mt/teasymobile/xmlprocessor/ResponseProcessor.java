@@ -47,7 +47,7 @@ public class ResponseProcessor {
 		String xml = "";
 		try {
 			JAXBContext jaxbContext = JAXBContext
-					.newInstance(TransferResponse.class);
+					.newInstance(MultiPartyPaymentRequest.class);
 			Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 			StringWriter sw = new StringWriter();
 
