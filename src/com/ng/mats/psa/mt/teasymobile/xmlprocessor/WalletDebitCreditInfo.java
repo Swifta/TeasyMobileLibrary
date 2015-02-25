@@ -2,7 +2,7 @@ package com.ng.mats.psa.mt.teasymobile.xmlprocessor;
 
 import javax.xml.bind.annotation.XmlType;
 
-@XmlType(name = "WalletDebitCreditInfo")
+@XmlType(propOrder = { "authenticationDetails", "debitRequest", "creditRequest" }, name = "WalletDebitCreditInfo")
 public class WalletDebitCreditInfo {
 
 	private AuthenticationDetails authenticationDetails = null;

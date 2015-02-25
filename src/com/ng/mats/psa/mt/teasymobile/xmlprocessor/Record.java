@@ -2,7 +2,9 @@ package com.ng.mats.psa.mt.teasymobile.xmlprocessor;
 
 import javax.xml.bind.annotation.XmlType;
 
-@XmlType(name = "record")
+@XmlType(propOrder = { "recID", "destinationCode", "accountIdentificationName",
+		"accountIdentificationNumber", "narration", "paymentReference",
+		"fTAmount" }, name = "record")
 public class Record {
 
 	private RecID recID = null;

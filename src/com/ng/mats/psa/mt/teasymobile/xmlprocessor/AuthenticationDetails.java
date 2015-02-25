@@ -2,7 +2,7 @@ package com.ng.mats.psa.mt.teasymobile.xmlprocessor;
 
 import javax.xml.bind.annotation.XmlType;
 
-@XmlType(name = "AuthenticationDetails")
+@XmlType(propOrder = { "username", "password", "originCode" }, name = "AuthenticationDetails")
 public class AuthenticationDetails {
 
 	private Username username = null;

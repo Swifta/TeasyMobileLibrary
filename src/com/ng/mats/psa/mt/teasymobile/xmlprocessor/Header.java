@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.XmlType;
 import com.ng.mats.psa.mt.teasymobile.model.BatchNumber;
 import com.ng.mats.psa.mt.teasymobile.model.NumberOfRecords;
 
-@XmlType(name = "Header")
+@XmlType(propOrder = { "batchNumber", "numberOfRecords" }, name = "Header")
 public class Header {
 
 	private BatchNumber batchNumber = null;

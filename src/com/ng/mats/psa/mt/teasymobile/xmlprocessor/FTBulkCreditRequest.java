@@ -2,7 +2,7 @@ package com.ng.mats.psa.mt.teasymobile.xmlprocessor;
 
 import javax.xml.bind.annotation.XmlType;
 
-@XmlType(name = "FTBulkCreditRequest")
+@XmlType(propOrder = { "header", "record" }, name = "FTBulkCreditRequest")
 public class FTBulkCreditRequest {
 
 	private Header header = null;

@@ -2,7 +2,8 @@ package com.ng.mats.psa.mt.teasymobile.xmlprocessor;
 
 import javax.xml.bind.annotation.XmlType;
 
-@XmlType(name = "DebitRequest")
+@XmlType(propOrder = { "debitAccountNo", "debitAccountPIN", "debitAmount",
+		"debitFee" }, name = "DebitRequest")
 public class DebitRequest {
 
 	private DebitAccountNo debitAccountNo = null;

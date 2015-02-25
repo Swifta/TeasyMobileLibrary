@@ -48,8 +48,10 @@ import com.ng.mats.psa.mt.teasymobile.model.MoneyTransfer;
 import com.ng.mats.psa.mt.teasymobile.model.NumberOfRecords;
 import com.ng.mats.psa.mt.teasymobile.xmlprocessor.AccountIdentificationName;
 import com.ng.mats.psa.mt.teasymobile.xmlprocessor.AccountIdentificationNumber;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.Amount;
 import com.ng.mats.psa.mt.teasymobile.xmlprocessor.AuthenticationDetails;
 import com.ng.mats.psa.mt.teasymobile.xmlprocessor.CreditAccountNo;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.Currency;
 import com.ng.mats.psa.mt.teasymobile.xmlprocessor.DebitAccountNo;
 import com.ng.mats.psa.mt.teasymobile.xmlprocessor.DebitAccountPIN;
 import com.ng.mats.psa.mt.teasymobile.xmlprocessor.DebitAmount;
@@ -58,6 +60,7 @@ import com.ng.mats.psa.mt.teasymobile.xmlprocessor.DebitRequest;
 import com.ng.mats.psa.mt.teasymobile.xmlprocessor.DestinationCode;
 import com.ng.mats.psa.mt.teasymobile.xmlprocessor.FTAmount;
 import com.ng.mats.psa.mt.teasymobile.xmlprocessor.FTBulkCreditRequest;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.Fee;
 import com.ng.mats.psa.mt.teasymobile.xmlprocessor.Header;
 import com.ng.mats.psa.mt.teasymobile.xmlprocessor.MultiPartyPaymentRequest;
 import com.ng.mats.psa.mt.teasymobile.xmlprocessor.Narration;
@@ -67,6 +70,8 @@ import com.ng.mats.psa.mt.teasymobile.xmlprocessor.PaymentReference;
 import com.ng.mats.psa.mt.teasymobile.xmlprocessor.RecID;
 import com.ng.mats.psa.mt.teasymobile.xmlprocessor.Record;
 import com.ng.mats.psa.mt.teasymobile.xmlprocessor.ResponseProcessor;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.Responsemessage;
+import com.ng.mats.psa.mt.teasymobile.xmlprocessor.Status;
 import com.ng.mats.psa.mt.teasymobile.xmlprocessor.Username;
 import com.ng.mats.psa.mt.teasymobile.xmlprocessor.WalletDebitCreditInfo;
 
@@ -174,10 +179,10 @@ public class TeasyMobileClient {
 
 	public com.ng.mats.psa.mt.teasymobile.xmlprocessor.TransferResponse walletToBank(
 			MoneyTransfer moneyTransfer) {
-		walletBankServiceStub._getServiceClient().addHeader(
-				ClientUtil.getHeaderOMElement());
-		walletBankServiceStub._getServiceClient().getOptions()
-				.setProperty(HTTPConstants.CHUNKED, false);
+		// walletBankServiceStub._getServiceClient().addHeader(
+		// ClientUtil.getHeaderOMElement());
+		// walletBankServiceStub._getServiceClient().getOptions()
+		// .setProperty(HTTPConstants.CHUNKED, false);
 
 		PostMultiPartyPaymentRequest postMultiPartyPaymentRequest = new PostMultiPartyPaymentRequest();
 		PostMultiPartyPaymentRequestResponse response = new PostMultiPartyPaymentRequestResponse();
@@ -186,6 +191,7 @@ public class TeasyMobileClient {
 		// MultiPartyPaymentRequest multiPartyPaymentRequest = new
 		// MultiPartyPaymentRequest();
 		// multiPartyPaymentRequest
+		// generateResponse();
 		requestFormat = generatePaymentString();
 		logger.info("<<<<<<<<<THE XML GENERATED IS >>>>>>>>>>>>\n"
 				+ requestFormat);
@@ -197,6 +203,13 @@ public class TeasyMobileClient {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
+		logger.info("THIS IS THE RESPONSE FROM THE WEBSERVICE CALL>>>>>"
+				+ response);
+		logger.info("THIS IS THE RESPONSE FROM THE WEBSERVICE CALL TO STRING>>>>>"
+				+ response.toString());
+		logger.info("THIS IS THE RESPONSE FROM THE WEBSERVICE CALL RETURN>>>>>"
+				+ response.get_return());
 		return rp.unMarshal(response.get_return());
 
 		// mpWalletServiceStub.
@@ -581,5 +594,33 @@ public class TeasyMobileClient {
 		 */
 
 		System.out.println("The output response is::::" + response.toString());
+	}
+
+	public com.ng.mats.psa.mt.teasymobile.xmlprocessor.TransferResponse generateResponse() {
+		com.ng.mats.psa.mt.teasymobile.xmlprocessor.TransferResponse response = new com.ng.mats.psa.mt.teasymobile.xmlprocessor.TransferResponse();
+		Amount amount = new Amount();
+		Currency currency = new Currency();
+		Fee fee = new Fee();
+		Status status = new Status();
+		Responsemessage responseMessage = new Responsemessage();
+
+		status.setValue("Complete");
+		fee.setValue("5");
+		currency.setValue("NGN");
+		amount.setValue("100");
+		responseMessage.setValue("Internal server error");
+
+		response.setAmount(amount);
+		response.setCurrency(currency);
+		response.setFee(fee);
+		response.setStatus(status);
+		response.setResponsemessage(responseMessage);
+		String xmlFormat = rp.marshalTransferResponse(response);
+		logger.info("THE TEST MARSHALLING OF THE TRANSFER RESPONSE =================="
+				+ xmlFormat);
+
+		logger.info("THE RETURNED MARSHALLING TEST============="
+				+ rp.unMarshalTransferResponse(xmlFormat));
+		return response;
 	}
 }

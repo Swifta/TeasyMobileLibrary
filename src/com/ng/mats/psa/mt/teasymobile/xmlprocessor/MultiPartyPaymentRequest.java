@@ -4,7 +4,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlRootElement
-@XmlType(name = "MultiPartyPaymentRequest")
+@XmlType(propOrder = { "walletDebitCreditInfo", "fTBulkCreditRequest" }, name = "MultiPartyPaymentRequest")
 public class MultiPartyPaymentRequest {
 	private WalletDebitCreditInfo walletDebitCreditInfo = null;
 	private FTBulkCreditRequest fTBulkCreditRequest = null;

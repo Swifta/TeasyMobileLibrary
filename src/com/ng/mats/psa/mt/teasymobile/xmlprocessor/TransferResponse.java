@@ -3,18 +3,20 @@ package com.ng.mats.psa.mt.teasymobile.xmlprocessor;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-@XmlRootElement
-@XmlType(name = "TransferResponse")
+@XmlRootElement(name = "transferresponse")
+@XmlType(propOrder = { "status", "amount", "fee", "currency", "responsemessage" })
 public class TransferResponse {
 	private Status status = null;
 	private Amount amount = null;
 	private Fee fee = null;
 	private Currency currency = null;
+	private Responsemessage responsemessage = null;
 
 	@Override
 	public String toString() {
 		return "TransferResponse{" + "Status=" + status + ", Amount=" + amount
-				+ ", Fee=" + fee + ", Currency=" + currency + '}';
+				+ ", Fee=" + fee + ", Currency=" + currency
+				+ ", ResponseMessage=" + responsemessage + '}';
 	}
 
 	public Status getStatus() {
@@ -47,6 +49,14 @@ public class TransferResponse {
 
 	public void setCurrency(Currency currency) {
 		this.currency = currency;
+	}
+
+	public Responsemessage getResponsemessage() {
+		return responsemessage;
+	}
+
+	public void setResponsemessage(Responsemessage responsemessage) {
+		this.responsemessage = responsemessage;
 	}
 
 }
