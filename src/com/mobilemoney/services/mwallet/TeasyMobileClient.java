@@ -1,6 +1,5 @@
 package com.mobilemoney.services.mwallet;
 
-import java.math.BigDecimal;
 import java.rmi.RemoteException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -91,7 +90,7 @@ public class TeasyMobileClient {
 	}
 
 	public String generatePaymentString() {
-		String batchNumberValue = "20150223210941001000", numberOfRecordsValue = "1", accountIdentificationNameValue = "Jude Smith", accountIdentificationNumberValue = "9998887771", destinationCodeValue = "999", fTAmountValue = "200000", narrationValue = "Transfer to Bank", paymentReferenceValue = "201502231111119", recIDValue = "000001", originCodeValue = "CINFORES", usernameValue = "cinfores", passwordValue = "apipass", creditAccountNoValue = "2348033919555", debitAccountNoValue = "2348171000157", debitAccountPINValue = "7005", debitAmountValue = "200000", debitFeeValue = "15000";
+		String batchNumberValue = "20150227210941001001", numberOfRecordsValue = "1", accountIdentificationNameValue = "Jude Smith", accountIdentificationNumberValue = "9998887771", destinationCodeValue = "999", fTAmountValue = "200000", narrationValue = "Transfer to Bank", paymentReferenceValue = "201502271111129", recIDValue = "000001", originCodeValue = "CINFORES", usernameValue = "cinfores", passwordValue = "apipass", creditAccountNoValue = "2348033919555", debitAccountNoValue = "2348171000157", debitAccountPINValue = "7005", debitAmountValue = "200000", debitFeeValue = "15000";
 
 		MultiPartyPaymentRequest request = new MultiPartyPaymentRequest();
 
@@ -555,29 +554,10 @@ public class TeasyMobileClient {
 
 	public static void main(String args[]) throws Exception {
 		TeasyMobileClient teasyMobileClient = new TeasyMobileClient();
-		MoneyTransfer moneyTransfer = new MoneyTransfer("2348104001339",
-				new BigDecimal(110), "dada", "1234");
-		moneyTransfer.setSender("2348170730938");
+		MoneyTransfer moneyTransfer = new TeasyMobilePropertyValues()
+				.getPropertyValues();
 		MTransferResponseType response = teasyMobileClient
 				.doCashout(moneyTransfer);
-		// com.ng.mats.psa.mt.teasymobile.xmlprocessor.TransferResponse response
-		// = teasyMobileClient
-		// .walletToBank(moneyTransfer);
-		// MTransferResponseType response = teasyMobileClient
-		// .doCashIn(moneyTransfer);
-		// MBalanceResponse response =
-		// teasyMobileClient.getBalance(moneyTransfer);
-		moneyTransfer.setTeasyrequestreference("201411281658736");
-		// MTransferResponseType response = teasyMobileClient
-		// .airtimeSales(moneyTransfer);
-		// MTransferResponseType response = teasyMobileClient
-		// .transactionQuery(moneyTransfer);
-		// MTxnReverseResponse response = teasyMobileClient
-		// .reverseTransaction(moneyTransfer);
-		moneyTransfer.setPingRequestParam("41.220.65.177");
-		// MPingResponse response =
-		// teasyMobileClient.pingRequest(moneyTransfer);
-
 		System.out.println("Status: " + response.getStatus());
 
 		System.out.println("ResponseMessage: " + response.getResponseMessage());
@@ -587,11 +567,11 @@ public class TeasyMobileClient {
 		System.out.println("Amount: " + response.getAmount());
 		System.out.println("CurrencyCode: " + response.getCurrency());
 		System.out.println("Fee: " + response.getFee());
-		System.out.println("TransactionId: " + response.getTransactionId());
+		// System.out.println("TransactionId: " + response.getTransactionId());
 		// balance
 		// System.out.println("Balance: " + response.getBalance() / 100);
 		// reverse transaction
-		System.out.println("Balance: " + response.getTransactionId());
+		// System.out.println("Balance: " + response.getTransactionId());
 
 		System.out.println("The output response is::::" + response.toString());
 	}
