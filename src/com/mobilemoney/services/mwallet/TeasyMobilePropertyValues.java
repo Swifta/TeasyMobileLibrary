@@ -57,6 +57,11 @@ public class TeasyMobilePropertyValues {
 				.getProperty("Teasyrequestreference_" + parameterType));
 		moneyTransfer.setTransactionType(prop.getProperty("TransactionType_"
 				+ parameterType));
+		moneyTransfer.setUrl(prop.getProperty("Url_" + parameterType));
+		moneyTransfer
+				.setUsername(prop.getProperty("Username_" + parameterType));
+		moneyTransfer
+				.setPassword(prop.getProperty("Password_" + parameterType));
 
 		return moneyTransfer;
 	}

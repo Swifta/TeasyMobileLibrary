@@ -77,13 +77,14 @@ import com.ng.mats.psa.mt.teasymobile.xmlprocessor.WalletDebitCreditInfo;
 public class TeasyMobileClient {
 	private static final Logger logger = Logger
 			.getLogger(TeasyMobileClient.class.getName());
+	private static MoneyTransfer moneyTransfer = null;
 	private MPWalletServiceStub mpWalletServiceStub = null;
 	WalletMultiBankServicesStub walletBankServiceStub = null;
 	ResponseProcessor rp = null;
 
-	public TeasyMobileClient() throws Exception {
+	public TeasyMobileClient(MoneyTransfer moneyTransfer) throws Exception {
 
-		mpWalletServiceStub = new MPWalletServiceStub();
+		mpWalletServiceStub = new MPWalletServiceStub(moneyTransfer.getUrl());
 		walletBankServiceStub = new WalletMultiBankServicesStub();
 		rp = new ResponseProcessor();
 
@@ -217,7 +218,8 @@ public class TeasyMobileClient {
 	public MTransferResponseType transactionQuery(MoneyTransfer moneyTransfer)
 			throws RemoteException {
 		mpWalletServiceStub._getServiceClient().addHeader(
-				ClientUtil.getHeaderOMElement());
+				ClientUtil.getHeaderOMElement(moneyTransfer.getUsername(),
+						moneyTransfer.getPassword()));
 		mpWalletServiceStub._getServiceClient().getOptions()
 				.setProperty(HTTPConstants.CHUNKED, false);
 		TransactionQueryRequest transactionQueryRequest = new TransactionQueryRequest();
@@ -241,7 +243,8 @@ public class TeasyMobileClient {
 	public MTransferResponseType airtimeSales(MoneyTransfer moneyTransfer)
 			throws RemoteException {
 		mpWalletServiceStub._getServiceClient().addHeader(
-				ClientUtil.getHeaderOMElement());
+				ClientUtil.getHeaderOMElement(moneyTransfer.getUsername(),
+						moneyTransfer.getPassword()));
 		mpWalletServiceStub._getServiceClient().getOptions()
 				.setProperty(HTTPConstants.CHUNKED, false);
 		AirtimeTopupRequest airtimeTopupRequest = new AirtimeTopupRequest();
@@ -292,7 +295,8 @@ public class TeasyMobileClient {
 
 	public MTxnReverseResponse reverseTransaction(MoneyTransfer moneyTransfer) {
 		mpWalletServiceStub._getServiceClient().addHeader(
-				ClientUtil.getHeaderOMElement());
+				ClientUtil.getHeaderOMElement(moneyTransfer.getUsername(),
+						moneyTransfer.getPassword()));
 		mpWalletServiceStub._getServiceClient().getOptions()
 				.setProperty(HTTPConstants.CHUNKED, false);
 		ReverseTxnRequest reverseTxnRequest = new ReverseTxnRequest();
@@ -326,7 +330,8 @@ public class TeasyMobileClient {
 	public MPingResponse pingRequest(MoneyTransfer moneyTransfer) {
 		String param = "";
 		mpWalletServiceStub._getServiceClient().addHeader(
-				ClientUtil.getHeaderOMElement());
+				ClientUtil.getHeaderOMElement(moneyTransfer.getUsername(),
+						moneyTransfer.getPassword()));
 		mpWalletServiceStub._getServiceClient().getOptions()
 				.setProperty(HTTPConstants.CHUNKED, false);
 		PingRequest pingRequest = new PingRequest();
@@ -348,13 +353,14 @@ public class TeasyMobileClient {
 	public MBalanceResponse getBalance(MoneyTransfer moneyTransfer)
 			throws Exception {
 		mpWalletServiceStub._getServiceClient().addHeader(
-				ClientUtil.getHeaderOMElement());
+				ClientUtil.getHeaderOMElement(moneyTransfer.getUsername(),
+						moneyTransfer.getPassword()));
 		mpWalletServiceStub._getServiceClient().getOptions()
 				.setProperty(HTTPConstants.CHUNKED, false);
 		BalanceGetRequest balanceGetRequest = new BalanceGetRequest();
 		MBasicRequestType param = new MBasicRequestType();
 		AccountNumber accountNumber = new AccountNumber();
-		accountNumber.setAccountNumber(moneyTransfer.getReceiver());
+		accountNumber.setAccountNumber(moneyTransfer.getSender());
 		param.setAccountNumber(accountNumber);
 
 		PIN pin = new PIN();
@@ -371,10 +377,11 @@ public class TeasyMobileClient {
 
 	}
 
-	public AdditionalHeader getAdditionalHeader() {
+	public AdditionalHeader getAdditionalHeader(String username, String password) {
 		AdditionalHeader additionalHeader = new AdditionalHeader();
 		MHeader mHeaderParam = new MHeader();
-		OMElement loginCredentials = ClientUtil.getHeaderOMElement(), contentCredentials = null;
+		OMElement loginCredentials = ClientUtil.getHeaderOMElement(username,
+				password), contentCredentials = null;
 		Iterator<OMElement> oem = loginCredentials.getChildElements();
 		logger.info("------------------" + loginCredentials.toString());
 		while (oem.hasNext()) {
@@ -458,7 +465,8 @@ public class TeasyMobileClient {
 		System.out.println("---------------------------PIN");
 
 		mpWalletServiceStub._getServiceClient().addHeader(
-				ClientUtil.getHeaderOMElement());
+				ClientUtil.getHeaderOMElement(moneyTransfer.getUsername(),
+						moneyTransfer.getPassword()));
 		mpWalletServiceStub._getServiceClient().getOptions()
 				.setProperty(HTTPConstants.CHUNKED, false);
 
@@ -538,7 +546,8 @@ public class TeasyMobileClient {
 
 		cashInRequest.setCashInRequest(mCashInRequestType);
 		mpWalletServiceStub._getServiceClient().addHeader(
-				ClientUtil.getHeaderOMElement());
+				ClientUtil.getHeaderOMElement(moneyTransfer.getUsername(),
+						moneyTransfer.getPassword()));
 		mpWalletServiceStub._getServiceClient().getOptions()
 				.setProperty(HTTPConstants.CHUNKED, false);
 		TransferResponse transferResponse = mpWalletServiceStub.cashInRequest(
@@ -553,23 +562,26 @@ public class TeasyMobileClient {
 	}
 
 	public static void main(String args[]) throws Exception {
-		TeasyMobileClient teasyMobileClient = new TeasyMobileClient();
-		MoneyTransfer moneyTransfer = new TeasyMobilePropertyValues()
-				.getPropertyValues();
-		MTransferResponseType response = teasyMobileClient
-				.doCashout(moneyTransfer);
-		System.out.println("Status: " + response.getStatus());
+		moneyTransfer = new TeasyMobilePropertyValues().getPropertyValues();
+		TeasyMobileClient teasyMobileClient = new TeasyMobileClient(
+				moneyTransfer);
 
-		System.out.println("ResponseMessage: " + response.getResponseMessage());
+		// MTransferResponseType response = teasyMobileClient
+		// .doCashout(moneyTransfer);
+		MBalanceResponse response = teasyMobileClient.getBalance(moneyTransfer);
+		// System.out.println("Status: " + response.getStatus());
+
+		// System.out.println("ResponseMessage: " +
+		// response.getResponseMessage());
 
 		// airtimesales
 
-		System.out.println("Amount: " + response.getAmount());
-		System.out.println("CurrencyCode: " + response.getCurrency());
-		System.out.println("Fee: " + response.getFee());
+		// System.out.println("Amount: " + response.getAmount());
+		// System.out.println("CurrencyCode: " + response.getCurrency());
+		// System.out.println("Fee: " + response.getFee());
 		// System.out.println("TransactionId: " + response.getTransactionId());
 		// balance
-		// System.out.println("Balance: " + response.getBalance() / 100);
+		System.out.println("Balance: " + response.getBalance() / 100);
 		// reverse transaction
 		// System.out.println("Balance: " + response.getTransactionId());
 

@@ -12,6 +12,9 @@ public class MoneyTransfer {
 	private String teasypin = "";
 	private String teasyrequestreference = "";
 	private String pingRequestParam = "";
+	private String url = "";
+	private String username = "";
+	private String password = "";
 	// @XmlTransient
 	// private CashOutStatus status = CashOutStatus.PENDING;
 	private String reference = "";
@@ -25,6 +28,9 @@ public class MoneyTransfer {
 		// this.teasyrequestreference = teasyrequestreference;
 		// this.status = status;
 		this.reference = "";
+		this.url = "";
+		this.username = "";
+		this.password = "";
 
 	}
 
@@ -120,6 +126,30 @@ public class MoneyTransfer {
 		this.pingRequestParam = pingRequestParam;
 	}
 
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("Receiver: " + receiver + "\n");
@@ -127,6 +157,9 @@ public class MoneyTransfer {
 		sb.append("Amount: " + amount + "\n");
 		sb.append("Reference: " + reference + "\n");
 		sb.append("Mmo: " + mmo + "\n");
+		sb.append("Url: " + url + "\n");
+		sb.append("Username: " + username + "\n");
+		sb.append("Password: " + password + "\n");
 		// sb.append("Status: " + status + "\n");
 
 		return sb.toString();

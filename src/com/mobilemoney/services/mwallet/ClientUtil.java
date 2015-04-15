@@ -6,7 +6,7 @@ import org.apache.axiom.om.OMFactory;
 import org.apache.axiom.om.OMNamespace;
 
 public class ClientUtil {
-	public static OMElement getHeaderOMElement() {
+	public static OMElement getHeaderOMElement(String username, String password) {
 		OMFactory fac = OMAbstractFactory.getOMFactory();
 
 		OMNamespace omNs = fac.createOMNamespace(
@@ -16,12 +16,10 @@ public class ClientUtil {
 				omNs);
 
 		OMElement usernameElement = fac.createOMElement("username", omNs);
-		usernameElement
-				.addChild(fac.createOMText(usernameElement, "matsagent"));
+		usernameElement.addChild(fac.createOMText(usernameElement, username));
 
 		OMElement passwordElement = fac.createOMElement("password", omNs);
-		passwordElement
-				.addChild(fac.createOMText(passwordElement, "swifta123"));
+		passwordElement.addChild(fac.createOMText(passwordElement, password));
 
 		additionalHeader.addChild(usernameElement);
 		additionalHeader.addChild(passwordElement);
