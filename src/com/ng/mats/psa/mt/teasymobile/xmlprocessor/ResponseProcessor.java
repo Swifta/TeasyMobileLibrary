@@ -25,12 +25,14 @@ import javax.xml.transform.TransformerFactoryConfigurationError;
 import javax.xml.transform.stax.StAXSource;
 import javax.xml.transform.stream.StreamResult;
 
+import com.mobilemoney.services.mwallet.MPWalletServiceStub.MTransferResponseType;
+
 public class ResponseProcessor {
 	private static final Logger logger = Logger
 			.getLogger(ResponseProcessor.class.getName());
 
-	public static TransferResponse unMarshal(String xml) {
-		TransferResponse response = null;
+	public static MTransferResponseType unMarshal(String xml) {
+		MTransferResponseType response = null;
 		logger.info("-------------------------->>>>>>>>>>Unmarshal the xml which is :"
 				+ xml);
 
@@ -70,7 +72,7 @@ public class ResponseProcessor {
 
 			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 
-			response = (TransferResponse) jaxbUnmarshaller.unmarshal(xsr);
+			response = (MTransferResponseType) jaxbUnmarshaller.unmarshal(xsr);
 			// if (formattedXml != null) {
 			// response = (TransferResponse) jaxbUnmarshaller
 			// .unmarshal(new ByteArrayInputStream(formattedXml

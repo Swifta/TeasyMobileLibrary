@@ -92,7 +92,30 @@ public class TeasyMobileClient {
 
 	public String generatePaymentString() {
 		String batchNumberValue = "20150227210941001001", numberOfRecordsValue = "1", accountIdentificationNameValue = "Jude Smith", accountIdentificationNumberValue = "9998887771", destinationCodeValue = "999", fTAmountValue = "200000", narrationValue = "Transfer to Bank", paymentReferenceValue = "201502271111129", recIDValue = "000001", originCodeValue = "CINFORES", usernameValue = "cinfores", passwordValue = "apipass", creditAccountNoValue = "2348033919555", debitAccountNoValue = "2348171000157", debitAccountPINValue = "7005", debitAmountValue = "200000", debitFeeValue = "15000";
+		MoneyTransfer moneyTransfer = new MoneyTransfer();
+		moneyTransfer.setBatchNumberValue(batchNumberValue);
+		moneyTransfer.setNumberOfRecordsValue(numberOfRecordsValue);
+		moneyTransfer
+				.setAccountIdentificationNameValue(accountIdentificationNameValue);
+		moneyTransfer
+				.setAccountIdentificationNumberValue(accountIdentificationNumberValue);
+		moneyTransfer.setDestinationCodeValue(destinationCodeValue);
+		moneyTransfer.setfTAmountValue(fTAmountValue);
+		moneyTransfer.setNarrationValue(narrationValue);
+		moneyTransfer.setPaymentReferenceValue(paymentReferenceValue);
+		moneyTransfer.setRecIDValue(recIDValue);
+		moneyTransfer.setOriginCodeValue(originCodeValue);
+		moneyTransfer.setUsernameValue(usernameValue);
+		moneyTransfer.setPasswordValue(passwordValue);
+		moneyTransfer.setCreditAccountNoValue(creditAccountNoValue);
+		moneyTransfer.setDebitAccountNoValue(debitAccountNoValue);
+		moneyTransfer.setDebitAccountPINValue(debitAccountPINValue);
+		moneyTransfer.setDebitAmountValue(debitAmountValue);
+		moneyTransfer.setDebitFeeValue(debitFeeValue);
+		return generatePaymentString(moneyTransfer);
+	}
 
+	public String generatePaymentString(MoneyTransfer moneyTransfer) {
 		MultiPartyPaymentRequest request = new MultiPartyPaymentRequest();
 
 		FTBulkCreditRequest fTBulkCreditRequest = new FTBulkCreditRequest();
@@ -101,8 +124,8 @@ public class TeasyMobileClient {
 		BatchNumber batchNumber = new BatchNumber();
 		NumberOfRecords numberOfRecords = new NumberOfRecords();
 
-		numberOfRecords.setValue(numberOfRecordsValue);
-		batchNumber.setValue(batchNumberValue);
+		numberOfRecords.setValue(moneyTransfer.getNumberOfRecordsValue());
+		batchNumber.setValue(moneyTransfer.getBatchNumberValue());
 
 		header.setBatchNumber(batchNumber);
 		header.setNumberOfRecords(numberOfRecords);
@@ -115,13 +138,15 @@ public class TeasyMobileClient {
 		PaymentReference paymentReference = new PaymentReference();
 		RecID recID = new RecID();
 
-		accountIdentificationName.setValue(accountIdentificationNameValue);
-		accountIdentificationNumber.setValue(accountIdentificationNumberValue);
-		destinationCode.setValue(destinationCodeValue);
-		fTAmount.setValue(fTAmountValue);
-		narration.setValue(narrationValue);
-		paymentReference.setValue(paymentReferenceValue);
-		recID.setValue(recIDValue);
+		accountIdentificationName.setValue(moneyTransfer
+				.getAccountIdentificationNameValue());
+		accountIdentificationNumber.setValue(moneyTransfer
+				.getAccountIdentificationNumberValue());
+		destinationCode.setValue(moneyTransfer.getDestinationCodeValue());
+		fTAmount.setValue(moneyTransfer.getfTAmountValue());
+		narration.setValue(moneyTransfer.getNarrationValue());
+		paymentReference.setValue(moneyTransfer.getPaymentReferenceValue());
+		recID.setValue(moneyTransfer.getRecIDValue());
 
 		record.setAccountIdentificationName(accountIdentificationName);
 		record.setAccountIdentificationNumber(accountIdentificationNumber);
@@ -140,11 +165,11 @@ public class TeasyMobileClient {
 		AuthenticationDetails authenticationDetails = new AuthenticationDetails();
 
 		OriginCode originCode = new OriginCode();
-		originCode.setValue(originCodeValue);
+		originCode.setValue(moneyTransfer.getOriginCodeValue());
 		Password password = new Password();
-		password.setValue(passwordValue);
+		password.setValue(moneyTransfer.getPasswordValue());
 		Username username = new Username();
-		username.setValue(usernameValue);
+		username.setValue(moneyTransfer.getUsernameValue());
 
 		authenticationDetails.setOriginCode(originCode);
 		authenticationDetails.setPassword(password);
@@ -158,11 +183,11 @@ public class TeasyMobileClient {
 		DebitAmount debitAmount = new DebitAmount();
 		DebitFee debitFee = new DebitFee();
 
-		creditAccountNo.setValue(creditAccountNoValue);
-		debitAccountNo.setValue(debitAccountNoValue);
-		debitAccountPIN.setValue(debitAccountPINValue);
-		debitAmount.setValue(debitAmountValue);
-		debitFee.setValue(debitFeeValue);
+		creditAccountNo.setValue(moneyTransfer.getCreditAccountNoValue());
+		debitAccountNo.setValue(moneyTransfer.getDebitAccountNoValue());
+		debitAccountPIN.setValue(moneyTransfer.getDebitAccountPINValue());
+		debitAmount.setValue(moneyTransfer.getDebitAmountValue());
+		debitFee.setValue(moneyTransfer.getDebitFeeValue());
 
 		creditRequest.setCreditAccountNo(creditAccountNo);
 		DebitRequest debitRequest = new DebitRequest();
@@ -177,8 +202,7 @@ public class TeasyMobileClient {
 		return rp.marshal(request);
 	}
 
-	public com.ng.mats.psa.mt.teasymobile.xmlprocessor.TransferResponse walletToBank(
-			MoneyTransfer moneyTransfer) {
+	public MTransferResponseType walletToBank(MoneyTransfer moneyTransfer) {
 		// walletBankServiceStub._getServiceClient().addHeader(
 		// ClientUtil.getHeaderOMElement());
 		// walletBankServiceStub._getServiceClient().getOptions()
@@ -225,7 +249,7 @@ public class TeasyMobileClient {
 		TransactionQueryRequest transactionQueryRequest = new TransactionQueryRequest();
 		MTransactionQuery mTransRequest = new MTransactionQuery();
 		AccountNumber accountNumber = new AccountNumber();
-		System.out.println("---------------------------Account number>>>>"
+		logger.info("---------------------------Account number>>>>"
 				+ moneyTransfer.getSender());
 		accountNumber.setAccountNumber(moneyTransfer.getSender());
 		mTransRequest.setAccountNumber(accountNumber);
@@ -250,28 +274,28 @@ public class TeasyMobileClient {
 		AirtimeTopupRequest airtimeTopupRequest = new AirtimeTopupRequest();
 		MAirtimeTopupRequestType airtimeRequest = new MAirtimeTopupRequestType();
 		AccountNumber accountNumber = new AccountNumber();
-		System.out.println("---------------------------Account number>>>>"
+		logger.info("---------------------------Account number>>>>"
 				+ moneyTransfer.getSender());
 		accountNumber.setAccountNumber(moneyTransfer.getSender()); // 2348171000157
 		airtimeRequest.setAccountNumber(accountNumber);
 		PIN pin = new PIN();
-		System.out.println("---------------------------PIN>>>"
+		logger.info("---------------------------PIN>>>"
 				+ moneyTransfer.getTeasypin());
 		pin.setPIN(moneyTransfer.getTeasypin()); // 7005
 		airtimeRequest.setAccountPIN(pin);
 		airtimeRequest.setAmount(moneyTransfer.getAmount().intValue());
-		System.out.println("---------------------------Amount>>>>"
+		logger.info("---------------------------Amount>>>>"
 				+ moneyTransfer.getAmount());
 		CurrencyCode currencyCode = new CurrencyCode();
-		System.out.println("---------------------------Currency code");
+		logger.info("---------------------------Currency code");
 		currencyCode.setCurrencyCode("NGN");
 		airtimeRequest.setCurrency(currencyCode);
 		MmTransferCode mmTransferCode = new MmTransferCode();
-		System.out.println("---------------------------MmTransfer code");
+		logger.info("---------------------------MmTransfer code");
 		mmTransferCode.setMmTransferCode("T3ASYT3ST");
 		airtimeRequest.setOriginCode(mmTransferCode);
 		RequestReference requestReference = new RequestReference();
-		System.out.println("---------------------------Request reference");
+		logger.info("---------------------------Request reference");
 		Date dNow = new Date();
 		SimpleDateFormat ft = new SimpleDateFormat("YYYYMMddHHmmSSS");
 		requestReference.setRequestReference(ft.format(dNow));
@@ -280,7 +304,7 @@ public class TeasyMobileClient {
 		mmTransferCode.setMmTransferCode("KAKA");
 		airtimeRequest.setDestinationCode(mmTransferCode);
 		accountNumber = new AccountNumber();
-		System.out.println("---------------------------Account number>>>>"
+		logger.info("---------------------------Account number>>>>"
 				+ moneyTransfer.getReceiver());
 		accountNumber.setAccountNumber(moneyTransfer.getReceiver());
 		airtimeRequest.setNumberToTopup(accountNumber);
@@ -303,7 +327,7 @@ public class TeasyMobileClient {
 		MTxnReverseRequest mTxnReverseRequest = new MTxnReverseRequest();
 
 		AccountNumber accountNumber = new AccountNumber();
-		System.out.println("---------------------------Account number>>>>"
+		logger.info("---------------------------Account number>>>>"
 				+ moneyTransfer.getSender());
 		accountNumber.setAccountNumber(moneyTransfer.getSender());
 
@@ -372,7 +396,7 @@ public class TeasyMobileClient {
 		BalanceGetResponse balanceGetResponse = mpWalletServiceStub
 				.balanceGetRequest(balanceGetRequest, null);
 		// mpWalletServiceStub.
-		System.out.println("---------------------------Transfer Response");
+		logger.info("---------------------------Transfer Response");
 		return balanceGetResponse.getBalanceGetResponse();
 
 	}
@@ -402,7 +426,7 @@ public class TeasyMobileClient {
 				mHeaderParam.setPassword(contentCredentials.getText());
 			}
 		}
-		System.out.println("<<<<<<<<<<<<<THE PARAMETER HEADERS ARE >>>>>>>>>>"
+		logger.info("<<<<<<<<<<<<<THE PARAMETER HEADERS ARE >>>>>>>>>>"
 				+ mHeaderParam.getUsername() + " :::::Password:::::"
 				+ mHeaderParam.getPassword());
 		additionalHeader.setAdditionalHeader(mHeaderParam);
@@ -411,46 +435,45 @@ public class TeasyMobileClient {
 
 	public MTransferResponseType doCashout(MoneyTransfer moneyTransfer)
 			throws Exception {
-		System.out.println("...do Cash out...");
-		System.out.println("-----------------------------doing cashout.....");
+		logger.info("...do Cash out...");
+		logger.info("-----------------------------doing cashout.....");
 
 		if (mpWalletServiceStub == null) {
-			System.out.println("Fund stub is not available");
-			System.out
-					.println("---------------------------Fund stub is not available");
+			logger.info("Fund stub is not available");
+			logger.info("---------------------------Fund stub is not available");
 		}
 		int amount = moneyTransfer.getAmount().intValue() * 100;
 
 		// DebitRequest debitRequest = new DebitRequest();
-		System.out.println("---------------------------Debit request");
+		logger.info("---------------------------Debit request");
 		// MTransferRequestType mtrTransferRequestType = new
 		// MTransferRequestType();
 		AccountNumber accountNumber = new AccountNumber(), merchantNumber = new AccountNumber();
 
-		System.out.println("---------------------------Account number>>>>"
+		logger.info("---------------------------Account number>>>>"
 				+ moneyTransfer.getReceiver());
 		accountNumber.setAccountNumber(moneyTransfer.getReceiver()); // 2348171000157
 
-		System.out.println("---------------------------Merchant number>>>>"
+		logger.info("---------------------------Merchant number>>>>"
 				+ moneyTransfer.getSender());
 		merchantNumber.setAccountNumber(moneyTransfer.getSender());
 		// mtrTransferRequestType.setAccountNumber(accountNumber);
 		PIN pin = new PIN();
-		System.out.println("---------------------------PIN>>>"
+		logger.info("---------------------------PIN>>>"
 				+ moneyTransfer.getTeasypin());
 		pin.setPIN(moneyTransfer.getTeasypin()); // 7005
 		// mtrTransferRequestType.setAccountPIN(pin);
 		// mtrTransferRequestType.setAmount(amount);
-		System.out.println("---------------------------Amount>>>>" + amount);
+		logger.info("---------------------------Amount>>>>" + amount);
 		CurrencyCode currencyCode = new CurrencyCode();
 
 		currencyCode.setCurrencyCode("NGN");
 		// mtrTransferRequestType.setCurrency(currencyCode);
-		System.out.println("---------------------------Currency code::"
+		logger.info("---------------------------Currency code::"
 				+ currencyCode.getCurrencyCode());
 		MmTransferCode mmTransferCode = new MmTransferCode();
 		mmTransferCode.setMmTransferCode("T3ASYT3ST");
-		System.out.println("---------------------------MmTransfer code::"
+		logger.info("---------------------------MmTransfer code::"
 				+ mmTransferCode.getMmTransferCode());
 		// mtrTransferRequestType.setOriginCode(mmTransferCode);
 		RequestReference requestReference = new RequestReference();
@@ -459,10 +482,10 @@ public class TeasyMobileClient {
 		SimpleDateFormat ft = new SimpleDateFormat("YYYYMMddHHmmSSS");
 		requestReference.setRequestReference(ft.format(dNow));
 		// mtrTransferRequestType.setRequestReference(requestReference);
-		System.out.println("---------------------------Request reference:"
+		logger.info("---------------------------Request reference:"
 				+ requestReference.getRequestReference());
 		// debitRequest.setDebitRequest(mtrTransferRequestType);
-		System.out.println("---------------------------PIN");
+		logger.info("---------------------------PIN");
 
 		mpWalletServiceStub._getServiceClient().addHeader(
 				ClientUtil.getHeaderOMElement(moneyTransfer.getUsername(),
@@ -485,21 +508,21 @@ public class TeasyMobileClient {
 				cashOutRequest, null);
 		// TransferResponse transferResponse = mpWalletServiceStub.debitRequest(
 		// debitRequest, getAdditionalHeader());
-		System.out.println("---------------------------Transfer Response");
+		logger.info("---------------------------Transfer Response");
 		return transferResponse.getTransferResponse();
 
 	}
 
 	public MTransferResponseType doCashIn(MoneyTransfer moneyTransfer)
 			throws Exception {
-		System.out.println("---------------------------Inside the do cashin");
-		System.out.println("...do Cash In...");
+		logger.info("---------------------------Inside the do cashin");
+		logger.info("...do Cash In...");
 
 		if (mpWalletServiceStub == null) {
-			System.out.println("---------------------------Stub is null");
-			System.out.println("Fund stub is not available");
+			logger.info("---------------------------Stub is null");
+			logger.info("Fund stub is not available");
 		} else {
-			System.out.println("---------------------------Stub is not null");
+			logger.info("---------------------------Stub is not null");
 		}
 
 		CreditRequest creditRequest = new CreditRequest();
@@ -513,26 +536,26 @@ public class TeasyMobileClient {
 		merchantNumber.setAccountNumber(moneyTransfer.getSender());
 		// mtrTransferRequestType.setAccountNumber(accountNumber);
 		PIN pin = new PIN();
-		System.out.println("after instantiation of PIN");
+		logger.info("after instantiation of PIN");
 		pin.setPIN(moneyTransfer.getTeasypin()); // 7005
 
 		// mtrTransferRequestType.setAccountPIN(pin);
 		// mtrTransferRequestType.setAmount(amount);
 		CurrencyCode currencyCode = new CurrencyCode();
-		System.out.println("after instantiation of CurrencyCode");
+		logger.info("after instantiation of CurrencyCode");
 		currencyCode.setCurrencyCode("NGN");
 		// mtrTransferRequestType.setCurrency(currencyCode);
 		MmTransferCode mmTransferCode = new MmTransferCode();
-		System.out.println("MmtransferCode is instantiated");
+		logger.info("MmtransferCode is instantiated");
 		mmTransferCode.setMmTransferCode("T3ASYT3ST");
 		// mtrTransferRequestType.setOriginCode(mmTransferCode);
 		RequestReference requestReference = new RequestReference();
-		System.out.println("Instantiation of RequestReference");
+		logger.info("Instantiation of RequestReference");
 		Date dNow = new Date();
 		SimpleDateFormat ft = new SimpleDateFormat("YYYYMMddHHmmSSS");
 		requestReference.setRequestReference(ft.format(dNow));
 		// mtrTransferRequestType.setRequestReference(requestReference);
-		System.out.println("After set request reference");
+		logger.info("After set request reference");
 		// creditRequest.setCreditRequest(mtrTransferRequestType);
 
 		CashInRequest cashInRequest = new CashInRequest();
@@ -556,7 +579,7 @@ public class TeasyMobileClient {
 		// TransferResponse transferResponse =
 		// mpWalletServiceStub.creditRequest(
 		// creditRequest, getAdditionalHeader());
-		System.out.println("After return of transfer response");
+		logger.info("After return of transfer response");
 		return transferResponse.getTransferResponse();
 
 	}
@@ -566,26 +589,27 @@ public class TeasyMobileClient {
 		TeasyMobileClient teasyMobileClient = new TeasyMobileClient(
 				moneyTransfer);
 
-		// MTransferResponseType response = teasyMobileClient
+		MTransferResponseType response = teasyMobileClient
+		// .doCashIn(moneyTransfer);
 		// .doCashout(moneyTransfer);
-		MBalanceResponse response = teasyMobileClient.getBalance(moneyTransfer);
-		// System.out.println("Status: " + response.getStatus());
+				.walletToBank(moneyTransfer);
+		// MBalanceResponse response =
+		// teasyMobileClient.getBalance(moneyTransfer);
+		// logger.info("Status: " + response.getStatus());
 
-		// System.out.println("ResponseMessage: " +
-		// response.getResponseMessage());
-
+		logger.info("ResponseMessage: " + response.getResponseMessage());
 		// airtimesales
 
-		// System.out.println("Amount: " + response.getAmount());
-		// System.out.println("CurrencyCode: " + response.getCurrency());
-		// System.out.println("Fee: " + response.getFee());
-		// System.out.println("TransactionId: " + response.getTransactionId());
+		// logger.info("Amount: " + response.getAmount());
+		// logger.info("CurrencyCode: " + response.getCurrency());
+		// logger.info("Fee: " + response.getFee());
+		// logger.info("TransactionId: " + response.getTransactionId());
 		// balance
-		System.out.println("Balance: " + response.getBalance() / 100);
+		// logger.info("Balance: " + response.getBalance() / 100);
 		// reverse transaction
-		// System.out.println("Balance: " + response.getTransactionId());
+		// logger.info("Balance: " + response.getTransactionId());
 
-		System.out.println("The output response is::::" + response.toString());
+		logger.info("The output response is::::" + response.toString());
 	}
 
 	public com.ng.mats.psa.mt.teasymobile.xmlprocessor.TransferResponse generateResponse() {
