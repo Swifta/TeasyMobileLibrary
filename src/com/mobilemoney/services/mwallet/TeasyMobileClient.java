@@ -16,7 +16,6 @@ import com.mobilemoney.services.mwallet.MPWalletServiceStub.BalanceGetRequest;
 import com.mobilemoney.services.mwallet.MPWalletServiceStub.BalanceGetResponse;
 import com.mobilemoney.services.mwallet.MPWalletServiceStub.CashInRequest;
 import com.mobilemoney.services.mwallet.MPWalletServiceStub.CashOutRequest;
-import com.mobilemoney.services.mwallet.MPWalletServiceStub.CreditRequest;
 import com.mobilemoney.services.mwallet.MPWalletServiceStub.CurrencyCode;
 import com.mobilemoney.services.mwallet.MPWalletServiceStub.MAirtimeTopupRequestType;
 import com.mobilemoney.services.mwallet.MPWalletServiceStub.MBalanceResponse;
@@ -525,18 +524,20 @@ public class TeasyMobileClient {
 			logger.info("---------------------------Stub is not null");
 		}
 
-		CreditRequest creditRequest = new CreditRequest();
+		// CreditRequest creditRequest = new CreditRequest();
 
 		int amount = moneyTransfer.getAmount().intValue() * 100;
 
 		// MTransferRequestType mtrTransferRequestType = new
 		// MTransferRequestType();
+
 		AccountNumber accountNumber = new AccountNumber(), merchantNumber = new AccountNumber();
 		accountNumber.setAccountNumber(moneyTransfer.getReceiver()); // 2348171000157
 		merchantNumber.setAccountNumber(moneyTransfer.getSender());
 		// mtrTransferRequestType.setAccountNumber(accountNumber);
 		PIN pin = new PIN();
 		logger.info("after instantiation of PIN");
+		// moneyTransfer.setTeasypin("");
 		pin.setPIN(moneyTransfer.getTeasypin()); // 7005
 
 		// mtrTransferRequestType.setAccountPIN(pin);
@@ -591,13 +592,16 @@ public class TeasyMobileClient {
 
 		MTransferResponseType response = teasyMobileClient
 		// .doCashIn(moneyTransfer);
-		// .doCashout(moneyTransfer);
-				.walletToBank(moneyTransfer);
+				.doCashout(moneyTransfer);
+		// .walletToBank(moneyTransfer);
 		// MBalanceResponse response =
 		// teasyMobileClient.getBalance(moneyTransfer);
 		// logger.info("Status: " + response.getStatus());
 
 		logger.info("ResponseMessage: " + response.getResponseMessage());
+		logger.info("ResponseMessage: " + response.getAmount());
+		logger.info("Transactionid: " + response.getTransactionId());
+
 		// airtimesales
 
 		// logger.info("Amount: " + response.getAmount());
